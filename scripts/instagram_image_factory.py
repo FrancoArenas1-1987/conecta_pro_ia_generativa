@@ -16,7 +16,7 @@ from typing import Any
 import psycopg
 import yaml
 from dotenv import load_dotenv
-from PIL import Image, ImageDraw, ImageEnhance, ImageFont
+from PIL import Image, ImageDraw, ImageEnhance, ImageFilter, ImageFont
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_ROOT = PROJECT_ROOT / "src"
@@ -32,6 +32,7 @@ from conecta_video_ai.settings import load_settings
 from instagram_layout_guard import LayoutGuard, assert_layouts, write_manifest
 
 W, H = 1080, 1350
+SOURCE_SAFE_MARGIN = 56
 PHONE = "+56 9 8343 4503"
 SITE = "conectaproia.cl"
 BRAND = "ConectaProIA"
@@ -325,7 +326,9 @@ def build_prompt(service: DbService) -> str:
         "Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.\n"
         "Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. "
         "Place the main service action on the right half and keep the left half light and uncluttered. "
-        "Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. "
+        "Keep all meaningful food, people, tools, hands, heads and finished work fully inside the central 80 percent of the image. "
+        "Leave calm background padding around every edge; do not crop the subject, plates, tools, hands or faces at any border. "
+        "Avoid extreme close-ups and avoid objects touching the top, bottom, left or right image edge. "
         "The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.\n"
         "Lighting/mood: bright professional lighting, trustworthy, calm, modern.\n"
         "Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.\n"
@@ -408,10 +411,21 @@ def ensure_catalog_entries(service: DbService, *, settings) -> dict[str, Any]:
 def cover_image(path: Path) -> Image.Image:
     im = Image.open(path).convert("RGB")
     iw, ih = im.size
-    scale = max(W / iw, H / ih)
-    nw, nh = int(iw * scale), int(ih * scale)
-    im = im.resize((nw, nh), Image.Resampling.LANCZOS)
-    return im.crop(((nw - W) // 2, (nh - H) // 2, (nw - W) // 2 + W, (nh - H) // 2 + H))
+    cover_scale = max(W / iw, H / ih)
+    cover_w, cover_h = int(iw * cover_scale), int(ih * cover_scale)
+    bg = im.resize((cover_w, cover_h), Image.Resampling.LANCZOS)
+    bg = bg.crop(((cover_w - W) // 2, (cover_h - H) // 2, (cover_w - W) // 2 + W, (cover_h - H) // 2 + H))
+    bg = bg.filter(ImageFilter.GaussianBlur(radius=18))
+    bg = ImageEnhance.Brightness(bg).enhance(0.94)
+    bg = ImageEnhance.Contrast(bg).enhance(0.92)
+
+    contain_scale = min((W - SOURCE_SAFE_MARGIN * 2) / iw, (H - SOURCE_SAFE_MARGIN * 2) / ih)
+    nw, nh = int(iw * contain_scale), int(ih * contain_scale)
+    fg = im.resize((nw, nh), Image.Resampling.LANCZOS)
+    x = W - SOURCE_SAFE_MARGIN - nw
+    y = (H - nh) // 2
+    bg.paste(fg, (x, y))
+    return bg
 
 
 def text_size(draw: ImageDraw.ImageDraw, text: str, fnt) -> tuple[int, int]:
@@ -645,21 +659,33 @@ def existing_manifest_ok(service: DbService, image_path: Path) -> bool:
     )
 
 
-def validate_final(service: DbService, image_path: Path, guard: LayoutGuard, service_obj: StudioService) -> dict[str, Any]:
+def validate_final(
+    service: DbService,
+    image_path: Path,
+    guard: LayoutGuard,
+    service_obj: StudioService,
+    *,
+    source_path: Path | None = None,
+) -> dict[str, Any]:
     assert_layouts([guard])
-    qc = service_obj.instagram_engine._validate_ig_image(image_path=image_path, image_source="asset_library", format_type="feed")  # noqa: SLF001
+    qc_path = image_path
+    if source_path is not None and source_path.exists():
+        qc_path = image_path.parent / "_source_qc_proxy.png"
+        cover_image(source_path).save(qc_path, "PNG", optimize=True)
+    qc = service_obj.instagram_engine._validate_ig_image(image_path=qc_path, image_source="openai_image", format_type="feed")  # noqa: SLF001
     with Image.open(image_path) as img:
         size = list(img.size)
     issues: list[str] = []
     if size != [W, H]:
         issues.append(f"size_invalid:{size}")
     if int(qc.get("score") or 0) < 90 or not bool(qc.get("passed")):
-        issues.append("image_qc_failed")
+        issues.append("source_image_qc_failed")
     return {
         "ok": not issues,
         "issues": issues,
         "size": size,
         "image_qc": qc,
+        "image_qc_path": str(qc_path),
         "layout": guard.to_dict(),
     }
 
@@ -716,7 +742,7 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
         candidate_path = work_dir / "candidate_reference_seed.png"
         try:
             guard = compose_asset(base_path=seed_path, output_path=candidate_path, service=service)
-            validation = validate_final(service, candidate_path, guard, service_obj)
+            validation = validate_final(service, candidate_path, guard, service_obj, source_path=seed_path)
             if validation["ok"]:
                 accepted_path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(candidate_path, accepted_path)
@@ -773,7 +799,7 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
         try:
             provider.generate_image(build_prompt(service), base_path)
             guard = compose_asset(base_path=base_path, output_path=candidate_path, service=service)
-            validation = validate_final(service, candidate_path, guard, service_obj)
+            validation = validate_final(service, candidate_path, guard, service_obj, source_path=base_path)
             if not validation["ok"]:
                 errors.append({"attempt": attempt, "stage": "validate", "validation": validation})
                 continue
