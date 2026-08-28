@@ -77,6 +77,8 @@ El compose usa `network_mode: host` porque en Linux permite que el contenedor in
 
 La generacion de imagenes premium queda a cargo de `scripts/instagram_image_factory.py`. Por eso en produccion conviene mantener `INSTAGRAM_ENABLE_OPENAI_IMAGES=false`: el publicador no regenera imagenes inline, sino que publica desde `imagenes_ig`, donde la fabrica va agregando/actualizando assets con QC.
 
+Usa `IG_IMAGE_FACTORY_MAX_ATTEMPTS=3` para que la fabrica pueda regenerar cuando una imagen no pasa QC visual.
+
 Primer deploy manual:
 
 ```bash
