@@ -19,6 +19,7 @@ COPY pyproject.toml README.md requirements.txt /app/
 COPY src /app/src
 COPY scripts /app/scripts
 COPY config /app/config
+COPY assets /app/assets
 COPY imagenes_ig /app/imagenes_ig
 COPY web /app/web
 

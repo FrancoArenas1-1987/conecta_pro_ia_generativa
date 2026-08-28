@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import colorsys
+import os
 import json
 import fnmatch
 import hashlib
@@ -2928,8 +2929,17 @@ class InstagramContentEngine:
         return ImageFont.load_default()
 
     def _select_logo_path(self) -> Path | None:
-        for candidate in self.context.logo_candidates:
-            p = Path(candidate)
+        candidate_paths = [Path(candidate) for candidate in self.context.logo_candidates]
+        assets_root = Path(os.getenv("ASSETS_ROOT", "assets"))
+        candidate_paths.extend(
+            [
+                assets_root / "conectaprologo_512.png",
+                assets_root / "conectaprologo.png",
+                Path("assets/conectaprologo_512.png"),
+                Path("/app/assets/conectaprologo_512.png"),
+            ]
+        )
+        for p in candidate_paths:
             if p.exists() and p.is_file():
                 return p
         # Fallback: auto-detect ConectaPro logos in default assets folder.

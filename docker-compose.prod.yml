@@ -21,6 +21,7 @@ services:
     volumes:
       - ./output:/app/output
       - ./imagenes_ig:/app/imagenes_ig
+      - ./assets:/app/assets:ro
       - ./logs:/app/logs
       - ./.env:/app/.env
     network_mode: host
