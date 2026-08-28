@@ -1,0 +1,4461 @@
+defaults:
+  locale_cycle:
+  - Chile
+  format_cycle:
+  - feed
+  - story
+  - feed
+  - story
+  - feed
+  objective_cycle:
+  - captar_clientes
+  - captar_clientes
+  - captar_proveedores
+  - branding
+  hashtags_base:
+  - ConectaProIA
+  - ProfesionalesConfiables
+  - SolucionRapida
+  - WhatsApp
+  rotate_window: 3
+  coverage_zones:
+  - Chile
+  preferred_assets:
+  - C:\Franco\conectapro_rrss\publicacion_clientes.png
+categories:
+- id: gasfiteria
+  label: Gasfiteria urgente
+  objective: captar_clientes
+  keywords:
+  - gasfiter
+  - gasfiteria
+  - calefon
+  - fuga
+  - agua
+  services:
+  - gasfiter
+  - reparacion de calefon
+  - fuga de agua
+  image_prompt_templates:
+  - Vertical 9:16 photo, a friendly plumber repairing a home water heater in a Chilean apartment, realistic, modern, bright natural light, no text.
+  - Vertical 9:16 photo, a homeowner relieved while a trusted plumber fixes a kitchen leak, Chilean context, realistic, no text.
+  variants:
+  - hook: Se corto el agua caliente justo hoy?
+    value: ConectaProIA te conecta por WhatsApp con un gasfiter confiable en minutos.
+    proof: Sin llamadas largas, sin perder tiempo, con profesionales verificados.
+    cta: Hablanos y activa tu solicitud ahora.
+    short_text: Gasfiter confiable en minutos.
+  - hook: Fuga en casa y nadie responde?
+    value: Pide ayuda por WhatsApp y recibe opciones reales en tu comuna.
+    proof: ConectaProIA te muestra profesionales disponibles para hoy.
+    cta: Escribenos ahora y resuelve rapido.
+    short_text: Resuelve tu urgencia hoy.
+- id: electricidad
+  label: Electricidad hogar
+  objective: captar_clientes
+  keywords:
+  - electricidad
+  - electricista
+  - enchufe
+  - tablero
+  - luz
+  services:
+  - electricista
+  - reparacion electrica
+  - falla de enchufe
+  image_prompt_templates:
+  - Vertical 9:16 photo, certified electrician fixing a home electrical panel, safe equipment, Chilean home, realistic, no text.
+  - Vertical 9:16 photo, family relieved after power issue is solved by an electrician, modern interior, realistic, no text.
+  variants:
+  - hook: Se corto la luz y necesitas ayuda hoy?
+    value: ConectaProIA conecta por WhatsApp con electricistas confiables y disponibles.
+    proof: Flujo simple, respuesta rapida y profesionales verificados.
+    cta: Escribenos y consigue apoyo en minutos.
+    short_text: Electricista confiable hoy.
+  - hook: Enchufes fallando y sin dato confiable?
+    value: Pide tu servicio por WhatsApp y compara opciones reales.
+    proof: ConectaProIA te ahorra tiempo y reduce el riesgo de mala experiencia.
+    cta: Habla con nosotros ahora.
+    short_text: Soluciona tu problema electrico.
+- id: kinesiologia
+  label: Kinesiologia y salud
+  objective: captar_clientes
+  keywords:
+  - kinesiologia
+  - kinesio
+  - rehabilitacion
+  - dolor
+  - terapia
+  services:
+  - kinesiologo
+  - terapia fisica
+  - rehabilitacion a domicilio
+  image_prompt_templates:
+  - Vertical 9:16 photo, professional physiotherapist helping an adult with shoulder recovery at home, warm natural scene, realistic, no text.
+  - Vertical 9:16 photo, close-up of guided stretching session by a trusted kinesiologist, modern Chilean home, no text.
+  variants:
+  - hook: Dolor de espalda y no sabes a quien llamar?
+    value: ConectaProIA te conecta por WhatsApp con kinesiologos confiables.
+    proof: Atencion clara, contacto directo y opciones segun tu necesidad.
+    cta: Escribenos y agenda tu apoyo hoy.
+    short_text: Kinesiologo confiable por WhatsApp.
+  - hook: Necesitas rehabilitacion sin perder tiempo?
+    value: Solicita ayuda en minutos y recibe opciones reales en tu comuna.
+    proof: ConectaProIA simplifica todo el proceso para ti.
+    cta: Conecta ahora y avanza.
+    short_text: Recuperate con apoyo profesional.
+- id: legal
+  label: Asesoria legal
+  objective: captar_clientes
+  preferred_assets:
+  - C:\Franco\conectapro_rrss\abogado\abogado.png
+  keywords:
+  - abogado
+  - legal
+  - contrato
+  - juicio
+  - asesoria
+  services:
+  - abogado
+  - asesoria legal
+  - revision de contrato
+  image_prompt_templates:
+  - Vertical 9:16 photo, approachable lawyer consulting a client in a modern office, Chilean context, realistic, no text.
+  - Vertical 9:16 photo, legal professional reviewing documents with client, trust and clarity, no text.
+  variants:
+  - hook: Tienes un tema legal y no sabes por donde empezar?
+    value: ConectaProIA te conecta por WhatsApp con profesionales legales confiables.
+    proof: Sin vueltas, sin intermediacion confusa, contacto directo.
+    cta: Escribenos ahora y da el primer paso.
+    short_text: Asesoria legal confiable.
+  - hook: Necesitas revisar un contrato hoy?
+    value: Solicita apoyo por WhatsApp y recibe alternativas profesionales.
+    proof: ConectaProIA acelera tu busqueda con enfoque practico.
+    cta: Conecta ahora con un profesional.
+    short_text: Apoyo legal rapido y claro.
+- id: desarrollo_software
+  label: Desarrollo de sistemas informaticos
+  objective: captar_clientes
+  keywords:
+  - desarrollo
+  - software
+  - sistemas
+  - informaticos
+  - sitio web
+  - aplicacion web
+  - automatizacion
+  - integracion
+  - sistemas internos
+  services:
+  - desarrollo de software
+  - sitios y aplicaciones web
+  - automatizacion de tareas
+  - integracion de sistemas
+  - soporte de software
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad for custom software development in Chile, professional developer working on a modern web system, realistic, clean technology setting, no text.
+  - Vertical 9:16 professional technology scene showing software automation, system integrations and business dashboards, realistic Chilean context, no text.
+  hashtags:
+  - DesarrolloDeSoftware
+  - SistemasInformaticos
+  - Automatizacion
+  - AplicacionesWeb
+  - Chile
+  variants:
+  - hook: Necesitas desarrollar o mejorar un sistema para tu negocio?
+    value: Encuentra especialistas para sitios web, automatizaciones, integraciones y sistemas internos.
+    proof: Describe tu proyecto y recibe opciones de profesionales segun alcance y disponibilidad.
+    cta: Cuentanos lo que necesitas por WhatsApp.
+    short_text: Desarrollo de software para tu negocio.
+  - hook: Tus procesos manuales te quitan tiempo?
+    value: Busca apoyo para automatizar tareas, integrar plataformas o evolucionar tu software.
+    proof: Coordina alternativas para definir alcance, entregables, plazos y soporte.
+    cta: Envia tu solicitud por WhatsApp.
+    short_text: Automatiza e integra tus sistemas.
+- id: veterinarios
+  label: Veterinarios y cuidado de mascotas
+  objective: captar_clientes
+  keywords:
+  - veterinario
+  - veterinaria
+  - veterinarios
+  - mascota
+  - mascotas
+  - perro
+  - gato
+  - vacunacion
+  - control preventivo
+  - atencion a domicilio
+  services:
+  - consulta veterinaria
+  - control preventivo
+  - vacunacion
+  - evaluacion de sintomas
+  - orientacion veterinaria
+  - atencion veterinaria a domicilio
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, friendly veterinary professional examining a dog and cat in a clean modern clinic, Chilean context, realistic, no text.
+  - Vertical 9:16 realistic scene of a caring veterinarian providing guidance to a pet owner, warm trustworthy atmosphere, no text.
+  hashtags:
+  - Veterinarios
+  - CuidadoDeMascotas
+  - SaludAnimal
+  - Veterinaria
+  - Chile
+  variants:
+  - hook: Tu mascota necesita atencion veterinaria?
+    value: Busca opciones para controles, orientacion y necesidades puntuales de perros, gatos y otras mascotas.
+    proof: Indica la especie, edad, sintomas, tiempo de evolucion y tu comuna.
+    cta: Solicita opciones por WhatsApp.
+    short_text: Atencion veterinaria para tu mascota.
+  - hook: Necesitas un veterinario en tu comuna?
+    value: ConectaProIA coordina opciones para consultas, vacunacion, controles preventivos y evaluacion de sintomas.
+    proof: La modalidad y disponibilidad se confirman directamente con cada profesional.
+    cta: Cuentanos lo que necesita tu mascota.
+    short_text: Encuentra apoyo veterinario local.
+- id: traductores_ingles_espanol
+  label: Traductores ingles-espanol
+  objective: captar_clientes
+  keywords:
+  - traductor
+  - traductora
+  - traductores
+  - traduccion
+  - ingles
+  - espanol
+  - documentos
+  - contenido bilingue
+  - localizacion
+  - correccion
+  services:
+  - traduccion ingles-espanol
+  - traduccion de documentos
+  - localizacion de contenido digital
+  - revision de textos bilingues
+  - correccion de traducciones
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional English-Spanish translator reviewing documents in a modern office, realistic Chilean context, no text.
+  - Vertical 9:16 realistic bilingual translation workspace with documents, laptop and professional translator, clean and trustworthy, no text.
+  hashtags:
+  - Traductores
+  - Traduccion
+  - InglesEspanol
+  - Documentos
+  - Chile
+  variants:
+  - hook: Necesitas traducir documentos entre ingles y espanol?
+    value: Solicita apoyo para documentos personales, comerciales y contenidos digitales.
+    proof: Indica formato, cantidad de palabras o paginas, audiencia y fecha de entrega.
+    cta: Pide opciones por WhatsApp.
+    short_text: Traduccion ingles-espanol.
+  - hook: Tu contenido necesita una traduccion clara y profesional?
+    value: Busca apoyo para localizar sitios web, presentaciones o revisar textos bilingues.
+    proof: Confirma previamente si necesitas traduccion simple, certificada o un formato especifico.
+    cta: Cuentanos lo que necesitas traducir.
+    short_text: Traduce documentos y contenido digital.
+- id: comida_preparada_restaurante
+  label: Restaurante / comida preparada
+  objective: captar_clientes
+  keywords:
+  - comida
+  - restaurante
+  - comida preparada
+  - colaciones
+  - platos listos
+  - pedidos
+  services:
+  - comida preparada
+  - restaurantes
+  - colaciones
+  - platos listos
+  - pedidos de comida
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, restaurant staff with prepared meals in a clean kitchen, Chilean context, realistic, no text.
+  - Vertical 9:16 realistic prepared food service scene with fresh meals and trustworthy local restaurant staff, no text.
+  hashtags:
+  - ComidaPreparada
+  - Restaurantes
+  - ComidaCasera
+  - WhatsApp
+  variants:
+  - hook: Buscas comida preparada?
+    value: ConectaProIA te conecta por WhatsApp con opciones de restaurantes y comida preparada.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Comida preparada por WhatsApp.
+  - hook: Necesitas resolver una comida hoy?
+    value: Encuentra opciones locales de platos listos, colaciones y restaurantes.
+    proof: ConectaProIA simplifica el contacto para que coordines rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Restaurantes y comida lista.
+- id: comida_sushi
+  label: Sushi
+  objective: captar_clientes
+  keywords:
+  - sushi
+  - rolls
+  - comida japonesa
+  - tablas
+  - pedidos
+  services:
+  - sushi
+  - rolls
+  - tablas de sushi
+  - comida japonesa
+  - pedidos de sushi
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, sushi chef with fresh rolls and sushi trays in a clean kitchen, realistic, no text.
+  - Vertical 9:16 appetizing sushi service scene with local restaurant staff, fresh rolls and professional presentation, no text.
+  hashtags:
+  - Sushi
+  - ComidaJaponesa
+  - Rolls
+  - WhatsApp
+  variants:
+  - hook: Buscas sushi hoy?
+    value: ConectaProIA te conecta por WhatsApp con opciones de sushi y comida japonesa.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Sushi por WhatsApp.
+  - hook: Necesitas sushi para compartir?
+    value: Encuentra opciones de rolls, tablas y pedidos preparados.
+    proof: ConectaProIA simplifica el contacto para coordinar rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Rolls y sushi listo.
+- id: comida_sandwiches_completos
+  label: Sandwiches / completos
+  objective: captar_clientes
+  keywords:
+  - sandwiches
+  - completos
+  - comida rapida
+  - colaciones
+  - pedidos
+  services:
+  - sandwiches
+  - completos
+  - colaciones rapidas
+  - comida rapida
+  - pedidos de comida
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, local food counter with sandwiches and Chilean completos, friendly staff, realistic, no text.
+  - Vertical 9:16 appetizing sandwiches and completos service scene, clean local food shop, professional presentation, no text.
+  hashtags:
+  - Sandwiches
+  - Completos
+  - ComidaRapida
+  - WhatsApp
+  variants:
+  - hook: Buscas sandwiches o completos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de sandwiches, completos y comida rapida.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Sandwiches y completos.
+  - hook: Necesitas comida rapida hoy?
+    value: Encuentra opciones de completos, sandwiches y colaciones listas.
+    proof: ConectaProIA simplifica el contacto para coordinar rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Comida rapida por WhatsApp.
+- id: comida_pizzeria
+  label: Pizzeria
+  objective: captar_clientes
+  keywords:
+  - pizzeria
+  - pizza
+  - pizzas
+  - comida preparada
+  - pedidos
+  services:
+  - pizzeria
+  - pizzas preparadas
+  - pedidos de pizza
+  - comida preparada
+  - opciones familiares
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, pizza maker with fresh pizzas in a clean pizzeria, realistic, no text.
+  - Vertical 9:16 appetizing pizzeria service scene with fresh pizza, local restaurant staff and professional presentation, no text.
+  hashtags:
+  - Pizzeria
+  - Pizza
+  - ComidaPreparada
+  - WhatsApp
+  variants:
+  - hook: Buscas pizzeria hoy?
+    value: ConectaProIA te conecta por WhatsApp con opciones de pizzerias y comida preparada.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Pizzas por WhatsApp.
+  - hook: Necesitas pizza para compartir?
+    value: Encuentra opciones de pizzas preparadas, pedidos familiares y comida lista.
+    proof: ConectaProIA simplifica el contacto para coordinar rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Pizzas y comida lista.
+- id: aire_acondicionado_calefaccion
+  label: Aire acondicionado / calefaccion
+  objective: captar_clientes
+  keywords:
+  - aire acondicionado
+  - calefaccion
+  - climatizacion
+  - instalacion
+  - mantencion
+  - reparacion
+  services:
+  - aire acondicionado
+  - calefaccion
+  - climatizacion
+  - mantencion de aire acondicionado
+  - reparacion de calefaccion
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, technician servicing a wall air conditioner or heating unit in a clean home, realistic, no text.
+  - Vertical 9:16 realistic climatization service scene with professional technician and modern home, no text.
+  hashtags:
+  - AireAcondicionado
+  - Calefaccion
+  - Climatizacion
+  - WhatsApp
+  variants:
+  - hook: Necesitas aire acondicionado o calefaccion?
+    value: ConectaProIA te conecta por WhatsApp con opciones para instalacion, mantencion o reparacion.
+    proof: Describe tu necesidad y coordina alternativas con tecnicos disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Aire acondicionado por WhatsApp.
+  - hook: Tu equipo no enfria o no calefacciona?
+    value: Busca opciones de climatizacion para revisar, mantener o reparar tu equipo.
+    proof: ConectaProIA simplifica el contacto y la coordinacion.
+    cta: Pide opciones ahora.
+    short_text: Climatizacion y mantencion.
+- id: psicologia
+  label: Psicologia
+  objective: captar_clientes
+  keywords:
+  - psicologo
+  - psicologia
+  - terapia
+  - salud mental
+  - atencion psicologica
+  services:
+  - psicologo
+  - psicologia
+  - terapia psicologica
+  - orientacion psicologica
+  - atencion psicologica
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, calm therapy office with psychologist and client in a respectful conversation, realistic, no text.
+  - Vertical 9:16 realistic mental health support scene in a clean private office, trustworthy atmosphere, no text.
+  hashtags:
+  - Psicologia
+  - Psicologo
+  - SaludMental
+  - WhatsApp
+  variants:
+  - hook: Buscas psicologo?
+    value: ConectaProIA te conecta por WhatsApp con opciones de atencion psicologica segun tu necesidad.
+    proof: Indica el tipo de apoyo que buscas y coordina disponibilidad directamente.
+    cta: Escribenos por WhatsApp.
+    short_text: Psicologia por WhatsApp.
+  - hook: Necesitas apoyo psicologico?
+    value: Solicita opciones profesionales para orientacion, terapia o evaluacion inicial.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Encuentra apoyo profesional.
+- id: fletes_mudanzas
+  label: Fletes / mudanzas
+  objective: captar_clientes
+  keywords:
+  - fletes
+  - mudanzas
+  - traslado
+  - transporte
+  - carga
+  services:
+  - fletes
+  - mudanzas
+  - traslado de muebles
+  - transporte de carga
+  - retiro y entrega
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, mover carrying boxes near a clean moving truck, realistic Chilean context, no text.
+  - Vertical 9:16 realistic moving service scene with transport worker, boxes and organized home move, no text.
+  hashtags:
+  - Fletes
+  - Mudanzas
+  - Transporte
+  - WhatsApp
+  variants:
+  - hook: Necesitas fletes o mudanzas?
+    value: ConectaProIA te conecta por WhatsApp con opciones para trasladar muebles, cajas o carga puntual.
+    proof: Describe origen, destino y volumen para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Fletes y mudanzas.
+  - hook: Tienes que mover algo hoy?
+    value: Busca opciones para fletes, retiros, entregas o mudanzas pequenas.
+    proof: ConectaProIA facilita el contacto con transportistas disponibles.
+    cta: Pide opciones ahora.
+    short_text: Traslados por WhatsApp.
+- id: comida_hamburguesas
+  label: Hamburguesas
+  objective: captar_clientes
+  keywords:
+  - hamburguesas
+  - burger
+  - comida rapida
+  - pedidos
+  - restaurante
+  services:
+  - hamburguesas
+  - burgers
+  - comida rapida
+  - pedidos de hamburguesas
+  - restaurante de hamburguesas
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, fresh hamburgers prepared in a clean local kitchen with friendly staff, realistic, no text.
+  - Vertical 9:16 appetizing hamburger service scene with professional food counter and local restaurant staff, no text.
+  hashtags:
+  - Hamburguesas
+  - ComidaRapida
+  - Pedidos
+  - WhatsApp
+  variants:
+  - hook: Buscas hamburguesas?
+    value: ConectaProIA te conecta por WhatsApp con opciones locales para pedidos de hamburguesas.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Hamburguesas por WhatsApp.
+  - hook: Necesitas resolver una comida hoy?
+    value: Encuentra opciones de hamburguesas, combos y pedidos preparados.
+    proof: ConectaProIA simplifica el contacto para coordinar rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Hamburguesas y comida lista.
+- id: arquitectura
+  label: Arquitectura
+  objective: captar_clientes
+  keywords:
+  - arquitectura
+  - arquitecto
+  - planos
+  - regularizacion
+  - proyectos
+  - diseno
+  services:
+  - arquitectura
+  - arquitecto
+  - planos
+  - regularizacion
+  - diseno de proyectos
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, architect reviewing plans and a house model in a modern office, realistic, no text.
+  - Vertical 9:16 realistic architecture service scene with professional architect, plans and project materials, no text.
+  hashtags:
+  - Arquitectura
+  - Arquitecto
+  - Planos
+  - WhatsApp
+  variants:
+  - hook: Necesitas arquitectura?
+    value: ConectaProIA te conecta por WhatsApp con opciones para proyectos, planos, regularizaciones u orientacion profesional.
+    proof: Describe el alcance de tu proyecto para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Arquitectura por WhatsApp.
+  - hook: Tienes un proyecto o regularizacion pendiente?
+    value: Busca apoyo profesional para planos, diseno, permisos u orientacion tecnica.
+    proof: La propuesta y disponibilidad se coordinan con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Planos y proyectos.
+- id: reparacion_pc_notebook
+  label: Reparacion de PC / notebooks
+  objective: captar_clientes
+  keywords:
+  - computador
+  - notebook
+  - pc
+  - reparacion
+  - soporte tecnico
+  - formateo
+  services:
+  - reparacion de computadores
+  - reparacion de notebooks
+  - soporte tecnico
+  - diagnostico computacional
+  - mantencion de PC
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, computer technician repairing a notebook in a clean workshop, realistic, no text.
+  - Vertical 9:16 realistic laptop repair service scene with technician, tools and modern workspace, no text.
+  hashtags:
+  - ReparacionPC
+  - Notebook
+  - SoporteTecnico
+  - WhatsApp
+  variants:
+  - hook: Tu computador falla?
+    value: ConectaProIA te conecta por WhatsApp con opciones para revisar notebooks, PC o problemas tecnicos.
+    proof: Describe la falla y coordina alternativas de diagnostico o reparacion.
+    cta: Escribenos por WhatsApp.
+    short_text: Reparacion de computadores.
+  - hook: Notebook lento o con problemas?
+    value: Busca opciones para diagnostico, mantencion, reparacion o soporte tecnico.
+    proof: ConectaProIA facilita el contacto con tecnicos disponibles.
+    cta: Pide opciones ahora.
+    short_text: Soporte tecnico por WhatsApp.
+- id: camaras_seguridad
+  label: Camaras de seguridad
+  objective: captar_clientes
+  keywords:
+  - camaras
+  - seguridad
+  - cctv
+  - vigilancia
+  - instalacion
+  - alarmas
+  services:
+  - camaras de seguridad
+  - instalacion de camaras
+  - CCTV
+  - vigilancia
+  - mantencion de seguridad
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, technician installing a security camera on a clean home exterior, realistic, no text.
+  - Vertical 9:16 realistic security camera installation service scene for home or small business, no text.
+  hashtags:
+  - CamarasDeSeguridad
+  - CCTV
+  - Seguridad
+  - WhatsApp
+  variants:
+  - hook: Necesitas camaras de seguridad?
+    value: ConectaProIA te conecta por WhatsApp con opciones para instalacion, mantencion o revision de seguridad.
+    proof: Indica si es para casa o negocio y coordina alternativas disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Camaras de seguridad.
+  - hook: Quieres mejorar la seguridad de tu espacio?
+    value: Busca opciones para camaras, CCTV, revision o mantencion de sistemas.
+    proof: ConectaProIA simplifica el contacto con tecnicos.
+    cta: Pide opciones ahora.
+    short_text: Seguridad por WhatsApp.
+- id: dentista
+  label: Dentista
+  objective: captar_clientes
+  keywords:
+  - dentista
+  - odontologia
+  - dental
+  - atencion dental
+  - consulta dental
+  services:
+  - dentista
+  - odontologia
+  - consulta dental
+  - atencion dental
+  - control dental
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, friendly dentist with patient in a clean modern dental clinic, realistic, no text.
+  - Vertical 9:16 realistic dental appointment scene with dentist and patient, calm trustworthy atmosphere, no text.
+  hashtags:
+  - Dentista
+  - Odontologia
+  - SaludDental
+  - WhatsApp
+  variants:
+  - hook: Buscas dentista?
+    value: ConectaProIA te conecta por WhatsApp con opciones de atencion dental segun tu necesidad.
+    proof: Indica el tipo de atencion que buscas y coordina disponibilidad.
+    cta: Escribenos por WhatsApp.
+    short_text: Dentista por WhatsApp.
+  - hook: Necesitas una consulta dental?
+    value: Busca opciones para controles, evaluacion u orientacion odontologica.
+    proof: La atencion y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Atencion dental.
+- id: mecanica_automotriz
+  label: Mecanica automotriz
+  objective: captar_clientes
+  keywords:
+  - mecanico
+  - mecanica
+  - automotriz
+  - auto
+  - vehiculo
+  - reparacion
+  - mantencion
+  services:
+  - mecanico automotriz
+  - mecanica automotriz
+  - diagnostico automotriz
+  - mantencion de vehiculos
+  - reparacion de autos
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, mechanic inspecting a car engine in a clean garage, realistic, no text.
+  - Vertical 9:16 realistic automotive mechanic service scene with technician and diagnostic tool, no text.
+  hashtags:
+  - Mecanico
+  - MecanicaAutomotriz
+  - Autos
+  - WhatsApp
+  variants:
+  - hook: Necesitas mecanico?
+    value: ConectaProIA te conecta por WhatsApp con opciones para diagnostico, mantencion o reparacion automotriz.
+    proof: Describe la falla o mantencion pendiente y coordina alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Mecanica automotriz.
+  - hook: Tu auto necesita revision?
+    value: Busca opciones de mecanica para diagnostico, mantencion o reparacion.
+    proof: ConectaProIA facilita el contacto con mecanicos disponibles.
+    cta: Pide opciones ahora.
+    short_text: Mecanico por WhatsApp.
+- id: medicina_general
+  label: Medicina general
+  objective: captar_clientes
+  keywords:
+  - medicina general
+  - medico
+  - doctor
+  - consulta medica
+  - atencion medica
+  - salud
+  services:
+  - medicina general
+  - medico general
+  - consulta medica
+  - atencion medica
+  - orientacion medica
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, general practitioner talking with patient in a clean consultation room, realistic, no text.
+  - Vertical 9:16 realistic primary care appointment scene with doctor and patient, calm trustworthy atmosphere, no text.
+  hashtags:
+  - MedicinaGeneral
+  - Medico
+  - Salud
+  - WhatsApp
+  variants:
+  - hook: Buscas atencion medica?
+    value: ConectaProIA te conecta por WhatsApp con opciones de atencion medica general segun tu necesidad.
+    proof: Indica el motivo de consulta y coordina disponibilidad directamente.
+    cta: Escribenos por WhatsApp.
+    short_text: Medicina general por WhatsApp.
+  - hook: Necesitas una consulta medica?
+    value: Busca opciones para atencion general, evaluacion u orientacion medica.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Atencion medica general.
+- id: peluqueria_canina
+  label: Peluqueria canina
+  objective: captar_clientes
+  keywords:
+  - peluqueria canina
+  - mascotas
+  - perros
+  - bano
+  - corte
+  - estetica canina
+  services:
+  - peluqueria canina
+  - bano de mascotas
+  - corte canino
+  - cuidado estetico de mascotas
+  - grooming canino
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional dog groomer caring for a clean dog in a modern grooming salon, realistic, no text.
+  - Vertical 9:16 realistic pet grooming service scene with friendly groomer and clean salon, no text.
+  hashtags:
+  - PeluqueriaCanina
+  - Mascotas
+  - CuidadoDeMascotas
+  - WhatsApp
+  variants:
+  - hook: Buscas peluqueria canina?
+    value: ConectaProIA te conecta por WhatsApp con opciones para bano, corte y cuidado estetico de tu mascota.
+    proof: Indica el tamano, raza y necesidad para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Peluqueria canina por WhatsApp.
+  - hook: Tu mascota necesita bano o corte?
+    value: Busca opciones de peluqueria canina y cuidado estetico.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Cuidado estetico canino.
+- id: calefont_termos
+  label: Calefont / termos
+  objective: captar_clientes
+  keywords:
+  - calefont
+  - termos
+  - agua caliente
+  - mantencion
+  - reparacion
+  - instalacion
+  services:
+  - calefont
+  - termos
+  - mantencion de calefont
+  - reparacion de termos
+  - revision de agua caliente
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, technician inspecting a wall water heater or thermos in a clean home utility room, realistic, no text.
+  - Vertical 9:16 realistic water heater maintenance service scene with professional technician, no text.
+  hashtags:
+  - Calefont
+  - Termos
+  - AguaCaliente
+  - WhatsApp
+  variants:
+  - hook: Problemas con calefont o termo?
+    value: ConectaProIA te conecta por WhatsApp con opciones para revision, mantencion o reparacion.
+    proof: Describe la falla y coordina alternativas con tecnicos disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Calefont y termos.
+  - hook: Te quedaste sin agua caliente?
+    value: Busca opciones para revisar calefont, termos o sistemas de agua caliente.
+    proof: ConectaProIA facilita el contacto y la coordinacion.
+    cta: Pide opciones ahora.
+    short_text: Revision de agua caliente.
+- id: depilacion
+  label: Depilacion
+  objective: captar_clientes
+  keywords:
+  - depilacion
+  - estetica
+  - belleza
+  - laser
+  - cera
+  - cuidado personal
+  services:
+  - depilacion
+  - depilacion laser
+  - depilacion con cera
+  - estetica
+  - cuidado personal
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional esthetician in a clean beauty studio preparing a hair removal treatment, realistic, no text.
+  - Vertical 9:16 realistic beauty service scene for depilation or personal care, modest and professional, no text.
+  hashtags:
+  - Depilacion
+  - Estetica
+  - Belleza
+  - WhatsApp
+  variants:
+  - hook: Buscas depilacion?
+    value: ConectaProIA te conecta por WhatsApp con opciones de estetica y depilacion segun tu necesidad.
+    proof: Indica la modalidad que buscas y coordina disponibilidad.
+    cta: Escribenos por WhatsApp.
+    short_text: Depilacion por WhatsApp.
+  - hook: Necesitas un servicio de estetica?
+    value: Busca opciones para depilacion, cuidado personal y atencion estetica.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Estetica y depilacion.
+- id: terapeuta_ocupacional
+  label: Terapeuta ocupacional
+  objective: captar_clientes
+  keywords:
+  - terapeuta ocupacional
+  - terapia ocupacional
+  - rehabilitacion
+  - autonomia
+  - apoyo profesional
+  services:
+  - terapeuta ocupacional
+  - terapia ocupacional
+  - rehabilitacion funcional
+  - apoyo en autonomia
+  - evaluacion ocupacional
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, occupational therapist guiding an adult patient through a hand mobility exercise, realistic, no text.
+  - Vertical 9:16 realistic occupational therapy support scene with therapist and patient in a warm clinic room, no text.
+  hashtags:
+  - TerapiaOcupacional
+  - TerapeutaOcupacional
+  - Rehabilitacion
+  - WhatsApp
+  variants:
+  - hook: Necesitas terapeuta ocupacional?
+    value: ConectaProIA te conecta por WhatsApp con opciones de apoyo profesional segun tu necesidad.
+    proof: Describe el caso para coordinar alternativas de atencion.
+    cta: Escribenos por WhatsApp.
+    short_text: Terapia ocupacional.
+  - hook: Buscas apoyo para autonomia o rehabilitacion?
+    value: Solicita opciones de terapia ocupacional y orientacion profesional.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Apoyo profesional.
+- id: control_plagas
+  label: Control de plagas
+  objective: captar_clientes
+  keywords:
+  - control de plagas
+  - plagas
+  - fumigacion
+  - desinsectacion
+  - sanitizacion
+  - prevencion
+  services:
+  - control de plagas
+  - fumigacion
+  - desinsectacion
+  - tratamiento preventivo
+  - revision de plagas
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, pest control technician with protective equipment treating a clean home or business area, realistic, no text.
+  - Vertical 9:16 realistic pest control service scene, hygienic professional technician, no disturbing imagery, no text.
+  hashtags:
+  - ControlDePlagas
+  - Fumigacion
+  - Higiene
+  - WhatsApp
+  variants:
+  - hook: Necesitas control de plagas?
+    value: ConectaProIA te conecta por WhatsApp con opciones para revision, tratamiento o sanitizacion preventiva.
+    proof: Indica el tipo de espacio y problema para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Control de plagas.
+  - hook: Quieres revisar o prevenir plagas?
+    value: Busca opciones de control, tratamiento y orientacion tecnica.
+    proof: ConectaProIA facilita el contacto con tecnicos disponibles.
+    cta: Pide opciones ahora.
+    short_text: Tratamiento preventivo.
+- id: reparacion_electrodomesticos
+  label: Reparacion electrodomesticos
+  objective: captar_clientes
+  keywords:
+  - electrodomesticos
+  - lavadora
+  - refrigerador
+  - reparacion
+  - mantencion
+  - tecnico
+  services:
+  - reparacion de electrodomesticos
+  - revision de lavadoras
+  - revision de refrigeradores
+  - mantencion de electrodomesticos
+  - diagnostico tecnico
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, technician repairing a washing machine or refrigerator in a clean home, realistic, no text.
+  - Vertical 9:16 realistic home appliance repair service scene with technician and tools, no text.
+  hashtags:
+  - Electrodomesticos
+  - Reparacion
+  - Tecnico
+  - WhatsApp
+  variants:
+  - hook: Fallo un electrodomestico?
+    value: ConectaProIA te conecta por WhatsApp con opciones para revisar lavadoras, refrigeradores u otros equipos.
+    proof: Describe el equipo y la falla para coordinar alternativas tecnicas.
+    cta: Escribenos por WhatsApp.
+    short_text: Reparacion de electrodomesticos.
+  - hook: Necesitas tecnico para tu casa?
+    value: Busca opciones para diagnostico, mantencion o reparacion de electrodomesticos.
+    proof: ConectaProIA simplifica el contacto con tecnicos disponibles.
+    cta: Pide opciones ahora.
+    short_text: Tecnicos por WhatsApp.
+- id: sanitizacion
+  label: Sanitizacion
+  objective: captar_clientes
+  keywords:
+  - sanitizacion
+  - limpieza
+  - desinfeccion
+  - higiene
+  - espacios
+  services:
+  - sanitizacion
+  - desinfeccion de espacios
+  - limpieza sanitaria
+  - higiene de espacios
+  - sanitizacion preventiva
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional worker sanitizing a clean office or home interior, realistic, no text.
+  - Vertical 9:16 realistic disinfection and sanitization service scene with hygienic equipment, no text.
+  hashtags:
+  - Sanitizacion
+  - Desinfeccion
+  - Limpieza
+  - WhatsApp
+  variants:
+  - hook: Necesitas sanitizacion?
+    value: ConectaProIA te conecta por WhatsApp con opciones para limpieza y sanitizacion de espacios.
+    proof: Indica el tipo de espacio para coordinar alternativas disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Sanitizacion por WhatsApp.
+  - hook: Quieres desinfectar un espacio?
+    value: Busca opciones para sanitizacion preventiva, limpieza sanitaria o desinfeccion.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Desinfeccion de espacios.
+- id: cerrajeria
+  label: Cerrajeria
+  objective: captar_clientes
+  keywords:
+  - cerrajero
+  - cerrajeria
+  - cerraduras
+  - llaves
+  - seguridad
+  - puertas
+  services:
+  - cerrajeria
+  - cerrajero
+  - cambio de cerraduras
+  - revision de cerraduras
+  - seguridad de puertas
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, residential home security technician speaking with homeowner beside a front door, realistic, no text.
+  - Vertical 9:16 realistic locksmith service scene with packaged lock hardware and professional handoff, no text.
+  hashtags:
+  - Cerrajeria
+  - Cerrajero
+  - Seguridad
+  - WhatsApp
+  variants:
+  - hook: Necesitas cerrajero?
+    value: ConectaProIA te conecta por WhatsApp con opciones para cambios, revisiones o coordinacion de cerrajeria.
+    proof: Describe tu necesidad para coordinar alternativas seguras.
+    cta: Escribenos por WhatsApp.
+    short_text: Cerrajeria por WhatsApp.
+  - hook: Quieres cambiar o revisar una cerradura?
+    value: Busca opciones de cerrajeria y seguridad para puertas.
+    proof: ConectaProIA facilita el contacto con especialistas disponibles.
+    cta: Pide opciones ahora.
+    short_text: Seguridad de puertas.
+- id: enfermeria_a_domicilio
+  label: Enfermeria a domicilio
+  objective: captar_clientes
+  keywords:
+  - enfermeria
+  - enfermera
+  - domicilio
+  - cuidados
+  - salud
+  - atencion domiciliaria
+  services:
+  - enfermeria a domicilio
+  - cuidados de enfermeria
+  - atencion domiciliaria
+  - control de signos
+  - apoyo de enfermeria
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, nurse checking blood pressure for an adult patient at home, realistic, no text.
+  - Vertical 9:16 realistic home nursing service scene with caring professional and comfortable home interior, no text.
+  hashtags:
+  - Enfermeria
+  - EnfermeriaADomicilio
+  - Salud
+  - WhatsApp
+  variants:
+  - hook: Buscas enfermeria a domicilio?
+    value: ConectaProIA te conecta por WhatsApp con opciones de apoyo de enfermeria segun tu necesidad.
+    proof: Indica el requerimiento para coordinar alternativas profesionales.
+    cta: Escribenos por WhatsApp.
+    short_text: Enfermeria a domicilio.
+  - hook: Necesitas apoyo de enfermeria?
+    value: Busca opciones para atencion domiciliaria, control u orientacion de cuidados.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Apoyo de enfermeria.
+- id: fonoaudiologo
+  label: Fonoaudiologo
+  objective: captar_clientes
+  keywords:
+  - fonoaudiologo
+  - fonoaudiologia
+  - lenguaje
+  - habla
+  - voz
+  - audicion
+  services:
+  - fonoaudiologo
+  - fonoaudiologia
+  - terapia de lenguaje
+  - evaluacion del habla
+  - orientacion fonoaudiologica
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, speech therapist guiding a pronunciation exercise in a clean therapy room, realistic, no text.
+  - Vertical 9:16 realistic fonoaudiology service scene with therapist and patient, warm professional atmosphere, no text.
+  hashtags:
+  - Fonoaudiologo
+  - Fonoaudiologia
+  - TerapiaDeLenguaje
+  - WhatsApp
+  variants:
+  - hook: Buscas fonoaudiologo?
+    value: ConectaProIA te conecta por WhatsApp con opciones de evaluacion u orientacion fonoaudiologica.
+    proof: Describe la necesidad para coordinar alternativas de atencion.
+    cta: Escribenos por WhatsApp.
+    short_text: Fonoaudiologia por WhatsApp.
+  - hook: Necesitas apoyo en habla o lenguaje?
+    value: Busca opciones de fonoaudiologia, evaluacion u orientacion profesional.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Apoyo fonoaudiologico.
+- id: fosas_septicas_alcantarillado
+  label: Fosas septicas / alcantarillado
+  objective: captar_clientes
+  keywords:
+  - fosas septicas
+  - alcantarillado
+  - drenaje
+  - camara
+  - limpieza sanitaria
+  - mantencion
+  services:
+  - fosas septicas
+  - alcantarillado
+  - limpieza de fosas
+  - mantencion sanitaria
+  - revision de drenajes
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, technician servicing septic or sewer maintenance equipment outside a clean home, realistic, no text.
+  - Vertical 9:16 realistic sanitary maintenance service scene with utility truck and professional technician, clean presentation, no text.
+  hashtags:
+  - FosasSepticas
+  - Alcantarillado
+  - Mantencion
+  - WhatsApp
+  variants:
+  - hook: Problemas con alcantarillado?
+    value: ConectaProIA te conecta por WhatsApp con opciones para fosas septicas, drenajes y alcantarillado.
+    proof: Describe tu necesidad para coordinar alternativas tecnicas disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Fosas septicas y alcantarillado.
+  - hook: Necesitas revisar una fosa o drenaje?
+    value: Busca opciones para mantencion sanitaria, limpieza o revision tecnica.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Mantencion sanitaria.
+- id: paneles_solares
+  label: Paneles solares
+  objective: captar_clientes
+  keywords:
+  - paneles solares
+  - energia solar
+  - instalacion solar
+  - mantencion
+  - electricidad
+  services:
+  - paneles solares
+  - instalacion solar
+  - mantencion de paneles
+  - revision solar
+  - energia solar
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, solar technician inspecting rooftop solar panels, realistic, no text.
+  - Vertical 9:16 editorial solar panel maintenance service scene with bright sunlight and professional technician, no text.
+  hashtags:
+  - PanelesSolares
+  - EnergiaSolar
+  - Sustentabilidad
+  - WhatsApp
+  variants:
+  - hook: Buscas paneles solares?
+    value: ConectaProIA te conecta con opciones para instalacion, revision o mantencion solar.
+    proof: Describe tu proyecto para coordinar alternativas tecnicas.
+    cta: Escribenos por WhatsApp.
+    short_text: Paneles solares por WhatsApp.
+  - hook: Quieres revisar o instalar energia solar?
+    value: Busca opciones para proyectos solares, mantencion o evaluacion tecnica.
+    proof: La propuesta y disponibilidad se coordinan con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Energia solar para tu espacio.
+- id: red_wifi_internet
+  label: Red / WiFi / Internet hogar
+  objective: captar_clientes
+  keywords:
+  - wifi
+  - internet
+  - red
+  - router
+  - conectividad
+  - soporte tecnico
+  services:
+  - red wifi
+  - internet hogar
+  - configuracion de router
+  - soporte de red
+  - conectividad
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, network technician configuring a WiFi router in a modern home office, realistic, no text.
+  - Vertical 9:16 realistic home internet support service scene with router, laptop and technician, no text.
+  hashtags:
+  - WiFi
+  - InternetHogar
+  - SoporteTecnico
+  - WhatsApp
+  variants:
+  - hook: Tu WiFi falla?
+    value: ConectaProIA te conecta con opciones para configurar redes, routers e internet hogar.
+    proof: Describe el problema para coordinar alternativas de soporte.
+    cta: Escribenos por WhatsApp.
+    short_text: Soporte WiFi e internet.
+  - hook: Necesitas mejorar tu red?
+    value: Busca opciones para router, senal, cableado o configuracion de internet.
+    proof: ConectaProIA facilita el contacto con tecnicos disponibles.
+    cta: Pide opciones ahora.
+    short_text: Red hogar por WhatsApp.
+- id: comida_colaciones
+  label: Colaciones / comida casera
+  objective: captar_clientes
+  keywords:
+  - colaciones
+  - comida casera
+  - almuerzos
+  - platos listos
+  - pedidos
+  services:
+  - colaciones
+  - comida casera
+  - almuerzos preparados
+  - platos listos
+  - pedidos de comida
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, homemade lunch boxes and prepared meals in a clean kitchen, realistic, no text.
+  - Vertical 9:16 appetizing colaciones and comida casera service scene with fresh prepared meals, no text.
+  hashtags:
+  - Colaciones
+  - ComidaCasera
+  - Almuerzos
+  - WhatsApp
+  variants:
+  - hook: Buscas colaciones?
+    value: ConectaProIA te conecta por WhatsApp con opciones de comida casera y platos listos.
+    proof: Pide alternativas segun tu necesidad y coordina directo por WhatsApp.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Colaciones por WhatsApp.
+  - hook: Necesitas comida casera hoy?
+    value: Encuentra opciones de colaciones, almuerzos y platos preparados.
+    proof: ConectaProIA simplifica el contacto para coordinar rapido.
+    cta: Hablanos por WhatsApp.
+    short_text: Comida casera lista.
+- id: cosmetologia_limpieza_facial
+  label: Cosmetologia / limpieza facial
+  objective: captar_clientes
+  keywords:
+  - cosmetologia
+  - limpieza facial
+  - estetica
+  - facial
+  - cuidado de piel
+  services:
+  - cosmetologia
+  - limpieza facial
+  - cuidado facial
+  - estetica facial
+  - tratamientos de piel
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, cosmetologist performing a gentle facial cleansing treatment in a clean skincare studio, realistic, no text.
+  - Vertical 9:16 realistic facial care service scene with professional cosmetologist and calm wellness atmosphere, no text.
+  hashtags:
+  - Cosmetologia
+  - LimpiezaFacial
+  - Estetica
+  - WhatsApp
+  variants:
+  - hook: Buscas limpieza facial?
+    value: ConectaProIA te conecta con opciones de cosmetologia y cuidado facial.
+    proof: Indica el tipo de atencion que buscas para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Cosmetologia por WhatsApp.
+  - hook: Quieres cuidar tu piel?
+    value: Busca opciones para limpieza facial, estetica y orientacion cosmetologica.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Limpieza facial y estetica.
+- id: cuidado_de_mascotas
+  label: Cuidado de mascotas
+  objective: captar_clientes
+  keywords:
+  - cuidado de mascotas
+  - mascotas
+  - perros
+  - gatos
+  - paseos
+  - cuidador
+  services:
+  - cuidado de mascotas
+  - cuidado de perros
+  - cuidado de gatos
+  - paseos de mascotas
+  - apoyo para mascotas
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, caring pet sitter with dog and cat in a cozy home, realistic, no text.
+  - Vertical 9:16 lifestyle pet care service scene with happy pets and trustworthy caregiver, no text.
+  hashtags:
+  - CuidadoDeMascotas
+  - Mascotas
+  - PerrosYGatos
+  - WhatsApp
+  variants:
+  - hook: Necesitas cuidado de mascotas?
+    value: ConectaProIA te conecta por WhatsApp con opciones para cuidado, paseos o apoyo puntual.
+    proof: Indica especie, horario y necesidad para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Cuidado de mascotas.
+  - hook: Buscas apoyo para tu perro o gato?
+    value: Encuentra opciones de cuidado, paseos y apoyo para mascotas.
+    proof: La modalidad y disponibilidad se confirman con cada cuidador.
+    cta: Pide opciones ahora.
+    short_text: Mascotas cuidadas.
+- id: imagenologia_ecografia
+  label: Imagenologia / ecografia
+  objective: captar_clientes
+  keywords:
+  - imagenologia
+  - ecografia
+  - salud
+  - examen
+  - diagnostico por imagen
+  services:
+  - imagenologia
+  - ecografia
+  - examenes de imagen
+  - orientacion de salud
+  - atencion profesional
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, healthcare professional preparing an ultrasound exam in a clean medical imaging room, realistic, no text.
+  - Vertical 9:16 realistic medical imaging service scene with blurred ultrasound screen and professional staff, no text.
+  hashtags:
+  - Imagenologia
+  - Ecografia
+  - Salud
+  - WhatsApp
+  variants:
+  - hook: Buscas ecografia?
+    value: ConectaProIA te conecta con opciones de imagenologia o ecografia segun tu necesidad.
+    proof: Indica el tipo de examen para coordinar alternativas profesionales.
+    cta: Escribenos por WhatsApp.
+    short_text: Imagenologia por WhatsApp.
+  - hook: Necesitas un examen de imagen?
+    value: Busca opciones de ecografia, imagenologia u orientacion profesional.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Pide opciones ahora.
+    short_text: Ecografia e imagenologia.
+- id: lavado_de_autos
+  label: Lavado de autos
+  objective: captar_clientes
+  keywords:
+  - lavado de autos
+  - detailing
+  - limpieza auto
+  - vehiculo
+  - automotriz
+  services:
+  - lavado de autos
+  - limpieza automotriz
+  - detailing
+  - lavado interior
+  - lavado exterior
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, car detailer washing and polishing a clean car, realistic, no text.
+  - Vertical 9:16 dynamic auto detailing service scene with glossy car reflections and professional worker, no text.
+  hashtags:
+  - LavadoDeAutos
+  - Detailing
+  - Autos
+  - WhatsApp
+  variants:
+  - hook: Buscas lavado de autos?
+    value: ConectaProIA te conecta con opciones para lavado, limpieza o detailing automotriz.
+    proof: Indica el tipo de vehiculo y servicio para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Lavado de autos.
+  - hook: Quieres limpiar tu auto?
+    value: Busca opciones de lavado interior, exterior o detailing.
+    proof: ConectaProIA facilita el contacto con especialistas disponibles.
+    cta: Pide opciones ahora.
+    short_text: Limpieza automotriz.
+- id: limpieza_de_alfombras_y_tapices
+  label: Limpieza de alfombras y tapices
+  objective: captar_clientes
+  keywords:
+  - limpieza de alfombras
+  - limpieza de tapices
+  - sofa
+  - alfombras
+  - tapices
+  - limpieza profunda
+  services:
+  - limpieza de alfombras
+  - limpieza de tapices
+  - limpieza de sofa
+  - lavado de alfombras
+  - limpieza profunda
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional cleaner using extraction machine on sofa or rug in a modern home, realistic, no text.
+  - Vertical 9:16 realistic upholstery and carpet cleaning service scene with fresh home interior, no text.
+  hashtags:
+  - LimpiezaDeTapices
+  - LimpiezaDeAlfombras
+  - LimpiezaProfunda
+  - WhatsApp
+  variants:
+  - hook: Tapices o alfombras sucias?
+    value: ConectaProIA te conecta con opciones para limpieza de sofas, alfombras y tapices.
+    proof: Describe lo que necesitas limpiar para coordinar alternativas.
+    cta: Escribenos por WhatsApp.
+    short_text: Limpieza de tapices.
+  - hook: Quieres renovar tus espacios?
+    value: Busca opciones para limpieza profunda de alfombras, sofas y tapices.
+    proof: La modalidad y disponibilidad se confirman con cada especialista.
+    cta: Pide opciones ahora.
+    short_text: Alfombras y tapices.
+- id: limpieza_post_obra
+  label: Limpieza post obra
+  objective: captar_clientes
+  keywords:
+  - limpieza post obra
+  - post obra
+  - limpieza
+  - construccion
+  - remodelacion
+  - entrega
+  services:
+  - limpieza post obra
+  - limpieza despues de remodelacion
+  - limpieza de entrega
+  - limpieza profunda
+  - aseo post obra
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad, professional cleaner in newly renovated apartment cleaning windows and floors, realistic, no text.
+  - Vertical 9:16 realistic post-construction cleaning service scene in bright renovated interior, no text.
+  hashtags:
+  - LimpiezaPostObra
+  - Limpieza
+  - Remodelacion
+  - WhatsApp
+  variants:
+  - hook: Terminaste una obra?
+    value: ConectaProIA te conecta con opciones para limpieza post obra y entrega de espacios.
+    proof: Indica el tipo de espacio para coordinar alternativas disponibles.
+    cta: Escribenos por WhatsApp.
+    short_text: Limpieza post obra.
+  - hook: Necesitas dejar impecable un espacio?
+    value: Busca opciones para aseo post obra, limpieza profunda o entrega.
+    proof: ConectaProIA simplifica el contacto con especialistas.
+    cta: Pide opciones ahora.
+    short_text: Post obra impecable.
+- id: manicure_unas
+  label: Manicure / Uñas
+  objective: captar_clientes
+  keywords:
+  - manicure
+  - unas
+  - uñas
+  services:
+  - Manicure / Uñas
+  - manicure
+  - unas
+  - uñas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Manicure / Uñas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Manicure / Uñas, professional and varied composition, no text.
+  hashtags:
+  - ManicureUnas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas manicure / uñas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de manicure / uñas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Manicure / Uñas por WhatsApp.
+  - hook: Necesitas coordinar manicure / uñas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Manicure / Uñas por WhatsApp.
+- id: pintura
+  label: Pintor / Pintura
+  objective: captar_clientes
+  keywords:
+  - pintura
+  - pintor
+  services:
+  - Pintor / Pintura
+  - pintura
+  - pintor
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Pintor / Pintura, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Pintor / Pintura, professional and varied composition, no text.
+  hashtags:
+  - PintorPintura
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas pintor / pintura?
+    value: ConectaProIA te conecta por WhatsApp con opciones de pintor / pintura de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Pintor / Pintura por WhatsApp.
+  - hook: Necesitas coordinar pintor / pintura?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Pintor / Pintura por WhatsApp.
+- id: reparacion_celulares
+  label: Reparación de celulares
+  objective: captar_clientes
+  keywords:
+  - reparacion
+  - celulares
+  - reparación
+  services:
+  - Reparación de celulares
+  - reparacion
+  - celulares
+  - reparación
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Reparación de celulares, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Reparación de celulares, professional and varied composition, no text.
+  hashtags:
+  - ReparacionDeCelulares
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas reparación de celulares?
+    value: ConectaProIA te conecta por WhatsApp con opciones de reparación de celulares de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Reparación de celulares por WhatsApp.
+  - hook: Necesitas coordinar reparación de celulares?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Reparación de celulares por WhatsApp.
+- id: tens_cuidado_adulto_mayor
+  label: TENS / Cuidado adulto mayor
+  objective: captar_clientes
+  keywords:
+  - tens
+  - cuidado
+  - adulto
+  - mayor
+  services:
+  - TENS / Cuidado adulto mayor
+  - tens
+  - cuidado
+  - adulto
+  - mayor
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for TENS / Cuidado adulto mayor, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for TENS / Cuidado adulto mayor, professional and varied composition, no text.
+  hashtags:
+  - TENSCuidadoAdultoMayor
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas tens / cuidado adulto mayor?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de tens / cuidado adulto mayor.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: TENS / Cuidado adulto mayor por WhatsApp.
+  - hook: Necesitas coordinar tens / cuidado adulto mayor?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: TENS / Cuidado adulto mayor por WhatsApp.
+- id: reparacion_tv_audio
+  label: TV / Audio / Electrónica
+  objective: captar_clientes
+  keywords:
+  - reparacion
+  - audio
+  - electrónica
+  services:
+  - TV / Audio / Electrónica
+  - reparacion
+  - audio
+  - electrónica
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for TV / Audio / Electrónica, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for TV / Audio / Electrónica, professional and varied composition, no text.
+  hashtags:
+  - TVAudioElectronica
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas tv / audio / electrónica?
+    value: ConectaProIA te conecta por WhatsApp con opciones de tv / audio / electrónica de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: TV / Audio / Electrónica por WhatsApp.
+  - hook: Necesitas coordinar tv / audio / electrónica?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: TV / Audio / Electrónica por WhatsApp.
+- id: aire_acondicionado_automotriz
+  label: Aire acondicionado automotriz
+  objective: captar_clientes
+  keywords:
+  - aire
+  - acondicionado
+  - automotriz
+  services:
+  - Aire acondicionado automotriz
+  - aire
+  - acondicionado
+  - automotriz
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Aire acondicionado automotriz, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Aire acondicionado automotriz, professional and varied composition, no text.
+  hashtags:
+  - AireAcondicionadoAutomotriz
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas aire acondicionado automotriz?
+    value: ConectaProIA te conecta por WhatsApp con opciones de aire acondicionado automotriz para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Aire acondicionado automotriz por WhatsApp.
+  - hook: Necesitas coordinar aire acondicionado automotriz?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Aire acondicionado automotriz por WhatsApp.
+- id: asesora_hogar
+  label: Asesora de hogar
+  objective: captar_clientes
+  keywords:
+  - asesora
+  - hogar
+  services:
+  - Asesora de hogar
+  - asesora
+  - hogar
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Asesora de hogar, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Asesora de hogar, professional and varied composition, no text.
+  hashtags:
+  - AsesoraDeHogar
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas asesora de hogar?
+    value: ConectaProIA te conecta por WhatsApp con opciones de asesora de hogar de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Asesora de hogar por WhatsApp.
+  - hook: Necesitas coordinar asesora de hogar?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Asesora de hogar por WhatsApp.
+- id: cejas_y_pestanas
+  label: Cejas y pestañas
+  objective: captar_clientes
+  keywords:
+  - cejas
+  - pestanas
+  - pestañas
+  services:
+  - Cejas y pestañas
+  - cejas
+  - pestanas
+  - pestañas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Cejas y pestañas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Cejas y pestañas, professional and varied composition, no text.
+  hashtags:
+  - CejasYPestanas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas cejas y pestañas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de cejas y pestañas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Cejas y pestañas por WhatsApp.
+  - hook: Necesitas coordinar cejas y pestañas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Cejas y pestañas por WhatsApp.
+- id: configuracion_de_celulares_y_dispositivos
+  label: Configuracion de celulares y dispositivos
+  objective: captar_clientes
+  keywords:
+  - configuracion
+  - celulares
+  - dispositivos
+  services:
+  - Configuracion de celulares y dispositivos
+  - configuracion
+  - celulares
+  - dispositivos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Configuracion de celulares y dispositivos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Configuracion de celulares y dispositivos, professional and varied composition, no text.
+  hashtags:
+  - ConfiguracionDeCelularesYDis
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas configuracion de celulares y dispositivos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de configuracion de celulares y dispositivos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Configuracion de celulares y dispositivos por WhatsApp.
+  - hook: Necesitas coordinar configuracion de celulares y dispositivos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Configuracion de celulares y dispositivos por WhatsApp.
+- id: corretaje_de_propiedades
+  label: Corretaje de propiedades
+  objective: captar_clientes
+  keywords:
+  - corretaje
+  - propiedades
+  services:
+  - Corretaje de propiedades
+  - corretaje
+  - propiedades
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Corretaje de propiedades, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Corretaje de propiedades, professional and varied composition, no text.
+  hashtags:
+  - CorretajeDePropiedades
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas corretaje de propiedades?
+    value: ConectaProIA te conecta por WhatsApp con opciones de corretaje de propiedades de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Corretaje de propiedades por WhatsApp.
+  - hook: Necesitas coordinar corretaje de propiedades?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Corretaje de propiedades por WhatsApp.
+- id: electricidad_automotriz
+  label: Electricidad automotriz
+  objective: captar_clientes
+  keywords:
+  - electricidad
+  - automotriz
+  services:
+  - Electricidad automotriz
+  - electricidad
+  - automotriz
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Electricidad automotriz, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Electricidad automotriz, professional and varied composition, no text.
+  hashtags:
+  - ElectricidadAutomotriz
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas electricidad automotriz?
+    value: ConectaProIA te conecta por WhatsApp con opciones de electricidad automotriz para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Electricidad automotriz por WhatsApp.
+  - hook: Necesitas coordinar electricidad automotriz?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Electricidad automotriz por WhatsApp.
+- id: grua_asistencia_ruta
+  label: Grúa / Asistencia en ruta
+  objective: captar_clientes
+  keywords:
+  - grua
+  - asistencia
+  - ruta
+  - grúa
+  services:
+  - Grúa / Asistencia en ruta
+  - grua
+  - asistencia
+  - ruta
+  - grúa
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Grúa / Asistencia en ruta, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Grúa / Asistencia en ruta, professional and varied composition, no text.
+  hashtags:
+  - GruaAsistenciaEnRuta
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas grúa / asistencia en ruta?
+    value: ConectaProIA te conecta por WhatsApp con opciones de grúa / asistencia en ruta para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Grúa / Asistencia en ruta por WhatsApp.
+  - hook: Necesitas coordinar grúa / asistencia en ruta?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Grúa / Asistencia en ruta por WhatsApp.
+- id: nineria_babysitter
+  label: Ninera / Babysitter
+  objective: captar_clientes
+  keywords:
+  - nineria
+  - babysitter
+  - ninera
+  services:
+  - Ninera / Babysitter
+  - nineria
+  - babysitter
+  - ninera
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Ninera / Babysitter, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Ninera / Babysitter, professional and varied composition, no text.
+  hashtags:
+  - NineraBabysitter
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas ninera / babysitter?
+    value: ConectaProIA te conecta por WhatsApp con opciones de ninera / babysitter de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Ninera / Babysitter por WhatsApp.
+  - hook: Necesitas coordinar ninera / babysitter?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Ninera / Babysitter por WhatsApp.
+- id: peluqueria_barberia
+  label: Peluquero / Barbería
+  objective: captar_clientes
+  keywords:
+  - peluqueria
+  - barberia
+  - peluquero
+  - barbería
+  services:
+  - Peluquero / Barbería
+  - peluqueria
+  - barberia
+  - peluquero
+  - barbería
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Peluquero / Barbería, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Peluquero / Barbería, professional and varied composition, no text.
+  hashtags:
+  - PeluqueroBarberia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas peluquero / barbería?
+    value: ConectaProIA te conecta por WhatsApp con opciones de peluquero / barbería de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Peluquero / Barbería por WhatsApp.
+  - hook: Necesitas coordinar peluquero / barbería?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Peluquero / Barbería por WhatsApp.
+- id: podologo
+  label: Podologo
+  objective: captar_clientes
+  keywords:
+  - podologo
+  services:
+  - Podologo
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Podologo, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Podologo, professional and varied composition, no text.
+  hashtags:
+  - Podologo
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas podologo?
+    value: ConectaProIA te conecta por WhatsApp con opciones de podologo de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Podologo por WhatsApp.
+  - hook: Necesitas coordinar podologo?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Podologo por WhatsApp.
+- id: psicopedagogia
+  label: Psicopedagogia
+  objective: captar_clientes
+  keywords:
+  - psicopedagogia
+  services:
+  - Psicopedagogia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Psicopedagogia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Psicopedagogia, professional and varied composition, no text.
+  hashtags:
+  - Psicopedagogia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas psicopedagogia?
+    value: ConectaProIA te conecta por WhatsApp con opciones de psicopedagogia de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Psicopedagogia por WhatsApp.
+  - hook: Necesitas coordinar psicopedagogia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Psicopedagogia por WhatsApp.
+- id: seguridad_privada
+  label: Seguridad privada
+  objective: captar_clientes
+  keywords:
+  - seguridad
+  - privada
+  services:
+  - Seguridad privada
+  - seguridad
+  - privada
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Seguridad privada, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Seguridad privada, professional and varied composition, no text.
+  hashtags:
+  - SeguridadPrivada
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas seguridad privada?
+    value: ConectaProIA te conecta por WhatsApp con opciones de seguridad privada de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Seguridad privada por WhatsApp.
+  - hook: Necesitas coordinar seguridad privada?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Seguridad privada por WhatsApp.
+- id: tasacion_inmobiliaria
+  label: Tasacion inmobiliaria
+  objective: captar_clientes
+  keywords:
+  - tasacion
+  - inmobiliaria
+  services:
+  - Tasacion inmobiliaria
+  - tasacion
+  - inmobiliaria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Tasacion inmobiliaria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Tasacion inmobiliaria, professional and varied composition, no text.
+  hashtags:
+  - TasacionInmobiliaria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas tasacion inmobiliaria?
+    value: ConectaProIA te conecta por WhatsApp con opciones de tasacion inmobiliaria de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Tasacion inmobiliaria por WhatsApp.
+  - hook: Necesitas coordinar tasacion inmobiliaria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Tasacion inmobiliaria por WhatsApp.
+- id: traumatologia
+  label: Traumatologia
+  objective: captar_clientes
+  keywords:
+  - traumatologia
+  services:
+  - Traumatologia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Traumatologia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Traumatologia, professional and varied composition, no text.
+  hashtags:
+  - Traumatologia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas traumatologia?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de traumatologia.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Traumatologia por WhatsApp.
+  - hook: Necesitas coordinar traumatologia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Traumatologia por WhatsApp.
+- id: administracion_de_propiedades
+  label: Administracion de propiedades
+  objective: captar_clientes
+  keywords:
+  - administracion
+  - propiedades
+  services:
+  - Administracion de propiedades
+  - administracion
+  - propiedades
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Administracion de propiedades, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Administracion de propiedades, professional and varied composition, no text.
+  hashtags:
+  - AdministracionDePropiedades
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas administracion de propiedades?
+    value: ConectaProIA te conecta por WhatsApp con opciones de administracion de propiedades de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Administracion de propiedades por WhatsApp.
+  - hook: Necesitas coordinar administracion de propiedades?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Administracion de propiedades por WhatsApp.
+- id: animacion_de_eventos
+  label: Animacion de eventos
+  objective: captar_clientes
+  keywords:
+  - animacion
+  - eventos
+  services:
+  - Animacion de eventos
+  - animacion
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Animacion de eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Animacion de eventos, professional and varied composition, no text.
+  hashtags:
+  - AnimacionDeEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas animacion de eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de animacion de eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Animacion de eventos por WhatsApp.
+  - hook: Necesitas coordinar animacion de eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Animacion de eventos por WhatsApp.
+- id: arriendo_mobiliario_eventos
+  label: Arriendo mobiliario eventos
+  objective: captar_clientes
+  keywords:
+  - arriendo
+  - mobiliario
+  - eventos
+  services:
+  - Arriendo mobiliario eventos
+  - arriendo
+  - mobiliario
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Arriendo mobiliario eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Arriendo mobiliario eventos, professional and varied composition, no text.
+  hashtags:
+  - ArriendoMobiliarioEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas arriendo mobiliario eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de arriendo mobiliario eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Arriendo mobiliario eventos por WhatsApp.
+  - hook: Necesitas coordinar arriendo mobiliario eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Arriendo mobiliario eventos por WhatsApp.
+- id: banqueteria
+  label: Banquetería
+  objective: captar_clientes
+  keywords:
+  - banqueteria
+  - banquetería
+  services:
+  - Banquetería
+  - banqueteria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Banquetería, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Banquetería, professional and varied composition, no text.
+  hashtags:
+  - Banqueteria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas banquetería?
+    value: ConectaProIA te conecta por WhatsApp con opciones de banquetería.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Banquetería por WhatsApp.
+  - hook: Necesitas coordinar banquetería?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Banquetería por WhatsApp.
+- id: ciberseguridad_antivirus
+  label: Ciberseguridad / Antivirus
+  objective: captar_clientes
+  keywords:
+  - ciberseguridad
+  - antivirus
+  services:
+  - Ciberseguridad / Antivirus
+  - ciberseguridad
+  - antivirus
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Ciberseguridad / Antivirus, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Ciberseguridad / Antivirus, professional and varied composition, no text.
+  hashtags:
+  - CiberseguridadAntivirus
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas ciberseguridad / antivirus?
+    value: ConectaProIA te conecta por WhatsApp con opciones de ciberseguridad / antivirus de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Ciberseguridad / Antivirus por WhatsApp.
+  - hook: Necesitas coordinar ciberseguridad / antivirus?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Ciberseguridad / Antivirus por WhatsApp.
+- id: clases_de_conducir
+  label: Clases de conducir
+  objective: captar_clientes
+  keywords:
+  - clases
+  - conducir
+  services:
+  - Clases de conducir
+  - clases
+  - conducir
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Clases de conducir, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Clases de conducir, professional and varied composition, no text.
+  hashtags:
+  - ClasesDeConducir
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas clases de conducir?
+    value: ConectaProIA te conecta por WhatsApp con opciones de clases de conducir para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Clases de conducir por WhatsApp.
+  - hook: Necesitas coordinar clases de conducir?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Clases de conducir por WhatsApp.
+- id: decoracion_de_eventos
+  label: Decoracion de eventos
+  objective: captar_clientes
+  keywords:
+  - decoracion
+  - eventos
+  services:
+  - Decoracion de eventos
+  - decoracion
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Decoracion de eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Decoracion de eventos, professional and varied composition, no text.
+  hashtags:
+  - DecoracionDeEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas decoracion de eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de decoracion de eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Decoracion de eventos por WhatsApp.
+  - hook: Necesitas coordinar decoracion de eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Decoracion de eventos por WhatsApp.
+- id: desarrollo_web
+  label: Desarrollo de sistemas informaticos
+  objective: captar_clientes
+  keywords:
+  - desarrollo
+  - web
+  - sistemas
+  - informaticos
+  services:
+  - Desarrollo de sistemas informaticos
+  - desarrollo
+  - web
+  - sistemas
+  - informaticos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Desarrollo de sistemas informaticos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Desarrollo de sistemas informaticos, professional and varied composition, no text.
+  hashtags:
+  - DesarrolloDeSistemasInformat
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas desarrollo de sistemas informaticos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de desarrollo de sistemas informaticos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Desarrollo de sistemas informaticos por WhatsApp.
+  - hook: Necesitas coordinar desarrollo de sistemas informaticos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Desarrollo de sistemas informaticos por WhatsApp.
+- id: dj_musica_eventos
+  label: DJ / Musica eventos
+  objective: captar_clientes
+  keywords:
+  - musica
+  - eventos
+  services:
+  - DJ / Musica eventos
+  - musica
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for DJ / Musica eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for DJ / Musica eventos, professional and varied composition, no text.
+  hashtags:
+  - DJMusicaEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas dj / musica eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de dj / musica eventos para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: DJ / Musica eventos por WhatsApp.
+  - hook: Necesitas coordinar dj / musica eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: DJ / Musica eventos por WhatsApp.
+- id: entrenador_personal
+  label: Entrenador personal
+  objective: captar_clientes
+  keywords:
+  - entrenador
+  - personal
+  services:
+  - Entrenador personal
+  - entrenador
+  - personal
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Entrenador personal, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Entrenador personal, professional and varied composition, no text.
+  hashtags:
+  - EntrenadorPersonal
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas entrenador personal?
+    value: ConectaProIA te conecta por WhatsApp con opciones de entrenador personal de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Entrenador personal por WhatsApp.
+  - hook: Necesitas coordinar entrenador personal?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Entrenador personal por WhatsApp.
+- id: garzones_personal_eventos
+  label: Garzones / Personal eventos
+  objective: captar_clientes
+  keywords:
+  - garzones
+  - personal
+  - eventos
+  services:
+  - Garzones / Personal eventos
+  - garzones
+  - personal
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Garzones / Personal eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Garzones / Personal eventos, professional and varied composition, no text.
+  hashtags:
+  - GarzonesPersonalEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas garzones / personal eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de garzones / personal eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Garzones / Personal eventos por WhatsApp.
+  - hook: Necesitas coordinar garzones / personal eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Garzones / Personal eventos por WhatsApp.
+- id: impresoras_scanner
+  label: Impresoras / Scanner
+  objective: captar_clientes
+  keywords:
+  - impresoras
+  - scanner
+  services:
+  - Impresoras / Scanner
+  - impresoras
+  - scanner
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Impresoras / Scanner, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Impresoras / Scanner, professional and varied composition, no text.
+  hashtags:
+  - ImpresorasScanner
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas impresoras / scanner?
+    value: ConectaProIA te conecta por WhatsApp con opciones de impresoras / scanner de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Impresoras / Scanner por WhatsApp.
+  - hook: Necesitas coordinar impresoras / scanner?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Impresoras / Scanner por WhatsApp.
+- id: laboratorio_clinico
+  label: Laboratorio clinico
+  objective: captar_clientes
+  keywords:
+  - laboratorio
+  - clinico
+  services:
+  - Laboratorio clinico
+  - laboratorio
+  - clinico
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Laboratorio clinico, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Laboratorio clinico, professional and varied composition, no text.
+  hashtags:
+  - LaboratorioClinico
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas laboratorio clinico?
+    value: ConectaProIA te conecta por WhatsApp con opciones de laboratorio clinico de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Laboratorio clinico por WhatsApp.
+  - hook: Necesitas coordinar laboratorio clinico?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Laboratorio clinico por WhatsApp.
+- id: marketing_digital
+  label: Marketing digital
+  objective: captar_clientes
+  keywords:
+  - marketing
+  - digital
+  services:
+  - Marketing digital
+  - marketing
+  - digital
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Marketing digital, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Marketing digital, professional and varied composition, no text.
+  hashtags:
+  - MarketingDigital
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas marketing digital?
+    value: ConectaProIA te conecta por WhatsApp con opciones de marketing digital de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Marketing digital por WhatsApp.
+  - hook: Necesitas coordinar marketing digital?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Marketing digital por WhatsApp.
+- id: masajes
+  label: Masajista
+  objective: captar_clientes
+  keywords:
+  - masajes
+  - masajista
+  services:
+  - Masajista
+  - masajes
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Masajista, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Masajista, professional and varied composition, no text.
+  hashtags:
+  - Masajista
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas masajista?
+    value: ConectaProIA te conecta por WhatsApp con opciones de masajista de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Masajista por WhatsApp.
+  - hook: Necesitas coordinar masajista?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Masajista por WhatsApp.
+- id: neumaticos_vulcanizacion
+  label: Neumaticos / Vulcanizacion
+  objective: captar_clientes
+  keywords:
+  - neumaticos
+  - vulcanizacion
+  services:
+  - Neumaticos / Vulcanizacion
+  - neumaticos
+  - vulcanizacion
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Neumaticos / Vulcanizacion, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Neumaticos / Vulcanizacion, professional and varied composition, no text.
+  hashtags:
+  - NeumaticosVulcanizacion
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas neumaticos / vulcanizacion?
+    value: ConectaProIA te conecta por WhatsApp con opciones de neumaticos / vulcanizacion para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Neumaticos / Vulcanizacion por WhatsApp.
+  - hook: Necesitas coordinar neumaticos / vulcanizacion?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Neumaticos / Vulcanizacion por WhatsApp.
+- id: oftalmologia
+  label: Oftalmologia
+  objective: captar_clientes
+  keywords:
+  - oftalmologia
+  services:
+  - Oftalmologia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Oftalmologia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Oftalmologia, professional and varied composition, no text.
+  hashtags:
+  - Oftalmologia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas oftalmologia?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de oftalmologia.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Oftalmologia por WhatsApp.
+  - hook: Necesitas coordinar oftalmologia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Oftalmologia por WhatsApp.
+- id: produccion_audiovisual
+  label: Produccion audiovisual
+  objective: captar_clientes
+  keywords:
+  - produccion
+  - audiovisual
+  services:
+  - Produccion audiovisual
+  - produccion
+  - audiovisual
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Produccion audiovisual, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Produccion audiovisual, professional and varied composition, no text.
+  hashtags:
+  - ProduccionAudiovisual
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas produccion audiovisual?
+    value: ConectaProIA te conecta por WhatsApp con opciones de produccion audiovisual de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Produccion audiovisual por WhatsApp.
+  - hook: Necesitas coordinar produccion audiovisual?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Produccion audiovisual por WhatsApp.
+- id: psiquiatria
+  label: Psiquiatria
+  objective: captar_clientes
+  keywords:
+  - psiquiatria
+  services:
+  - Psiquiatria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Psiquiatria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Psiquiatria, professional and varied composition, no text.
+  hashtags:
+  - Psiquiatria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas psiquiatria?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de psiquiatria.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Psiquiatria por WhatsApp.
+  - hook: Necesitas coordinar psiquiatria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Psiquiatria por WhatsApp.
+- id: reparacion_de_calzado
+  label: Reparacion de calzado
+  objective: captar_clientes
+  keywords:
+  - reparacion
+  - calzado
+  services:
+  - Reparacion de calzado
+  - reparacion
+  - calzado
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Reparacion de calzado, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Reparacion de calzado, professional and varied composition, no text.
+  hashtags:
+  - ReparacionDeCalzado
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas reparacion de calzado?
+    value: ConectaProIA te conecta por WhatsApp con opciones de reparacion de calzado de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Reparacion de calzado por WhatsApp.
+  - hook: Necesitas coordinar reparacion de calzado?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Reparacion de calzado por WhatsApp.
+- id: soldador
+  label: Soldador
+  objective: captar_clientes
+  keywords:
+  - soldador
+  services:
+  - Soldador
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Soldador, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Soldador, professional and varied composition, no text.
+  hashtags:
+  - Soldador
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas soldador?
+    value: ConectaProIA te conecta por WhatsApp con opciones de soldador de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Soldador por WhatsApp.
+  - hook: Necesitas coordinar soldador?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Soldador por WhatsApp.
+- id: topografia
+  label: Topografia
+  objective: captar_clientes
+  keywords:
+  - topografia
+  services:
+  - Topografia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Topografia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Topografia, professional and varied composition, no text.
+  hashtags:
+  - Topografia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas topografia?
+    value: ConectaProIA te conecta por WhatsApp con opciones de topografia de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Topografia por WhatsApp.
+  - hook: Necesitas coordinar topografia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Topografia por WhatsApp.
+- id: yoga_pilates
+  label: Yoga / Pilates
+  objective: captar_clientes
+  keywords:
+  - yoga
+  - pilates
+  services:
+  - Yoga / Pilates
+  - yoga
+  - pilates
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Yoga / Pilates, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Yoga / Pilates, professional and varied composition, no text.
+  hashtags:
+  - YogaPilates
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas yoga / pilates?
+    value: ConectaProIA te conecta por WhatsApp con opciones de yoga / pilates de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Yoga / Pilates por WhatsApp.
+  - hook: Necesitas coordinar yoga / pilates?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Yoga / Pilates por WhatsApp.
+- id: agencia_de_viajes
+  label: Agencia de viajes
+  objective: captar_clientes
+  keywords:
+  - agencia
+  - viajes
+  services:
+  - Agencia de viajes
+  - agencia
+  - viajes
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Agencia de viajes, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Agencia de viajes, professional and varied composition, no text.
+  hashtags:
+  - AgenciaDeViajes
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas agencia de viajes?
+    value: ConectaProIA te conecta por WhatsApp con opciones de agencia de viajes de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Agencia de viajes por WhatsApp.
+  - hook: Necesitas coordinar agencia de viajes?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Agencia de viajes por WhatsApp.
+- id: aislacion_termica_acustica
+  label: Aislacion termica / acustica
+  objective: captar_clientes
+  keywords:
+  - aislacion
+  - termica
+  - acustica
+  services:
+  - Aislacion termica / acustica
+  - aislacion
+  - termica
+  - acustica
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Aislacion termica / acustica, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Aislacion termica / acustica, professional and varied composition, no text.
+  hashtags:
+  - AislacionTermicaAcustica
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas aislacion termica / acustica?
+    value: ConectaProIA te conecta por WhatsApp con opciones de aislacion termica / acustica de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Aislacion termica / acustica por WhatsApp.
+  - hook: Necesitas coordinar aislacion termica / acustica?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Aislacion termica / acustica por WhatsApp.
+- id: armado_de_muebles
+  label: Armado de muebles
+  objective: captar_clientes
+  keywords:
+  - armado
+  - muebles
+  services:
+  - Armado de muebles
+  - armado
+  - muebles
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Armado de muebles, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Armado de muebles, professional and varied composition, no text.
+  hashtags:
+  - ArmadoDeMuebles
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas armado de muebles?
+    value: ConectaProIA te conecta por WhatsApp con opciones de armado de muebles de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Armado de muebles por WhatsApp.
+  - hook: Necesitas coordinar armado de muebles?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Armado de muebles por WhatsApp.
+- id: arriendo_carpas_eventos
+  label: Arriendo carpas eventos
+  objective: captar_clientes
+  keywords:
+  - arriendo
+  - carpas
+  - eventos
+  services:
+  - Arriendo carpas eventos
+  - arriendo
+  - carpas
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Arriendo carpas eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Arriendo carpas eventos, professional and varied composition, no text.
+  hashtags:
+  - ArriendoCarpasEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas arriendo carpas eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de arriendo carpas eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Arriendo carpas eventos por WhatsApp.
+  - hook: Necesitas coordinar arriendo carpas eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Arriendo carpas eventos por WhatsApp.
+- id: audio_e_iluminacion_eventos
+  label: Audio e iluminacion eventos
+  objective: captar_clientes
+  keywords:
+  - audio
+  - iluminacion
+  - eventos
+  services:
+  - Audio e iluminacion eventos
+  - audio
+  - iluminacion
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Audio e iluminacion eventos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Audio e iluminacion eventos, professional and varied composition, no text.
+  hashtags:
+  - AudioEIluminacionEventos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas audio e iluminacion eventos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de audio e iluminacion eventos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Audio e iluminacion eventos por WhatsApp.
+  - hook: Necesitas coordinar audio e iluminacion eventos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Audio e iluminacion eventos por WhatsApp.
+- id: ceramista
+  label: Ceramista
+  objective: captar_clientes
+  keywords:
+  - ceramista
+  services:
+  - Ceramista
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Ceramista, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Ceramista, professional and varied composition, no text.
+  hashtags:
+  - Ceramista
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas ceramista?
+    value: ConectaProIA te conecta por WhatsApp con opciones de ceramista de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Ceramista por WhatsApp.
+  - hook: Necesitas coordinar ceramista?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Ceramista por WhatsApp.
+- id: clases_de_idiomas
+  label: Clases de idiomas
+  objective: captar_clientes
+  keywords:
+  - clases
+  - idiomas
+  services:
+  - Clases de idiomas
+  - clases
+  - idiomas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Clases de idiomas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Clases de idiomas, professional and varied composition, no text.
+  hashtags:
+  - ClasesDeIdiomas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas clases de idiomas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de clases de idiomas para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Clases de idiomas por WhatsApp.
+  - hook: Necesitas coordinar clases de idiomas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Clases de idiomas por WhatsApp.
+- id: clases_deportivas
+  label: Clases deportivas
+  objective: captar_clientes
+  keywords:
+  - clases
+  - deportivas
+  services:
+  - Clases deportivas
+  - clases
+  - deportivas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Clases deportivas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Clases deportivas, professional and varied composition, no text.
+  hashtags:
+  - ClasesDeportivas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas clases deportivas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de clases deportivas para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Clases deportivas por WhatsApp.
+  - hook: Necesitas coordinar clases deportivas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Clases deportivas por WhatsApp.
+- id: clases_de_programacion
+  label: Clases de programacion
+  objective: captar_clientes
+  keywords:
+  - clases
+  - programacion
+  services:
+  - Clases de programacion
+  - clases
+  - programacion
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Clases de programacion, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Clases de programacion, professional and varied composition, no text.
+  hashtags:
+  - ClasesDeProgramacion
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas clases de programacion?
+    value: ConectaProIA te conecta por WhatsApp con opciones de clases de programacion para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Clases de programacion por WhatsApp.
+  - hook: Necesitas coordinar clases de programacion?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Clases de programacion por WhatsApp.
+- id: cobranza
+  label: Cobranza
+  objective: captar_clientes
+  keywords:
+  - cobranza
+  services:
+  - Cobranza
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Cobranza, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Cobranza, professional and varied composition, no text.
+  hashtags:
+  - Cobranza
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas cobranza?
+    value: ConectaProIA te conecta por WhatsApp con opciones de cobranza de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Cobranza por WhatsApp.
+  - hook: Necesitas coordinar cobranza?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Cobranza por WhatsApp.
+- id: dermatologia
+  label: Dermatologia
+  objective: captar_clientes
+  keywords:
+  - dermatologia
+  services:
+  - Dermatologia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Dermatologia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Dermatologia, professional and varied composition, no text.
+  hashtags:
+  - Dermatologia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas dermatologia?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de dermatologia.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Dermatologia por WhatsApp.
+  - hook: Necesitas coordinar dermatologia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Dermatologia por WhatsApp.
+- id: desabolladura_y_pintura_automotriz
+  label: Desabolladura y pintura automotriz
+  objective: captar_clientes
+  keywords:
+  - desabolladura
+  - pintura
+  - automotriz
+  services:
+  - Desabolladura y pintura automotriz
+  - desabolladura
+  - pintura
+  - automotriz
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Desabolladura y pintura automotriz, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Desabolladura y pintura automotriz, professional and varied composition, no text.
+  hashtags:
+  - DesabolladuraYPinturaAutomot
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas desabolladura y pintura automotriz?
+    value: ConectaProIA te conecta por WhatsApp con opciones de desabolladura y pintura automotriz para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Desabolladura y pintura automotriz por WhatsApp.
+  - hook: Necesitas coordinar desabolladura y pintura automotriz?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Desabolladura y pintura automotriz por WhatsApp.
+- id: detailing_automotriz
+  label: Detailing automotriz
+  objective: captar_clientes
+  keywords:
+  - detailing
+  - automotriz
+  services:
+  - Detailing automotriz
+  - detailing
+  - automotriz
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Detailing automotriz, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Detailing automotriz, professional and varied composition, no text.
+  hashtags:
+  - DetailingAutomotriz
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas detailing automotriz?
+    value: ConectaProIA te conecta por WhatsApp con opciones de detailing automotriz para tu vehiculo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Detailing automotriz por WhatsApp.
+  - hook: Necesitas coordinar detailing automotriz?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Detailing automotriz por WhatsApp.
+- id: diseno_grafico
+  label: Diseñador gráfico
+  objective: captar_clientes
+  keywords:
+  - diseno
+  - grafico
+  - diseñador
+  - gráfico
+  services:
+  - Diseñador gráfico
+  - diseno
+  - grafico
+  - diseñador
+  - gráfico
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Diseñador gráfico, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Diseñador gráfico, professional and varied composition, no text.
+  hashtags:
+  - DisenadorGrafico
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas diseñador gráfico?
+    value: ConectaProIA te conecta por WhatsApp con opciones de diseñador gráfico de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Diseñador gráfico por WhatsApp.
+  - hook: Necesitas coordinar diseñador gráfico?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Diseñador gráfico por WhatsApp.
+- id: fotografia_eventos
+  label: Fotógrafo
+  objective: captar_clientes
+  keywords:
+  - fotografia
+  - eventos
+  - fotógrafo
+  services:
+  - Fotógrafo
+  - fotografia
+  - eventos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Fotógrafo, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Fotógrafo, professional and varied composition, no text.
+  hashtags:
+  - Fotografo
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas fotógrafo?
+    value: ConectaProIA te conecta por WhatsApp con opciones de fotógrafo de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Fotógrafo por WhatsApp.
+  - hook: Necesitas coordinar fotógrafo?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Fotógrafo por WhatsApp.
+- id: techumbre_filtraciones
+  label: Hojalatero
+  objective: captar_clientes
+  keywords:
+  - techumbre
+  - filtraciones
+  - hojalatero
+  services:
+  - Hojalatero
+  - techumbre
+  - filtraciones
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Hojalatero, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Hojalatero, professional and varied composition, no text.
+  hashtags:
+  - Hojalatero
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas hojalatero?
+    value: ConectaProIA te conecta por WhatsApp con opciones de hojalatero de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Hojalatero por WhatsApp.
+  - hook: Necesitas coordinar hojalatero?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Hojalatero por WhatsApp.
+- id: impermeabilizacion
+  label: Impermeabilizacion
+  objective: captar_clientes
+  keywords:
+  - impermeabilizacion
+  services:
+  - Impermeabilizacion
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Impermeabilizacion, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Impermeabilizacion, professional and varied composition, no text.
+  hashtags:
+  - Impermeabilizacion
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas impermeabilizacion?
+    value: ConectaProIA te conecta por WhatsApp con opciones de impermeabilizacion de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Impermeabilizacion por WhatsApp.
+  - hook: Necesitas coordinar impermeabilizacion?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Impermeabilizacion por WhatsApp.
+- id: ingenieria_calculo_estructural
+  label: Ingenieria / Calculo estructural
+  objective: captar_clientes
+  keywords:
+  - ingenieria
+  - calculo
+  - estructural
+  services:
+  - Ingenieria / Calculo estructural
+  - ingenieria
+  - calculo
+  - estructural
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Ingenieria / Calculo estructural, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Ingenieria / Calculo estructural, professional and varied composition, no text.
+  hashtags:
+  - IngenieriaCalculoEstructural
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas ingenieria / calculo estructural?
+    value: ConectaProIA te conecta por WhatsApp con opciones de ingenieria / calculo estructural de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Ingenieria / Calculo estructural por WhatsApp.
+  - hook: Necesitas coordinar ingenieria / calculo estructural?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Ingenieria / Calculo estructural por WhatsApp.
+- id: jardineria
+  label: Jardinería
+  objective: captar_clientes
+  keywords:
+  - jardineria
+  - jardinería
+  services:
+  - Jardinería
+  - jardineria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Jardinería, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Jardinería, professional and varied composition, no text.
+  hashtags:
+  - Jardineria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas jardinería?
+    value: ConectaProIA te conecta por WhatsApp con opciones de jardinería de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Jardinería por WhatsApp.
+  - hook: Necesitas coordinar jardinería?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Jardinería por WhatsApp.
+- id: albanileria
+  label: Maestro / Albañilería
+  objective: captar_clientes
+  keywords:
+  - albanileria
+  - maestro
+  - albañilería
+  services:
+  - Maestro / Albañilería
+  - albanileria
+  - maestro
+  - albañilería
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Maestro / Albañilería, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Maestro / Albañilería, professional and varied composition, no text.
+  hashtags:
+  - MaestroAlbanileria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas maestro / albañilería?
+    value: ConectaProIA te conecta por WhatsApp con opciones de maestro / albañilería de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Maestro / Albañilería por WhatsApp.
+  - hook: Necesitas coordinar maestro / albañilería?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Maestro / Albañilería por WhatsApp.
+- id: maestro_general
+  label: Maestro General
+  objective: captar_clientes
+  keywords:
+  - maestro
+  - general
+  services:
+  - Maestro General
+  - maestro
+  - general
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Maestro General, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Maestro General, professional and varied composition, no text.
+  hashtags:
+  - MaestroGeneral
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas maestro general?
+    value: ConectaProIA te conecta por WhatsApp con opciones de maestro general de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Maestro General por WhatsApp.
+  - hook: Necesitas coordinar maestro general?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Maestro General por WhatsApp.
+- id: mantencion_de_piscinas
+  label: Mantencion de piscinas
+  objective: captar_clientes
+  keywords:
+  - mantencion
+  - piscinas
+  services:
+  - Mantencion de piscinas
+  - mantencion
+  - piscinas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Mantencion de piscinas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Mantencion de piscinas, professional and varied composition, no text.
+  hashtags:
+  - MantencionDePiscinas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas mantencion de piscinas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de mantencion de piscinas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Mantencion de piscinas por WhatsApp.
+  - hook: Necesitas coordinar mantencion de piscinas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Mantencion de piscinas por WhatsApp.
+- id: maquillaje
+  label: Maquillaje
+  objective: captar_clientes
+  keywords:
+  - maquillaje
+  services:
+  - Maquillaje
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Maquillaje, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Maquillaje, professional and varied composition, no text.
+  hashtags:
+  - Maquillaje
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas maquillaje?
+    value: ConectaProIA te conecta por WhatsApp con opciones de maquillaje de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Maquillaje por WhatsApp.
+  - hook: Necesitas coordinar maquillaje?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Maquillaje por WhatsApp.
+- id: matrona
+  label: Matrona
+  objective: captar_clientes
+  keywords:
+  - matrona
+  services:
+  - Matrona
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Matrona, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Matrona, professional and varied composition, no text.
+  hashtags:
+  - Matrona
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas matrona?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de matrona.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Matrona por WhatsApp.
+  - hook: Necesitas coordinar matrona?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Matrona por WhatsApp.
+- id: nutricion
+  label: Nutricionista
+  objective: captar_clientes
+  keywords:
+  - nutricion
+  - nutricionista
+  services:
+  - Nutricionista
+  - nutricion
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Nutricionista, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Nutricionista, professional and varied composition, no text.
+  hashtags:
+  - Nutricionista
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas nutricionista?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de nutricionista.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Nutricionista por WhatsApp.
+  - hook: Necesitas coordinar nutricionista?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Nutricionista por WhatsApp.
+- id: otorrinolaringologia
+  label: Otorrinolaringologia
+  objective: captar_clientes
+  keywords:
+  - otorrinolaringologia
+  services:
+  - Otorrinolaringologia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Otorrinolaringologia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Otorrinolaringologia, professional and varied composition, no text.
+  hashtags:
+  - Otorrinolaringologia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas otorrinolaringologia?
+    value: ConectaProIA te conecta por WhatsApp con opciones de otorrinolaringologia de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Otorrinolaringologia por WhatsApp.
+  - hook: Necesitas coordinar otorrinolaringologia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Otorrinolaringologia por WhatsApp.
+- id: pediatria
+  label: Pediatria
+  objective: captar_clientes
+  keywords:
+  - pediatria
+  services:
+  - Pediatria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Pediatria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Pediatria, professional and varied composition, no text.
+  hashtags:
+  - Pediatria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas pediatria?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de pediatria.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Pediatria por WhatsApp.
+  - hook: Necesitas coordinar pediatria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Pediatria por WhatsApp.
+- id: pos_sistemas_de_venta
+  label: POS / Sistemas de venta
+  objective: captar_clientes
+  keywords:
+  - pos
+  - sistemas
+  - venta
+  services:
+  - POS / Sistemas de venta
+  - pos
+  - sistemas
+  - venta
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for POS / Sistemas de venta, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for POS / Sistemas de venta, professional and varied composition, no text.
+  hashtags:
+  - POSSistemasDeVenta
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas pos / sistemas de venta?
+    value: ConectaProIA te conecta por WhatsApp con opciones de pos / sistemas de venta de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: POS / Sistemas de venta por WhatsApp.
+  - hook: Necesitas coordinar pos / sistemas de venta?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: POS / Sistemas de venta por WhatsApp.
+- id: puertas_y_ventanas
+  label: Puertas y ventanas
+  objective: captar_clientes
+  keywords:
+  - puertas
+  - ventanas
+  services:
+  - Puertas y ventanas
+  - puertas
+  - ventanas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Puertas y ventanas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Puertas y ventanas, professional and varied composition, no text.
+  hashtags:
+  - PuertasYVentanas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas puertas y ventanas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de puertas y ventanas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Puertas y ventanas por WhatsApp.
+  - hook: Necesitas coordinar puertas y ventanas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Puertas y ventanas por WhatsApp.
+- id: reclutamiento_recursos_humanos
+  label: Reclutamiento / Recursos humanos
+  objective: captar_clientes
+  keywords:
+  - reclutamiento
+  - recursos
+  - humanos
+  services:
+  - Reclutamiento / Recursos humanos
+  - reclutamiento
+  - recursos
+  - humanos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Reclutamiento / Recursos humanos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Reclutamiento / Recursos humanos, professional and varied composition, no text.
+  hashtags:
+  - ReclutamientoRecursosHumanos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas reclutamiento / recursos humanos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de reclutamiento / recursos humanos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Reclutamiento / Recursos humanos por WhatsApp.
+  - hook: Necesitas coordinar reclutamiento / recursos humanos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Reclutamiento / Recursos humanos por WhatsApp.
+- id: remodelacion_hogar
+  label: Remodelacion hogar
+  objective: captar_clientes
+  keywords:
+  - remodelacion
+  - hogar
+  services:
+  - Remodelacion hogar
+  - remodelacion
+  - hogar
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Remodelacion hogar, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Remodelacion hogar, professional and varied composition, no text.
+  hashtags:
+  - RemodelacionHogar
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas remodelacion hogar?
+    value: ConectaProIA te conecta por WhatsApp con opciones de remodelacion hogar de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Remodelacion hogar por WhatsApp.
+  - hook: Necesitas coordinar remodelacion hogar?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Remodelacion hogar por WhatsApp.
+- id: servicios_funerarios
+  label: Servicios funerarios
+  objective: captar_clientes
+  keywords:
+  - servicios
+  - funerarios
+  services:
+  - Servicios funerarios
+  - servicios
+  - funerarios
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Servicios funerarios, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Servicios funerarios, professional and varied composition, no text.
+  hashtags:
+  - ServiciosFunerarios
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas servicios funerarios?
+    value: ConectaProIA te conecta por WhatsApp con opciones de servicios funerarios de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Servicios funerarios por WhatsApp.
+  - hook: Necesitas coordinar servicios funerarios?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Servicios funerarios por WhatsApp.
+- id: transporte_de_mascotas
+  label: Transporte de mascotas
+  objective: captar_clientes
+  keywords:
+  - transporte
+  - mascotas
+  services:
+  - Transporte de mascotas
+  - transporte
+  - mascotas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Transporte de mascotas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Transporte de mascotas, professional and varied composition, no text.
+  hashtags:
+  - TransporteDeMascotas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas transporte de mascotas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de transporte de mascotas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Transporte de mascotas por WhatsApp.
+  - hook: Necesitas coordinar transporte de mascotas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Transporte de mascotas por WhatsApp.
+- id: clases_particulares
+  label: Tutor / Clases particulares
+  objective: captar_clientes
+  keywords:
+  - clases
+  - particulares
+  - tutor
+  services:
+  - Tutor / Clases particulares
+  - clases
+  - particulares
+  - tutor
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Tutor / Clases particulares, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Tutor / Clases particulares, professional and varied composition, no text.
+  hashtags:
+  - TutorClasesParticulares
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas tutor / clases particulares?
+    value: ConectaProIA te conecta por WhatsApp con opciones de tutor / clases particulares para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Tutor / Clases particulares por WhatsApp.
+  - hook: Necesitas coordinar tutor / clases particulares?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Tutor / Clases particulares por WhatsApp.
+- id: vidriero_espejos
+  label: Vidriero / Espejos
+  objective: captar_clientes
+  keywords:
+  - vidriero
+  - espejos
+  services:
+  - Vidriero / Espejos
+  - vidriero
+  - espejos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Vidriero / Espejos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Vidriero / Espejos, professional and varied composition, no text.
+  hashtags:
+  - VidrieroEspejos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas vidriero / espejos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de vidriero / espejos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Vidriero / Espejos por WhatsApp.
+  - hook: Necesitas coordinar vidriero / espejos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Vidriero / Espejos por WhatsApp.
+- id: adiestramiento_de_mascotas
+  label: Adiestramiento de mascotas
+  objective: captar_clientes
+  keywords:
+  - adiestramiento
+  - mascotas
+  services:
+  - Adiestramiento de mascotas
+  - adiestramiento
+  - mascotas
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Adiestramiento de mascotas, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Adiestramiento de mascotas, professional and varied composition, no text.
+  hashtags:
+  - AdiestramientoDeMascotas
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas adiestramiento de mascotas?
+    value: ConectaProIA te conecta por WhatsApp con opciones de adiestramiento de mascotas de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Adiestramiento de mascotas por WhatsApp.
+  - hook: Necesitas coordinar adiestramiento de mascotas?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Adiestramiento de mascotas por WhatsApp.
+- id: asesoria_tributaria
+  label: Asesoria tributaria
+  objective: captar_clientes
+  keywords:
+  - asesoria
+  - tributaria
+  services:
+  - Asesoria tributaria
+  - asesoria
+  - tributaria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Asesoria tributaria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Asesoria tributaria, professional and varied composition, no text.
+  hashtags:
+  - AsesoriaTributaria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas asesoria tributaria?
+    value: ConectaProIA te conecta por WhatsApp con opciones de asesoria tributaria de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Asesoria tributaria por WhatsApp.
+  - hook: Necesitas coordinar asesoria tributaria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Asesoria tributaria por WhatsApp.
+- id: asistente_virtual_administrativo
+  label: Asistente virtual / Administrativo
+  objective: captar_clientes
+  keywords:
+  - asistente
+  - virtual
+  - administrativo
+  services:
+  - Asistente virtual / Administrativo
+  - asistente
+  - virtual
+  - administrativo
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Asistente virtual / Administrativo, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Asistente virtual / Administrativo, professional and varied composition, no text.
+  hashtags:
+  - AsistenteVirtualAdministrati
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas asistente virtual / administrativo?
+    value: ConectaProIA te conecta por WhatsApp con opciones de asistente virtual / administrativo de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Asistente virtual / Administrativo por WhatsApp.
+  - hook: Necesitas coordinar asistente virtual / administrativo?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Asistente virtual / Administrativo por WhatsApp.
+- id: auditoria
+  label: Auditoria
+  objective: captar_clientes
+  keywords:
+  - auditoria
+  services:
+  - Auditoria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Auditoria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Auditoria, professional and varied composition, no text.
+  hashtags:
+  - Auditoria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas auditoria?
+    value: ConectaProIA te conecta por WhatsApp con opciones de auditoria de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Auditoria por WhatsApp.
+  - hook: Necesitas coordinar auditoria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Auditoria por WhatsApp.
+- id: canaletas_y_bajadas_de_agua
+  label: Canaletas y bajadas de agua
+  objective: captar_clientes
+  keywords:
+  - canaletas
+  - bajadas
+  - agua
+  services:
+  - Canaletas y bajadas de agua
+  - canaletas
+  - bajadas
+  - agua
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Canaletas y bajadas de agua, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Canaletas y bajadas de agua, professional and varied composition, no text.
+  hashtags:
+  - CanaletasYBajadasDeAgua
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas canaletas y bajadas de agua?
+    value: ConectaProIA te conecta por WhatsApp con opciones de canaletas y bajadas de agua de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Canaletas y bajadas de agua por WhatsApp.
+  - hook: Necesitas coordinar canaletas y bajadas de agua?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Canaletas y bajadas de agua por WhatsApp.
+- id: carpintero
+  label: Carpinteria
+  objective: captar_clientes
+  keywords:
+  - carpintero
+  - carpinteria
+  services:
+  - Carpinteria
+  - carpintero
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Carpinteria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Carpinteria, professional and varied composition, no text.
+  hashtags:
+  - Carpinteria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas carpinteria?
+    value: ConectaProIA te conecta por WhatsApp con opciones de carpinteria de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Carpinteria por WhatsApp.
+  - hook: Necesitas coordinar carpinteria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Carpinteria por WhatsApp.
+- id: clases_de_musica
+  label: Clases de musica
+  objective: captar_clientes
+  keywords:
+  - clases
+  - musica
+  services:
+  - Clases de musica
+  - clases
+  - musica
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Clases de musica, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Clases de musica, professional and varied composition, no text.
+  hashtags:
+  - ClasesDeMusica
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Buscas clases de musica?
+    value: ConectaProIA te conecta por WhatsApp con opciones de clases de musica para aprender con apoyo.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Clases de musica por WhatsApp.
+  - hook: Necesitas coordinar clases de musica?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Clases de musica por WhatsApp.
+- id: community_manager
+  label: Community manager
+  objective: captar_clientes
+  keywords:
+  - community
+  - manager
+  services:
+  - Community manager
+  - community
+  - manager
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Community manager, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Community manager, professional and varied composition, no text.
+  hashtags:
+  - CommunityManager
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas community manager?
+    value: ConectaProIA te conecta por WhatsApp con opciones de community manager de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Community manager por WhatsApp.
+  - hook: Necesitas coordinar community manager?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Community manager por WhatsApp.
+- id: contador
+  label: Contador
+  objective: captar_clientes
+  keywords:
+  - contador
+  services:
+  - Contador
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Contador, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Contador, professional and varied composition, no text.
+  hashtags:
+  - Contador
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas contador?
+    value: ConectaProIA te conecta por WhatsApp con opciones de contador de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Contador por WhatsApp.
+  - hook: Necesitas coordinar contador?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Contador por WhatsApp.
+- id: corredor_de_seguros
+  label: Corredor de seguros
+  objective: captar_clientes
+  keywords:
+  - corredor
+  - seguros
+  services:
+  - Corredor de seguros
+  - corredor
+  - seguros
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Corredor de seguros, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Corredor de seguros, professional and varied composition, no text.
+  hashtags:
+  - CorredorDeSeguros
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas corredor de seguros?
+    value: ConectaProIA te conecta por WhatsApp con opciones de corredor de seguros de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Corredor de seguros por WhatsApp.
+  - hook: Necesitas coordinar corredor de seguros?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Corredor de seguros por WhatsApp.
+- id: detective_privado
+  label: Detective privado
+  objective: captar_clientes
+  keywords:
+  - detective
+  - privado
+  services:
+  - Detective privado
+  - detective
+  - privado
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Detective privado, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Detective privado, professional and varied composition, no text.
+  hashtags:
+  - DetectivePrivado
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas detective privado?
+    value: ConectaProIA te conecta por WhatsApp con opciones de detective privado de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Detective privado por WhatsApp.
+  - hook: Necesitas coordinar detective privado?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Detective privado por WhatsApp.
+- id: diseno_de_interiores
+  label: Diseño de interiores
+  objective: captar_clientes
+  keywords:
+  - diseno
+  - interiores
+  - diseño
+  services:
+  - Diseño de interiores
+  - diseno
+  - interiores
+  - diseño
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Diseño de interiores, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Diseño de interiores, professional and varied composition, no text.
+  hashtags:
+  - DisenoDeInteriores
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas diseño de interiores?
+    value: ConectaProIA te conecta por WhatsApp con opciones de diseño de interiores de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Diseño de interiores por WhatsApp.
+  - hook: Necesitas coordinar diseño de interiores?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Diseño de interiores por WhatsApp.
+- id: domotica_hogar_inteligente
+  label: Domotica / Hogar inteligente
+  objective: captar_clientes
+  keywords:
+  - domotica
+  - hogar
+  - inteligente
+  services:
+  - Domotica / Hogar inteligente
+  - domotica
+  - hogar
+  - inteligente
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Domotica / Hogar inteligente, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Domotica / Hogar inteligente, professional and varied composition, no text.
+  hashtags:
+  - DomoticaHogarInteligente
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas domotica / hogar inteligente?
+    value: ConectaProIA te conecta por WhatsApp con opciones de domotica / hogar inteligente de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Domotica / Hogar inteligente por WhatsApp.
+  - hook: Necesitas coordinar domotica / hogar inteligente?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Domotica / Hogar inteligente por WhatsApp.
+- id: ginecologia
+  label: Ginecologia
+  objective: captar_clientes
+  keywords:
+  - ginecologia
+  services:
+  - Ginecologia
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Ginecologia, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Ginecologia, professional and varied composition, no text.
+  hashtags:
+  - Ginecologia
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas ginecologia?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de ginecologia.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Ginecologia por WhatsApp.
+  - hook: Necesitas coordinar ginecologia?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Ginecologia por WhatsApp.
+- id: guia_turistico
+  label: Guia turistico
+  objective: captar_clientes
+  keywords:
+  - guia
+  - turistico
+  services:
+  - Guia turistico
+  - guia
+  - turistico
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Guia turistico, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Guia turistico, professional and varied composition, no text.
+  hashtags:
+  - GuiaTuristico
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas guia turistico?
+    value: ConectaProIA te conecta por WhatsApp con opciones de guia turistico de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Guia turistico por WhatsApp.
+  - hook: Necesitas coordinar guia turistico?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Guia turistico por WhatsApp.
+- id: instalacion_de_cortinas_y_roller
+  label: Instalacion de cortinas y roller
+  objective: captar_clientes
+  keywords:
+  - instalacion
+  - cortinas
+  - roller
+  services:
+  - Instalacion de cortinas y roller
+  - instalacion
+  - cortinas
+  - roller
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Instalacion de cortinas y roller, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Instalacion de cortinas y roller, professional and varied composition, no text.
+  hashtags:
+  - InstalacionDeCortinasYRoller
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas instalacion de cortinas y roller?
+    value: ConectaProIA te conecta por WhatsApp con opciones de instalacion de cortinas y roller de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Instalacion de cortinas y roller por WhatsApp.
+  - hook: Necesitas coordinar instalacion de cortinas y roller?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Instalacion de cortinas y roller por WhatsApp.
+- id: lavanderia_tintoreria
+  label: Lavanderia / Tintoreria
+  objective: captar_clientes
+  keywords:
+  - lavanderia
+  - tintoreria
+  services:
+  - Lavanderia / Tintoreria
+  - lavanderia
+  - tintoreria
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Lavanderia / Tintoreria, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Lavanderia / Tintoreria, professional and varied composition, no text.
+  hashtags:
+  - LavanderiaTintoreria
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas lavanderia / tintoreria?
+    value: ConectaProIA te conecta por WhatsApp con opciones de lavanderia / tintoreria de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Lavanderia / Tintoreria por WhatsApp.
+  - hook: Necesitas coordinar lavanderia / tintoreria?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Lavanderia / Tintoreria por WhatsApp.
+- id: medicina_interna
+  label: Medicina interna
+  objective: captar_clientes
+  keywords:
+  - medicina
+  - interna
+  services:
+  - Medicina interna
+  - medicina
+  - interna
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Medicina interna, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Medicina interna, professional and varied composition, no text.
+  hashtags:
+  - MedicinaInterna
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas medicina interna?
+    value: ConectaProIA te conecta por WhatsApp con opciones profesionales de medicina interna.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Medicina interna por WhatsApp.
+  - hook: Necesitas coordinar medicina interna?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Medicina interna por WhatsApp.
+- id: movimiento_tierra_demolicion_transporte
+  label: Movimiento de tierra / Demolicion / Transporte
+  objective: captar_clientes
+  keywords:
+  - movimiento
+  - tierra
+  - demolicion
+  - transporte
+  services:
+  - Movimiento de tierra / Demolicion / Transporte
+  - movimiento
+  - tierra
+  - demolicion
+  - transporte
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Movimiento de tierra / Demolicion / Transporte, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Movimiento de tierra / Demolicion / Transporte, professional and varied composition, no text.
+  hashtags:
+  - MovimientoDeTierraDemolicion
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas movimiento de tierra / demolicion / transporte?
+    value: ConectaProIA te conecta por WhatsApp con opciones de movimiento de tierra / demolicion / transporte de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Movimiento de tierra / Demolicion / Transporte por WhatsApp.
+  - hook: Necesitas coordinar movimiento de tierra / demolicion / transporte?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Movimiento de tierra / Demolicion / Transporte por WhatsApp.
+- id: paseador_de_perros
+  label: Paseador de perros
+  objective: captar_clientes
+  keywords:
+  - paseador
+  - perros
+  services:
+  - Paseador de perros
+  - paseador
+  - perros
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Paseador de perros, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Paseador de perros, professional and varied composition, no text.
+  hashtags:
+  - PaseadorDePerros
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas paseador de perros?
+    value: ConectaProIA te conecta por WhatsApp con opciones de paseador de perros de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Paseador de perros por WhatsApp.
+  - hook: Necesitas coordinar paseador de perros?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Paseador de perros por WhatsApp.
+- id: recuperacion_de_datos
+  label: Recuperacion de datos
+  objective: captar_clientes
+  keywords:
+  - recuperacion
+  - datos
+  services:
+  - Recuperacion de datos
+  - recuperacion
+  - datos
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Recuperacion de datos, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Recuperacion de datos, professional and varied composition, no text.
+  hashtags:
+  - RecuperacionDeDatos
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas recuperacion de datos?
+    value: ConectaProIA te conecta por WhatsApp con opciones de recuperacion de datos de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Recuperacion de datos por WhatsApp.
+  - hook: Necesitas coordinar recuperacion de datos?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Recuperacion de datos por WhatsApp.
+- id: tabiques_yeso_carton
+  label: Tabiques / Yeso carton
+  objective: captar_clientes
+  keywords:
+  - tabiques
+  - yeso
+  - carton
+  services:
+  - Tabiques / Yeso carton
+  - tabiques
+  - yeso
+  - carton
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Tabiques / Yeso carton, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Tabiques / Yeso carton, professional and varied composition, no text.
+  hashtags:
+  - TabiquesYesoCarton
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas tabiques / yeso carton?
+    value: ConectaProIA te conecta por WhatsApp con opciones de tabiques / yeso carton de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Tabiques / Yeso carton por WhatsApp.
+  - hook: Necesitas coordinar tabiques / yeso carton?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Tabiques / Yeso carton por WhatsApp.
+- id: tramites_notariales
+  label: Tramites notariales
+  objective: captar_clientes
+  keywords:
+  - tramites
+  - notariales
+  services:
+  - Tramites notariales
+  - tramites
+  - notariales
+  image_prompt_templates:
+  - Vertical 9:16 professional social ad for Tramites notariales, clean trustworthy service scene, no text.
+  - Vertical 9:16 premium local service visual for Tramites notariales, professional and varied composition, no text.
+  hashtags:
+  - TramitesNotariales
+  - ConectaProIA
+  - WhatsApp
+  - ServiciosLocales
+  variants:
+  - hook: Necesitas tramites notariales?
+    value: ConectaProIA te conecta por WhatsApp con opciones de tramites notariales de forma simple y rapida.
+    proof: Indica lo que necesitas y coordina alternativas disponibles por WhatsApp.
+    cta: Escribenos por WhatsApp.
+    short_text: Tramites notariales por WhatsApp.
+  - hook: Necesitas coordinar tramites notariales?
+    value: Busca opciones disponibles y recibe orientacion para avanzar rapido.
+    proof: La disponibilidad y prestacion se confirma con cada proveedor/profesional.
+    cta: Pide opciones ahora.
+    short_text: Tramites notariales por WhatsApp.
+- id: proveedores
+  label: Captacion de proveedores
+  objective: captar_proveedores
+  keywords:
+  - proveedor
+  - profesional
+  - trabajo
+  - agenda
+  - clientes
+  - oferta
+  - servicios
+  services:
+  - profesionales independientes
+  - tecnicos
+  - especialistas
+  image_prompt_templates:
+  - Vertical 9:16 photo, independent professional smiling while receiving new job notifications on smartphone, realistic, no text.
+  - Vertical 9:16 photo, service provider arriving to a client home with tools, confident and professional, no text.
+  variants:
+  - hook: Eres profesional y quieres mas clientes reales?
+    value: ConectaProIA te ayuda a recibir oportunidades por WhatsApp.
+    proof: Mas visibilidad, mejor flujo y contacto directo con personas interesadas.
+    cta: Unete hoy y activa tu perfil.
+    short_text: Consigue mas clientes hoy.
+  - hook: Tu agenda tiene espacios libres esta semana?
+    value: ConectaProIA conecta tu servicio con clientes que si necesitan ayuda.
+    proof: Proceso simple, rapido y orientado a resultados.
+    cta: Hablanos para comenzar.
+    short_text: Activa nuevos trabajos hoy.
+- id: qr_whatsapp
+  label: QR contacto WhatsApp
+  objective: branding
+  force_qr: true
+  keywords:
+  - qr
+  - whatsapp
+  - contacto
+  - conecta ya
+  services:
+  - contacto inmediato
+  image_prompt_templates:
+  - qr
+  variants:
+  - hook: Conecta YA
+    value: Escanea el QR y habla por WhatsApp con ConectaProIA.
+    proof: Encuentra profesionales confiables rapido y sin costo de contacto.
+    cta: Escanea y escribe ahora.
+    short_text: Conecta YA
+- id: medico_veterinario
+  label: Medico Veterinario
+  objective: captar_clientes
+  keywords:
+  - medico
+  - veterinario
+  - medico
+  - veterinario
+  services:
+  - Medico Veterinario
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Medico Veterinario''.
+
+    Scene/backdrop: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  variants:
+  - hook: ¿Necesitas Medico Veterinario?
+    value: ConectaProIA te conecta por WhatsApp con opciones disponibles.
+    proof: Servicio coordinado con profesionales activos.
+    cta: Escríbenos y te ayudamos a coordinar.
+    short_text: Medico Veterinario
+- id: abogado
+  label: Abogado
+  objective: captar_clientes
+  keywords:
+  - abogado
+  - abogado
+  services:
+  - Abogado
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Abogado''.
+
+    Scene/backdrop: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  variants:
+  - hook: ¿Necesitas Abogado?
+    value: ConectaProIA te conecta por WhatsApp con opciones disponibles.
+    proof: Servicio coordinado con profesionales activos.
+    cta: Escríbenos y te ayudamos a coordinar.
+    short_text: Abogado

@@ -1,0 +1,1095 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ConectaProIA Studio Local</title>
+  <style>
+    :root {
+      --bg-main: #061328;
+      --bg-accent: #0b1f45;
+      --panel: #102347;
+      --panel-2: #0a1731;
+      --card: rgba(12, 30, 66, 0.9);
+      --accent: #42d4d0;
+      --accent-2: #2eb5cf;
+      --accent-soft: rgba(66, 212, 208, 0.16);
+      --text: #f3f9ff;
+      --muted: #b7cae6;
+      --line: #2a4271;
+      --ok: #34d399;
+      --warn: #f59e0b;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Trebuchet MS", Arial, sans-serif;
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+      background:
+        radial-gradient(900px 450px at 0% 0%, #133f83 0%, transparent 65%),
+        radial-gradient(900px 500px at 100% 100%, #0a2c6e 0%, transparent 70%),
+        linear-gradient(135deg, var(--bg-main) 0%, #071834 35%, var(--bg-accent) 100%);
+      display: grid;
+      place-items: center;
+    }
+
+    .card {
+      width: min(1360px, 97vw);
+      background: linear-gradient(180deg, rgba(16,35,71,0.95) 0%, rgba(11,26,53,0.94) 100%);
+      border: 1px solid rgba(66, 212, 208, 0.35);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.42);
+    }
+
+    .brand-head {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 14px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(66, 212, 208, 0.28);
+      background: linear-gradient(90deg, rgba(66, 212, 208, 0.14), rgba(15, 54, 106, 0.2));
+    }
+
+    .brand-kicker {
+      display: inline-flex;
+      width: fit-content;
+      border-radius: 999px;
+      border: 1px solid rgba(66, 212, 208, 0.4);
+      padding: 4px 10px;
+      font-size: .75rem;
+      color: #d6fbff;
+      background: rgba(66, 212, 208, 0.12);
+      letter-spacing: .4px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      line-height: 1.15;
+    }
+
+    .brand-sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+
+    .tabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(130px, 1fr));
+      gap: 10px;
+      margin: 14px 0 18px;
+    }
+
+    .tab-btn {
+      width: auto;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #0a1b3a 0%, #09162f 100%);
+      color: var(--muted);
+      border-radius: 12px;
+      padding: 12px 12px;
+      cursor: pointer;
+      font-weight: 700;
+      letter-spacing: .2px;
+      transition: transform .12s ease, border-color .12s ease, color .12s ease, background .12s ease;
+    }
+
+    .tab-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(66, 212, 208, 0.6);
+      color: #e6fbff;
+    }
+
+    .tab-btn.active {
+      color: #05232a;
+      background: linear-gradient(135deg, var(--accent) 0%, #5be7e3 40%, var(--accent-2) 100%);
+      border-color: rgba(255, 255, 255, 0.28);
+      box-shadow: 0 8px 22px rgba(66, 212, 208, 0.3);
+    }
+
+    .panel { display: none; }
+    .panel.active {
+      display: block;
+      background: var(--card);
+      border: 1px solid #284679;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .grid { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+    .full { grid-column: 1 / -1; }
+
+    label {
+      font-size: .86rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--panel-2);
+      color: var(--text);
+      border-radius: 11px;
+      padding: 10px 12px;
+      font-size: .95rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: rgba(66, 212, 208, 0.8);
+      box-shadow: 0 0 0 2px var(--accent-soft);
+    }
+
+    textarea { min-height: 120px; resize: vertical; }
+
+    button.primary {
+      border: 0;
+      background: linear-gradient(135deg, var(--accent) 0%, #63ebe7 45%, var(--accent-2) 100%);
+      color: #03242d;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .row { display: flex; align-items: center; gap: 10px; }
+    .row input[type="checkbox"] { width: auto; }
+
+    .status { margin-top: 12px; color: var(--muted); }
+    .result a { color: #86f7ff; }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .hint { font-size: .82rem; color: var(--muted); }
+
+    .drafts-grid {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      margin-top: 12px;
+    }
+
+    .draft-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: rgba(8, 20, 42, 0.82);
+      overflow: hidden;
+    }
+
+    .draft-card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--line);
+      background: #000;
+    }
+
+    .draft-body {
+      padding: 10px;
+      display: grid;
+      gap: 6px;
+    }
+
+    .draft-body .title {
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .draft-body .small {
+      font-size: .8rem;
+      color: var(--muted);
+    }
+
+    .draft-body .caption {
+      font-size: .82rem;
+      color: var(--text);
+      white-space: pre-wrap;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: .75rem;
+      border-radius: 999px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      margin-right: 6px;
+      margin-top: 4px;
+    }
+
+    .pill.ok { border-color: var(--ok); color: var(--ok); }
+    .pill.warn { border-color: var(--warn); color: var(--warn); }
+
+    .descriptor-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(340px, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+      align-items: start;
+    }
+
+    .descriptor-panel {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: rgba(7, 20, 43, 0.72);
+      min-width: 0;
+    }
+
+    .descriptor-audit-panel {
+      min-width: 0;
+    }
+
+    .descriptor-editor-panel {
+      max-height: 620px;
+      overflow: auto;
+      scrollbar-gutter: stable;
+    }
+
+    .descriptor-panel h3 {
+      margin: 0 0 8px;
+      font-size: .96rem;
+    }
+
+    .descriptor-summary {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(110px, 1fr));
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 8px;
+      background: rgba(10, 24, 50, 0.86);
+    }
+
+    .metric .k {
+      font-size: .72rem;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .metric .v {
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .table-wrap {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: auto;
+      max-height: 420px;
+      width: 100%;
+    }
+
+    table.audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 780px;
+      table-layout: fixed;
+      font-size: .84rem;
+    }
+
+    .audit-table th,
+    .audit-table td {
+      border-bottom: 1px solid rgba(42, 66, 113, 0.7);
+      padding: 8px 8px;
+      vertical-align: top;
+      text-align: left;
+      word-break: break-word;
+    }
+
+    .audit-table th:nth-child(1),
+    .audit-table td:nth-child(1) { width: 15%; }
+    .audit-table th:nth-child(2),
+    .audit-table td:nth-child(2) { width: 36%; }
+    .audit-table th:nth-child(3),
+    .audit-table td:nth-child(3) { width: 11%; }
+    .audit-table th:nth-child(4),
+    .audit-table td:nth-child(4) { width: 9%; }
+    .audit-table th:nth-child(5),
+    .audit-table td:nth-child(5) { width: 8%; }
+    .audit-table th:nth-child(6),
+    .audit-table td:nth-child(6) { width: 13%; }
+    .audit-table th:nth-child(7),
+    .audit-table td:nth-child(7) { width: 8%; }
+
+    .audit-table th {
+      position: sticky;
+      top: 0;
+      background: #0d2145;
+      z-index: 2;
+    }
+
+    .audit-row-selected {
+      outline: 1px solid rgba(66, 212, 208, 0.6);
+      background: rgba(66, 212, 208, 0.08);
+    }
+
+    .descriptor-form {
+      display: grid;
+      gap: 8px;
+    }
+
+    .descriptor-form textarea {
+      min-height: 84px;
+    }
+
+    .descriptor-form .mini {
+      min-height: 64px;
+    }
+
+    @media (max-width: 980px) {
+      body { padding: 14px; }
+      .grid { grid-template-columns: 1fr; }
+      .toolbar { grid-template-columns: 1fr; }
+      .tabs { grid-template-columns: 1fr 1fr; }
+      .descriptor-layout { grid-template-columns: 1fr; }
+      .descriptor-summary { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .tabs { grid-template-columns: 1fr; }
+      .brand-head { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="brand-head">
+      <span class="brand-kicker">ConectaProIA Marketing Studio</span>
+      <h1>Centro Local de Imagenes y Publicacion IG</h1>
+      <p class="brand-sub">Enfoque actual: imagenes profesionales para Instagram con flujo automatizado.</p>
+    </div>
+
+    <div class="tabs">
+      <button id="tab-meta" class="tab-btn active" type="button">Meta Review</button>
+      <button id="tab-generate" class="tab-btn" type="button">Generar Imagen</button>
+      <button id="tab-ig" class="tab-btn" type="button">IG Imagenes</button>
+      <button id="tab-descriptors" class="tab-btn" type="button">Descriptores</button>
+    </div>
+
+    <section id="panel-meta" class="panel active">
+      <div class="toolbar">
+        <div>
+          <label>Estado de conexion Meta / Instagram</label>
+          <input id="meta-connection" type="text" readonly value="Cargando..." />
+        </div>
+        <div class="row" style="align-items:end;">
+          <button id="meta-refresh" type="button">Actualizar Estado</button>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div>
+          <label>Facebook Page ID</label>
+          <input id="meta-page-id" type="text" readonly value="-" />
+        </div>
+        <div>
+          <label>Facebook Page Name</label>
+          <input id="meta-page-name" type="text" readonly value="-" />
+        </div>
+        <div>
+          <label>Instagram User ID</label>
+          <input id="meta-ig-id" type="text" readonly value="-" />
+        </div>
+        <div>
+          <label>Instagram Username</label>
+          <input id="meta-ig-user" type="text" readonly value="-" />
+        </div>
+        <div>
+          <label>Followers</label>
+          <input id="meta-followers" type="text" readonly value="-" />
+        </div>
+        <div>
+          <label>Media Count</label>
+          <input id="meta-media-count" type="text" readonly value="-" />
+        </div>
+      </div>
+
+      <div class="status" id="meta-publish-status">Publish capability: verificando...</div>
+      <div class="status" id="meta-scopes">Scopes: -</div>
+      <div class="status" id="meta-media">Ultimas publicaciones: -</div>
+    </section>
+
+    <section id="panel-generate" class="panel">
+      <form id="studio-form" class="grid">
+        <div>
+          <label>Modo</label>
+          <select id="mode" name="mode">
+            <option value="image" selected>Imagen</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Servicio</label>
+          <input id="service" name="service" type="text" placeholder="gasfiteria, kinesiologia, electricidad..." />
+        </div>
+
+        <div class="full">
+          <label>Contexto / Idea</label>
+          <textarea id="context" name="context" placeholder="Ej: Publicacion para captar clientes con urgencia de gasfiter en Concepcion"></textarea>
+        </div>
+
+        <div class="full">
+          <button type="submit" class="primary">Generar Imagen</button>
+        </div>
+      </form>
+
+      <div id="status" class="status"></div>
+      <div id="result" class="result"></div>
+    </section>
+
+    <section id="panel-ig" class="panel">
+      <div class="grid">
+        <div>
+          <label>Objetivo del ciclo IG</label>
+          <select id="ig-objective">
+            <option value="">Auto por categoria</option>
+            <option value="captar_clientes">Captar clientes</option>
+            <option value="captar_proveedores">Captar proveedores</option>
+            <option value="branding">Branding</option>
+          </select>
+        </div>
+        <div>
+          <label>Categoria forzada (opcional)</label>
+          <input id="ig-category" type="text" placeholder="gasfiteria / electricidad / qr_whatsapp" />
+        </div>
+
+        <div class="row">
+          <input id="ig-publish" type="checkbox" checked />
+          <label for="ig-publish" style="margin:0;">Publicar al terminar ciclo</label>
+        </div>
+        <div class="row">
+          <input id="ig-real-publish" type="checkbox" />
+          <label for="ig-real-publish" style="margin:0;">Publicacion real IG (no simulada)</label>
+        </div>
+
+        <div class="row full">
+          <input id="ig-use-meta" type="checkbox" checked />
+          <label for="ig-use-meta" style="margin:0;">Analizar historial de Instagram</label>
+        </div>
+
+        <div class="full">
+          <label>URL publica de imagen (opcional para publicar real)</label>
+          <input id="ig-public-image-url" type="text" placeholder="https://.../imagen.jpg" />
+        </div>
+
+        <div class="full row" style="justify-content: flex-start; gap: 12px;">
+          <button id="ig-run-once" class="primary" type="button">Generar ciclo IG (1 vez)</button>
+          <button id="ig-refresh" type="button">Actualizar borradores</button>
+        </div>
+      </div>
+
+      <div class="hint" style="margin-top:10px;">
+        Link directo: <a href="/instagram/gallery" target="_blank">Abrir galeria completa de borradores IG</a>
+      </div>
+
+      <div id="ig-status" class="status"></div>
+      <div id="ig-plan" class="hint" style="margin-top:8px;"></div>
+      <div id="ig-drafts" class="drafts-grid"></div>
+    </section>
+
+    <section id="panel-descriptors" class="panel">
+      <div class="descriptor-layout">
+        <div class="descriptor-panel descriptor-audit-panel">
+          <h3>Auditoria de Descriptores IG</h3>
+          <div id="descriptor-audit-summary" class="descriptor-summary"></div>
+          <div class="table-wrap">
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th>Categoria</th>
+                  <th>Descripcion (ES)</th>
+                  <th>Estado</th>
+                  <th>OCR</th>
+                  <th>Confianza</th>
+                  <th>Composicion</th>
+                  <th>Accion</th>
+                </tr>
+              </thead>
+              <tbody id="descriptor-audit-body"></tbody>
+            </table>
+          </div>
+          <div id="descriptor-pending" class="hint" style="margin-top:8px;"></div>
+        </div>
+
+        <div class="descriptor-panel descriptor-editor-panel">
+          <h3>Editor Manual Por Categoria</h3>
+          <div class="descriptor-form">
+            <div>
+              <label>Categoria seleccionada</label>
+              <input id="desc-form-id" type="text" readonly value="-" />
+            </div>
+            <div>
+              <label>Label</label>
+              <input id="desc-form-label" type="text" />
+            </div>
+            <div>
+              <label>Objetivo</label>
+              <select id="desc-form-objective">
+                <option value="captar_clientes">captar_clientes</option>
+                <option value="captar_proveedores">captar_proveedores</option>
+                <option value="branding">branding</option>
+              </select>
+            </div>
+            <div>
+              <label>Descripcion (ES)</label>
+              <textarea id="desc-form-descripcion-es" class="mini"></textarea>
+            </div>
+            <div>
+              <label>Contexto de categoria</label>
+              <textarea id="desc-form-context"></textarea>
+            </div>
+            <div>
+              <label>Visual brief</label>
+              <textarea id="desc-form-visual"></textarea>
+            </div>
+            <div>
+              <label>Keywords (coma separada)</label>
+              <input id="desc-form-keywords" type="text" />
+            </div>
+            <div>
+              <label>Servicios (coma separada)</label>
+              <input id="desc-form-services" type="text" />
+            </div>
+            <div>
+              <label>Plantilla de prompt principal</label>
+              <textarea id="desc-form-image-template" class="mini"></textarea>
+            </div>
+            <div>
+              <label>Hook variante principal</label>
+              <textarea id="desc-form-variant-hook" class="mini"></textarea>
+            </div>
+            <div>
+              <label>Value variante principal</label>
+              <textarea id="desc-form-variant-value" class="mini"></textarea>
+            </div>
+            <div>
+              <label>Proof variante principal</label>
+              <textarea id="desc-form-variant-proof" class="mini"></textarea>
+            </div>
+            <div>
+              <label>CTA variante principal</label>
+              <input id="desc-form-variant-cta" type="text" />
+            </div>
+            <div>
+              <label>Short text variante principal</label>
+              <input id="desc-form-variant-short" type="text" />
+            </div>
+            <div class="row" style="justify-content:flex-start; gap:12px;">
+              <button id="descriptor-category-save" class="primary" type="button">Guardar Categoria</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="full">
+          <label>Archivo completo de descriptores por categoria (YAML)</label>
+          <textarea id="descriptor-editor" style="min-height: 360px;" spellcheck="false"></textarea>
+        </div>
+        <div class="row full" style="justify-content:flex-start; gap:12px;">
+          <button id="descriptor-reload" type="button">Recargar YAML</button>
+          <button id="descriptor-save" class="primary" type="button">Guardar YAML Completo</button>
+        </div>
+      </div>
+      <div id="descriptor-status" class="status">Cargando descriptores...</div>
+    </section>
+  </div>
+
+  <script>
+    const tabMeta = document.getElementById('tab-meta');
+    const tabGenerate = document.getElementById('tab-generate');
+    const tabIg = document.getElementById('tab-ig');
+    const tabDescriptors = document.getElementById('tab-descriptors');
+    const panelMeta = document.getElementById('panel-meta');
+    const panelGenerate = document.getElementById('panel-generate');
+    const panelIg = document.getElementById('panel-ig');
+    const panelDescriptors = document.getElementById('panel-descriptors');
+    let descriptorAuditRows = [];
+    let selectedDescriptorId = '';
+
+    function switchTab(target) {
+      const isMeta = target === 'meta';
+      const isGen = target === 'generate';
+      const isIg = target === 'ig';
+      const isDesc = target === 'descriptors';
+
+      tabMeta.classList.toggle('active', isMeta);
+      tabGenerate.classList.toggle('active', isGen);
+      tabIg.classList.toggle('active', isIg);
+      tabDescriptors.classList.toggle('active', isDesc);
+      panelMeta.classList.toggle('active', isMeta);
+      panelGenerate.classList.toggle('active', isGen);
+      panelIg.classList.toggle('active', isIg);
+      panelDescriptors.classList.toggle('active', isDesc);
+
+      if (isMeta) loadMetaStatus();
+      if (isIg) {
+        loadInstagramPlan();
+        loadInstagramDrafts();
+      }
+      if (isDesc) {
+        loadDescriptors();
+        loadDescriptorAudit();
+      }
+    }
+
+    tabMeta.addEventListener('click', () => switchTab('meta'));
+    tabGenerate.addEventListener('click', () => switchTab('generate'));
+    tabIg.addEventListener('click', () => switchTab('ig'));
+    tabDescriptors.addEventListener('click', () => switchTab('descriptors'));
+
+    async function loadMetaStatus() {
+      const conn = document.getElementById('meta-connection');
+      const pageId = document.getElementById('meta-page-id');
+      const pageName = document.getElementById('meta-page-name');
+      const igId = document.getElementById('meta-ig-id');
+      const igUser = document.getElementById('meta-ig-user');
+      const followers = document.getElementById('meta-followers');
+      const mediaCount = document.getElementById('meta-media-count');
+      const publishStatus = document.getElementById('meta-publish-status');
+      const scopes = document.getElementById('meta-scopes');
+      const media = document.getElementById('meta-media');
+
+      conn.value = 'Consultando Meta API...';
+      try {
+        const res = await fetch('/api/meta/check?limit=5');
+        const data = await res.json();
+
+        if (!res.ok || !data.ok) {
+          conn.value = `No listo: ${data.error || data.message || 'Sin conexion Meta'}`;
+          pageId.value = '-';
+          pageName.value = '-';
+          igId.value = '-';
+          igUser.value = '-';
+          followers.value = '-';
+          mediaCount.value = '-';
+          publishStatus.textContent = 'Publish capability: no disponible';
+          scopes.textContent = 'Scopes: -';
+          media.textContent = 'Ultimas publicaciones: -';
+          return;
+        }
+
+        conn.value = 'Conectado OK';
+        pageId.value = data.page?.id || '-';
+        pageName.value = data.page?.name || '-';
+        igId.value = data.instagram?.id || '-';
+        igUser.value = data.instagram?.username || '-';
+        followers.value = String(data.instagram?.followers_count ?? '-');
+        mediaCount.value = String(data.instagram?.media_count ?? '-');
+
+        const canPublish = Boolean(data.capabilities?.publish_instagram);
+        publishStatus.textContent = `Publish capability: ${canPublish ? 'SI' : 'NO'} (permiso publish requerido)`;
+
+        const scopeList = Array.isArray(data.scopes) ? data.scopes : [];
+        scopes.textContent = `Scopes: ${scopeList.length ? scopeList.join(', ') : '-'}`;
+
+        const recent = Array.isArray(data.recent_media) ? data.recent_media : [];
+        if (!recent.length) {
+          media.textContent = 'Ultimas publicaciones: sin datos';
+        } else {
+          const preview = recent.map((m, i) => `${i + 1}) ${m.media_type || '-'} | ${(m.caption || '').slice(0, 90)}...`).join(' | ');
+          media.textContent = `Ultimas publicaciones: ${preview}`;
+        }
+      } catch (err) {
+        conn.value = `Error: ${err.message}`;
+        publishStatus.textContent = 'Publish capability: error';
+      }
+    }
+
+    async function loadInstagramPlan() {
+      const el = document.getElementById('ig-plan');
+      try {
+        const res = await fetch('/api/instagram/plan');
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo cargar plan IG');
+        const items = (data.plan && data.plan.items) ? data.plan.items.slice(0, 5) : [];
+        if (!items.length) {
+          el.textContent = 'Plan IG: sin items aun.';
+          return;
+        }
+        el.innerHTML = 'Plan proximo (5): ' + items.map(i => `${i.order}. ${i.category_label} (${i.format_type})`).join(' | ');
+      } catch (err) {
+        el.textContent = 'Plan IG error: ' + err.message;
+      }
+    }
+
+    async function loadInstagramDrafts() {
+      const status = document.getElementById('ig-status');
+      const grid = document.getElementById('ig-drafts');
+      status.textContent = 'Cargando borradores IG...';
+      grid.innerHTML = '';
+
+      try {
+        const res = await fetch('/api/instagram/drafts?limit=60');
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo cargar borradores');
+
+        if (!data.items || data.items.length === 0) {
+          status.textContent = 'No hay borradores IG aun. Ejecuta un ciclo.';
+          return;
+        }
+
+        status.textContent = `Borradores IG: ${data.count}`;
+
+        for (const item of data.items) {
+          const card = document.createElement('div');
+          card.className = 'draft-card';
+
+          card.innerHTML = `
+            <img src="${item.image_url || ''}" alt="${item.category_label || item.category_id || 'draft'}" />
+            <div class="draft-body">
+              <div class="title">${item.category_label || item.category_id || 'Sin categoria'}</div>
+              <div class="small">${item.created_at || '-'} | ${item.format_type || '-'} | ${item.objective || '-'}</div>
+              <div class="small">${item.short_text_preview || ''}</div>
+              <div class="caption">${item.caption_preview || ''}</div>
+              <div>
+                <span class="pill ${item.status === 'published' || item.status === 'simulated_published' ? 'ok' : 'warn'}">${item.status || 'draft'}</span>
+              </div>
+            </div>
+          `;
+
+          const body = card.querySelector('.draft-body');
+          const actions = document.createElement('div');
+          actions.className = 'row';
+
+          const openBtn = document.createElement('button');
+          openBtn.textContent = 'Abrir imagen';
+          openBtn.addEventListener('click', () => {
+            if (item.image_url) window.open(item.image_url, '_blank');
+          });
+          actions.appendChild(openBtn);
+
+          if (item.status !== 'published' && item.status !== 'simulated_published') {
+            const publishBtn = document.createElement('button');
+            publishBtn.className = 'primary';
+            const realPublish = document.getElementById('ig-real-publish').checked;
+            publishBtn.textContent = realPublish ? 'Publicar real IG' : 'Simular publicacion';
+            publishBtn.addEventListener('click', () => publishInstagramDraft(item.draft_id));
+            actions.appendChild(publishBtn);
+          }
+
+          body.appendChild(actions);
+          grid.appendChild(card);
+        }
+      } catch (err) {
+        status.textContent = `Error IG: ${err.message}`;
+      }
+    }
+
+    async function publishInstagramDraft(draftId) {
+      const status = document.getElementById('ig-status');
+      const realPublish = document.getElementById('ig-real-publish').checked;
+      const publicImageUrl = document.getElementById('ig-public-image-url').value.trim();
+      status.textContent = `Publicando borrador ${draftId} (${realPublish ? 'real' : 'simulacion'})...`;
+
+      try {
+        const res = await fetch(`/api/instagram/drafts/${draftId}/publish`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            simulate: !realPublish,
+            public_image_url: publicImageUrl || null,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Error al publicar borrador');
+        status.textContent = `Borrador publicado (${realPublish ? 'real' : 'simulado'}): ${draftId}`;
+        await loadInstagramPlan();
+        await loadInstagramDrafts();
+      } catch (err) {
+        status.textContent = `Error publicando borrador: ${err.message}`;
+      }
+    }
+
+    async function runInstagramAutoOnce() {
+      const status = document.getElementById('ig-status');
+      const objective = document.getElementById('ig-objective').value;
+      const category = document.getElementById('ig-category').value.trim();
+      const publish = document.getElementById('ig-publish').checked;
+      const realPublish = document.getElementById('ig-real-publish').checked;
+      const useMetaHistory = document.getElementById('ig-use-meta').checked;
+      const publicImageUrl = document.getElementById('ig-public-image-url').value.trim();
+
+      status.textContent = 'Ejecutando ciclo IG automatico...';
+
+      try {
+        const res = await fetch('/api/instagram/auto-once', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            objective: objective || null,
+            category: category || null,
+            publish,
+            simulate_publish: !realPublish,
+            use_meta_history: useMetaHistory,
+            public_image_url: publicImageUrl || null,
+          }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'Error en ciclo automatico');
+        status.textContent = `Ciclo completado. Nuevo borrador: ${data.draft?.draft_id || '-'}`;
+        await loadInstagramPlan();
+        await loadInstagramDrafts();
+      } catch (err) {
+        status.textContent = `Error en ciclo IG: ${err.message}`;
+      }
+    }
+
+    document.getElementById('meta-refresh').addEventListener('click', loadMetaStatus);
+    document.getElementById('ig-run-once').addEventListener('click', runInstagramAutoOnce);
+    document.getElementById('ig-refresh').addEventListener('click', loadInstagramDrafts);
+    document.getElementById('descriptor-reload').addEventListener('click', loadDescriptors);
+    document.getElementById('descriptor-save').addEventListener('click', saveDescriptors);
+    document.getElementById('descriptor-category-save').addEventListener('click', saveDescriptorCategory);
+
+    async function loadDescriptors() {
+      const status = document.getElementById('descriptor-status');
+      const editor = document.getElementById('descriptor-editor');
+      status.textContent = 'Cargando descriptores...';
+      try {
+        const res = await fetch('/api/instagram/descriptors');
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo cargar descriptores');
+        editor.value = data.content || '';
+        status.textContent = `Archivo cargado: ${data.path}`;
+      } catch (err) {
+        status.textContent = `Error: ${err.message}`;
+      }
+    }
+
+    async function saveDescriptors() {
+      const status = document.getElementById('descriptor-status');
+      const editor = document.getElementById('descriptor-editor');
+      status.textContent = 'Guardando descriptores...';
+      try {
+        const res = await fetch('/api/instagram/descriptors', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content: editor.value }),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo guardar descriptores');
+        status.textContent = `Descriptores guardados (${data.count} categorias).`;
+        await loadDescriptorAudit(selectedDescriptorId);
+      } catch (err) {
+        status.textContent = `Error guardando: ${err.message}`;
+      }
+    }
+
+    function listToCsv(value) {
+      if (!Array.isArray(value)) return '';
+      return value.map((x) => String(x || '').trim()).filter(Boolean).join(', ');
+    }
+
+    function csvToList(value) {
+      return String(value || '')
+        .split(',')
+        .map((x) => x.trim())
+        .filter(Boolean);
+    }
+
+    function renderDescriptorSummary(summary) {
+      const container = document.getElementById('descriptor-audit-summary');
+      const rows = [
+        ['Total', summary.total_descriptors || 0],
+        ['Auto', summary.auto_generated || 0],
+        ['Manual', summary.manual_existing || 0],
+        ['Pend. revision', summary.pending_review || 0],
+        ['Nuevas sin desc.', summary.new_detected_without_descriptor || 0],
+      ];
+      container.innerHTML = rows.map(([k, v]) => `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('');
+    }
+
+    function fillDescriptorForm(row) {
+      document.getElementById('desc-form-id').value = row?.id || '-';
+      document.getElementById('desc-form-label').value = row?.label || '';
+      document.getElementById('desc-form-objective').value = row?.objective || 'captar_clientes';
+      document.getElementById('desc-form-descripcion-es').value = row?.descripcion_es || '';
+      document.getElementById('desc-form-context').value = row?.category_context || '';
+      document.getElementById('desc-form-visual').value = row?.visual_brief || '';
+      document.getElementById('desc-form-keywords').value = listToCsv(row?.keywords || []);
+      document.getElementById('desc-form-services').value = listToCsv(row?.services || []);
+      document.getElementById('desc-form-image-template').value = Array.isArray(row?.image_prompt_templates) && row.image_prompt_templates[0] ? row.image_prompt_templates[0] : '';
+      const v = Array.isArray(row?.variants) && row.variants[0] ? row.variants[0] : {};
+      document.getElementById('desc-form-variant-hook').value = v.hook || '';
+      document.getElementById('desc-form-variant-value').value = v.value || '';
+      document.getElementById('desc-form-variant-proof').value = v.proof || '';
+      document.getElementById('desc-form-variant-cta').value = v.cta || '';
+      document.getElementById('desc-form-variant-short').value = v.short_text || '';
+    }
+
+    function selectDescriptorCategory(categoryId) {
+      selectedDescriptorId = String(categoryId || '').trim();
+      const row = descriptorAuditRows.find((x) => x.id === selectedDescriptorId) || null;
+      fillDescriptorForm(row);
+
+      const body = document.getElementById('descriptor-audit-body');
+      body.querySelectorAll('tr').forEach((tr) => {
+        tr.classList.toggle('audit-row-selected', tr.dataset.id === selectedDescriptorId);
+      });
+    }
+
+    function renderDescriptorAuditTable(rows) {
+      const body = document.getElementById('descriptor-audit-body');
+      body.innerHTML = '';
+      if (!rows.length) {
+        body.innerHTML = '<tr><td colspan="7">No hay descriptores cargados.</td></tr>';
+        return;
+      }
+
+      for (const row of rows) {
+        const tr = document.createElement('tr');
+        tr.dataset.id = row.id;
+        const ocrText = row.ocr?.used ? `${row.ocr.engine}${row.ocr.available ? ' (texto detectado)' : ' (sin texto)'}` : 'No usado';
+        const comp = `${row.composition?.safe_text_zone || '-'} / ${row.composition?.focal_zone || '-'} / ${row.composition?.content_density || '-'}`;
+        const statusText = row.origin === 'auto_generado'
+          ? `Auto (${row.generated_at || 'sin fecha'})`
+          : row.origin === 'pendiente_revision'
+            ? `Pendiente (${row.skipped_reason || 'revision'})`
+            : 'Manual';
+
+        tr.innerHTML = `
+          <td><strong>${row.id}</strong><br/><span class="hint">${row.label || ''}</span></td>
+          <td>${row.descripcion_es || '-'}</td>
+          <td>${statusText}</td>
+          <td>${ocrText}</td>
+          <td>${row.confidence || 0}%</td>
+          <td>${comp}${row.composition?.edge_margin_risk ? '<br/><span class="pill warn">edge-risk</span>' : ''}</td>
+          <td><button type="button" data-action="edit" data-id="${row.id}">Editar</button></td>
+        `;
+        body.appendChild(tr);
+      }
+
+      body.querySelectorAll('button[data-action=\"edit\"]').forEach((btn) => {
+        btn.addEventListener('click', () => selectDescriptorCategory(btn.dataset.id));
+      });
+    }
+
+    async function loadDescriptorAudit(preferId = null) {
+      const status = document.getElementById('descriptor-status');
+      const pending = document.getElementById('descriptor-pending');
+      try {
+        const res = await fetch('/api/instagram/descriptors/audit');
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo cargar auditoria');
+
+        descriptorAuditRows = Array.isArray(data.categories) ? data.categories : [];
+        renderDescriptorSummary(data.summary || {});
+        renderDescriptorAuditTable(descriptorAuditRows);
+
+        const pendingRows = Array.isArray(data.pending_new_categories) ? data.pending_new_categories : [];
+        if (!pendingRows.length) {
+          pending.textContent = 'No hay categorias nuevas pendientes sin descriptor.';
+        } else {
+          const txt = pendingRows.map((x) => `${x.id} (${x.reason || 'sin razon'})`).join(' | ');
+          pending.textContent = `Categorias nuevas detectadas sin descriptor: ${txt}`;
+        }
+
+        const targetId = String(preferId || selectedDescriptorId || '').trim();
+        if (targetId && descriptorAuditRows.some((x) => x.id === targetId)) {
+          selectDescriptorCategory(targetId);
+        } else if (descriptorAuditRows.length) {
+          selectDescriptorCategory(descriptorAuditRows[0].id);
+        } else {
+          fillDescriptorForm(null);
+        }
+
+        status.textContent = `Auditoria cargada (${descriptorAuditRows.length} categorias).`;
+      } catch (err) {
+        status.textContent = `Error auditoria: ${err.message}`;
+      }
+    }
+
+    async function saveDescriptorCategory() {
+      const status = document.getElementById('descriptor-status');
+      const categoryId = String(document.getElementById('desc-form-id').value || '').trim();
+      if (!categoryId || categoryId === '-') {
+        status.textContent = 'Selecciona una categoria desde la tabla.';
+        return;
+      }
+
+      status.textContent = `Guardando categoria ${categoryId}...`;
+      try {
+        const payload = {
+          label: document.getElementById('desc-form-label').value.trim(),
+          objective: document.getElementById('desc-form-objective').value,
+          descripcion_es: document.getElementById('desc-form-descripcion-es').value.trim(),
+          category_context: document.getElementById('desc-form-context').value.trim(),
+          visual_brief: document.getElementById('desc-form-visual').value.trim(),
+          keywords: csvToList(document.getElementById('desc-form-keywords').value),
+          services: csvToList(document.getElementById('desc-form-services').value),
+          image_prompt_template: document.getElementById('desc-form-image-template').value.trim(),
+          variant: {
+            hook: document.getElementById('desc-form-variant-hook').value.trim(),
+            value: document.getElementById('desc-form-variant-value').value.trim(),
+            proof: document.getElementById('desc-form-variant-proof').value.trim(),
+            cta: document.getElementById('desc-form-variant-cta').value.trim(),
+            short_text: document.getElementById('desc-form-variant-short').value.trim(),
+          },
+        };
+
+        const res = await fetch(`/api/instagram/descriptors/category/${encodeURIComponent(categoryId)}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok || !data.ok) throw new Error(data.error || 'No se pudo guardar categoria');
+
+        status.textContent = `Categoria ${categoryId} guardada correctamente.`;
+        await loadDescriptorAudit(categoryId);
+        await loadDescriptors();
+      } catch (err) {
+        status.textContent = `Error guardando categoria: ${err.message}`;
+      }
+    }
+
+    document.getElementById('studio-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const status = document.getElementById('status');
+      const result = document.getElementById('result');
+      status.textContent = 'Generando imagen...';
+      result.innerHTML = '';
+
+      const payload = {
+        mode: 'image',
+        context: document.getElementById('context').value.trim(),
+        service: document.getElementById('service').value.trim(),
+      };
+
+      try {
+        const res = await fetch('/api/generate', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Error desconocido');
+
+        status.textContent = 'Imagen generada correctamente.';
+        result.innerHTML = `<p><strong>Run:</strong> ${data.run_id}</p><p><a href="${data.file_url}" target="_blank">Abrir imagen generada</a></p>`;
+      } catch (err) {
+        status.textContent = `Error: ${err.message}`;
+      }
+    });
+
+    switchTab('meta');
+  </script>
+</body>
+</html>

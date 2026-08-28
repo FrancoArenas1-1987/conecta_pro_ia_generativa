@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "conecta-video-ai-local"
+version = "0.1.0"
+description = "Generador local de videos e imagenes para ConectaProIA"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0.1",
+  "pydantic>=2.8.0",
+  "python-dotenv>=1.0.1",
+  "tenacity>=9.0.0",
+  "Pillow>=10.4.0",
+  "numpy>=1.26.4",
+  "moviepy>=1.0.3,<2.0.0",
+  "flask>=3.0.3",
+  "edge-tts>=6.1.12",
+  "openai>=2.0.0",
+  "psycopg[binary]>=3.2.0"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-q"

@@ -1,0 +1,38 @@
+﻿# Destinos adicionales para replicar publicaciones IG/FB.
+#
+# Cada item en "targets" representa otra cuenta de negocio donde quieres publicar
+# el MISMO contenido generado por el pipeline principal.
+#
+# Recomendado: usa *_env para no guardar secretos en este archivo.
+# - meta_access_token_env: nombre de variable de entorno con el Page Access Token
+# - meta_page_id_env: nombre de variable de entorno con el Page ID
+# - meta_instagram_user_id_env: nombre de variable de entorno con el IG User ID
+#
+# Campos disponibles por target:
+# - name: alias legible
+# - enabled: true/false
+# - publish_instagram: true/false
+# - crosspost_facebook: true/false
+# - publish_facebook_story: true/false (por defecto false)
+# - meta_graph_version: opcional, por ejemplo v25.0
+
+targets:
+  - name: "dueno_1"
+    enabled: false
+    publish_instagram: true
+    crosspost_facebook: true
+    publish_facebook_story: false
+    meta_access_token_env: "META_OWNER1_ACCESS_TOKEN"
+    meta_page_id_env: "META_OWNER1_PAGE_ID"
+    meta_instagram_user_id_env: "META_OWNER1_IG_USER_ID"
+    meta_graph_version: "v25.0"
+
+  - name: "dueno_2"
+    enabled: false
+    publish_instagram: true
+    crosspost_facebook: true
+    publish_facebook_story: false
+    meta_access_token_env: "META_OWNER2_ACCESS_TOKEN"
+    meta_page_id_env: "META_OWNER2_PAGE_ID"
+    meta_instagram_user_id_env: "META_OWNER2_IG_USER_ID"
+    meta_graph_version: "v25.0"

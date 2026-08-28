@@ -1,0 +1,54 @@
+﻿company_name: "ConectaProIA"
+tagline: "Conexion confiable por WhatsApp"
+mission: "Conectar personas con profesionales confiables en minutos, con un flujo simple y transparente."
+positioning:
+  core_value: "Sin llamadas, sin formularios, sin perder tiempo."
+  differentiation:
+    - "Profesionales verificados"
+    - "Contacto directo por WhatsApp"
+    - "El usuario decide con quien hablar"
+brand_promises:
+  - "No compartimos datos sin consentimiento"
+  - "Intermediacion transparente"
+  - "Validacion humana y disponibilidad local"
+audience:
+  - "personas que necesitan ayuda profesional rapida"
+  - "familias que buscan opciones confiables"
+  - "usuarios que prefieren resolver por WhatsApp"
+voice:
+  tone: "claro, empatico, profesional y concreto"
+  style:
+    - "frases cortas"
+    - "beneficios directos"
+    - "sin exageraciones"
+  avoid:
+    - "promesas absolutas"
+    - "terminos tecnicos innecesarios"
+    - "mensajes ambiguos"
+key_messages:
+  - "Encontrar ayuda profesional confiable en minutos"
+  - "Todo comienza por WhatsApp"
+  - "Transparencia en el proceso"
+legal_safety:
+  - "ConectaProIA actua como intermediario."
+  - "La evaluacion y tratamiento son responsabilidad del profesional."
+  - "Valores y horarios se acuerdan directamente entre usuario y profesional."
+service_scope: "Servicio en fase de prueba en la Region del Biobio."
+call_to_action: "Hablar por WhatsApp ahora"
+whatsapp_url: "https://api.whatsapp.com/send?phone=56983434503"
+website_url: "https://conectaproia.cl"
+logo_candidates:
+  - "C:\\Franco\\conectapro_rrss\\conectaprologo_512.png"
+  - "C:\\Franco\\conectapro_rrss\\conectaprologo.png"
+  - "C:\\Franco\\conectapro_rrss\\portada_facebook.png"
+  - "C:\\Franco\\conectapro_rrss\\perfil_facebook.png"
+  - "C:\\Franco\\conectapro_rrss\\publicacion_clientes.png"
+whatsapp_qr_path: "C:\\Franco\\conectapro_rrss\\qr_conectapro_reel.png"
+whatsapp_qr_provider_path: "C:\\Franco\\conectapro_rrss\\qr_conectapro_reel.png"
+visual_identity:
+  primary_color: "#0B132B"
+  secondary_color: "#1C2541"
+  accent_color: "#5BC0BE"
+  text_color: "#FFFFFF"
+  video_format: "vertical_9_16"
+

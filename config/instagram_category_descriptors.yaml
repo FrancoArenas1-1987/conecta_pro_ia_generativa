@@ -1,0 +1,1450 @@
+prompt_framework:
+  common_strengths:
+  - Commercial social-ad clarity with instant trust.
+  - 'High visual hierarchy: hero subject + clean support scene.'
+  - Strong conversion intent without visual noise.
+  - Professional realism with polished color grading.
+  common_layout_rules:
+  - Hero subject on right or right-center third.
+  - Leave clean negative space on left/mid-left for text overlays.
+  - Use 3 depth layers (foreground, midground, background) to avoid flat look.
+  - Keep lower area readable for CTA/phone badge overlays.
+  - Edge-to-edge composition, avoid thick outer margins or framed card look.
+  - Keep all critical text and logos inside central safe area with breathing room.
+  common_brand_rules:
+  - Human expressions must feel close, confident and credible.
+  - Wardrobe/tools must match the service and look real.
+  - Scene must communicate order, safety and service quality.
+  global_poster_structure:
+  - Top headline block clearly readable with at least 8% top margin.
+  - Middle information block with concise value points/bullets.
+  - Bottom CTA band with logo + WhatsApp + website clearly visible.
+  - 'Visual hierarchy must read in 3 seconds: headline, value, action.'
+  design_finish_rules:
+  - Use premium rounded modules and clean section separators.
+  - Use coherent iconography for each value point.
+  - Use subtle wave/curve accents and soft gradients to avoid flat design.
+  - Maintain strict alignment grid and balanced whitespace.
+  global_negative_rules:
+  - No distorted anatomy, malformed hands or extra fingers.
+  - No duplicate faces, no chaotic clutter, no low-resolution blur.
+  - No cartoon style unless explicitly requested.
+  reference_policy: Analyze category reference image and create a new variation with same visual language, never a direct copy.
+categories:
+- id: sincosto
+  label: Contacto Sin Costo
+  objective: captar_clientes
+  category_context: Communicate that contacting professionals through ConectaProIA is free for clients.
+  visual_brief: Bright promotional scene, benefit-first message feeling, relief and confidence.
+  keywords:
+  - gratis
+  - sin costo
+  - contacto
+  - clientes
+  - confianza
+  services:
+  - contacto gratis
+  - solicitud sin costo
+  reference_asset_patterns:
+  - sincosto_6d5aa1fe30.png
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad image focused on free contact benefit for service requests in Chile.
+  creative_template:
+    subject_profile: Client and mixed professionals cast with approachable and optimistic expressions.
+    scene_profile: Promotional modern service-ad setting with subtle dynamic shapes and movement cues.
+    color_direction: Warm yellow/cream base with green accent for free-value highlight, balanced by clean neutral tones.
+    lighting_direction: Bright front lighting with soft shadow separation and ad-like clarity.
+    camera_direction: Mid shot with slightly wide framing to include both benefit cue and people.
+    copy_structure: Headline impact + highlighted free-benefit ribbon + supporting trust bullets + contact CTA strip.
+    layout_density: high information density with clear segmentation
+    tone_keywords:
+    - accesible
+    - claro
+    - optimista
+    - directo
+    information_blocks:
+    - Top impact headline with zero-cost proposition.
+    - Visual free marker (0$ tag or equivalent symbol).
+    - Middle block with trust/professional diversity cues.
+    - Bottom contact module with WhatsApp number and brand name.
+    text_hierarchy:
+    - Primary headline in largest bold typography.
+    - Free-value ribbon as second visual priority.
+    - Bulleted support points in short readable lines.
+    - CTA and phone with high-contrast treatment.
+    category_quality_checks:
+    - Must feel promotional and premium, not generic flyer.
+    - Free-benefit message must be instantly understood in 3 seconds.
+    - No empty margins; all sections must look intentionally designed.
+    min_info_elements: 10
+    differentiators:
+    - Visual cue of zero-cost concept (price tag or symbolic free marker).
+    - Benefit-first composition before service detail.
+    scene_anchors:
+    - Free-contact visual metaphor near top-left or center-left.
+    - Multi-professional lineup as trust anchor.
+    trust_cues:
+    - Friendly smiles and open body language.
+    - Service diversity represented in one frame.
+    avoid:
+    - Do not make it look like a discount coupon flyer.
+  variants:
+  - hook: Contactar profesionales no te cuesta nada.
+    value: ConectaProIA te permite pedir ayuda y hablar directo por WhatsApp sin costo de contacto.
+    proof: Rapido, simple y transparente para que decidas con calma.
+    cta: Escribenos y pide opciones ahora.
+    short_text: Contacto gratis con profesionales.
+- id: contacta_profesional
+  label: Contacta A Un Profesional
+  objective: captar_clientes
+  category_context: Drive immediate action so users contact a professional by WhatsApp.
+  visual_brief: 'Urgency + confidence: user need resolved quickly by trusted specialist.'
+  keywords:
+  - contactar
+  - profesional
+  - rapido
+  - ayuda
+  - whatsapp
+  services:
+  - contacto inmediato
+  - solicitud por WhatsApp
+  reference_asset_patterns:
+  - publicacion-clientes_321bf12155.png
+  image_prompt_templates:
+  - Vertical 9:16 conversion-oriented service image for immediate professional contact in Chile.
+  creative_template:
+    subject_profile: Primary professional hero plus optional secondary client persona showing relief.
+    scene_profile: Action-driven service context with dynamic but clean information zones.
+    color_direction: Deep blue base with yellow callout accents and green CTA energy.
+    lighting_direction: Crisp contrast with strong key light over hero faces.
+    camera_direction: Hero-centric mid shot with supportive secondary elements.
+    copy_structure: Question headline + speed/value statement + trust bullets + bold CTA contact area.
+    layout_density: information-rich and conversion-oriented
+    tone_keywords:
+    - urgente
+    - confiable
+    - resolutivo
+    - cercano
+    information_blocks:
+    - Top question-style hook with urgency.
+    - Secondary value line emphasizing fast connection.
+    - Checklist/bullets about trust, speed and expert matching.
+    - Footer with WhatsApp number and brand lockup.
+    text_hierarchy:
+    - Hook headline dominates top area.
+    - Value line directly below headline.
+    - Benefits in left-side stacked rows.
+    - Contact CTA in large, highly visible treatment.
+    category_quality_checks:
+    - Must communicate immediate action and confidence.
+    - Professional cast and tools should look realistic and clean.
+    - Final layout should look like polished paid social ad.
+    min_info_elements: 10
+    differentiators:
+    - Immediate availability feeling.
+    - Strong call-to-action visual rhythm.
+    scene_anchors:
+    - Professional in work-ready stance.
+    - Visual indication of rapid response.
+    trust_cues:
+    - Clean uniforms and recognizable tools.
+    avoid:
+    - Avoid empty backgrounds without service context.
+  variants:
+  - hook: Necesitas un profesional ahora?
+    value: ConectaProIA te conecta por WhatsApp en minutos.
+    proof: Sin vueltas, con opciones reales y disponibles.
+    cta: Contacta ahora.
+    short_text: Contacta a un profesional hoy.
+- id: proveedores
+  label: Captacion De Proveedores
+  objective: captar_proveedores
+  category_context: Attract professionals to join the network and receive more opportunities.
+  visual_brief: Growth and opportunity tone, aspirational but realistic.
+  keywords:
+  - proveedor
+  - tecnicos
+  - especialistas
+  - mas clientes
+  - oportunidades
+  services:
+  - tecnicos
+  - especialistas
+  - profesionales independientes
+  reference_asset_patterns:
+  - ofreceservicios_a8d24190f0.png
+  image_prompt_templates:
+  - Vertical 9:16 recruiting-style ad image for professionals joining a trusted services network in Chile.
+  creative_template:
+    subject_profile: Mixed group of professionals (technical + healthcare + office profile) with confident stance.
+    scene_profile: Network opportunity environment with movement and upward momentum cues.
+    color_direction: Blue and cyan gradients with light highlights and high readability areas.
+    lighting_direction: Bright commercial lighting with separated subjects and glossy finish.
+    camera_direction: Wide mid shot to include team diversity and partnership vibe.
+    copy_structure: Join-network headline + dual value proposition + two CTA tracks (offer services / find services).
+    layout_density: high with multi-message segmentation
+    tone_keywords:
+    - oportunidad
+    - crecimiento
+    - profesional
+    - equipo
+    information_blocks:
+    - Main recruitment headline for professionals.
+    - Support line describing network value.
+    - Team lineup as trust anchor.
+    - Dual contact zones distinguishing providers and clients.
+    text_hierarchy:
+    - Main join headline as top visual anchor.
+    - Secondary explanation line under headline.
+    - Benefit bullets near center-left.
+    - Dual CTA/phone modules at bottom.
+    category_quality_checks:
+    - Must clearly separate provider contact from client contact.
+    - Team diversity should feel coherent and premium.
+    - No confusing visual clutter between dual CTA modules.
+    min_info_elements: 11
+    differentiators:
+    - 'Dual message: offer services and connect with clients.'
+    - Collective team identity, not a single specialist.
+    scene_anchors:
+    - Team lineup across center or right-center.
+    - Network/join visual flow.
+    trust_cues:
+    - Professional wardrobe diversity with coherent quality level.
+    avoid:
+    - Do not look like a stock photo without brand intent.
+  variants:
+  - hook: Eres profesional y quieres mas clientes?
+    value: ConectaProIA te ayuda a recibir oportunidades por WhatsApp.
+    proof: Proceso simple y enfoque en resultados.
+    cta: Unete hoy.
+    short_text: Activa mas oportunidades.
+- id: electricidad
+  label: Electricidad Hogar
+  objective: captar_clientes
+  category_context: Solve home electrical failures fast and safely.
+  visual_brief: Technical precision with safety-first perception.
+  keywords:
+  - electricidad
+  - electricista
+  - enchufe
+  - tablero
+  - luz
+  services:
+  - electricista
+  - reparacion electrica
+  - falla de enchufe
+  reference_asset_patterns:
+  - electricidad_c8e68b052e.png
+  image_prompt_templates:
+  - Vertical 9:16 photoreal electric-service ad image with trusted electrician in Chilean residential context.
+  creative_template:
+    subject_profile: Electrician with PPE, focused expression, realistic tools and cables.
+    scene_profile: Electrical panel or home wiring context with visible safe-work environment.
+    color_direction: Electric blue palette with yellow safety accents and neutral support tones.
+    lighting_direction: High-contrast directional lighting to emphasize technical detail.
+    camera_direction: Three-quarter mid shot showing both technician and task area.
+    copy_structure: Service headline + 3 technical bullet services + availability CTA + branded contact footer.
+    layout_density: high with technical clarity and readable spacing
+    tone_keywords:
+    - tecnico
+    - seguro
+    - rapido
+    - experto
+    information_blocks:
+    - Top category title with strong contrast.
+    - Three service bullets with checklist icon rhythm.
+    - Availability/pricing consult banner.
+    - Footer lockup with logo, WhatsApp and coverage cities.
+    text_hierarchy:
+    - Service title at highest emphasis.
+    - Bullets as second reading layer.
+    - CTA banner as third attention anchor.
+    - Footer contact retained as final conversion anchor.
+    category_quality_checks:
+    - Electrical context and PPE must be unmistakable.
+    - Technical details visible without visual chaos.
+    - Ad should feel safe, modern and trustworthy.
+    min_info_elements: 10
+    differentiators:
+    - Clear electrical context with believable equipment.
+    - Safety perception is mandatory.
+    scene_anchors:
+    - Panel/cable detail visible.
+    - Checkmark-friendly clean zones on left.
+    trust_cues:
+    - Helmet or gloves when context requires it.
+    avoid:
+    - No sparks/fire panic scene.
+  variants:
+  - hook: Problemas electricos en casa?
+    value: Te conectamos con electricistas confiables por WhatsApp.
+    proof: Respuesta rapida y profesionales verificados.
+    cta: Escribenos ahora.
+    short_text: Soluciona tu problema electrico.
+- id: gasfiteria
+  label: Gasfiteria Urgente
+  objective: captar_clientes
+  category_context: Solve water and heater urgencies with fast response.
+  visual_brief: Urgency under control, practical and trustworthy service.
+  keywords:
+  - gasfiter
+  - calefon
+  - fuga
+  - agua
+  - urgencia
+  services:
+  - gasfiter
+  - reparacion de calefon
+  - fuga de agua
+  reference_asset_patterns:
+  - gasfiteria_b64ce0a2fa.png
+  image_prompt_templates:
+  - Vertical 9:16 photoreal plumbing-service ad image showing quick and reliable resolution in Chilean home setting.
+  creative_template:
+    subject_profile: Plumber in uniform with realistic tools and confident practical expression.
+    scene_profile: Kitchen, bathroom or pipe network context with clear repair action.
+    color_direction: Deep blue base with yellow accents and fresh water-toned highlights.
+    lighting_direction: Natural plus controlled key light for clean detail visibility.
+    camera_direction: Side-angle mid shot to showcase action and pipes.
+    copy_structure: Service title + practical repair bullets + availability CTA strip + branded contact footer.
+    layout_density: high with practical action detail
+    tone_keywords:
+    - urgente
+    - confiable
+    - tecnico
+    - resolutivo
+    information_blocks:
+    - Top gasfiteria title block.
+    - Three specific service bullets (fugas, destapes, instalaciones).
+    - Availability/pricing consultation band.
+    - Footer with logo, WhatsApp and city coverage.
+    text_hierarchy:
+    - Category title as dominant top element.
+    - Bullets with check icons for scanning speed.
+    - CTA stripe highly contrasted.
+    - Footer contact line kept clean and legible.
+    category_quality_checks:
+    - Pipes/valves/heater context must be visible and realistic.
+    - Service action should feel active, not posed stock.
+    - Final composition must retain premium commercial polish.
+    min_info_elements: 10
+    differentiators:
+    - Water/fuga context clearly visible.
+    - Action shot over static posing.
+    scene_anchors:
+    - Pipe/valve or heater details.
+    - Service hero in active repair.
+    trust_cues:
+    - Professional posture and tool control.
+    avoid:
+    - No dirty chaotic scene.
+  variants:
+  - hook: Fuga o calefon con problemas?
+    value: ConectaProIA te conecta por WhatsApp con gasfiter confiable.
+    proof: Opciones reales para resolver hoy.
+    cta: Solicita ayuda ahora.
+    short_text: Gasfiter confiable en minutos.
+- id: kinesiologia
+  label: Kinesiologia Y Salud
+  objective: captar_clientes
+  category_context: Promote close and reliable physiotherapy care.
+  visual_brief: Healthcare calmness, empathy and clinical professionalism.
+  keywords:
+  - kinesiologia
+  - terapia
+  - rehabilitacion
+  - dolor
+  - salud
+  services:
+  - Kinesiología Respiratoria
+  - Kinesiología de Piso Pélvico
+  - rehabilitacion a domicilio
+  service_modules:
+  - Kinesiología Respiratoria
+  - Kinesiología de Piso Pélvico
+  reference_asset_patterns:
+  - kine_1c78eb70f5.png
+  image_prompt_templates:
+  - Vertical 9:16 premium healthcare ad image with physiotherapy context, calm trust and modern clinical style.
+  creative_template:
+    subject_profile: Female or male physiotherapist in clean scrubs assisting patient with gentle guided interaction.
+    scene_profile: Modern clinic or tidy home-treatment setting with medical trust signals.
+    color_direction: Turquoise, mint and white palette with soft medical-clean ambiance.
+    lighting_direction: Soft bright diffused lighting with skin-friendly natural tones.
+    camera_direction: Balanced mid shot capturing practitioner-patient interaction.
+    copy_structure: Healthcare headline + dual specialty modules + bullets per module + location chip + CTA contact band.
+    layout_density: high information density with calm medical clarity
+    tone_keywords:
+    - calido
+    - profesional
+    - humano
+    - bienestar
+    information_blocks:
+    - Top title with kinesiologia specialty framing.
+    - 'Module 1: kinesiologia respiratoria + three support bullets.'
+    - 'Module 2: kinesiologia de piso pelvico + three support bullets.'
+    - Location/coverage chip and polished bottom contact strip.
+    text_hierarchy:
+    - Main title at top, high contrast and premium weight.
+    - Specialty module chips as second-level headers.
+    - Bullets grouped clearly under each specialty module.
+    - WhatsApp CTA and brand lockup as final conversion block.
+    category_quality_checks:
+    - Both specialties must appear clearly, never just one.
+    - Medical care interaction must look empathetic and professional.
+    - Design should feel polished and premium, not minimal or empty.
+    min_info_elements: 12
+    differentiators:
+    - Care interaction is the hero moment.
+    - Medical calm look over urgent-commercial look.
+    scene_anchors:
+    - Treatment table or therapy context.
+    - Subtle health symbols or clinical cues in background.
+    signature_elements:
+    - Medical-plus symbols and subtle lung/bodyline illustration watermark.
+    - Two service module chips with rounded capsule style.
+    - Location chip and polished bottom contact band.
+    trust_cues:
+    - Gentle posture and reassuring facial expressions.
+    avoid:
+    - No hospital emergency vibe.
+  variants:
+  - hook: Necesitas apoyo kinesico?
+    value: ConectaProIA te conecta con profesionales por WhatsApp.
+    proof: Atencion clara y opciones segun tu necesidad.
+    cta: Agenda hoy.
+    short_text: Apoyo kinesico confiable.
+- id: legal
+  label: Asesoria Legal
+  objective: captar_clientes
+  category_context: Enable fast contact with reliable legal professionals.
+  visual_brief: Authority and trust with approachable legal guidance.
+  keywords:
+  - abogado
+  - legal
+  - contrato
+  - asesoria
+  - juicio
+  services:
+  - abogado
+  - asesoria legal
+  - revision de contrato
+  reference_asset_patterns:
+  - abogado_2e7d0917ba.png
+  image_prompt_templates:
+  - Vertical 9:16 premium legal-services ad image with trustworthy lawyer and clear professional authority.
+  creative_template:
+    subject_profile: Lawyer in formal attire with confident but approachable expression.
+    scene_profile: Office or legal library context with subtle justice symbolism.
+    color_direction: Navy blue and neutral beige tones with gold accent details.
+    lighting_direction: Controlled cinematic corporate light with sharp facial definition.
+    camera_direction: Medium portrait with legal context visible in background.
+    copy_structure: Authority headline + legal service list + trust bullets + WhatsApp consultation CTA.
+    layout_density: high information with formal premium structure
+    tone_keywords:
+    - serio
+    - confiable
+    - claro
+    - profesional
+    information_blocks:
+    - Top legal category title.
+    - Service list module (asesoria, juicios, divorcios, contratos).
+    - Trust/support bullets emphasizing speed and personalized attention.
+    - Bottom WhatsApp contact band with brand identity.
+    text_hierarchy:
+    - Legal headline as first focal point.
+    - Service module list as structured second block.
+    - Support bullets as third layer.
+    - CTA/contact area with strong readability.
+    category_quality_checks:
+    - Legal authority should feel trustworthy, not intimidating.
+    - Typography and spacing must be clean and corporate-grade.
+    - Overall finish must look premium and commercially deployable.
+    min_info_elements: 10
+    differentiators:
+    - Authority without intimidation.
+    - Client-guidance feel instead of courtroom drama.
+    scene_anchors:
+    - Legal books, desk or justice symbol.
+    - Document review or advisory posture.
+    trust_cues:
+    - Eye contact and calm confidence.
+    avoid:
+    - No aggressive litigation drama.
+  variants:
+  - hook: Necesitas orientacion legal?
+    value: ConectaProIA te conecta por WhatsApp con profesionales legales.
+    proof: Sin friccion y con enfoque practico.
+    cta: Habla con nosotros ahora.
+    short_text: Asesoria legal confiable.
+- id: desarrollo_software
+  label: Desarrollo De Sistemas Informaticos
+  objective: captar_clientes
+  category_context: Conectar empresas y personas con especialistas para desarrollar sitios web, automatizaciones, integraciones y sistemas internos.
+  visual_brief: Tecnologia profesional y cercana, orientada a resolver procesos reales de negocios mediante software.
+  keywords:
+  - desarrollo
+  - software
+  - sistemas
+  - informaticos
+  - sitio web
+  - automatizacion
+  - integracion
+  - aplicaciones
+  services:
+  - desarrollo de software
+  - sitios y aplicaciones web
+  - automatizacion de tareas
+  - integracion de sistemas
+  - soporte de software
+  reference_asset_patterns:
+  - desarrollo_software_sistemas_informaticos_01.png
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad for custom software development, automation and system integrations in Chile.
+  creative_template:
+    subject_profile: Software specialist working with a business client or reviewing a modern system dashboard.
+    scene_profile: Modern professional technology workspace with realistic screens, clean equipment and clear business context.
+    color_direction: Deep blue and cyan technology palette with warm human accents.
+    lighting_direction: Bright professional lighting with crisp screen and subject separation.
+    camera_direction: Medium shot showing the specialist and enough interface context to communicate software work.
+    copy_structure: Business problem headline + solution capabilities + coordination proof + WhatsApp CTA.
+    layout_density: medium-high with clean technical information blocks
+    tone_keywords:
+    - profesional
+    - tecnologico
+    - claro
+    - resolutivo
+    information_blocks:
+    - Headline focused on the business need.
+    - Capabilities for websites, automation, integrations and internal systems.
+    - Short coordination and scope clarification message.
+    - WhatsApp contact strip.
+    text_hierarchy:
+    - Business need first.
+    - Software capabilities second.
+    - Trust and process third.
+    - CTA and contact final.
+    category_quality_checks:
+    - Technology must look realistic and current.
+    - Avoid generic hacker imagery or unreadable code walls.
+    - Communicate business value, not only programming.
+    min_info_elements: 8
+    differentiators:
+    - Software connected to concrete business processes.
+    - Local professional coordination through WhatsApp.
+    scene_anchors:
+    - Modern dashboard or application interface.
+    - Developer collaborating with a client.
+    trust_cues:
+    - Organized workspace and professional posture.
+    - Clear, realistic technology equipment.
+    avoid:
+    - No cybercrime, hacker hoodies or fantasy interfaces.
+  variants:
+  - hook: Necesitas desarrollar o mejorar un sistema para tu negocio?
+    value: Encuentra especialistas para sitios web, automatizaciones, integraciones y sistemas internos.
+    proof: Describe tu proyecto y recibe opciones segun alcance y disponibilidad.
+    cta: Cuentanos lo que necesitas por WhatsApp.
+    short_text: Desarrollo de software para tu negocio.
+  - hook: Tus procesos manuales te quitan tiempo?
+    value: Busca apoyo para automatizar tareas, integrar plataformas o evolucionar tu software.
+    proof: Coordina alcance, entregables, plazos y soporte con el profesional.
+    cta: Envia tu solicitud por WhatsApp.
+    short_text: Automatiza e integra tus sistemas.
+- id: veterinarios
+  label: Veterinarios Y Cuidado De Mascotas
+  objective: captar_clientes
+  category_context: Conectar tutores de mascotas con profesionales veterinarios para controles, orientacion y necesidades puntuales.
+  visual_brief: Cuidado animal cercano y profesional, con mascotas tranquilas, tutores informados y ambiente clinico limpio.
+  keywords:
+  - veterinario
+  - veterinaria
+  - veterinarios
+  - mascota
+  - mascotas
+  - perro
+  - gato
+  - vacunacion
+  - salud animal
+  services:
+  - consulta veterinaria
+  - control preventivo
+  - vacunacion
+  - evaluacion de sintomas
+  - orientacion veterinaria
+  - atencion veterinaria a domicilio
+  reference_asset_patterns:
+  - veterinarios_atencion_mascotas_01.png
+  - veterinarios_atencion_mascotas_01.jpg
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad for local veterinary care in Chile, friendly veterinarian with healthy dog and cat, realistic and trustworthy.
+  creative_template:
+    subject_profile: Friendly veterinary professional interacting calmly with a dog, cat or pet owner.
+    scene_profile: Clean modern veterinary consultation room or credible home-visit environment.
+    color_direction: Fresh blue and green healthcare palette with warm natural pet tones.
+    lighting_direction: Soft bright clinical lighting that feels safe and welcoming.
+    camera_direction: Medium shot centered on the veterinarian-pet interaction.
+    copy_structure: Pet need headline + available care options + useful request details + WhatsApp CTA.
+    layout_density: medium with warm visual breathing space
+    tone_keywords:
+    - cuidadoso
+    - profesional
+    - cercano
+    - confiable
+    information_blocks:
+    - Headline addressing the pet's need.
+    - Consultation, vaccination and preventive care options.
+    - Prompt to provide species, age, symptoms and commune.
+    - WhatsApp contact strip.
+    text_hierarchy:
+    - Pet need first.
+    - Care options second.
+    - Helpful request details third.
+    - CTA and contact final.
+    category_quality_checks:
+    - Animals must look healthy and anatomically realistic.
+    - Veterinary equipment and handling must appear safe.
+    - Avoid implying guaranteed diagnosis or emergency availability.
+    min_info_elements: 8
+    differentiators:
+    - Local coordination according to commune and availability.
+    - Clear preparation details for a useful first contact.
+    scene_anchors:
+    - Veterinarian calmly examining or guiding.
+    - Dog, cat or pet owner as emotional focus.
+    trust_cues:
+    - Clean professional clothing and consultation setting.
+    - Gentle handling and relaxed animal expression.
+    avoid:
+    - No distressed animals, invasive procedures or graphic medical scenes.
+  variants:
+  - hook: Tu mascota necesita atencion veterinaria?
+    value: Busca opciones para controles, orientacion y necesidades puntuales.
+    proof: Indica especie, edad, sintomas, tiempo de evolucion y tu comuna.
+    cta: Solicita opciones por WhatsApp.
+    short_text: Atencion veterinaria para tu mascota.
+  - hook: Necesitas un veterinario en tu comuna?
+    value: Coordina opciones para consultas, vacunacion y controles preventivos.
+    proof: La modalidad y disponibilidad se confirman con cada profesional.
+    cta: Cuentanos lo que necesita tu mascota.
+    short_text: Encuentra apoyo veterinario local.
+- id: traductores_ingles_espanol
+  label: Traductores Ingles-Espanol
+  objective: captar_clientes
+  category_context: Conectar personas y empresas con profesionales para traducir, localizar y revisar documentos o contenidos entre ingles y espanol.
+  visual_brief: Comunicacion bilingue profesional, precisa y ordenada, con documentos y contenido digital claramente representados.
+  keywords:
+  - traductor
+  - traductora
+  - traduccion
+  - ingles
+  - espanol
+  - documentos
+  - localizacion
+  - bilingue
+  services:
+  - traduccion ingles-espanol
+  - traduccion de documentos
+  - localizacion de contenido digital
+  - revision de textos bilingues
+  - correccion de traducciones
+  reference_asset_patterns:
+  - traductores_ingles_espanol_01.png
+  - traductores_ingles_espanol_01.jpg
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad for English-Spanish translation services in Chile, professional translator with documents and laptop, realistic and polished.
+  creative_template:
+    subject_profile: Professional translator reviewing bilingual documents or digital content at a clean workstation.
+    scene_profile: Modern office or remote-work setting with realistic documents, laptop and subtle English-Spanish language cues.
+    color_direction: Professional blue and neutral palette with restrained red accents for bilingual contrast.
+    lighting_direction: Clear soft office lighting emphasizing readability and precision.
+    camera_direction: Medium shot including translator, document and digital-work context.
+    copy_structure: Translation need headline + supported content types + request details + WhatsApp CTA.
+    layout_density: medium with precise structured information
+    tone_keywords:
+    - preciso
+    - profesional
+    - claro
+    - confiable
+    information_blocks:
+    - Headline describing the translation need.
+    - Documents, websites, presentations and bilingual review options.
+    - Prompt for format, length, audience and deadline.
+    - WhatsApp contact strip.
+    text_hierarchy:
+    - Translation need first.
+    - Supported content types second.
+    - Project requirements third.
+    - CTA and contact final.
+    category_quality_checks:
+    - Language and document context must be immediately understandable.
+    - Avoid flags as the only visual explanation of translation.
+    - Do not imply official acceptance or certification unless confirmed.
+    min_info_elements: 8
+    differentiators:
+    - Translation of both documents and digital content.
+    - Preparation details that improve professional quoting.
+    scene_anchors:
+    - Bilingual document or side-by-side text.
+    - Translator using laptop and reference material.
+    trust_cues:
+    - Organized desk and focused professional posture.
+    - Clean document formatting and credible office setting.
+    avoid:
+    - No unreadable text walls or stereotypical tourism imagery.
+  variants:
+  - hook: Necesitas traducir documentos entre ingles y espanol?
+    value: Solicita apoyo para documentos personales, comerciales y contenidos digitales.
+    proof: Indica formato, cantidad de palabras o paginas, audiencia y fecha de entrega.
+    cta: Pide opciones por WhatsApp.
+    short_text: Traduccion ingles-espanol.
+  - hook: Tu contenido necesita una traduccion clara y profesional?
+    value: Busca apoyo para localizar sitios web, presentaciones o revisar textos bilingues.
+    proof: Confirma si necesitas traduccion simple, certificada o un formato especifico.
+    cta: Cuentanos lo que necesitas traducir.
+    short_text: Traduce documentos y contenido digital.
+- id: general
+  label: ConectaProIA
+  objective: branding
+  category_context: General brand content for trust, recall and professional coverage.
+  visual_brief: Brand-centered polished visual, broad-service relevance.
+  keywords:
+  - marca
+  - conectaproia
+  - confianza
+  - servicios
+  services:
+  - servicios profesionales
+  reference_asset_patterns:
+  - maestro_17d41ecc8e.png
+  image_prompt_templates:
+  - Vertical 9:16 premium brand image for trusted multi-service marketplace in Chile.
+  creative_template:
+    subject_profile: Generalist service professional with confident and close expression.
+    scene_profile: Neutral premium home-service scene adaptable to multiple service lines.
+    color_direction: Brand-blue foundation with white and warm accent highlights.
+    lighting_direction: Clean commercial lighting with balanced contrast.
+    camera_direction: Center-right hero framing with broad left-side breathing room.
+    copy_structure: Brand-first headline + multi-service cues + quick-benefit bullets + WhatsApp CTA.
+    layout_density: medium-high with strong brand recall
+    tone_keywords:
+    - marca
+    - confianza
+    - cercania
+    - premium
+    information_blocks:
+    - Brand-forward title at top.
+    - Multi-service support list or chips.
+    - Trust and speed cues in short bullet form.
+    - Bottom conversion strip with WhatsApp and logo.
+    text_hierarchy:
+    - Brand/title first.
+    - Service cues second.
+    - Trust bullets third.
+    - CTA/footer contact final.
+    category_quality_checks:
+    - Should look like umbrella brand campaign, not one narrow category.
+    - Maintain clean premium visual language.
+    - Avoid visual emptiness; include clear structured information.
+    min_info_elements: 9
+    differentiators:
+    - Brand memory and trust-building above urgency.
+    scene_anchors:
+    - Professional tools or neutral service indicators.
+    trust_cues:
+    - Friendly but competent posture.
+    avoid:
+    - No category-specific overfocus.
+  variants:
+  - hook: Conecta con profesionales confiables.
+    value: ConectaProIA simplifica tu busqueda por WhatsApp.
+    proof: Rapido, claro y orientado a resultados.
+    cta: Conecta hoy.
+    short_text: ConectaProIA en minutos.
+- id: zzz_tmp
+  label: Zzz Tmp
+  objective: captar_clientes
+  category_context: Atraer clientes que necesitan ayuda inmediata y confiable.
+  visual_brief: 'dramatic mood, high saturation, Blue/cyan dominant palette with professional look, orientation vertical, safe_text_zone=center, focal_zone=left, density=low. OCR cues: not detected.'
+  keywords:
+  - tmp
+  - zzz
+  - gratis
+  - costo
+  - sin
+  - contacto
+  - base
+  - clientes
+  services:
+  - contacto gratis
+  - solicitud sin costo
+  reference_asset_patterns:
+  - base.png
+  image_prompt_templates:
+  - Vertical 9:16 premium social ad image for category 'Zzz Tmp' in Chile, photorealistic, polished, no clipping.
+  creative_template:
+    subject_profile: Client and mixed professionals cast with approachable and optimistic expressions.
+    scene_profile: Promotional modern service-ad setting with subtle dynamic shapes and movement cues.
+    color_direction: Blue/cyan dominant palette with professional look. Avg RGB [35, 70, 130].
+    lighting_direction: Bright front lighting with soft shadow separation and ad-like clarity.
+    camera_direction: Mid shot with slightly wide framing to include both benefit cue and people.
+    copy_structure: Headline impact + highlighted free-benefit ribbon + supporting trust bullets + contact CTA strip.
+    layout_density: high information density with clear segmentation
+    tone_keywords:
+    - accesible
+    - claro
+    - optimista
+    - directo
+    differentiators:
+    - Visual cue of zero-cost concept (price tag or symbolic free marker).
+    - Benefit-first composition before service detail.
+    scene_anchors:
+    - Free-contact visual metaphor near top-left or center-left.
+    - Multi-professional lineup as trust anchor.
+    trust_cues:
+    - Friendly smiles and open body language.
+    - Service diversity represented in one frame.
+    composition_rules:
+    - Hero on right or right-center
+    - Safe margins for top and bottom text
+    poster_structure:
+    - Headline top block
+    - Middle value modules
+    - Bottom CTA contact strip
+    design_finish_rules:
+    - Rounded modules
+    - Clean iconography
+    - Soft gradients and separators
+    category_quality_checks:
+    - Must feel promotional and premium, not generic flyer.
+    - Free-benefit message must be instantly understood in 3 seconds.
+    - No empty margins; all sections must look intentionally designed.
+    avoid:
+    - No distorted anatomy
+    - No unreadable or clipped text
+    min_info_elements: 10
+  variants:
+  - hook: Necesitas zzz tmp hoy?
+    value: ConectaProIA te ayuda a resolver zzz tmp por WhatsApp con enfoque claro y rapido.
+    proof: Contenido diseñado para transmitir confianza, orden y accion inmediata.
+    cta: Escribenos ahora.
+    short_text: Necesitas zzz tmp hoy?
+  analysis:
+    reference_file: base.png
+    reference_image:
+      size:
+      - 1080
+      - 1350
+      orientation: vertical
+      avg_rgb:
+      - 35
+      - 70
+      - 130
+      mood: dramatic
+      saturation: high saturation
+      color_hint: Blue/cyan dominant palette with professional look
+    composition:
+      orientation: vertical
+      safe_text_zone: center
+      focal_zone: left
+      vertical_focus: top
+      content_density: low
+      edge_density:
+        left: 2.72
+        center: 1.1
+        right: 2.72
+      luminance:
+        left: 66.0
+        center: 66.0
+        right: 66.0
+      edge_margin_risk: true
+      edge_meta:
+        top: 0.732201646090535
+        bottom: 0.732201646090535
+        left: 0.8640826873385012
+        right: 0.8640826873385012
+        center: 1.0
+        top_dark_pct: 100.0
+        bottom_dark_pct: 100.0
+        left_dark_pct: 100.0
+        right_dark_pct: 100.0
+        top_std: 0.0
+        bottom_std: 0.0
+        touch_top: 0.0
+        touch_bottom: 0.0
+        inset_card: 1.0
+    ocr:
+      engine: pytesseract
+      available: false
+      line_preview: []
+      tokens: []
+      error: ocr_no_text_detected
+    semantic_tags:
+    - tmp
+    - zzz
+    - gratis
+    - costo
+    - sin
+    - contacto
+    - base
+    - clientes
+    - confianza
+    - solicitud
+    - accesible
+    - claro
+    - optimista
+    - directo
+- id: comida_preparada_restaurante
+  label: Restaurante / Comida preparada
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Restaurante / Comida preparada por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+  keywords:
+  - comida
+  - preparada
+  - restaurante
+  - restaurante
+  - comida
+  - preparada
+  services:
+  - Restaurante / Comida preparada
+  reference_asset_patterns:
+  - comida_preparada_restaurante_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Restaurante / Comida preparada''.
+
+    Scene/backdrop: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: comida_sushi
+  label: Sushi
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Sushi por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+  keywords:
+  - comida
+  - sushi
+  - sushi
+  services:
+  - Sushi
+  reference_asset_patterns:
+  - comida_sushi_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Sushi''.
+
+    Scene/backdrop: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: comida_sandwiches_completos
+  label: Sandwiches / Completos
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Sandwiches / Completos por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+  keywords:
+  - comida
+  - sandwiches
+  - completos
+  - sandwiches
+  - completos
+  services:
+  - Sandwiches / Completos
+  reference_asset_patterns:
+  - comida_sandwiches_completos_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Sandwiches / Completos''.
+
+    Scene/backdrop: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: comida_pizzeria
+  label: Pizzeria
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Pizzeria por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+  keywords:
+  - comida
+  - pizzeria
+  - pizzeria
+  services:
+  - Pizzeria
+  reference_asset_patterns:
+  - comida_pizzeria_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Pizzeria''.
+
+    Scene/backdrop: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: aire_acondicionado_calefaccion
+  label: Aire acondicionado / Calefacción
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Aire acondicionado / Calefacción por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional plumber actively repairing a sink, pipe leak or water heater with visible wrench and fittings, clean home interior, service action clearly visible, not just a portrait
+  keywords:
+  - aire
+  - acondicionado
+  - calefaccion
+  - aire
+  - acondicionado
+  - calefaccion
+  services:
+  - Aire acondicionado / Calefacción
+  reference_asset_patterns:
+  - aire_acondicionado_calefaccion_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Aire acondicionado / Calefacción''.
+
+    Scene/backdrop: professional plumber actively repairing a sink, pipe leak or water heater with visible wrench and fittings, clean home interior, service action clearly visible, not just a portrait.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional plumber actively repairing a sink, pipe leak or water heater with visible wrench and fittings, clean home interior, service action clearly visible, not just a portrait
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: medico_veterinario
+  label: Medico Veterinario
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Medico Veterinario por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+  keywords:
+  - medico
+  - veterinario
+  - medico
+  - veterinario
+  services:
+  - Medico Veterinario
+  reference_asset_patterns:
+  - medico_veterinario_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Medico Veterinario''.
+
+    Scene/backdrop: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: psicologia
+  label: Psicólogo
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Psicólogo por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+  keywords:
+  - psicologia
+  - psicologo
+  services:
+  - Psicólogo
+  reference_asset_patterns:
+  - psicologia_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Psicólogo''.
+
+    Scene/backdrop: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: fletes_mudanzas
+  label: Fletes / Mudanzas
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Fletes / Mudanzas por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting
+  keywords:
+  - fletes
+  - mudanzas
+  - fletes
+  - mudanzas
+  services:
+  - Fletes / Mudanzas
+  reference_asset_patterns:
+  - fletes_mudanzas_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Fletes / Mudanzas''.
+
+    Scene/backdrop: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: dentista
+  label: Dentista
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Dentista por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+  keywords:
+  - dentista
+  - dentista
+  services:
+  - Dentista
+  reference_asset_patterns:
+  - dentista_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Dentista''.
+
+    Scene/backdrop: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: trustworthy healthcare or therapy setting with a professional assisting an adult client, no emergency or invasive procedure
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: comida_hamburguesas
+  label: Hamburguesas
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Hamburguesas por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+  keywords:
+  - comida
+  - hamburguesas
+  - hamburguesas
+  services:
+  - Hamburguesas
+  reference_asset_patterns:
+  - comida_hamburguesas_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Hamburguesas''.
+
+    Scene/backdrop: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local food service scene with appetizing prepared food, clean kitchen or counter, no delivery-app branding
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: abogado
+  label: Abogado
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Abogado por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting
+  keywords:
+  - abogado
+  - abogado
+  services:
+  - Abogado
+  reference_asset_patterns:
+  - abogado_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Abogado''.
+
+    Scene/backdrop: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: professional local service scene with a real worker or specialist helping an adult client in a clean Chilean setting
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: arquitectura
+  label: Arquitectura
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Arquitectura por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: modern property or office consultation with a professional advisor and client
+  keywords:
+  - arquitectura
+  - arquitectura
+  services:
+  - Arquitectura
+  reference_asset_patterns:
+  - arquitectura_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Arquitectura''.
+
+    Scene/backdrop: modern property or office consultation with a professional advisor and client.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: modern property or office consultation with a professional advisor and client
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro
+- id: peluqueria_canina
+  label: Peluquería canina
+  objective: captar_clientes
+  category_context: Promocionar coordinación de Peluquería canina por WhatsApp usando solo contacto oficial de ConectaProIA.
+  visual_brief: refined beauty studio with a skilled professional serving an adult client
+  keywords:
+  - peluqueria
+  - canina
+  - peluqueria
+  - canina
+  services:
+  - Peluquería canina
+  reference_asset_patterns:
+  - peluqueria_canina_01.png
+  image_prompt_templates:
+  - 'Use case: ads-marketing
+
+    Asset type: Instagram feed base image for ConectaProIA service marketplace
+
+    Primary request: premium photorealistic vertical image representing the service ''Peluquería canina''.
+
+    Scene/backdrop: refined beauty studio with a skilled professional serving an adult client.
+
+    Style/medium: high-end commercial editorial photography, realistic faces and hands, polished but natural.
+
+    Composition/framing: vertical 4:5 composition, clear subject, clean negative space for later Spanish text overlay. Place the main service action on the right half and keep the left half light and uncluttered. Keep at least 12 percent clean padding above heads, hats, tools and hands; do not crop the subject at any edge. The service activity, tools, materials or finished result must be visible in the foreground. Avoid generic portrait-only images.
+
+    Lighting/mood: bright professional lighting, trustworthy, calm, modern.
+
+    Constraints: no text, no logos, no signs, no readable screens, no phone numbers, no WhatsApp branding, no watermarks, no provider names.
+
+    Avoid: close-up headshot, cropped hat or face, subject touching image borders, distorted anatomy, extra fingers, clutter, brand marks, documents with readable data, license plates.'
+  creative_template:
+    subject_profile: Profesional real del rubro, presentación limpia y confiable.
+    scene_profile: refined beauty studio with a skilled professional serving an adult client
+    color_direction: Paleta profesional balanceada con acento verde ConectaProIA.
+    lighting_direction: Luz natural o comercial suave, alto nivel de claridad.
+    copy_structure: Servicio + profesionales activos + WhatsApp oficial + web + disclaimer.
+    layout_density: media
+    tone_keywords:
+    - profesional
+    - confiable
+    - claro

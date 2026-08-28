@@ -1,0 +1,27 @@
+services:
+  social_automation:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      CP_DB_HOST: ${CP_DB_HOST:-127.0.0.1}
+      CP_DB_PORT: ${CP_DB_PORT:-5432}
+      CP_DB_NAME: ${CP_DB_NAME:-conectapro}
+      CP_DB_USER: ${CP_DB_USER:-conectapro}
+      CP_DB_PASSWORD: ${CP_DB_PASSWORD:-}
+      OUTPUT_ROOT: /app/output/runs
+      INSTAGRAM_DRAFTS_ROOT: /app/output/runs/instagram/drafts
+      INSTAGRAM_CATALOG_PATH: /app/output/runs/instagram/catalog/publication_catalog.json
+      INSTAGRAM_STATE_PATH: /app/output/runs/instagram/state.json
+      INSTAGRAM_PLAN_PATH: /app/output/runs/instagram/catalog/publication_plan.json
+      INSTAGRAM_PUBLISH_ASSETS_ROOT: /app/imagenes_ig
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./output:/app/output
+      - ./imagenes_ig:/app/imagenes_ig
+      - ./logs:/app/logs
+      - ./.env:/app/.env
+    network_mode: host
+    restart: "no"
