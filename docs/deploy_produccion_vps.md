@@ -67,11 +67,15 @@ META_USER_TOKEN_EXPIRES_AT=...
 META_PAGE_ID=...
 META_INSTAGRAM_USER_ID=...
 INSTAGRAM_SIMULATE_PUBLISH=false
+INSTAGRAM_ENABLE_OPENAI_IMAGES=false
+INSTAGRAM_REQUIRE_AI_IMAGE=false
 INSTAGRAM_WHATSAPP_CLIENT_URL=https://api.whatsapp.com/send?phone=56983434503
 INSTAGRAM_WHATSAPP_PROVIDER_URL=https://api.whatsapp.com/send?phone=56961903199
 ```
 
 El compose usa `network_mode: host` porque en Linux permite que el contenedor independiente conecte a la DB publicada por `conectapro-platform` en `127.0.0.1:5432`, sin mezclar repos ni servicios.
+
+La generacion de imagenes premium queda a cargo de `scripts/instagram_image_factory.py`. Por eso en produccion conviene mantener `INSTAGRAM_ENABLE_OPENAI_IMAGES=false`: el publicador no regenera imagenes inline, sino que publica desde `imagenes_ig`, donde la fabrica va agregando/actualizando assets con QC.
 
 Primer deploy manual:
 

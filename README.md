@@ -284,8 +284,8 @@ Archivo de planificación:
 Flags relevantes:
 
 ```env
-INSTAGRAM_ENABLE_OPENAI_IMAGES=true
-INSTAGRAM_REQUIRE_AI_IMAGE=true
+INSTAGRAM_ENABLE_OPENAI_IMAGES=false
+INSTAGRAM_REQUIRE_AI_IMAGE=false
 INSTAGRAM_BRANDING_REQUIRED=true
 INSTAGRAM_WHATSAPP_CLIENT_URL=https://api.whatsapp.com/send?phone=56983434503
 INSTAGRAM_WHATSAPP_PROVIDER_URL=https://api.whatsapp.com/send?phone=56961903199
@@ -301,7 +301,7 @@ INSTAGRAM_ANTISPAM_COOLDOWN_MINUTES=120
 INSTAGRAM_OPENAI_USE_INTERLEAVING=false
 ```
 
-Si `INSTAGRAM_REQUIRE_AI_IMAGE=true` y falla OpenAI, el ciclo se detiene (no publica contenido no conforme).
+En produccion estable, la fabrica dedicada `scripts/instagram_image_factory.py` genera imagenes premium con OpenAI, aplica branding/QC y actualiza `imagenes_ig`. Por eso el publicador puede mantener `INSTAGRAM_ENABLE_OPENAI_IMAGES=false` y publicar desde la biblioteca curada.
 
 ## Renovacion automatica token Meta
 
