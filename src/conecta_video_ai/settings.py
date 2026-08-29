@@ -94,6 +94,9 @@ class AppSettings(BaseModel):
     instagram_state_path: Path = Path("output/runs/instagram/state.json")
     instagram_recent_media_limit: int = 30
     instagram_post_interval_minutes: int = 960
+    instagram_publish_time_window_enabled: bool = True
+    instagram_publish_timezone: str = "America/Santiago"
+    instagram_publish_allowed_windows: str = "11:00-20:30"
     instagram_plan_horizon_hours: int = 24
     instagram_short_text_max_chars: int = 90
     instagram_enable_openai_images: bool = True
@@ -251,6 +254,8 @@ def load_settings(default_path: Path = Path("config/app.yaml")) -> AppSettings:
         "INSTAGRAM_MUSIC_LIBRARY_ROOT": "instagram_music_library_root",
         "INSTAGRAM_MUSIC_FORCE_TRACK": "instagram_music_force_track",
         "INSTAGRAM_PUBLISH_MEDIA_MODE": "instagram_publish_media_mode",
+        "INSTAGRAM_PUBLISH_TIMEZONE": "instagram_publish_timezone",
+        "INSTAGRAM_PUBLISH_ALLOWED_WINDOWS": "instagram_publish_allowed_windows",
     }
     for env_key, config_key in env_map.items():
         if os.getenv(env_key):
@@ -289,6 +294,7 @@ def load_settings(default_path: Path = Path("config/app.yaml")) -> AppSettings:
         "INSTAGRAM_OPENAI_USE_INTERLEAVING": "instagram_openai_use_interleaving",
         "INSTAGRAM_SEQUENTIAL_IMAGE_LIBRARY": "instagram_sequential_image_library",
         "INSTAGRAM_LIBRARY_SYNC_FROM_DRAFTS": "instagram_library_sync_from_drafts",
+        "INSTAGRAM_PUBLISH_TIME_WINDOW_ENABLED": "instagram_publish_time_window_enabled",
     }
     for env_key, config_key in bool_map.items():
         if os.getenv(env_key):

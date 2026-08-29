@@ -209,9 +209,9 @@ Runner recomendado para produccion estable (real publish + guardias de cadencia/
 python scripts/run_instagram_autopublish_once.py --use-meta-history
 ```
 
-Nota: este runner ahora intenta sincronizar biblioteca central (`publish_assets`) en cada ciclo antes de publicar.
+Nota: este runner valida la ventana horaria local antes de generar o publicar. Por defecto solo publica entre `11:00-20:30` en `America/Santiago`, configurable con `INSTAGRAM_PUBLISH_TIMEZONE` e `INSTAGRAM_PUBLISH_ALLOWED_WINDOWS`.
 
-Registrar tarea diaria en Windows, una publicacion por dia en horarios recomendados:
+Registrar tarea diaria en Windows, hasta dos publicaciones por dia en horarios recomendados:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\scripts\setup_instagram_daily_best_times_task.ps1 -DisableLegacyTasks
@@ -219,18 +219,19 @@ powershell -ExecutionPolicy Bypass -File .\scripts\setup_instagram_daily_best_ti
 
 Horarios por defecto:
 
-- Lunes: 14:30
-- Martes: 13:30
-- Miercoles: 18:30
-- Jueves: 12:30
-- Viernes: 11:30
-- Sabado: 11:00
-- Domingo: 18:00
+- Lunes: 14:30 y 19:00
+- Martes: 13:30 y 18:30
+- Miercoles: 12:30 y 18:30
+- Jueves: 12:30 y 16:30
+- Viernes: 11:30 y 16:00
+- Sabado: 11:00 y 17:00
+- Domingo: 13:00 y 18:00
 
 La tarea diaria ejecuta sincronizacion ligera de biblioteca central antes del ciclo de publicacion.
 
 La automatizacion estable ahora incluye:
 
+- guardia de ventana horaria local (`INSTAGRAM_PUBLISH_ALLOWED_WINDOWS`)
 - guardia de intervalo minimo de publicacion (`INSTAGRAM_POST_INTERVAL_MINUTES`)
 - cooldown anti-spam por error Meta 368
 - fallback automatico de video a imagen cuando corresponde

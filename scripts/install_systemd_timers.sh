@@ -4,6 +4,7 @@ set -euo pipefail
 APP_DIR="${APP_DIR:-/opt/conecta-pro-ia-generativa}"
 SERVICE_USER="${SERVICE_USER:-$(whoami)}"
 SYSTEMD_DIR="${SYSTEMD_DIR:-/etc/systemd/system}"
+PUBLISH_TZ="${PUBLISH_TZ:-America/Santiago}"
 
 install_unit() {
   local name="$1"
@@ -28,28 +29,38 @@ install_timer() {
   local name="$1"
   local schedule="$2"
   local randomized_delay="${3:-5m}"
-  sudo tee "${SYSTEMD_DIR}/${name}.timer" >/dev/null <<EOF
+  local persistent="${4:-true}"
+  local schedules=()
+  IFS="|" read -r -a schedules <<<"$schedule"
+  {
+    cat <<EOF
 [Unit]
 Description=Timer for ${name}
 
 [Timer]
-OnCalendar=${schedule}
+EOF
+    for calendar in "${schedules[@]}"; do
+      echo "OnCalendar=${calendar}"
+    done
+    cat <<EOF
 RandomizedDelaySec=${randomized_delay}
-Persistent=true
+Persistent=${persistent}
 
 [Install]
 WantedBy=timers.target
 EOF
+  } | sudo tee "${SYSTEMD_DIR}/${name}.timer" >/dev/null
 }
 
 install_unit "conectapro-ig-image-factory" "image-factory"
 install_timer "conectapro-ig-image-factory" "hourly" "10m"
 
 install_unit "conectapro-ig-autopublish" "autopublish"
-install_timer "conectapro-ig-autopublish" "*-*-* *:15:00" "10m"
+autopublish_schedule="Mon *-*-* 14:30:00 ${PUBLISH_TZ}|Mon *-*-* 19:00:00 ${PUBLISH_TZ}|Tue *-*-* 13:30:00 ${PUBLISH_TZ}|Tue *-*-* 18:30:00 ${PUBLISH_TZ}|Wed *-*-* 12:30:00 ${PUBLISH_TZ}|Wed *-*-* 18:30:00 ${PUBLISH_TZ}|Thu *-*-* 12:30:00 ${PUBLISH_TZ}|Thu *-*-* 16:30:00 ${PUBLISH_TZ}|Fri *-*-* 11:30:00 ${PUBLISH_TZ}|Fri *-*-* 16:00:00 ${PUBLISH_TZ}|Sat *-*-* 11:00:00 ${PUBLISH_TZ}|Sat *-*-* 17:00:00 ${PUBLISH_TZ}|Sun *-*-* 13:00:00 ${PUBLISH_TZ}|Sun *-*-* 18:00:00 ${PUBLISH_TZ}"
+install_timer "conectapro-ig-autopublish" "${autopublish_schedule}" "10m" "false"
 
 install_unit "conectapro-ig-carousel" "carousel"
-install_timer "conectapro-ig-carousel" "Mon,Wed,Fri,Sun *-*-* 12:05:00" "20m"
+install_timer "conectapro-ig-carousel" "Mon,Wed,Fri,Sun *-*-* 12:05:00 ${PUBLISH_TZ}" "20m" "false"
 
 install_unit "conectapro-meta-token-refresh" "token-refresh"
 install_timer "conectapro-meta-token-refresh" "*-*-* 03:30:00" "30m"

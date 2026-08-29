@@ -69,6 +69,9 @@ META_INSTAGRAM_USER_ID=...
 INSTAGRAM_SIMULATE_PUBLISH=false
 INSTAGRAM_ENABLE_OPENAI_IMAGES=false
 INSTAGRAM_REQUIRE_AI_IMAGE=false
+INSTAGRAM_PUBLISH_TIME_WINDOW_ENABLED=true
+INSTAGRAM_PUBLISH_TIMEZONE=America/Santiago
+INSTAGRAM_PUBLISH_ALLOWED_WINDOWS=11:00-20:30
 INSTAGRAM_WHATSAPP_CLIENT_URL=https://api.whatsapp.com/send?phone=56983434503
 INSTAGRAM_WHATSAPP_PROVIDER_URL=https://api.whatsapp.com/send?phone=56961903199
 ```
@@ -90,8 +93,8 @@ bash scripts/deploy_prod.sh
 El deploy instala estos timers:
 
 - `conectapro-ig-image-factory.timer`: genera o repara imagenes.
-- `conectapro-ig-autopublish.timer`: publica feed/story con guardias internas.
-- `conectapro-ig-carousel.timer`: publica carruseles con imagenes nuevas.
+- `conectapro-ig-autopublish.timer`: publica feed/story a las 12:30 y 18:30 hora Chile, con guardias internas.
+- `conectapro-ig-carousel.timer`: publica carruseles al mediodia hora Chile, con guardia interna de ventana horaria.
 - `conectapro-meta-token-refresh.timer`: renueva tokens Meta.
 
 Comandos utiles:

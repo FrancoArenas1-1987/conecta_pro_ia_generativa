@@ -18,6 +18,7 @@ if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
 from conecta_video_ai.instagram_graph_publisher import InstagramGraphPublisher
+from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.settings import load_settings
 from conecta_video_ai.whatsapp_links import extract_whatsapp_phone, normalize_whatsapp_click_url
 
@@ -579,6 +580,26 @@ def main() -> None:
 
     os.chdir(PROJECT_ROOT)
     if args.publish:
+        settings = load_settings()
+        schedule_status = publish_window_status(
+            enabled=bool(settings.instagram_publish_time_window_enabled),
+            timezone_name=str(settings.instagram_publish_timezone),
+            allowed_windows=str(settings.instagram_publish_allowed_windows),
+        )
+        if not bool(schedule_status.get("allowed", False)):
+            print(
+                json.dumps(
+                    {
+                        "ok": True,
+                        "skipped": True,
+                        "reason": str(schedule_status.get("reason") or "publish_time_window_closed"),
+                        "schedule": schedule_status,
+                    },
+                    ensure_ascii=False,
+                    indent=2,
+                )
+            )
+            return
         skipped, payload = should_skip(int(args.interval_hours), force=bool(args.force))
         if skipped and payload is not None:
             print(json.dumps(payload, ensure_ascii=False, indent=2))

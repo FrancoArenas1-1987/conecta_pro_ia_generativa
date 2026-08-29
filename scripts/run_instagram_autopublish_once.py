@@ -16,6 +16,7 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
+from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.pipelines import StudioService
 from conecta_video_ai.settings import load_settings
 
@@ -187,6 +188,23 @@ def main() -> None:
     args = parser.parse_args()
 
     settings = load_settings()
+    log_path = settings.output_root / "instagram" / "automation_hourly_log.jsonl"
+    schedule_status = publish_window_status(
+        enabled=bool(settings.instagram_publish_time_window_enabled),
+        timezone_name=str(settings.instagram_publish_timezone),
+        allowed_windows=str(settings.instagram_publish_allowed_windows),
+    )
+    if not bool(schedule_status.get("allowed", False)):
+        payload = {
+            "ok": True,
+            "skipped": True,
+            "reason": str(schedule_status.get("reason") or "publish_time_window_closed"),
+            "schedule": schedule_status,
+        }
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
+        _append_log(log_path, {"ts": _now_iso(), "mode": "hourly_once", **payload})
+        return
+
     # Enforce hourly real publishing, but respect .env/app.yaml quality/economy toggles.
     # This avoids hard-stopping the flow when monthly image budget is reached.
     settings.instagram_enable_openai_images = bool(settings.instagram_enable_openai_images)
@@ -204,7 +222,6 @@ def main() -> None:
     if not (settings.openai_api_key or "").strip():
         raise SystemExit("OPENAI_API_KEY no configurada para autopublish hourly")
 
-    log_path = settings.output_root / "instagram" / "automation_hourly_log.jsonl"
     lock_path = _runner_lock_path(settings)
     lock_acquired, lock_note = _acquire_runner_lock(lock_path)
     if not lock_acquired:
@@ -239,6 +256,10 @@ def main() -> None:
                 "quality_burst_max_attempts": settings.instagram_publish_quality_burst_max_attempts,
                 "antispam_cooldown_minutes": settings.instagram_antispam_cooldown_minutes,
                 "post_interval_minutes": settings.instagram_post_interval_minutes,
+                "publish_time_window_enabled": settings.instagram_publish_time_window_enabled,
+                "publish_timezone": settings.instagram_publish_timezone,
+                "publish_allowed_windows": settings.instagram_publish_allowed_windows,
+                "publish_window_status": schedule_status,
                 "video_fallback_enabled": settings.instagram_publish_auto_video_fallback_enabled,
                 "preflight_targets_enabled": settings.instagram_publish_preflight_targets_enabled,
             },
