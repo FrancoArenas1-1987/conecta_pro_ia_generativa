@@ -159,14 +159,46 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
-def font(size: int, *, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
-    candidates = [
-        Path(r"C:\Windows\Fonts\arialbd.ttf") if bold else Path(r"C:\Windows\Fonts\arial.ttf"),
-        Path(r"C:\Windows\Fonts\segoeuib.ttf") if bold else Path(r"C:\Windows\Fonts\segoeui.ttf"),
+def _font_paths(*, bold: bool = False) -> list[Path]:
+    filename = "DejaVuSans-Bold.ttf" if bold else "DejaVuSans.ttf"
+    env_dirs = [Path(x) for x in str(os.getenv("IG_FONT_DIRS") or "").split(os.pathsep) if x.strip()]
+    font_dirs = [
+        *env_dirs,
+        Path("/usr/share/fonts/truetype/dejavu"),
+        Path("/usr/share/fonts/truetype/liberation2"),
+        Path("/usr/local/share/fonts"),
     ]
-    for candidate in candidates:
-        if candidate.exists():
+    windows_name = "arialbd.ttf" if bold else "arial.ttf"
+    segoe_name = "segoeuib.ttf" if bold else "segoeui.ttf"
+    return [
+        Path(r"C:\Windows\Fonts") / windows_name,
+        Path(r"C:\Windows\Fonts") / segoe_name,
+        *[font_dir / filename for font_dir in font_dirs],
+    ]
+
+
+def font(size: int, *, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
+    seen: set[str] = set()
+    for candidate in _font_paths(bold=bold):
+        if not str(candidate):
+            continue
+        key = str(candidate)
+        if key in seen:
+            continue
+        seen.add(key)
+        if not candidate.exists():
+            continue
+        try:
             return ImageFont.truetype(str(candidate), size=size)
+        except OSError:
+            continue
+
+    # Last chance: Pillow/fontconfig can resolve these by family name on some Linux images.
+    for name in (("DejaVuSans-Bold.ttf", "Arial Bold.ttf") if bold else ("DejaVuSans.ttf", "Arial.ttf")):
+        try:
+            return ImageFont.truetype(name, size=size)
+        except OSError:
+            continue
     return ImageFont.load_default()
 
 

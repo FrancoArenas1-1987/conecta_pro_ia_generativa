@@ -3,6 +3,7 @@ from pathlib import Path
 from PIL import Image
 
 from conecta_video_ai.whatsapp_links import extract_whatsapp_phone, normalize_whatsapp_click_url
+import scripts.run_instagram_carousel_once as carousel
 from scripts.run_instagram_carousel_once import choose_theme, load_assets
 
 
@@ -44,3 +45,30 @@ def test_carousel_builds_dynamic_recent_services_theme_for_new_categories(tmp_pa
 
     assert theme["id"] == "servicios_recientes"
     assert "peluqueria_canina" in theme["categories"]
+
+
+def test_carousel_font_uses_linux_dejavu_before_bitmap_fallback(monkeypatch) -> None:
+    class FakeFont:
+        pass
+
+    linux_font = Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf")
+    monkeypatch.setattr(
+        carousel,
+        "_font_paths",
+        lambda *, bold: [Path(r"C:\Windows\Fonts\arialbd.ttf"), linux_font],
+    )
+    monkeypatch.setattr(Path, "exists", lambda self: self == linux_font)
+
+    def fake_truetype(path: str, *, size: int):
+        assert path == str(linux_font)
+        assert size == 76
+        return FakeFont()
+
+    monkeypatch.setattr(carousel.ImageFont, "truetype", fake_truetype)
+    monkeypatch.setattr(
+        carousel.ImageFont,
+        "load_default",
+        lambda: (_ for _ in ()).throw(AssertionError("bitmap fallback should not be used")),
+    )
+
+    assert isinstance(carousel.font(76, bold=True), FakeFont)
