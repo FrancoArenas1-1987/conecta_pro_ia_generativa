@@ -30,6 +30,7 @@ from .music_engine import generate_instrumental_bed
 from .providers import OllamaProvider, OpenAIImageProvider
 from .settings import AppSettings
 from .storage import create_run_dir, write_json
+from .service_images import read_registry, approved_paths, canonical
 from .whatsapp_links import (
     DEFAULT_CLIENT_PHONE,
     DEFAULT_PROVIDER_PHONE,
@@ -181,6 +182,8 @@ class InstagramContentEngine:
 
     def _normalize_category_id(self, category_id: str) -> str:
         clean = str(category_id or "").strip()
+        if self._service_image_registry():
+            return canonical(clean)
         if clean in self.category_map:
             return clean
         if "general" in self.category_map:
@@ -1418,6 +1421,15 @@ class InstagramContentEngine:
             if item is not None:
                 built.append(item)
 
+        registry = self._service_image_registry()
+        if registry:
+            allowed = approved_paths(registry, self.publish_assets_root)
+            unique = {}
+            for item in built:
+                code = canonical(item["id"])
+                if code in allowed:
+                    unique[code] = {**item, "id": code}
+            built = list(unique.values())
         self.categories = built
         self.category_map = {str(cat.get("id") or "").strip(): cat for cat in self.categories if str(cat.get("id") or "").strip()}
 
@@ -1482,6 +1494,8 @@ class InstagramContentEngine:
         counts_videos: dict[str, int] = {}
         counts_audios: dict[str, int] = {}
         counts_images_quality_pass: dict[str, int] = {}
+        registry = self._service_image_registry()
+        primary = {str(path): code for code, path in approved_paths(registry, self.publish_assets_root).items()}
 
         def _ingest_items(rows: list[Any], media_type: str) -> None:
             for item in rows:
@@ -1529,6 +1543,14 @@ class InstagramContentEngine:
                         quality_score = int(q.get("score") or 0)
                         quality_passed = bool(quality_score >= int(self.settings.instagram_publish_quality_min_score))
                         quality_issues = [str(x) for x in (q.get("issues") or []) if str(x).strip()][:4]
+                if registry and media_type == "image":
+                    primary_code = primary.get(str(path.resolve()))
+                    excluded = not bool(primary_code)
+                    if primary_code:
+                        category_id, confidence, category_source = primary_code, 100, "approved_primary"
+                        quality_passed = True
+                        quality_score = max(90, int(quality_score or 0))
+                        quality_issues = []
                 entry = {
                     "path_key": key,
                     "path": str(path),
@@ -1589,6 +1611,9 @@ class InstagramContentEngine:
             payload["write_warning"] = f"os_error:{exc}"
         return payload
 
+    def _service_image_registry(self) -> dict:
+        return read_registry(self.settings.output_root / "instagram" / "catalog" / "service_images.json")
+
     def _asset_catalog_map(self) -> dict[str, dict[str, Any]]:
         data = self._safe_read_json(self.asset_catalog_path, {})
         out: dict[str, dict[str, Any]] = {}
@@ -1648,6 +1673,16 @@ class InstagramContentEngine:
         return dedup
 
     def _select_library_asset(self, *, query: str, category_id: str, state: dict[str, Any]) -> tuple[Any, dict[str, Any]]:
+        registry = self._service_image_registry()
+        if registry:
+            code = canonical(category_id)
+            path = approved_paths(registry, self.publish_assets_root).get(code)
+            chosen = next((item for item in self.asset_library.image_items if path and item.path.resolve() == path), None)
+            if chosen is None:
+                raise GenerationError(f"No approved primary image for service '{code}'")
+            return chosen, {"asset_key": self._asset_key(path), "asset_rel_path": self._asset_rel_path(path),
+                            "asset_category_id": code, "asset_category_confidence": 100,
+                            "asset_has_qr": False, "asset_rotation_pool": 1, "asset_avoid_count": 0}
         if self.settings.instagram_sequential_image_library:
             return self._next_sequential_image(state)
 

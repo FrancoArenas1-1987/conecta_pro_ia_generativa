@@ -20,6 +20,7 @@ if str(SRC_ROOT) not in sys.path:
 from conecta_video_ai.instagram_graph_publisher import InstagramGraphPublisher
 from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.settings import load_settings
+from conecta_video_ai.service_images import read_registry, approved_paths, canonical
 from conecta_video_ai.whatsapp_links import extract_whatsapp_phone, normalize_whatsapp_click_url
 
 W, H = 1080, 1350
@@ -287,6 +288,9 @@ def detect_category(path: Path, *, assets_root: Path | None = None) -> str:
 
 
 def load_assets(assets_root: Path) -> dict[str, list[Path]]:
+    registry = read_registry(INSTAGRAM_STATE_PATH.parent / "catalog" / "service_images.json")
+    if registry:
+        return {code: [path] for code, path in approved_paths(registry, assets_root).items()}
     grouped: dict[str, list[Path]] = {}
     for path in sorted(assets_root.rglob("*")):
         if not path.is_file():
@@ -303,7 +307,8 @@ def choose_theme(grouped: dict[str, list[Path]], *, force_theme: str | None = No
     state = read_json(STATE_PATH, {})
     recent = list(state.get("recent_themes") or []) if isinstance(state, dict) else []
     dynamic_theme = build_recent_services_theme(grouped)
-    candidates = [dynamic_theme, *THEMES] if dynamic_theme is not None else THEMES
+    canonical_themes = [{**theme, "categories": list(dict.fromkeys(canonical(c) for c in theme["categories"]))} for theme in THEMES]
+    candidates = [dynamic_theme, *canonical_themes] if dynamic_theme is not None else canonical_themes
     if force_theme:
         candidates = [theme for theme in candidates if theme["id"] == force_theme]
     if not candidates:

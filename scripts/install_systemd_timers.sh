@@ -60,7 +60,7 @@ autopublish_schedule="Mon *-*-* 14:30:00 ${PUBLISH_TZ}|Mon *-*-* 19:00:00 ${PUBL
 install_timer "conectapro-ig-autopublish" "${autopublish_schedule}" "10m" "false"
 
 install_unit "conectapro-ig-carousel" "carousel"
-install_timer "conectapro-ig-carousel" "Mon,Wed,Fri,Sun *-*-* 12:05:00 ${PUBLISH_TZ}" "20m" "false"
+install_timer "conectapro-ig-carousel" "*-*-* 12..20:05,20,35,50:00 ${PUBLISH_TZ}" "0" "false"
 
 install_unit "conectapro-meta-token-refresh" "token-refresh"
 install_timer "conectapro-meta-token-refresh" "*-*-* 03:30:00" "30m"

@@ -24,7 +24,15 @@ fi
 mkdir -p output logs imagenes_ig
 
 echo "[deploy] Fetching latest code ($BRANCH)..."
+if [[ -n "$(git status --porcelain --untracked-files=normal)" ]]; then
+  echo "[deploy] ERROR: local changes exist. Preserve and integrate them before deploying."
+  exit 1
+fi
 git fetch origin "$BRANCH"
+if ! git merge-base --is-ancestor HEAD "origin/$BRANCH"; then
+  echo "[deploy] ERROR: local commits are not present in origin/$BRANCH. Integrate them first."
+  exit 1
+fi
 git checkout "$BRANCH"
 git reset --hard "origin/$BRANCH"
 

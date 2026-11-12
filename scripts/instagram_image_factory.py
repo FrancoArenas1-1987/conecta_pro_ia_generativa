@@ -29,6 +29,8 @@ from conecta_video_ai.exceptions import GenerationError
 from conecta_video_ai.pipelines import StudioService
 from conecta_video_ai.providers import OpenAIImageProvider
 from conecta_video_ai.settings import load_settings
+from conecta_video_ai.service_images import reconcile, read_registry, approve_generated, save_registry
+from conecta_video_ai.image_budget import ImageBudget, BudgetBlocked
 from instagram_layout_guard import LayoutGuard, assert_layouts, write_manifest
 
 W, H = 1080, 1350
@@ -36,7 +38,7 @@ SOURCE_SAFE_MARGIN = 56
 PHONE = "+56 9 8343 4503"
 SITE = "conectaproia.cl"
 BRAND = "ConectaProIA"
-QUALITY_STANDARD_VERSION = 6
+QUALITY_STANDARD_VERSION = 7
 REFERENCE_SEEDS = {
     "electricidad": "electricidad_reparacion_01.png",
 }
@@ -44,6 +46,7 @@ STATE_DIR = PROJECT_ROOT / "output" / "runs" / "instagram" / "image_factory"
 MANIFEST_DIR = STATE_DIR / "manifests"
 LOG_PATH = STATE_DIR / "image_factory_log.jsonl"
 STATE_PATH = STATE_DIR / "state.json"
+REGISTRY_PATH = STATE_DIR.parent / "catalog" / "service_images.json"
 LOCK_PATH = Path(tempfile.gettempdir()) / "conectaproia_ig_image_factory.lock"
 FONT_DIRS = [
     Path(os.getenv("IG_FONT_DIR", "")),
@@ -457,6 +460,56 @@ def draw_wrapped(draw, x: int, y: int, text: str, fnt, fill, max_width: int, gap
     return y
 
 
+def draw_fitted_text(draw, bounds, text, fnt, fill, *, min_size: int = 16, gap: int = 6):
+    """Measure full copy with the actual font and fit it within a fixed region.
+
+    Never truncate copy. Impossible layouts fail during preflight before spending.
+    Long words are split by glyph width; Linux fallback fonts are measured too.
+    """
+    x1, y1, x2, y2 = bounds
+    for size in range(fnt.size, min_size - 1, -1):
+        fitted = fnt.font_variant(size=size)
+        lines = []
+        for paragraph in text.splitlines():
+            line = ""
+            for word in paragraph.split():
+                trial = (line + " " + word).strip()
+                if text_size(draw, trial, fitted)[0] <= x2 - x1:
+                    line = trial
+                    continue
+                if line:
+                    lines.append(line)
+                    line = ""
+                for char in word:
+                    if line and text_size(draw, line + char, fitted)[0] > x2 - x1:
+                        lines.append(line)
+                        line = ""
+                    line += char
+            if line:
+                lines.append(line)
+        measured = [draw.textbbox((0, 0), line, font=fitted, anchor="lt") for line in lines]
+        heights = [b[3] - b[1] for b in measured]
+        height = sum(heights) + gap * max(0, len(lines) - 1)
+        if lines and height <= y2-y1 and all(text_size(draw, line, fitted)[0] <= x2-x1 for line in lines):
+            y = y1
+            boxes = []
+            positions = []
+            for line, h, bearing in zip(lines, heights, measured):
+                position = (x1 - bearing[0], y - bearing[1])
+                positions.append(position)
+                boxes.append(draw.textbbox(position, line, font=fitted, anchor="lt"))
+                y += h + gap
+            actual = (min(b[0] for b in boxes), min(b[1] for b in boxes), max(b[2] for b in boxes), max(b[3] for b in boxes))
+            if actual[0] < x1 or actual[1] < y1 or actual[2] > x2 or actual[3] > y2:
+                continue
+            y = y1
+            for line, h, position in zip(lines, heights, positions):
+                draw.text(position, line, font=fitted, fill=fill, anchor="lt")
+                y += h + gap
+            return actual
+    raise RuntimeError(f"Text cannot fit allocated bounds at readable size: {text!r}")
+
+
 def stable_accent(code: str) -> tuple[int, int, int]:
     palette = [(16, 185, 129), (14, 165, 233), (59, 130, 246), (20, 184, 166), (245, 158, 11), (236, 72, 153)]
     idx = int(hashlib.sha1(code.encode("utf-8")).hexdigest()[:2], 16) % len(palette)
@@ -468,12 +521,8 @@ def draw_footer(draw, service: DbService, x: int, y: int, max_width: int, fill) 
         f"ConectaProIA actúa como intermediario y no presta directamente servicios de {service.name}. "
         "La prestación es responsabilidad del proveedor/profesional."
     )
-    lines = wrap_text(draw, text, FONTS["tiny"], max_width)[:2]
-    yy = y
-    for line in lines:
-        draw.text((x, yy), line, font=FONTS["tiny"], fill=fill)
-        yy += 25
-    return (x, y, x + max_width, y + max(1, len(lines)) * 25)
+    return draw_fitted_text(draw, (x, y, x + max_width, 1306), text, FONTS["tiny"], fill, min_size=16, gap=4)
+
 
 
 def headline_for_service(service: DbService) -> str:
@@ -542,8 +591,8 @@ def draw_info_card(draw, x: int, y: int, title: str, subtitle: str, icon_kind: s
     card_w, card_h = 468, 96
     draw.rounded_rectangle((x, y, x + card_w, y + card_h), radius=18, fill=(255, 255, 255, 248), outline=(226, 232, 240, 255), width=2)
     draw_card_icon(draw, kind=icon_kind, cx=x + 45, cy=y + 48, accent=accent)
-    draw.text((x + 88, y + 18), title, font=FONTS["body_bold"], fill=(5, 30, 75, 255))
-    draw.text((x + 88, y + 58), subtitle, font=FONTS["tiny"], fill=(51, 65, 85, 255))
+    draw_fitted_text(draw, (x+88, y+18, x+card_w-16, y+52), title, FONTS["body_bold"], (5, 30, 75, 255), min_size=24)
+    draw_fitted_text(draw, (x+88, y+60, x+card_w-16, y+82), subtitle, FONTS["tiny"], (51, 65, 85, 255))
     return (x, y, x + card_w, y + card_h)
 
 
@@ -576,18 +625,10 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
     draw.text((x + 78, y + 54), "Conectamos personas y servicios locales", font=FONTS["tiny"], fill=(51, 65, 85, 255))
     guard.add("brand", (x, y, x + 440, y + 86))
 
-    y = 182
-    title_top = y
-    y = draw_wrapped(draw, x, y, headline_for_service(service), FONTS["title"], navy, 540, 10)
-    guard.add("title", (x, title_top, x + 540, y))
-
-    y += 40
-    desc_top = y
+    guard.add("title", draw_fitted_text(draw, (x, 182, x+540, 410), headline_for_service(service), FONTS["title"], navy, min_size=38, gap=10))
     desc = f"Te conectamos por WhatsApp con opciones locales de {service.name}."
-    y = draw_wrapped(draw, x, y, desc, FONTS["body"], (51, 65, 85, 255), 520, 8)
-    guard.add("description", (x, desc_top, x + 520, y))
-
-    y += 28
+    guard.add("description", draw_fitted_text(draw, (x, 432, x+520, 556), desc, FONTS["body"], (51, 65, 85, 255), min_size=24, gap=8))
+    y = 580
     guard.add("card_fast", draw_info_card(draw, x, y, "Atención rápida", "por WhatsApp", "fast", green[:3]))
     y += 116
     guard.add("card_options", draw_info_card(draw, x, y, "Opciones locales", "profesionales activos", "local", navy[:3]))
@@ -598,19 +639,17 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
     guard.add("cta_panel", (52, 960, 1028, 1168), kind="background")
     guard.add("contact_icon", draw_contact_icon(draw, cx=133, cy=1049, radius=55, fill=green, icon_fill=(255, 255, 255, 255)))
     draw.line((226, 990, 226, 1138), fill=(148, 163, 184, 180), width=2)
-    draw.text((270, 980), "Escríbenos al WhatsApp", font=FONTS["cta"], fill=(255, 255, 255, 255))
-    guard.add("cta", (270, 980, 820, 1025))
-    draw.text((270, 1036), PHONE, font=FONTS["phone"], fill=(255, 255, 255, 255))
-    guard.add("phone", (270, 1036, 760, 1091))
+    guard.add("cta", draw_fitted_text(draw, (270, 980, 1000, 1025), "Escríbenos al WhatsApp", FONTS["cta"], (255, 255, 255, 255), min_size=32))
+    guard.add("phone", draw_fitted_text(draw, (270, 1040, 1000, 1100), PHONE, FONTS["phone"], (255, 255, 255, 255), min_size=38))
     site_box = draw_site_badge(draw, (270, 1120, 610, 1160), fill=green, text_fill=navy)
     guard.add("site", site_box)
 
     fy = 1188
-    labels = ["Servicios verificados", "Profesionales locales", "Respuesta WhatsApp", "Intermediario"]
+    labels = ["Contacto directo", "Profesionales locales", "Respuesta WhatsApp", "Intermediario"]
     trust_x = [58, 310, 560, 800]
     for idx, (bx, label) in enumerate(zip(trust_x, labels)):
         draw.ellipse((bx, fy + 8, bx + 24, fy + 32), outline=navy, width=3)
-        draw.text((bx + 36, fy), label, font=FONTS["tiny"], fill=(30, 41, 59, 255))
+        draw_fitted_text(draw, (bx+36, fy+6, bx+220, fy+44), label, FONTS["tiny"], (30, 41, 59, 255), min_size=16, gap=2)
         guard.add(f"trust_{idx}", (bx, fy, bx + 220, fy + 44))
     guard.add("footer", draw_footer(draw, service, 58, 1248, 960, (71, 85, 105, 230)))
 
@@ -652,7 +691,6 @@ def existing_manifest_ok(service: DbService, image_path: Path) -> bool:
     manifest = safe_read_json(manifest_path, {})
     return (
         bool(manifest.get("accepted"))
-        and int(manifest.get("quality_standard_version") or 0) == QUALITY_STANDARD_VERSION
         and str(manifest.get("service_code")) == service.code
         and str(manifest.get("image_sha256")) == sha256_file(image_path)
         and int(manifest.get("provider_count") or 0) >= 1
@@ -690,17 +728,22 @@ def validate_final(
     }
 
 
-def choose_next_service(services: list[DbService], *, assets_root: Path, force_service: str | None = None) -> AssetDecision | None:
+def choose_next_service(services: list[DbService], *, assets_root: Path, force_service: str | None = None, registry: dict | None = None) -> AssetDecision | None:
     force = str(force_service or "").strip()
     for service in services:
         if force and service.code != force:
+            continue
+        row = (registry or {}).get("services", {}).get(service.code, {})
+        # Approvals/review state survive deployments and quality-rule changes.
+        if row.get("image") or row.get("status") in {"approved", "needs_review"}:
             continue
         image_path = assets_root / f"{service.code}_01.png"
         if existing_manifest_ok(service, image_path):
             continue
         if not image_path.exists():
             return AssetDecision(service, "create", "missing_image", str(image_path))
-        return AssetDecision(service, "rebuild", "missing_or_stale_factory_manifest", str(image_path))
+        # An existing file is reviewed/adopted, never regenerated automatically.
+        continue
     return None
 
 
@@ -709,7 +752,9 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
     service_obj = StudioService(settings)
     assets_root = Path(settings.instagram_publish_assets_root)
     services = load_db_services(min_providers=min_providers)
-    decision = choose_next_service(services, assets_root=assets_root, force_service=force_service)
+    catalog = safe_read_json(settings.instagram_asset_catalog_path, {})
+    registry = reconcile(REGISTRY_PATH, services, assets_root, catalog)
+    decision = choose_next_service(services, assets_root=assets_root, force_service=force_service, registry=registry)
     if decision is None:
         return {"ok": True, "skipped": True, "reason": "no_pending_services", "db_services": len(services)}
 
@@ -764,6 +809,7 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
                     "validation": validation,
                 }
                 safe_write_json(MANIFEST_DIR / f"{service.code}.json", manifest)
+                approve_generated(REGISTRY_PATH, service.code, accepted_path, assets_root)
                 write_manifest(STATE_DIR / "layout_manifests" / f"{service.code}.json", [guard])
                 sync = service_obj.instagram_engine.sync_asset_catalog()
                 result = {
@@ -792,17 +838,28 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
         size=str(settings.openai_image_size),
         quality=str(settings.openai_image_quality),
     )
+    budget = ImageBudget(STATE_DIR.parent / "budget" / "image_usage.sqlite3",
+                         float(settings.instagram_openai_monthly_budget_usd),
+                         float(os.getenv("IG_IMAGE_REQUEST_RESERVATION_USD", "0.30")))
 
     for attempt in range(1, max(1, int(max_attempts)) + 1):
         base_path = work_dir / f"base_attempt_{attempt}.jpg"
         candidate_path = work_dir / f"candidate_attempt_{attempt}.png"
+        reservation = None
+        api_completed = False
         try:
+            reservation = budget.reserve(service.code)
             provider.generate_image(build_prompt(service), base_path)
+            api_completed = True
+            budget.complete(reservation, {**provider.last_usage, "image": str(base_path)})
             guard = compose_asset(base_path=base_path, output_path=candidate_path, service=service)
             validation = validate_final(service, candidate_path, guard, service_obj, source_path=base_path)
             if not validation["ok"]:
                 errors.append({"attempt": attempt, "stage": "validate", "validation": validation})
-                continue
+                registry = read_registry(REGISTRY_PATH)
+                registry["services"][service.code].update(status="needs_review", reason="generated_image_quality_rejected", review_candidate=str(candidate_path))
+                save_registry(REGISTRY_PATH, registry)
+                break
 
             accepted_path.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(candidate_path, accepted_path)
@@ -822,6 +879,7 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
                 "validation": validation,
             }
             safe_write_json(MANIFEST_DIR / f"{service.code}.json", manifest)
+            approve_generated(REGISTRY_PATH, service.code, accepted_path, assets_root)
             write_manifest(STATE_DIR / "layout_manifests" / f"{service.code}.json", [guard])
             sync = service_obj.instagram_engine.sync_asset_catalog()
             result = {
@@ -829,6 +887,7 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
                 "created": True,
                 "decision": asdict(decision),
                 "attempt": attempt,
+                "budget_request_id": reservation,
                 "image_path": str(accepted_path),
                 "manifest_path": str(MANIFEST_DIR / f"{service.code}.json"),
                 "sync": {"ok": bool(sync.get("ok", True)), "total_images": sync.get("asset_catalog", sync).get("total_images")},
@@ -836,8 +895,24 @@ def generate_one(*, force_service: str | None = None, dry_run: bool = False, max
             append_log(result)
             write_state_result(result)
             return result
+        except BudgetBlocked as exc:
+            result = {"ok": False, "status": "blocked", "created": False, "reason": str(exc), "decision": asdict(decision)}
+            append_log(result)
+            write_state_result(result)
+            return result
         except Exception as exc:  # noqa: BLE001
+            if reservation and not api_completed:
+                budget.failed(reservation, str(exc))
             errors.append({"attempt": attempt, "stage": "exception", "error": str(exc)})
+            if api_completed:
+                # A paid source already exists. Never buy another to fix local
+                # composition, disk, validation or catalog errors.
+                registry = read_registry(REGISTRY_PATH)
+                registry["services"][service.code].update(
+                    status="needs_review", reason="post_generation_processing_failed",
+                    review_candidate=str(candidate_path), review_source=str(base_path))
+                save_registry(REGISTRY_PATH, registry)
+                break
 
     result = {"ok": False, "created": False, "decision": asdict(decision), "errors": errors}
     append_log(result)
@@ -849,7 +924,8 @@ def main() -> None:
     load_dotenv(PROJECT_ROOT / ".env", override=True)
     parser = argparse.ArgumentParser(description="Crea o repara 1 imagen IG por servicio activo en DB.")
     parser.add_argument("--force-service", default=None, help="Service code exacto para forzar.")
-    parser.add_argument("--dry-run", action="store_true", help="No genera ni escribe; solo muestra siguiente decisión.")
+    parser.add_argument("--dry-run", action="store_true", help="Sin llamadas pagadas: sincroniza registro/presupuesto y muestra el siguiente faltante.")
+    parser.add_argument("--resume-after-topup", action="store_true", help="Clear a recorded quota block after adding credits.")
     parser.add_argument("--max-attempts", type=int, default=int(os.getenv("IG_IMAGE_FACTORY_MAX_ATTEMPTS", "2")))
     parser.add_argument("--min-providers", type=int, default=int(os.getenv("IG_IMAGE_FACTORY_MIN_PROVIDERS", "1")))
     parser.add_argument(
@@ -869,6 +945,14 @@ def main() -> None:
         print(json.dumps(payload, ensure_ascii=False, indent=2))
         return
     try:
+        budget = ImageBudget(STATE_DIR.parent / "budget" / "image_usage.sqlite3",
+                             float(os.getenv("INSTAGRAM_OPENAI_MONTHLY_BUDGET_USD", "5")))
+        budget.import_history(PROJECT_ROOT / "logs" / "prod_jobs", float(os.getenv("INSTAGRAM_OPENAI_IMAGE_ESTIMATED_COST_USD", "0.25")))
+        if args.resume_after_topup:
+            budget.resume()
+        settings = load_settings()
+        reconcile(REGISTRY_PATH, load_db_services(min_providers=int(args.min_providers)),
+                  Path(settings.instagram_publish_assets_root), safe_read_json(settings.instagram_asset_catalog_path, {}))
         if not args.force_service and not args.dry_run:
             skipped, payload = should_skip_after_recent_success(int(args.min_success_interval_hours))
             if skipped and payload is not None:
@@ -883,6 +967,8 @@ def main() -> None:
             min_providers=int(args.min_providers),
         )
         print(json.dumps(result, ensure_ascii=False, indent=2))
+        if not result.get("ok"):
+            raise SystemExit(1)
     except Exception as exc:  # noqa: BLE001
         payload = {"ok": False, "error": str(exc)}
         append_log(payload)

@@ -1705,3 +1705,32 @@ def test_apply_branding_overlay_ignores_short_text_when_disabled(tmp_path: Path)
 
 
 
+
+
+def test_registry_publishes_only_primary_and_aligns_alias(tmp_path):
+    from conecta_video_ai.service_images import save_registry, digest
+    assets_root = tmp_path / "assets"
+    assets_root.mkdir()
+    primary = assets_root / "desarrollo_software_sistemas_informaticos_01.png"
+    other = assets_root / "desarrollo_software_02.png"
+    for p in [primary, other]:
+        Image.new("RGB", (1080, 1350), color=(80,90,100)).save(p)
+    output_root = tmp_path / "output/runs"
+    save_registry(output_root / "instagram/catalog/service_images.json", {"services": {
+        "desarrollo_web": {"status":"approved","active":True,"provider_count":1,
+                           "image":primary.name,"sha256":digest(primary)}
+    }})
+    settings = AppSettings(output_root=output_root, instagram_publish_assets_root=assets_root,
+                           instagram_drafts_root=output_root / "drafts",
+                           instagram_catalog_path=output_root / "catalog.json",
+                           instagram_state_path=output_root / "state.json",
+                           **_instagram_paths(output_root))
+    engine = InstagramContentEngine(settings=settings, context=_context(tmp_path),
+             provider=OllamaProvider(model="dummy", executable="ollama"),
+             asset_library=AssetLibrary(assets_root), openai_image_provider=None)
+    chosen, details = engine._select_library_asset(query="software", category_id="desarrollo_software", state={"recent_assets":[str(primary)]})
+    assert chosen.path.resolve()==primary.resolve()
+    assert details["asset_category_id"]=="desarrollo_web"
+    catalog=engine._asset_catalog_map()
+    assert catalog[engine._asset_key(other)]["excluded"] is True
+    assert catalog[engine._asset_key(primary)]["category_id"]=="desarrollo_web"

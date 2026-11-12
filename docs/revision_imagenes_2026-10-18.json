@@ -1,0 +1,336 @@
+{
+  "review_date": "2026-10-18",
+  "method": "Inspección visual de 33 imágenes mediante láminas de contacto, inspección ampliada de defectos y verificación técnica de todos los archivos. No se utilizó un modelo de puntuación estética ni OCR. Evaluación editorial, no garantía automática de calidad.",
+  "items": [
+    {
+      "file": "abogado_01.png",
+      "sha256": "12ad1578483f8661b1c862b8f070cebdc23607324813142e9ff7539e8e7e9778",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "no_publicar",
+      "note": "La escena muestra un operario y herramientas de gasfitería; no representa asesoría legal."
+    },
+    {
+      "file": "aire_acondicionado_calefaccion_01.png",
+      "sha256": "90b4ff440281b71995ecda5d76003358842f29ff77ff0d22aa08bfb6b3632fe0",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "La foto muestra tuberías/calefont; usar una escena inequívoca de climatización."
+    },
+    {
+      "file": "arquitectura_01.png",
+      "sha256": "69db8b52eeea3564a302f7e45ae9085218b2086b5cd97a5db7216b1c4898c603",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Retrato genérico; mostrar planos, maqueta o proyecto."
+    },
+    {
+      "file": "calefont_termos_01.png",
+      "sha256": "bea880f88919c8bbebdcf08c00df8688000b53be1d1e6c6ef05edc328b3dac79",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "La escena muestra al técnico, pero no deja claro el equipo intervenido."
+    },
+    {
+      "file": "camaras_seguridad_01.png",
+      "sha256": "388a8a3c0df50f1ba43fb01cb0c289ffbe734f0a0ff1fa01613c790611c93dff",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "cerrajeria_01.png",
+      "sha256": "0aaee579f70e53d1f5c9f145b397ff14882b84734b90eac16a740ae876a51048",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "comida_hamburguesas_01.png",
+      "sha256": "292e299a376384020d596592c21aaa45317ee5938876371931645eb5f13c1a30",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Mostrar hamburguesa terminada en primer plano; el plato/producto queda poco visible."
+    },
+    {
+      "file": "comida_pizzeria_01.png",
+      "sha256": "14f8260d35ec91c24c3043c23387f51ea7292b8e484d1ad273755930d058f467",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Mostrar pizza o preparación identificable, no solo al cocinero."
+    },
+    {
+      "file": "comida_preparada_restaurante_01.png",
+      "sha256": "bee2a48cc51ec97bd40d07777b241452020eacefff581d15d6aa79fe014c7e5e",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "no_publicar",
+      "note": "La tercera tarjeta invade el panel de contacto. Corregir composición antes de publicar."
+    },
+    {
+      "file": "comida_sandwiches_completos_01.png",
+      "sha256": "7952777a3757b3c63e740973a72ebf0707f26ff7a74d29492cf46ee142d68288",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "El producto queda poco visible; priorizar el sándwich/completo."
+    },
+    {
+      "file": "comida_sushi_01.png",
+      "sha256": "ee41b7510e2fbca59340bce1bc2ffdb397232380dddcfbfdfa36601501de5789",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "La acción se ve, pero falta mostrar claramente el sushi terminado."
+    },
+    {
+      "file": "corretaje_de_propiedades_01.png",
+      "sha256": "67fa3e7fb7dc8d891fedff36f9ffe37e96610fe1e89dfc5630fb3556a47416ec",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Retrato genérico de oficina; incorporar inmueble o entrega de llaves."
+    },
+    {
+      "file": "dentista_01.png",
+      "sha256": "affb8bd23524325caabec28b0adcdbd754592dd4fd948295d4a3573ea22e5fc9",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "La profesional se reconoce, pero falta una acción/equipo dental."
+    },
+    {
+      "file": "desarrollo_software_sistemas_informaticos_01.png",
+      "sha256": "b1727238642790a18fdd496d0e3f6becad305bb1740cb5f23ef520fc1275ebf4",
+      "size": [
+        1055,
+        1491
+      ],
+      "status": "mejorar",
+      "note": "Buena coherencia temática; demasiada información pequeña. Simplificar y comprobar versión feed."
+    },
+    {
+      "file": "electricidad_01.png",
+      "sha256": "83f6062ede13fd7e6f0c79bc5e8020aaec9923603f866735543a6293ae8ab749",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "electricidad_reparacion_01.png",
+      "sha256": "f417dabc80df44619c19d917ccb36cf85481c278b511bb0a8819db48a1066d54",
+      "size": [
+        1122,
+        1402
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "fletes_mudanzas_01.png",
+      "sha256": "bb3082f9f4037bd23f3f1c87ddcb9a14e57adcb139adcc378bb932d92697e366",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Retrato de operario sin carga/camión visible; mostrar la mudanza."
+    },
+    {
+      "file": "gasfiteria_01.png",
+      "sha256": "d2203403bd75a99b56e8caf0cdf3de9e2c55ab77a0321f82f52cccfc0c730111",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "gasfiteria_fuga_agua_01.png",
+      "sha256": "0dcca9d02e35021f26047e5ba7a334ec99f893076af3c11fe88c00fcef43a879",
+      "size": [
+        1055,
+        1491
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "imagenologia_ecografia_01.png",
+      "sha256": "883569a4bff7280a49a8b2ebbfa062c794e739564e250ef8bfe98737ceba4cff",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Mostrar ecógrafo/estudio; el retrato de salud no distingue este servicio."
+    },
+    {
+      "file": "kinesiologia_01.png",
+      "sha256": "f4a6fa44e53d0fa55a111d78c6fa8a1d8fb04810facb925ace1c39df98ad3b95",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Retrato genérico; preferir kinesiologia_domicilio_01 con terapia visible."
+    },
+    {
+      "file": "kinesiologia_domicilio_01.png",
+      "sha256": "97dd0a8c1de529410819312c351b6725ec51d1edbb8c2f2f10cb177529cde5cc",
+      "size": [
+        1122,
+        1402
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "lavanderia_tintoreria_01.png",
+      "sha256": "5c99c8d3712c35cf6d78d2b673c6e4a4ffd415e25ebd2256ee979ead6120394a",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "La ropa permite inferir el rubro, pero conviene mostrar equipo o actividad de lavandería."
+    },
+    {
+      "file": "legal_asesoria_legal_01.png",
+      "sha256": "596be1805081fb161fb6fa5611e2e1c355d33d8bd9a17e275f8e08f7482348d9",
+      "size": [
+        1024,
+        1536
+      ],
+      "status": "mejorar",
+      "note": "La escena legal es coherente; simplificar texto pequeño y adaptar relación 2:3 conservando todo el arte."
+    },
+    {
+      "file": "mecanica_automotriz_01.png",
+      "sha256": "bc70408c2e540a0a9da2ccc0d4b2afef8f6518c09664cf558f3833bb7e35cc55",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Se ve un profesional, pero falta vehículo/herramienta de diagnóstico reconocible."
+    },
+    {
+      "file": "medicina_general_01.png",
+      "sha256": "83133dacc4311abf1d220cef7522c799975f8215ac0e903948a77404f78ff9e1",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "medico_veterinario_01.png",
+      "sha256": "0cc254fee871b5890f342d8c75be175a5209ae13b6d6d4e5bbe31cd9c13fc3ea",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "No se ve un animal; preferir la alternativa veterinarios_atencion_mascotas_01."
+    },
+    {
+      "file": "peluqueria_canina_01.png",
+      "sha256": "8d02d9a941524beca7baedce8f3b533510364fc9a9bbf904bb3a79089a8d07cf",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "No se ve un perro ni una sesión de grooming; la escena no distingue el servicio."
+    },
+    {
+      "file": "psicologia_01.png",
+      "sha256": "8843ae0747b7393e695835450a12eded3f79acee3909b2186cac4520473513be",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    },
+    {
+      "file": "reparacion_pc_notebook_01.png",
+      "sha256": "3856e0c0e3dafa532bf69bed02769ac7b6bf32ec235fbb26913eca691d6ed064",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Título genérico y equipo poco visible; mostrar reparación y nombrar el servicio."
+    },
+    {
+      "file": "terapeuta_ocupacional_01.png",
+      "sha256": "11f4fcbc5516876e520bf003c8dca3d402bebf585b3302b3cd02cb01e6b5c65a",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "mejorar",
+      "note": "Retrato genérico; mostrar una intervención ocupacional reconocible."
+    },
+    {
+      "file": "traductores_ingles_espanol_01.png",
+      "sha256": "ca454234d142cf5b5c2d38d6ca1251d406515e3553a18e48441c2416b228bb94",
+      "size": [
+        1080,
+        1350
+      ],
+      "status": "no_publicar",
+      "note": "Fotografía sin título de servicio, marca ni contacto. El publicador conserva el arte base y no agrega esos textos."
+    },
+    {
+      "file": "veterinarios_atencion_mascotas_01.png",
+      "sha256": "315fd039e39e882c61731cfd5fb43ab5d5ea93105d29df9341f55bda3609d1ec",
+      "size": [
+        1122,
+        1402
+      ],
+      "status": "publicable_con_observaciones",
+      "note": "Servicio reconocible, contacto legible y composición sin colisión principal visible."
+    }
+  ]
+}

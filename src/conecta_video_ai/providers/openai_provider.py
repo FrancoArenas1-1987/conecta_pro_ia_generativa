@@ -25,7 +25,8 @@ class OpenAIImageProvider:
         except Exception as exc:  # noqa: BLE001
             raise GenerationError("OpenAI package is not installed. Run: python -m pip install --upgrade openai") from exc
 
-        self.client = OpenAI(api_key=api_key.strip())
+        self.client = OpenAI(api_key=api_key.strip(), max_retries=0)
+        self.last_usage: dict = {}
         self.model = model
         self.size = size
         self.quality = quality
@@ -43,6 +44,13 @@ class OpenAIImageProvider:
             )
         except Exception as exc:  # noqa: BLE001
             raise GenerationError(f"OpenAI image generation failed: {exc}") from exc
+
+        usage = getattr(response, "usage", None)
+        self.last_usage = {
+            "model": self.model, "size": self.size, "quality": self.quality,
+            "request_id": getattr(response, "_request_id", None),
+            "usage": usage.model_dump() if hasattr(usage, "model_dump") else (usage if isinstance(usage, dict) else {}),
+        }
 
         if not getattr(response, "data", None):
             raise GenerationError("OpenAI image generation returned empty data")

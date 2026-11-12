@@ -207,8 +207,9 @@ def main() -> None:
 
     # Enforce hourly real publishing, but respect .env/app.yaml quality/economy toggles.
     # This avoids hard-stopping the flow when monthly image budget is reached.
-    settings.instagram_enable_openai_images = bool(settings.instagram_enable_openai_images)
-    settings.instagram_require_ai_image = bool(settings.instagram_require_ai_image)
+    # All paid image creation belongs to the missing-service factory.
+    settings.instagram_enable_openai_images = False
+    settings.instagram_require_ai_image = False
     settings.instagram_ai_library_fallback_enabled = True
     settings.instagram_simulate_publish = False
     settings.instagram_crosspost_facebook = bool(settings.instagram_crosspost_facebook)
@@ -219,8 +220,6 @@ def main() -> None:
     # Do not override economics in the hourly runner.
     settings.instagram_openai_monthly_budget_usd = float(settings.instagram_openai_monthly_budget_usd)
     settings.instagram_openai_image_estimated_cost_usd = float(settings.instagram_openai_image_estimated_cost_usd)
-    if not (settings.openai_api_key or "").strip():
-        raise SystemExit("OPENAI_API_KEY no configurada para autopublish hourly")
 
     lock_path = _runner_lock_path(settings)
     lock_acquired, lock_note = _acquire_runner_lock(lock_path)
