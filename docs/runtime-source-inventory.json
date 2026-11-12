@@ -1,0 +1,397 @@
+{
+  "captured_date": "2026-11-12",
+  "files": [
+    {
+      "path": "src/conecta_video_ai/performance_tracker.py",
+      "sha256": "405b42e93f2a79347a140d21bf414d5ccca4abe4870bfdd121e4a8709f2b3bec"
+    },
+    {
+      "path": "src/conecta_video_ai/variant_generator.py",
+      "sha256": "de45d85823f4190b8b683e2045b8305c477044a67b1628b15cae664eaa2fa9a4"
+    },
+    {
+      "path": "src/conecta_video_ai/settings.py",
+      "sha256": "e3c094cec28ffce9c84f1e75110156e13077e67341d594d847154ddf280010b6"
+    },
+    {
+      "path": "src/conecta_video_ai/preflight.py",
+      "sha256": "db41a341f256c8ae1e5a7c3a846404424d26824fd39cfa24a35d43d47dccd412"
+    },
+    {
+      "path": "src/conecta_video_ai/meta_token_refresh.py",
+      "sha256": "ac3d9fb293cd1db0ec78e1ec840afc937a49f14e3a63ec1067850c529d425993"
+    },
+    {
+      "path": "src/conecta_video_ai/context_loader.py",
+      "sha256": "bc1fff09861e7b780d8a5e2a215b35488b2b92d3168dafcf952d9f69e06101c4"
+    },
+    {
+      "path": "src/conecta_video_ai/scene_bible.py",
+      "sha256": "fa81ddccdd500d1a01a830a7dbea85a9eadbd45f9bf5108747b450d9581fbb59"
+    },
+    {
+      "path": "src/conecta_video_ai/webapp.py",
+      "sha256": "01732d4b7fca99e803c13a7f0c0bd9f312f2d60573fde57ccb4507509afad30f"
+    },
+    {
+      "path": "src/conecta_video_ai/instagram_content_engine.py",
+      "sha256": "f45f53fde45bf79b93dbff1d612cfe4fbc2b41c653d188c701aa9746b2059efe"
+    },
+    {
+      "path": "src/conecta_video_ai/models.py",
+      "sha256": "d51e1058d8127f5958578de393c7f7a2c400da3c171ee2e38ce3053c71c851f0"
+    },
+    {
+      "path": "src/conecta_video_ai/__init__.py",
+      "sha256": "b576d15ec3b4344fd45759081e26534d0407d1f8f45362a8c7136eb2efe0ceb3"
+    },
+    {
+      "path": "src/conecta_video_ai/service_images.py",
+      "sha256": "3d47352d950556a180d3cf49501b8339acec7519b969cfec44900cd41d3e7106"
+    },
+    {
+      "path": "src/conecta_video_ai/tts_engine.py",
+      "sha256": "ceaeaae89300a039891c5df33c12dfcf89da4b9d16078931279efa4f980113ee"
+    },
+    {
+      "path": "src/conecta_video_ai/exceptions.py",
+      "sha256": "feebc090d6a11b4e6fdbe99282885bcbf2f35beb8584d7107d4eaa829fcb0dee"
+    },
+    {
+      "path": "src/conecta_video_ai/quality.py",
+      "sha256": "45a4b3c3422ece3d6af0f1fedab428d62a7df6793047fafee132fa489342b49c"
+    },
+    {
+      "path": "src/conecta_video_ai/publish_schedule.py",
+      "sha256": "3cb7e974f57d3dc4a00313852c651ef807dfffece2a49b157b591217da95d573"
+    },
+    {
+      "path": "src/conecta_video_ai/assets.py",
+      "sha256": "f581ea4fe0cc742a79a7ab0d6e4c68974dd64634b1b018d32cf7778e6cac6487"
+    },
+    {
+      "path": "src/conecta_video_ai/music_engine.py",
+      "sha256": "eda216ce187d10a93c024d6b9a83403b36338a0dc43acfba6d036d96a49b617f"
+    },
+    {
+      "path": "src/conecta_video_ai/video_post_review.py",
+      "sha256": "34ac205b4f8f49d376438ffb8b37236977a9026245751ca23420f9f2db12d04a"
+    },
+    {
+      "path": "src/conecta_video_ai/campaign_engine.py",
+      "sha256": "b3beb997f497ebe073051ed77c7d9ac95fd6f0cb2f143a0a133c4ea67e213f2f"
+    },
+    {
+      "path": "src/conecta_video_ai/marketing_validator.py",
+      "sha256": "15a6792b3aaef2241106bd8e68bc78ef9bacfd536a7330d3837d1d04b0e0a9a3"
+    },
+    {
+      "path": "src/conecta_video_ai/storage.py",
+      "sha256": "3126c445646f5271cbec0f0732769253536dca72022ce3e7739d937a6cda5b45"
+    },
+    {
+      "path": "src/conecta_video_ai/social_connectors.py",
+      "sha256": "de09f858f78cfc30b7a94399c1e1eb62f63c93837aec4b0443b3e9d16fd9f455"
+    },
+    {
+      "path": "src/conecta_video_ai/image_renderer.py",
+      "sha256": "6ee88bc73e69624884cf9dd415b6557328cd13ca3c2c3fdb8f918b1f818f6a74"
+    },
+    {
+      "path": "src/conecta_video_ai/meta_connector.py",
+      "sha256": "97e49be722bfb5ee60b50a2fc36e0af7a9423317bc37d0bfaaf6e86efe464e47"
+    },
+    {
+      "path": "src/conecta_video_ai/prompts.py",
+      "sha256": "e878f872cbd2da1cb87ea1ffc229a977108625aa13a7541c92e7b05e05acb3f9"
+    },
+    {
+      "path": "src/conecta_video_ai/pipelines.py",
+      "sha256": "2dc040e317c2c4d4cba3af8b54ec9e3d9ff3cdaa5bb69187be9f140f9349cfa6"
+    },
+    {
+      "path": "src/conecta_video_ai/insights_engine.py",
+      "sha256": "dd21d295772da988fd7a6aedba144b7ac33de4435257891bf8c4a10a3dc4c797"
+    },
+    {
+      "path": "src/conecta_video_ai/instagram_graph_publisher.py",
+      "sha256": "ebb439712a8a5e7d3f758994651a90d1545ac8071991e090591ac6f908627970"
+    },
+    {
+      "path": "src/conecta_video_ai/video_renderer.py",
+      "sha256": "a20f2f83394af37a4835230925f962dd860658e960bd2ff59b75f0deda206451"
+    },
+    {
+      "path": "src/conecta_video_ai/whatsapp_links.py",
+      "sha256": "99e1cb8d43ce05cefe87d476f301f8606465d534c6dcb0fbe66e343622cc65fb"
+    },
+    {
+      "path": "src/conecta_video_ai/cli.py",
+      "sha256": "2d6fc029ddf2ed2c242a38c76d7e558b3b95db1b69933e8e2e18e5677ad5f7fd"
+    },
+    {
+      "path": "src/conecta_video_ai/storyboard.py",
+      "sha256": "4af4c3e916b54b5e13979c8c8acf36d6ca3820b66245566c50e0fd61944cf52d"
+    },
+    {
+      "path": "src/conecta_video_ai/script_generator.py",
+      "sha256": "5a22ebc370ec642e00f0774450116265aab5f9ae8ecfa63540a9210f349828f9"
+    },
+    {
+      "path": "src/conecta_video_ai/logging_utils.py",
+      "sha256": "6d3082a1662d63ceaded47d2bb1deb261a39090cec1488f93add9bd5affa3862"
+    },
+    {
+      "path": "src/conecta_video_ai/image_budget.py",
+      "sha256": "33377555e67ded736c0b3036752ccb2fa68bfbe3601a4da37fc73e15e0a42fb6"
+    },
+    {
+      "path": "src/conecta_video_ai/continuity_validator.py",
+      "sha256": "8d6ddcc9082aa16b2cfa827a0109726244551efad771d1b2673ee44530eca344"
+    },
+    {
+      "path": "src/conecta_video_ai/marketing_optimizer.py",
+      "sha256": "6905abefc33dd06af13a1326f69b3072174bce1679771460d95361bdeb2d67a7"
+    },
+    {
+      "path": "src/conecta_video_ai/social_publishers.py",
+      "sha256": "bd5b35619e8bb602883549822dc2f07c17545abc894933780f7845af9c994a90"
+    },
+    {
+      "path": "src/conecta_video_ai/campaign_queue.py",
+      "sha256": "b72940faf3e8c5b19a75354e53aeca31a53ab7ee1d92891f8e5f7ff4f6481658"
+    },
+    {
+      "path": "src/conecta_video_ai/providers/__init__.py",
+      "sha256": "5dc39529a1080866011db5de5865f4a506b65cbae9d79ba15ebd329352fb244d"
+    },
+    {
+      "path": "src/conecta_video_ai/providers/comfyui_provider.py",
+      "sha256": "3f2cfed4fc1cf2af438bdea188a6a5242ffb3fc631523a76d7d7266fd65f2799"
+    },
+    {
+      "path": "src/conecta_video_ai/providers/openai_provider.py",
+      "sha256": "59674527244b99e9809a5a4ebf7bb3fb1fdf90dc246264976e0991577d7cdccb"
+    },
+    {
+      "path": "src/conecta_video_ai/providers/ollama_provider.py",
+      "sha256": "c14b51994814a7b8a7570b48818949cc38b2be4bbbe6cdb47c5de81edd56ea6e"
+    },
+    {
+      "path": "scripts/register_daily_task.ps1",
+      "sha256": "60d3c7fb457c46713c33f96c70c589502bfc65c4a18e3369a78bb71ac2c0f5c4"
+    },
+    {
+      "path": "scripts/run_instagram_carousel_once.py",
+      "sha256": "2e57d6ee4472486c636babdb241a60115424f3d4753f55f3f2afb62309b6ced7"
+    },
+    {
+      "path": "scripts/refresh_meta_token.py",
+      "sha256": "f135af1bdc47cc796097647d71e9d1276406349bdc05d0edfb5ce5d9b3271774"
+    },
+    {
+      "path": "scripts/validate_openai_key.ps1",
+      "sha256": "ea7c9761698ee7238887f85f9a01d2862418d38ddccffcee7aa82218435b910b"
+    },
+    {
+      "path": "scripts/check_automation_readiness.py",
+      "sha256": "f2e9101a9608ac6e9f86e777b99dbfc2ef9975d6abece1f6c82811409da68fcf"
+    },
+    {
+      "path": "scripts/check_automation_readiness.ps1",
+      "sha256": "1cb16ad7f15123574f001ca9340245a3eaee93fada915c7524f988b896cdffd8"
+    },
+    {
+      "path": "scripts/instagram_auto_once.ps1",
+      "sha256": "8916a999da11080cee105ffd51a0e41f50fcf94f4042eeba921a013dcdd7597b"
+    },
+    {
+      "path": "scripts/run_prod_job.sh",
+      "sha256": "b106a0eac2baf9161fd99bb8563365244af258cdeb880915bf0ec6b91bccd8f3"
+    },
+    {
+      "path": "scripts/generate_image.ps1",
+      "sha256": "f4f24c4a626ba2ab234196d58b71e3d97e8935303be61a6684e1cca161fb69f5"
+    },
+    {
+      "path": "scripts/register_instagram_image_factory_task.ps1",
+      "sha256": "1e1ed1eab7f558bb2e29d6d8ac57ba20283e38016b259c697bb32acef120d703"
+    },
+    {
+      "path": "scripts/sync_instagram_media_library.py",
+      "sha256": "e40204e3da549cb053cc09f97eee6b20a35ad608d68924680cc6e3697b335f0f"
+    },
+    {
+      "path": "scripts/run_instagram_image_factory_wrapper.ps1",
+      "sha256": "a676f4c54bd9864c745d83a209c41ba051814f0ff7b4aef4d1fc6e8e686f3ff3"
+    },
+    {
+      "path": "scripts/setup_instagram_weekdays_task.ps1",
+      "sha256": "73eee53b25d3874ae6e487e5dd13a483c1d782ffc14e0b4644038b85fd641118"
+    },
+    {
+      "path": "scripts/register_instagram_carousel_task.ps1",
+      "sha256": "58eb45403d1bfc9ef3b4d2db71ed16d05b17473c7bd176c9893d8800d3733e7f"
+    },
+    {
+      "path": "scripts/run_batch.ps1",
+      "sha256": "860ba600a6d746c1154496892cec647dae4bb7bf18ea312f893ee3ba925b2efc"
+    },
+    {
+      "path": "scripts/register_instagram_library_maintenance_task.ps1",
+      "sha256": "0b5e23747248d8580ae1c61a7183678263b9b7df9074a01572d7482434bd081d"
+    },
+    {
+      "path": "scripts/register_instagram_hourly_task.ps1",
+      "sha256": "74678670ff07a768b0ec9c993f6b10433c02938f91fc9d4e3268542bea4a9233"
+    },
+    {
+      "path": "scripts/register_meta_token_refresh_task.ps1",
+      "sha256": "b595ac2b7192007cf9db9ede731333831ef6a79ec2c006319605022587c415a7"
+    },
+    {
+      "path": "scripts/run_instagram_hourly_wrapper.ps1",
+      "sha256": "d3670d724ead9ee83e4c782b26297f778bea09b3eae177b02ee1ed1d40e1b715"
+    },
+    {
+      "path": "scripts/bootstrap.ps1",
+      "sha256": "3bfa7d5d8bf6aa1607fb1b95da8289f525435aefd0a575bb46a8298d2e84dc0e"
+    },
+    {
+      "path": "scripts/download_mixkit_story_music.ps1",
+      "sha256": "ae9f20829b7224eafaf9fe75cdcb9caa176aacc9fd4e7d59f95261dc22df3d89"
+    },
+    {
+      "path": "scripts/check_meta_connection.ps1",
+      "sha256": "179f0c5f607f0d0fcaf8f3f3f69e2ba3d83a7a082586aab9334893990ee88411"
+    },
+    {
+      "path": "scripts/run_instagram_image_factory_once.py",
+      "sha256": "80d7ffa65ebaaf3ddbc06e94bc9c07b200bd57c46c6f2f19e6725895ea8bdfc5"
+    },
+    {
+      "path": "scripts/run_instagram_library_maintenance_wrapper.ps1",
+      "sha256": "34d832b85272fd40c19da02799489b38835428c328ee31dd3701d84dbc35d22b"
+    },
+    {
+      "path": "scripts/list_meta_pages.py",
+      "sha256": "f73472378db1b70e68ce60eecc4ce12b7e44f0fb92457f861b0f8ff0a09dbc8f"
+    },
+    {
+      "path": "scripts/install_systemd_timers.sh",
+      "sha256": "c14cc2a6ac832063bea3547f3cc1488af1fff85c02132f7d2d752e112b01a5ea"
+    },
+    {
+      "path": "scripts/setup_instagram_hourly_task.ps1",
+      "sha256": "fed81c819205c51bd72f38cba47598bbd7c1ba407cdeea6e26bd976a2b47b873"
+    },
+    {
+      "path": "scripts/setup_instagram_daily_best_times_task.ps1",
+      "sha256": "05785db8a9888a2a03d4fba8a5d0de8567ead556b42f73912fdc1da52c2d7336"
+    },
+    {
+      "path": "scripts/run_instagram_carousel_wrapper.ps1",
+      "sha256": "2b73b8d35930a841f6d6c0f320f7458a85b896dfdff2295868a816d64700c214"
+    },
+    {
+      "path": "scripts/deploy_prod.sh",
+      "sha256": "d28e55f6cd5ed52469d166b1cc01389f7ffb1238472c6be1116cb2f4275b178f"
+    },
+    {
+      "path": "scripts/check_meta_connection.py",
+      "sha256": "3e629da2de21ec2d71380a69db2fa34a00d9ccfc6002fc2015d9bffc093651ee"
+    },
+    {
+      "path": "scripts/build_image_library_index.ps1",
+      "sha256": "b59b4a9c8f54c68403c9a0fea2850f4b16c84580fd9aacfbd1518eae0929a3df"
+    },
+    {
+      "path": "scripts/restart_local_web.ps1",
+      "sha256": "6051af075003bab56bd3e601cbac8ea8fd712a4c77b747108d4bdd1eea327b6e"
+    },
+    {
+      "path": "scripts/instagram_image_factory.py",
+      "sha256": "dd344e86c87ebed2065e0ab058c5d9a47c404b0f1e7d0e399eac3fda9aca36e3"
+    },
+    {
+      "path": "scripts/run_forced_ia_triple_publish.py",
+      "sha256": "dcd9df156ebf2dad51b58f6cc032b1b560df888441e92316f353dcfaaa35ba13"
+    },
+    {
+      "path": "scripts/register_full_automation.ps1",
+      "sha256": "94ac25d4fa43bdc8d04cac27c2d27844d72e54d1212a87bfa68a21105f4c0672"
+    },
+    {
+      "path": "scripts/setup_instagram_twice_daily_task.ps1",
+      "sha256": "7c97511f7a522ba3f313e72d17f86235984f25098127aa0403ff51deb0b8f461"
+    },
+    {
+      "path": "scripts/check_multi_publish_targets.py",
+      "sha256": "08e7c81393a17443d3bdfba087edb8bc101ebbbe589e1fa4d84ee21461e012ed"
+    },
+    {
+      "path": "scripts/generate_video.ps1",
+      "sha256": "25e9ff6d9577f3a25dcea8d794e7d01261379ae9c0c0806decc593cb90c2d4e9"
+    },
+    {
+      "path": "scripts/refresh_meta_token.ps1",
+      "sha256": "3b3331844f7b68cbd390695cc9459dd307174b9fc720a3ebb1ae8d4ac44ae6b7"
+    },
+    {
+      "path": "scripts/run_instagram_autopublish_once.py",
+      "sha256": "5e6168988ce0f1a977806663343048bb6286a6cc7c4885b568be92ce3a5c49f0"
+    },
+    {
+      "path": "scripts/cleanup_workspace.ps1",
+      "sha256": "6ad517d21acbe7530b50a141237ebdf9f7ccfeea0b4498c1e484d04e7871a2a0"
+    },
+    {
+      "path": "scripts/automation_status.py",
+      "sha256": "459b638a4a0457e4779fd04e4717a7ab77c42051635345ab68ed296032759e47"
+    },
+    {
+      "path": "scripts/start_local_web.ps1",
+      "sha256": "f91c32e15910211364139f0d068c1ccc4b3a15bd9207786254fef21b0a6a3756"
+    },
+    {
+      "path": "scripts/instagram_layout_guard.py",
+      "sha256": "e7aa2078af910a1459b4ba18dbec59b811c322a1355217d7762556521c6e4e23"
+    },
+    {
+      "path": "scripts/campaign_status.py",
+      "sha256": "12fbbd0214bf6ac15bb1cfa754f4c21f4a4b0b07768923c0bbd57cec5613a8f7"
+    },
+    {
+      "path": "scripts/check_instagram_layouts.py",
+      "sha256": "f7b39ee560a0ebb9af4364381b40aadf7e5b0f49ff641fc9953cb8a8c9fd618e"
+    },
+    {
+      "path": "config/instagram_asset_overrides.yaml",
+      "sha256": "59ddb04c4528e2c62d6a89f5d42cf80f71ea73b4ef7fd8486038519c6db85ce0"
+    },
+    {
+      "path": "config/instagram_publication_categories.yaml",
+      "sha256": "65fc82a64742937bd2a6198b150cfc675c41f9073a5fbab2827b7dc2fee50bb6"
+    },
+    {
+      "path": "config/instagram_publish_targets.yaml",
+      "sha256": "5e4e79374a6d6de407a6c49aaeb8f3201412f70372a6d980a8010e55fbae01f8"
+    },
+    {
+      "path": "config/instagram_category_descriptors.yaml",
+      "sha256": "e6f2dfda0b97a8386a4977875b25d6cdcfd2862c44968eff5de8cdf9e4fa1ff1"
+    },
+    {
+      "path": "config/app.yaml",
+      "sha256": "929d9a732c9b37284a7e5d3012465450c2dc4262f1dae7189cb0737b5a742d8f"
+    },
+    {
+      "path": "config/context_conecta_pro_ia.yaml",
+      "sha256": "df184ed2398861e500ee16c0db426ce0af02f4a7ce09d97ec1ea235cf9f6df7b"
+    },
+    {
+      "path": "config/comfyui/workflow_t2v.json",
+      "sha256": "0e3f96e1150e9819cb29bdcb2d2b2e415642043e64866539050b6081ac6ad610"
+    }
+  ]
+}
