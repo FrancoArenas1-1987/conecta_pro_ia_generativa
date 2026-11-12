@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "status": "restore_template_requires_reconciliation",
+  "entries": [
+    {
+      "campaign_id": "guia_siglo_xxi_v1",
+      "title": "La guia de servicios del siglo XXI",
+      "video": "conectaproia_publicitario_v1_meta.mp4",
+      "cover": "guia_siglo_xxi_v1_portada.jpg",
+      "caption": "Profesionales y servicios para tu hogar y tu dia a dia. ConectaProIA: la guia de servicios del siglo XXI. Buscar contactos es gratis. Cuentanos que necesitas y tu comuna por WhatsApp: https://wa.me/56983434503 . La disponibilidad y el valor del servicio se confirman con cada profesional. #ConectaProIA #Servicios #Chile",
+      "duration_seconds": 21.8,
+      "sha256": "cf64809b43774e19f43886a572022ba8d32c62044a5da0c47c2cd4c372cfaab2",
+      "cover_sha256": "b220dc6e8b7a35e8d4db287b128986bacc574067e50f18d120062e7ca51f1c24",
+      "approval_status": "approved",
+      "enabled": true,
+      "publish_stories": true,
+      "repeat_after_days": 7,
+      "public_video_url": "https://conectaproia.cl/campanas/cf64809b43774e19f438.mp4"
+    },
+    {
+      "campaign_id": "hogar_sin_vueltas_v1",
+      "title": "Tu casa necesita ayuda",
+      "video": "hogar_sin_vueltas_v1.mp4",
+      "cover": "hogar_sin_vueltas_v1_portada.png",
+      "caption": "¿Electricidad, gasfitería o una mudanza? Busca contactos de profesionales y servicios con ConectaProIA. Buscar contactos es gratis. Cuéntanos qué necesitas por WhatsApp: https://wa.me/56983434503 . La disponibilidad se confirma con cada profesional. El servicio contratado lo cobra cada profesional. #ConectaProIA #ServiciosParaElHogar #Chile",
+      "duration_seconds": 20,
+      "sha256": "3a1a6cc4b7c5b89a7674aa63a12497802e81f4eb38d8bfbb79cbcdd245a96313",
+      "video_qc": {
+        "passed": true,
+        "score": 100,
+        "issues": [],
+        "checks": {
+          "duration": 20.07,
+          "size": [
+            1080,
+            1920
+          ],
+          "has_audio": true
+        },
+        "recommendations": []
+      },
+      "approval_status": "approved",
+      "enabled": true,
+      "not_before": null,
+      "publish_stories": true,
+      "repeat_after_days": 7,
+      "cover_sha256": "f3ba1adba094eb553c8e3265d9d3ef6a59fe9cb923519adc2590bf2ae675ec60",
+      "public_video_url": "https://conectaproia.cl/campanas/3a1a6cc4b7c5b89a7674.mp4"
+    },
+    {
+      "campaign_id": "mascotas_bien_cuidadas_v1",
+      "title": "También para quienes más quieres",
+      "video": "mascotas_bien_cuidadas_v1.mp4",
+      "cover": "mascotas_bien_cuidadas_v1_portada.png",
+      "caption": "También hay servicios para quienes más quieres. Busca contactos de veterinaria y peluquería canina con ConectaProIA. Encontrar contactos no tiene costo. WhatsApp: https://wa.me/56983434503 . Consulta disponibilidad y valores directamente con cada profesional. #ConectaProIA #Mascotas #Veterinaria #PeluqueriaCanina",
+      "duration_seconds": 16,
+      "sha256": "fef4d899f75e9a03f71805d2b8d5c4f443f6837421b3ca33cbc7ff845b178354",
+      "video_qc": {
+        "passed": true,
+        "score": 100,
+        "issues": [],
+        "checks": {
+          "duration": 16.07,
+          "size": [
+            1080,
+            1920
+          ],
+          "has_audio": true
+        },
+        "recommendations": []
+      },
+      "approval_status": "approved",
+      "enabled": true,
+      "not_before": null,
+      "publish_stories": true,
+      "repeat_after_days": 7,
+      "cover_sha256": "9d5268693867577778cf103b64b65dd04e55a8f101df899e08880ee35d16f752",
+      "public_video_url": "https://conectaproia.cl/campanas/fef4d899f75e9a03f718.mp4"
+    }
+  ],
+  "min_interval_hours": 24,
+  "repeat_after_days": 7
+}

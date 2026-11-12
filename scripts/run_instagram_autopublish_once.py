@@ -16,6 +16,9 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
+from conecta_video_ai.campaign_queue import (
+    CampaignSelectionError, mark_image_slot_completed, run_campaign_slot, safe_error,
+)
 from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.pipelines import StudioService
 from conecta_video_ai.settings import load_settings
@@ -157,9 +160,9 @@ def _latest_published_utc(settings) -> datetime | None:
         payload = _safe_read_json(draft_dir / "draft.json", None)
         if not isinstance(payload, dict):
             continue
-        if str(payload.get("status") or "").strip().lower() not in {"published", "published_with_errors"}:
+        if str(payload.get("status") or "").strip().lower() not in {"published", "published_with_errors", "publication_uncertain"}:
             continue
-        published_at = _parse_utc_iso(str(payload.get("published_at") or "").strip())
+        published_at = _parse_utc_iso(str(payload.get("published_at") or payload.get("publication_attempted_at") or "").strip())
         if published_at is None:
             continue
         if latest is None or published_at > latest:
@@ -310,21 +313,38 @@ def main() -> None:
             return
 
         try:
-            sweep_report = service.instagram_engine.sweep_library_quality(force=False)
-            entry["quality_sweep"] = sweep_report
-            result = service.run_instagram_auto_cycle(
-                objective=args.objective,
-                force_category=args.category,
-                publish=True,
-                simulate_publish=False,
-                use_meta_history=bool(args.use_meta_history),
-                public_image_url=None,
-                public_video_url=None,
-            )
+            result = None
+            # Campaigns share the same timer, lock, interval and antispam guards.
+            # Explicit category/objective invocations keep their original intent.
+            if not args.category and not args.objective:
+                try:
+                    result = run_campaign_slot(service)
+                except CampaignSelectionError as exc:
+                    entry["campaign_selection_error"] = str(exc)
+            is_campaign = result is not None
+            if not is_campaign:
+                sweep_report = service.instagram_engine.sweep_library_quality(force=False)
+                entry["quality_sweep"] = sweep_report
+                result = service.run_instagram_auto_cycle(
+                    objective=args.objective,
+                    force_category=args.category,
+                    publish=True,
+                    simulate_publish=False,
+                    use_meta_history=bool(args.use_meta_history),
+                    public_image_url=None,
+                    public_video_url=None,
+                )
+            entry["campaign_id"] = result.get("campaign_id") if is_campaign else None
             draft = result.get("draft") if isinstance(result, dict) else {}
             publication = result.get("publication") if isinstance(result, dict) else {}
             publication_status = str((publication or {}).get("status") or "").strip().lower()
             entry_ok = publication_status == "ok"
+            if entry_ok and not is_campaign:
+                try:
+                    mark_image_slot_completed(settings)
+                except Exception as exc:
+                    # A queue bookkeeping error must not relabel a published image.
+                    entry["campaign_state_error"] = safe_error(exc)
             entry.update(
                 {
                     "ok": entry_ok,
