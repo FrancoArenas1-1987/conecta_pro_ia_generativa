@@ -1,6 +1,6 @@
 # Biblioteca de campañas publicitarias
 
-La biblioteca incorpora seis imágenes de campaña y seis videos. Es adicional a las imágenes habituales por servicio y a los carruseles existentes.
+La biblioteca incorpora diez imágenes de campaña y seis videos. Es adicional a las imágenes habituales por servicio y a los carruseles existentes.
 
 Los ángulos editoriales incluyen hogar, mascotas, variedad de servicios, marca, cómo buscar por necesidad y comuna, preguntas antes de contratar y la diferencia entre buscar contactos gratis y pagar por el trabajo profesional. No se presentan las personas ilustradas como testimonios o proveedores identificados.
 
@@ -33,3 +33,8 @@ La auditoría comprueba captions, hashes, estructura de imágenes, decodificaci�
 Las pruebas de ingesta de Meta crean contenedores sin ejecutar media_publish. Un estado FINISHED demuestra que Meta procesó ese archivo; no equivale a una publicación visible ni garantiza futuras entregas.
 
 La generación automática pagada de imágenes sigue desactivada. Esta biblioteca utiliza el VPS existente y recursos ya preparados. Los medios originales, paquetes y registros operativos permanecen en el almacenamiento de trabajo y los backups privados; el repositorio de código conserva los scripts, prompts, controles y manifiesto de restauración.
+
+
+## Tanda para consultas por necesidad y comuna
+
+Cuatro piezas nuevas de hogar, búsqueda por comuna, traducción y pizzerías se documentan en contacto_campaigns.md. Cada una tiene feed y Story, texto revisado y referencia de consulta. Sus originales y ocho JPEG de entrega se conservan en output/advertising/contacto_2026_11_13. Los nuevos elementos se intercalan al comienzo del manifiesto con los existentes; no se aumenta la frecuencia y la cola conserva todos sus comprobantes. El mínimo de repetición de estas cuatro piezas es de 21 días.

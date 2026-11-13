@@ -1,6 +1,22 @@
 # Textos aprobados de las campañas
 
-Los enlaces incluyen una referencia por pieza creativa para contar consultas atribuibles. La referencia se comparte entre redes y repeticiones: no identifica un post o canal concreto ni demuestra una venta. Las Stories muestran el contacto dentro del medio.
+Cada pieza conserva su texto, contacto y referencia. Las referencias de campaña se comparten entre redes y repeticiones: permiten contar consultas que las incluyan, sin demostrar ventas. Las Stories llevan el contacto dentro de la imagen.
+
+## Esa gotera no se arregla sola
+
+Formato: image. Referencia: CP-15F840DBF69B.
+
+¿Esa gotera sigue pendiente? ConectaProIA te ayuda a buscar contactos de gasfitería para tu hogar.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+gasfiter%C3%ADa+para+mi+hogar.+Referencia+CP-15F840DBF69B
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
 
 ## La guía de servicios del siglo XXI
 
@@ -19,6 +35,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Una necesidad, una comuna, un contacto
+
+Formato: image. Referencia: CP-2DFA8077F47F.
+
+No necesitas saber a quién llamar para empezar. ConectaProIA te ayuda a buscar contactos de profesionales y servicios en Chile.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué servicio necesitas y en qué comuna buscas.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-2DFA8077F47F
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Empieza por tu comuna
 
 Formato: image. Referencia: CP-11B4B5CB551F.
@@ -29,6 +61,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos qué necesitas y en qué comuna buscas atención.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-11B4B5CB551F
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Ese documento necesita traducción
+
+Formato: image. Referencia: CP-83D19BD2E1E0.
+
+¿Un documento por traducir? Busca contactos de traducción con ConectaProIA. Antes de contratar, confirma idiomas, tipo de traducción, plazos y valores.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos el idioma, qué documento necesitas traducir y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+traducci%C3%B3n+de+documentos.+Referencia+CP-83D19BD2E1E0
+Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
 
@@ -50,6 +98,22 @@ WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+pa
 La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #ServiciosParaElHogar #Chile
+
+## Una pizza empieza por un contacto
+
+Formato: image. Referencia: CP-B5873C090016.
+
+¿Pizza para compartir? Busca contactos de pizzerías con ConectaProIA y consulta opciones, horarios y valores directamente con cada local.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos tu comuna y qué estás buscando para compartir.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+pizzer%C3%ADas+en+mi+comuna.+Referencia+CP-B5873C090016
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
 
 ## Antes de contratar, pregunta esto
 

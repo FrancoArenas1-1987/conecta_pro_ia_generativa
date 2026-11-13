@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "created_for": "ConectaProIA",
+  "generation": "Built-in image_gen tool; no VPS generation or API-key requests",
+  "entries": [
+    {
+      "id": "gotera_hogar_20261113_v1",
+      "title": "Esa gotera no se arregla sola",
+      "angle": "hogar_necesidad_concreta",
+      "service": "gasfitería para mi hogar",
+      "intro": "¿Esa gotera sigue pendiente? ConectaProIA te ayuda a buscar contactos de gasfitería para tu hogar.",
+      "prompt": "Use case: ads-marketing. Create ONE finished premium Spanish-language advertising poster for ConectaProIA, a Chilean directory of professional/service contacts. Portrait 4:5 aspect ratio, ideally 1080x1350. This is a new original campaign, highly professional editorial art direction, instantly readable on a phone.\nDesign: warm ivory #F6F4E9, deep forest green #083F33, bold orange accent #FF653E. Main visual is a beautiful, believable close-up photograph of a normal household kitchen tap with a single water drop about to fall, in a tidy sunny Chilean home. Tactile photographic detail, compelling warm light, no person needed, no damage/disaster, no unsafe repair. Realistic water drop. Bold contemporary oversized typography in a carefully aligned editorial composition, generous whitespace, strong obvious hierarchy. Distinctive ad agency polish. No fake app screenshot, badges, testimonials, guarantee, clocks, made-up provider names, QR codes or watermark.\nExact Spanish copy, all spelled correctly and legible:\nSmall brand at top: \"ConectaProIA\"\nLarge primary headline: \"¿Esa gotera sigue pendiente?\"\nSupporting line: \"Busca contactos de gasfitería según tu comuna.\"\nHigh contrast action panel: \"Dinos qué necesitas + tu comuna\"\nContact instruction: \"Escríbenos por WhatsApp\"\nLarge readable phone: \"+56 9 8343 4503\"\nWebsite: \"conectaproia.cl\"\nSmall clear benefit: \"Buscar contactos es gratis.\"\nSmall readable footer: \"El servicio lo cobra cada profesional.\"\nKeep ALL copy and phone completely inside a generous 8% inset border; do not place copy over busy photo. Phone and main CTA readable at thumbnail size. Maintain spacious typography with accurate Spanish accents. The action panel is poster artwork, not an imitation clickable app button. Output the finished poster only.",
+      "cta": "Cuéntanos qué necesitas y en qué comuna buscas atención."
+    },
+    {
+      "id": "tu_comuna_contacto_20261113_v1",
+      "title": "Una necesidad, una comuna, un contacto",
+      "angle": "contacto_por_comuna",
+      "service": "profesionales y servicios",
+      "intro": "No necesitas saber a quién llamar para empezar. ConectaProIA te ayuda a buscar contactos de profesionales y servicios en Chile.",
+      "prompt": "Use case: ads-marketing. Create ONE high-impact finished Spanish advertising poster for ConectaProIA, Chilean service-contact directory. Portrait 4:5, ideally 1080x1350. Original striking Swiss editorial / modern Latin American brand campaign. Use deep midnight teal #103E37 background, warm cream typography, vivid lime #C7EB45 accents, exquisite spacing and oversized bold geometric sans-serif type. A sophisticated sculptural 3D location-pin motif in lime and translucent cream floating on subtle abstract concentric topographic lines; one central pin with beautiful lighting. Not a geographic availability map, no fake listings or statistics, no imitation app UI. Crisp, useful, professional, memorable.\nExact Spanish text, visually hierarchical:\nBrand: \"ConectaProIA\"\nHuge headline across short lines: \"Tu necesidad. Tu comuna. Tu próximo contacto.\"\nSecondary: \"Busca profesionales y servicios en Chile.\"\nAction panel in lime with dark text: \"Cuéntanos qué necesitas y dónde\"\nContact: \"WhatsApp +56 9 8343 4503\"\nWeb: \"conectaproia.cl\"\nBenefit: \"Buscar contactos es gratis.\"\nReadable footer: \"Disponibilidad y valores se confirman con cada profesional.\"\nEvery line spelled exactly with accents, no extra words. Main headline dominates upper area, a clear elegant location-pin in middle, CTA and phone large in lower area. Keep all copy within 8% inset and allow ample breathing room. Avoid photos of people, logos for other companies, QR codes, superlatives, guarantees, fake testimonials, watermark. Output only the single finished professional poster.",
+      "cta": "Cuéntanos qué servicio necesitas y en qué comuna buscas."
+    },
+    {
+      "id": "documento_traduccion_20261113_v1",
+      "title": "Ese documento necesita traducción",
+      "angle": "traduccion_necesidad_concreta",
+      "service": "traducción de documentos",
+      "intro": "¿Un documento por traducir? Busca contactos de traducción con ConectaProIA. Antes de contratar, confirma idiomas, tipo de traducción, plazos y valores.",
+      "prompt": "Use case: ads-marketing. Create ONE finished premium ConectaProIA Spanish advertising poster, Chilean directory helping people find professional contacts. Portrait 4:5, ideally 1080x1350. Fresh refined cobalt blue #173D83, pale cream #FFF6E9, sunny yellow #FFD76A. Upscale editorial stationery photography: close-up of neat unbranded papers with intentionally blurred non-readable lines, a blue pen and simple reading glasses on a warm desk. No passports, seals, government emblems, personal information or fabricated document text. Rich natural light, texture, sophisticated asymmetric editorial composition, hugely readable typography.\nExact Spanish text:\nBrand at top: \"ConectaProIA\"\nMain large headline: \"¿Un documento por traducir?\"\nSupporting line: \"Busca contactos de traducción.\"\nUseful prompt: \"Cuéntanos el idioma y qué necesitas.\"\nCTA: \"Empieza por WhatsApp\"\nLarge contact: \"+56 9 8343 4503\"\nWeb: \"conectaproia.cl\"\nBenefit: \"Buscar contactos es gratis.\"\nReadable footer: \"Tipo de traducción, plazos y valores: confírmalos con cada profesional.\"\nPrioritize main headline and phone; don't cram text or use tiny illegible type. Dedicated clean contrasting text zones, all copy within 8% inset. A polished ad you would see from a professional Chilean brand, accessible to everyday people. Avoid claims of certified translators, guarantees, same-day delivery, fake app chats, QR codes, watermark or additional copy. Finished poster only.",
+      "cta": "Cuéntanos el idioma, qué documento necesitas traducir y en qué comuna buscas atención."
+    },
+    {
+      "id": "pizza_compartir_20261113_v1",
+      "title": "Una pizza empieza por un contacto",
+      "angle": "comida_ocasion",
+      "service": "pizzerías en mi comuna",
+      "intro": "¿Pizza para compartir? Busca contactos de pizzerías con ConectaProIA y consulta opciones, horarios y valores directamente con cada local.",
+      "prompt": "Use case: ads-marketing. Create ONE finished professional Spanish-language ConectaProIA campaign poster. Portrait 4:5, ideally 1080x1350. Chilean directory of service/business contacts; not itself a pizza restaurant or delivery service. Professional appetizing still-life food photograph of one delicious whole pizza on a simple plate, a single lifted slice with realistic cheese, no people or hands required. Warm tomato red #D5442E, cream #FFF6E9 and deep green #173D34. Bold playful but highly polished editorial restaurant-ad style, beautiful warm directional light and tactile food, tasteful graphic curves. Clear readable cream typography, large hierarchy and purposeful whitespace.\nExact Spanish copy:\nBrand: \"ConectaProIA\"\nPrimary huge headline: \"¿Pizza para compartir?\"\nSupporting: \"Busca contactos de pizzerías según tu comuna.\"\nCTA: \"Cuéntanos dónde buscas\"\nContact instruction: \"Escríbenos por WhatsApp\"\nLarge phone: \"+56 9 8343 4503\"\nWeb: \"conectaproia.cl\"\nBenefit: \"Buscar contactos es gratis.\"\nReadable footer: \"Opciones, horarios y valores se consultan con cada local.\"\nBrand at top, headline upper third, pizza central focal photograph, very clear contact area bottom. Keep ALL text within a generous 8% inset and separated from busy photography. No invented pizza prices, discounts, free pizzas, delivery promises, restaurant logos, claims of guaranteed local availability, QR code, fake testimonials or watermark. The photo is an illustrative food scene and must not imply a specific restaurant. Finished poster only.",
+      "cta": "Cuéntanos tu comuna y qué estás buscando para compartir."
+    }
+  ]
+}
