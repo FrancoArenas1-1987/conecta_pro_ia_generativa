@@ -1,0 +1,12 @@
+[Unit]
+Description=Capture social metrics and Stories three times daily
+
+[Timer]
+OnCalendar=*-*-* 08:15:00 America/Santiago
+OnCalendar=*-*-* 14:15:00 America/Santiago
+OnCalendar=*-*-* 20:45:00 America/Santiago
+RandomizedDelaySec=3m
+Persistent=true
+
+[Install]
+WantedBy=timers.target

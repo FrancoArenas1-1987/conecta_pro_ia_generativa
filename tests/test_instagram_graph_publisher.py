@@ -199,3 +199,99 @@ def test_publish_facebook_multi_photo_uses_attached_media(monkeypatch, tmp_path:
     assert calls[2][1]["message"] == "Caption"
     assert '"media_fbid": "photo_1"' in calls[2][1]["attached_media"]
     assert '"media_fbid": "photo_2"' in calls[2][1]["attached_media"]
+
+
+def story_publisher(tmp_path,monkeypatch, *, fail_finish=False, missing_post=False):
+    p=InstagramGraphPublisher(_settings(tmp_path));calls=[];checkpoints=[]
+    monkeypatch.setattr(p,'resolve_page_access_token',lambda:'page_token')
+    monkeypatch.setattr('conecta_video_ai.instagram_graph_publisher.time.sleep',lambda _:None)
+    def http(*,method,path,params,access_token=None):
+        calls.append((method,path,dict(params)))
+        if method=='POST' and params.get('upload_phase')=='start':
+            return {'video_id':'123','upload_url':'https://rupload.facebook.com/video-upload/v21.0/123'}
+        if method=='POST' and params.get('upload_phase')=='finish':
+            assert checkpoints[-1]['phase']=='finishing'
+            assert params['video_state']=='PUBLISHED'
+            if fail_finish:raise GenerationError('network timeout')
+            return {'success':True} if missing_post else {'success':True,'post_id':'story_123'}
+        if path=='/123':
+            finishing=any(r[2].get('upload_phase')=='finish' for r in calls)
+            return {'status':{'video_status':'ready','uploading_phase':{'status':'complete'},
+                              'publishing_phase':{'status':'complete' if finishing else 'not_started'}}}
+        if path=='/page_1/stories':
+            return {'data':[{'post_id':'wrong','media_id':'456','status':'published'},
+                            {'post_id':'story_123','media_id':'123','status':'published'}]}
+        raise AssertionError((method,path,params))
+    monkeypatch.setattr(p,'_http',http)
+    def transfer(**kw):
+        calls.append(('UPLOAD',kw['upload_url'],{'source':kw['video_url']}))
+        return {'success':True}
+    monkeypatch.setattr(p,'_upload_story_video',transfer)
+    return p,calls,checkpoints
+
+
+def test_facebook_story_video_follows_start_transfer_finish_and_confirmation(tmp_path,monkeypatch):
+    p,calls,states=story_publisher(tmp_path,monkeypatch)
+    result=p.publish_facebook_story_video(video_url='https://cdn.test/story.mp4',progress=states.append)
+    assert result['status']=='published' and result['story_id']=='story_123' and result['video_id']=='123'
+    assert [r[2].get('upload_phase') for r in calls if r[0]=='POST']==['start','finish']
+    assert [r['phase'] for r in states]==['starting','session_created','transferred','finishing','finish_acknowledged','confirmed']
+    assert calls[1][0]=='UPLOAD'
+
+
+def test_facebook_story_finish_timeout_is_never_retried(tmp_path,monkeypatch):
+    p,calls,states=story_publisher(tmp_path,monkeypatch,fail_finish=True)
+    with pytest.raises(GenerationError,match='timeout'):
+        p.publish_facebook_story_video(video_url='https://cdn.test/story.mp4',progress=states.append)
+    assert sum(c[2].get('upload_phase')=='finish' for c in calls)==1
+    assert states[-1]=={'phase':'finishing','video_id':'123','publication_may_have_occurred':True}
+
+
+def test_facebook_story_success_acknowledgement_resolves_real_story_id(tmp_path,monkeypatch):
+    p,calls,states=story_publisher(tmp_path,monkeypatch,missing_post=True)
+    result=p.publish_facebook_story_video(video_url='https://cdn.test/story.mp4',progress=states.append)
+    assert result['story_id']=='story_123'
+
+
+def test_facebook_story_transfer_failure_never_calls_finish(tmp_path,monkeypatch):
+    p,calls,states=story_publisher(tmp_path,monkeypatch)
+    def fail(**kw):raise GenerationError('transfer rejected')
+    monkeypatch.setattr(p,'_upload_story_video',fail)
+    with pytest.raises(GenerationError,match='transfer'):
+        p.publish_facebook_story_video(video_url='https://cdn.test/story.mp4',progress=states.append)
+    assert not any(c[2].get('upload_phase')=='finish' for c in calls)
+    assert states[-1]['video_id']=='123'
+
+
+@pytest.mark.parametrize('url',[
+    'http://rupload.facebook.com/video-upload/v21.0/123',
+    'https://example.test/video-upload/v21.0/123',
+    'https://rupload.facebook.com.evil.test/video-upload/v21.0/123',
+    'https://rupload.facebook.com/video-upload/v21.0/456'
+])
+def test_story_upload_rejects_untrusted_destination_before_sending_token(tmp_path,url):
+    p=InstagramGraphPublisher(_settings(tmp_path))
+    with pytest.raises(GenerationError,match='destination'):
+        p._upload_story_video(upload_url=url,video_id='123',video_url='https://cdn.test/story.mp4',page_token='secret')
+
+
+def test_story_binary_transfer_uses_meta_upload_url_and_hosted_file_header(tmp_path,monkeypatch):
+    import io,json
+    p=InstagramGraphPublisher(_settings(tmp_path));seen=[]
+    def open_request(request,timeout):
+        seen.append(request)
+        return io.BytesIO(json.dumps({'success':True}).encode())
+    monkeypatch.setattr('conecta_video_ai.instagram_graph_publisher.urlopen',open_request)
+    result=p._upload_story_video(upload_url='https://rupload.facebook.com/video-upload/v21.0/123',video_id='123',
+                                 video_url='https://cdn.test/story.mp4',page_token='page_token')
+    assert result['success']
+    assert seen[0].method=='POST'
+    assert seen[0].get_header('Authorization')=='OAuth page_token'
+    assert seen[0].get_header('File_url')=='https://cdn.test/story.mp4'
+
+
+def test_story_processing_error_never_reports_published(tmp_path,monkeypatch):
+    p=InstagramGraphPublisher(_settings(tmp_path))
+    monkeypatch.setattr(p,'_http',lambda **kw:{'status':{'video_status':'error','processing_phase':{'errors':[{'code':1}]}}})
+    with pytest.raises(GenerationError,match='processing failed'):
+        p._wait_story_phase(video_id='123',page_token='token',published=True)

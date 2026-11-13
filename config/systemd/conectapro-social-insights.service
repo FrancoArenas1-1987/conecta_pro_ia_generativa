@@ -1,0 +1,12 @@
+[Unit]
+Description=ConectaProIA read-only social insights
+Requires=docker.service
+After=docker.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/opt/conecta-pro-ia-generativa
+ExecStart=/opt/conecta-pro-ia-generativa/scripts/run_social_insights.sh
+TimeoutStartSec=600

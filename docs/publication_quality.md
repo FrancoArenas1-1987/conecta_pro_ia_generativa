@@ -28,6 +28,10 @@ El auditor comprueba variantes para clientes y proveedores, imágenes feed/story
 
 Estos controles verifican reglas concretas y estructura técnica. No demuestran por sí solos que una fotografía represente bien el servicio, que todo texto integrado sea perfecto o que la pieza tenga buena calidad publicitaria. El contenido visual nuevo sigue necesitando revisión editorial antes de aprobarse. No se corrigieron publicaciones históricas ya publicadas.
 
-## Biblioteca de campa?as de imagen y video
+## Biblioteca de campañas de imagen y video
 
-Ver advertising_library.md para los formatos, fuentes, rotaci?n y auditor?a completa de las doce campa?as. Las im?genes de campa?a usan el mismo registro durable de entregas que los videos.
+Ver advertising_library.md para los formatos, fuentes, rotación y auditoría completa de las doce campañas. Las imágenes de campaña usan el mismo registro durable de entregas que los videos.
+
+## Comprobantes de Stories y referencias
+
+Las Stories de video de Facebook utilizan start, transferencia y finish, con registro de video_id y confirmación de la fase de publicación. La aceptación de una carga no se marca como publicación terminada. Las referencias de WhatsApp en los nuevos borradores y campañas conservan el teléfono validado. Ver organic_acquisition.md.

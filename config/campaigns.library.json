@@ -9,7 +9,7 @@
       "title": "La guía de servicios del siglo XXI",
       "video": "conectaproia_publicitario_v1_meta.mp4",
       "cover": "guia_siglo_xxi_v1_portada.jpg",
-      "caption": "¿Necesitas un profesional o un servicio para tu hogar?\n\nConectaProIA te ayuda a encontrar contactos de profesionales y servicios en Chile.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption": "¿Necesitas un profesional o un servicio para tu hogar?\n\nConectaProIA te ayuda a encontrar contactos de profesionales y servicios en Chile.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-2EAFDEC0D833\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
       "duration_seconds": 21.8,
       "sha256": "cf64809b43774e19f43886a572022ba8d32c62044a5da0c47c2cd4c372cfaab2",
       "cover_sha256": "b220dc6e8b7a35e8d4db287b128986bacc574067e50f18d120062e7ca51f1c24",
@@ -18,17 +18,18 @@
       "publish_stories": true,
       "repeat_after_days": 7,
       "public_video_url": "https://conectaproia.cl/campanas/cf64809b43774e19f438.mp4",
-      "caption_sha256": "bf1fd2708c041b9324166697791afa25f368e9c6890b99b899bc873ca2e4ad45",
-      "caption_reviewed_at": "2026-11-13T00:06:39.504143+00:00",
+      "caption_sha256": "278d446d15c459a9e8d16558360e5f7f02fd0be403a669f4ac8b971e81261836",
+      "caption_reviewed_at": "2026-11-13T22:03:31.861423+00:00",
       "media_type": "video",
-      "angle": "marca"
+      "angle": "marca",
+      "tracking_code": "CP-2EAFDEC0D833"
     },
     {
       "campaign_id": "empieza_por_tu_comuna_v1",
       "title": "Empieza por tu comuna",
       "angle": "educacion",
-      "caption": "¿Cómo empezar? Cuéntanos qué servicio necesitas, indica tu comuna y revisa los contactos disponibles con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "f3aee8393aef885f6103d7870396cc71d759b733f67b33fe1a7988028c2f22d6",
+      "caption": "¿Cómo empezar? Cuéntanos qué servicio necesitas, indica tu comuna y revisa los contactos disponibles con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-11B4B5CB551F\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "83cd23660029633542479387ffaf2cf01fc36f61dd62a28ecce48e822873b49f",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -39,16 +40,17 @@
       "story_image": "empieza_por_tu_comuna_v1_story.jpg",
       "story_sha256": "71689d0c7f171dad18243b832ba7ed01e38b40898db02ccf076b727207aa161f",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
+      "caption_reviewed_at": "2026-11-13T22:03:31.861423+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/d045fa3c68b83bf7adbd.jpg",
-      "public_story_image_url": "https://conectaproia.cl/campanas/71689d0c7f171dad1824.jpg"
+      "public_story_image_url": "https://conectaproia.cl/campanas/71689d0c7f171dad1824.jpg",
+      "tracking_code": "CP-11B4B5CB551F"
     },
     {
       "campaign_id": "hogar_sin_vueltas_v1",
       "title": "Servicios para tu hogar",
       "video": "hogar_sin_vueltas_v1.mp4",
       "cover": "hogar_sin_vueltas_v1_portada.png",
-      "caption": "¿Necesitas un electricista, un gasfíter o ayuda con una mudanza?\n\nBusca contactos de profesionales y servicios para tu hogar con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #ServiciosParaElHogar #Chile",
+      "caption": "¿Necesitas un electricista, un gasfíter o ayuda con una mudanza?\n\nBusca contactos de profesionales y servicios para tu hogar con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+para+el+hogar.+Referencia+CP-2A95478AC115\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #ServiciosParaElHogar #Chile",
       "duration_seconds": 20,
       "sha256": "3a1a6cc4b7c5b89a7674aa63a12497802e81f4eb38d8bfbb79cbcdd245a96313",
       "video_qc": {
@@ -72,17 +74,18 @@
       "repeat_after_days": 7,
       "cover_sha256": "f3ba1adba094eb553c8e3265d9d3ef6a59fe9cb923519adc2590bf2ae675ec60",
       "public_video_url": "https://conectaproia.cl/campanas/3a1a6cc4b7c5b89a7674.mp4",
-      "caption_sha256": "21848060fa21ee0f6916d0b20dacb673decf1a4b9cfcb1cf982013f501ef818f",
-      "caption_reviewed_at": "2026-11-13T00:06:39.504143+00:00",
+      "caption_sha256": "047db4a8c23e345a4ffa6eda2a096809c04baab7b6148d907ebee5693f21d6dc",
+      "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "media_type": "video",
-      "angle": "hogar"
+      "angle": "hogar",
+      "tracking_code": "CP-2A95478AC115"
     },
     {
       "campaign_id": "antes_de_contratar_v1",
       "title": "Antes de contratar, pregunta esto",
       "angle": "consejos",
-      "caption": "Tres preguntas para decidir con información: ¿cuál es el valor?, ¿qué incluye? y ¿hay disponibilidad? Guarda esta lista y encuentra contactos con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "7c733641f8fd912cae154bd9ccb64e7bfa51bb69a0624c41acadc9d6fcde40ab",
+      "caption": "Tres preguntas para decidir con información: ¿cuál es el valor?, ¿qué incluye? y ¿hay disponibilidad? Guarda esta lista y encuentra contactos con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-8244BE9D8102\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "74caadf89f528ff1801d563d34672448654836f988d82c15467709bc8854a165",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -93,16 +96,17 @@
       "story_image": "antes_de_contratar_v1_story.jpg",
       "story_sha256": "0a052683db878acdc8b0e14a05e3948d2b19bedfab3494e42b649cf94a082200",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
+      "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/104ebe8b50463e65e54f.jpg",
-      "public_story_image_url": "https://conectaproia.cl/campanas/0a052683db878acdc8b0.jpg"
+      "public_story_image_url": "https://conectaproia.cl/campanas/0a052683db878acdc8b0.jpg",
+      "tracking_code": "CP-8244BE9D8102"
     },
     {
       "campaign_id": "mascotas_bien_cuidadas_v1",
       "title": "Cuidado para tus mascotas",
       "video": "mascotas_bien_cuidadas_v1.mp4",
       "cover": "mascotas_bien_cuidadas_v1_portada.png",
-      "caption": "¿Buscas un veterinario o peluquería canina?\n\nConectaProIA te ayuda a encontrar contactos para el cuidado de tus mascotas.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Mascotas #Veterinaria #PeluqueriaCanina",
+      "caption": "¿Buscas un veterinario o peluquería canina?\n\nConectaProIA te ayuda a encontrar contactos para el cuidado de tus mascotas.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+cuidado+de+mascotas.+Referencia+CP-445AB6D73647\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Mascotas #Veterinaria #PeluqueriaCanina",
       "duration_seconds": 16,
       "sha256": "fef4d899f75e9a03f71805d2b8d5c4f443f6837421b3ca33cbc7ff845b178354",
       "video_qc": {
@@ -126,17 +130,18 @@
       "repeat_after_days": 7,
       "cover_sha256": "9d5268693867577778cf103b64b65dd04e55a8f101df899e08880ee35d16f752",
       "public_video_url": "https://conectaproia.cl/campanas/fef4d899f75e9a03f718.mp4",
-      "caption_sha256": "fae1a8e4ae791732de13eb32631ad888696b1a295e6038cd5531cdb47ca05009",
-      "caption_reviewed_at": "2026-11-13T00:06:39.504143+00:00",
+      "caption_sha256": "e0bb327fe6b1caf312edac32a0fcf0055a08159979faae21ff06a83220edc9b3",
+      "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "media_type": "video",
-      "angle": "mascotas"
+      "angle": "mascotas",
+      "tracking_code": "CP-445AB6D73647"
     },
     {
       "campaign_id": "muchos_pendientes_v1",
       "title": "Un lugar para tus pendientes",
       "angle": "vida_cotidiana",
-      "caption": "Tu hogar, tus mascotas, tu trabajo o una mudanza: las necesidades cambian. ConectaProIA te ayuda a buscar contactos según tu necesidad y comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "e1dc9808040974fc7921c5fa05d023cd2abcb861e07e526897f2a68b2952795a",
+      "caption": "Tu hogar, tus mascotas, tu trabajo o una mudanza: las necesidades cambian. ConectaProIA te ayuda a buscar contactos según tu necesidad y comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-2F15C1D5A03D\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "39a067a01fedc62a65168fabdb6afd05fb1e6379e540e895cf28ecb735eb74ad",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -147,16 +152,17 @@
       "story_image": "muchos_pendientes_v1_story.jpg",
       "story_sha256": "ba75fe9d68054b255a771a98650a0bf0abaff10c256127474eba0423ec72429b",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
+      "caption_reviewed_at": "2026-11-13T22:03:31.871841+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/8cb9881007f2ff6995a6.jpg",
-      "public_story_image_url": "https://conectaproia.cl/campanas/ba75fe9d68054b255a77.jpg"
+      "public_story_image_url": "https://conectaproia.cl/campanas/ba75fe9d68054b255a77.jpg",
+      "tracking_code": "CP-2F15C1D5A03D"
     },
     {
       "campaign_id": "como_buscar_video_v1",
       "title": "Cómo buscar un servicio",
       "angle": "educacion",
-      "caption": "Empieza por tu necesidad y tu comuna. ConectaProIA te ayuda a encontrar contactos de profesionales y servicios.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "91c14182f56139079beae4d21a83975940fa1f1ed4e2b74b0f631c62e3542311",
+      "caption": "Empieza por tu necesidad y tu comuna. ConectaProIA te ayuda a encontrar contactos de profesionales y servicios.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-03911C733CAA\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "c5fa29216ff556ef0b490bc2809fed6e96e2bd210d95db36552f8530b7ff0e6b",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -169,15 +175,16 @@
       "publish_stories": true,
       "music": "mixkit-corporate-drive-493.mp3",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_video_url": "https://conectaproia.cl/campanas/168e62fb617d5cb833b7.mp4"
+      "caption_reviewed_at": "2026-11-13T22:03:31.871841+00:00",
+      "public_video_url": "https://conectaproia.cl/campanas/168e62fb617d5cb833b7.mp4",
+      "tracking_code": "CP-03911C733CAA"
     },
     {
       "campaign_id": "profesional_casa_imagen_v1",
       "title": "Un profesional para tu casa",
       "angle": "hogar",
-      "caption": "¿Buscas un profesional o un servicio para tu hogar? Cuéntanos qué necesitas y en qué comuna buscas atención. ConectaProIA te ayuda a encontrar contactos.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "14817fa5077ba8416859380126f10a065a0165e4af8584bd0f804f131a5723ce",
+      "caption": "¿Buscas un profesional o un servicio para tu hogar? Cuéntanos qué necesitas y en qué comuna buscas atención. ConectaProIA te ayuda a encontrar contactos.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+para+el+hogar.+Referencia+CP-0CF6F83FD573\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "33ca678f34ac5fb505f428d86370c881862df2b4da1f1e2bd48b8a1229918b9f",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -186,15 +193,16 @@
       "sha256": "5652597714d8bb564114a55296955d0789cb151c992496e34f545c6555f1190d",
       "publish_stories": false,
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_image_url": "https://conectaproia.cl/campanas/5652597714d8bb564114.jpg"
+      "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
+      "public_image_url": "https://conectaproia.cl/campanas/5652597714d8bb564114.jpg",
+      "tracking_code": "CP-0CF6F83FD573"
     },
     {
       "campaign_id": "preguntas_antes_contratar_video_v1",
       "title": "Tres preguntas antes de contratar",
       "angle": "consejos",
-      "caption": "Antes de contratar, pregunta por el valor, qué incluye el servicio y la disponibilidad. Guarda esta lista y decide con información. Encuentra contactos con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "f8007f81a031ba615383f036827ae3751106fee2f4e9b6d21f702cb604d50786",
+      "caption": "Antes de contratar, pregunta por el valor, qué incluye el servicio y la disponibilidad. Guarda esta lista y decide con información. Encuentra contactos con ConectaProIA.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-AEFD32C17BEC\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "9b5467d867581af42c85afa6bd135658e2dc2a7a5b70c1a90f662456dce24b32",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -207,15 +215,16 @@
       "publish_stories": true,
       "music": "mixkit-stylish-energy-614.mp3",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_video_url": "https://conectaproia.cl/campanas/f7e257dc49cc357354ed.mp4"
+      "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
+      "public_video_url": "https://conectaproia.cl/campanas/f7e257dc49cc357354ed.mp4",
+      "tracking_code": "CP-AEFD32C17BEC"
     },
     {
       "campaign_id": "muchos_servicios_imagen_v1",
       "title": "Muchos servicios, un lugar",
       "angle": "variedad",
-      "caption": "Hay distintas necesidades en tu día a día. Busca contactos de profesionales y servicios con ConectaProIA y consulta las opciones disponibles para tu comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "f032c9b3e0e7bbfa6ee0db5f7f4bbbaa6a357861f0d3babaff43a733e5a11e53",
+      "caption": "Hay distintas necesidades en tu día a día. Busca contactos de profesionales y servicios con ConectaProIA y consulta las opciones disponibles para tu comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-B8A4D4BB76D2\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "31d9535eabd17fc32705a1004c13a62b24849b6253984c8200c2345ce77c356e",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -224,15 +233,16 @@
       "sha256": "efa22fc15d0f88aeda42cfdb47f6539b538569da6c0050c272098d25a72ce886",
       "publish_stories": false,
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_image_url": "https://conectaproia.cl/campanas/efa22fc15d0f88aeda42.jpg"
+      "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
+      "public_image_url": "https://conectaproia.cl/campanas/efa22fc15d0f88aeda42.jpg",
+      "tracking_code": "CP-B8A4D4BB76D2"
     },
     {
       "campaign_id": "buscar_sin_costo_video_v1",
       "title": "Qué es gratis y qué se contrata",
       "angle": "propuesta_de_valor",
-      "caption": "Buscar contactos y contratar un servicio son pasos distintos. ConectaProIA te ayuda a encontrar a quién consultar; acuerda el trabajo directamente con cada profesional.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "89fd3eec358816025b6b3f821dfc93cc30cf7f5bffa13c640d033375a9408bf9",
+      "caption": "Buscar contactos y contratar un servicio son pasos distintos. ConectaProIA te ayuda a encontrar a quién consultar; acuerda el trabajo directamente con cada profesional.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-197869B34C28\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "926750a31b75da63b71d4ee25eafa91b03c83798135b560daa66f8caf1a6f440",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -245,15 +255,16 @@
       "publish_stories": true,
       "music": "mixkit-upbeat-groove-897.mp3",
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_video_url": "https://conectaproia.cl/campanas/117068944e162843ee06.mp4"
+      "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
+      "public_video_url": "https://conectaproia.cl/campanas/117068944e162843ee06.mp4",
+      "tracking_code": "CP-197869B34C28"
     },
     {
       "campaign_id": "guia_siglo_xxi_imagen_v1",
       "title": "La guía de servicios del siglo XXI",
       "angle": "marca",
-      "caption": "Una guía de contactos para el día a día. ConectaProIA te ayuda a encontrar profesionales y servicios según lo que necesitas y dónde buscas atención.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
-      "caption_sha256": "828417c58ff048d04f54e54dbc95180daef24c023a9ec8e5125edac5673b251a",
+      "caption": "Una guía de contactos para el día a día. ConectaProIA te ayuda a encontrar profesionales y servicios según lo que necesitas y dónde buscas atención.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-4BE71D946EAE\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "d63cf4620dca0f9cfa2deec33f63cbfe2f84b4af2a3e7ea655a76da086d47131",
       "approval_status": "approved",
       "enabled": true,
       "repeat_after_days": 14,
@@ -262,8 +273,9 @@
       "sha256": "e4939ce9e2657d0c07ea9a6c6a2af709ca3f499e9daa5afe98d002a3593ace62",
       "publish_stories": false,
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "caption_reviewed_at": "2026-11-13T00:51:32.921697+00:00",
-      "public_image_url": "https://conectaproia.cl/campanas/e4939ce9e2657d0c07ea.jpg"
+      "caption_reviewed_at": "2026-11-13T22:03:31.874255+00:00",
+      "public_image_url": "https://conectaproia.cl/campanas/e4939ce9e2657d0c07ea.jpg",
+      "tracking_code": "CP-4BE71D946EAE"
     }
   ],
   "status": "restore_template_requires_reconciliation"

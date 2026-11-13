@@ -6,9 +6,9 @@ import os
 import time
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlencode
+from urllib.parse import urlencode, urlparse
 from urllib.request import Request, urlopen
 
 from .exceptions import GenerationError
@@ -768,27 +768,95 @@ class InstagramGraphPublisher:
             "raw": data,
         }
 
-    def publish_facebook_story_video(self, *, video_url: str) -> dict[str, Any]:
+    def _upload_story_video(self, *, upload_url: str, video_id: str, video_url: str, page_token: str) -> dict:
+        parsed = urlparse(upload_url)
+        if (parsed.scheme != "https" or parsed.hostname != "rupload.facebook.com" or parsed.port is not None
+                or parsed.username or parsed.password or not parsed.path.startswith("/video-upload/")
+                or parsed.path.rstrip("/").split("/")[-1] != video_id):
+            raise GenerationError("Invalid Facebook upload destination")
+        request = Request(upload_url, data=b"", method="POST",
+                          headers={"Authorization": "OAuth " + page_token, "file_url": video_url})
+        try:
+            with urlopen(request, timeout=120) as response:
+                result = json.loads(response.read().decode("utf-8"))
+        except HTTPError as exc:
+            detail = exc.read().decode("utf-8", errors="replace")
+            raise GenerationError(f"Facebook Story transfer HTTP {exc.code}: {detail}") from None
+        except (URLError, ValueError, OSError):
+            raise GenerationError("Facebook Story transfer failed; publication was not requested") from None
+        if result.get("success") is not True:
+            raise GenerationError("Facebook Story transfer was not acknowledged")
+        return result
+
+    def _wait_story_phase(self, *, video_id: str, page_token: str, published: bool,
+                         max_wait_seconds: int = 240) -> dict:
+        deadline = time.monotonic() + max_wait_seconds
+        while True:
+            data = self._http(method="GET", path=f"/{video_id}", params={"fields": "status"},
+                              access_token=page_token)
+            status = data.get("status") or {}
+            if not isinstance(status, dict):
+                raise GenerationError("Facebook Story status was not structured")
+            failed = str(status.get("video_status", "")).lower() in {"error", "failed"}
+            for phase in ["uploading_phase", "processing_phase", "publishing_phase"]:
+                detail = status.get(phase) or {}
+                failed = failed or bool(detail.get("errors")) or str(detail.get("status", "")).lower() in {"error", "failed"}
+            if failed or status.get("errors"):
+                raise GenerationError("Facebook Story processing failed: " + json.dumps(status))
+            if published:
+                complete = str((status.get("publishing_phase") or {}).get("status", "")).lower() == "complete"
+                if complete:
+                    return data
+            elif str((status.get("uploading_phase") or {}).get("status", "")).lower() == "complete":
+                return data
+            if time.monotonic() >= deadline:
+                raise GenerationError("Facebook Story status timed out; inspect recorded video_id before retrying")
+            time.sleep(3)
+
+    def publish_facebook_story_video(self, *, video_url: str,
+                                     progress: Callable[[dict], None] | None = None) -> dict[str, Any]:
+        """Start, transfer, finish once, then confirm processing. Never blindly retry finish."""
+        if urlparse(video_url).scheme != "https":
+            raise GenerationError("Facebook Story source must use HTTPS")
+        def checkpoint(phase, **values):
+            if progress:
+                progress({"phase": phase, **values})
         page_token = self.resolve_page_access_token()
-        last_exc: Exception | None = None
-        for params in ({"video_url": video_url}, {"url": video_url}, {"file_url": video_url}):
-            try:
-                data = self._http(
-                    method="POST",
-                    path=f"/{self.page_id}/video_stories",
-                    params=params,
-                    access_token=page_token,
-                )
-                story_id = str(data.get("id") or data.get("post_id") or "").strip()
-                return {
-                    "channel": "facebook_graph_story_video",
-                    "status": "published",
-                    "story_id": story_id or None,
-                    "raw": data,
-                }
-            except Exception as exc:  # noqa: BLE001
-                last_exc = exc
-        raise GenerationError(f"No se pudo publicar Facebook Video Story: {last_exc}")
+        checkpoint("starting")
+        started = self._http(method="POST", path=f"/{self.page_id}/video_stories",
+                             params={"upload_phase": "start"}, access_token=page_token)
+        video_id = str(started.get("video_id") or "").strip()
+        upload_url = str(started.get("upload_url") or "").strip()
+        if not video_id or not upload_url:
+            raise GenerationError("Facebook Story start did not return video_id and upload_url")
+        checkpoint("session_created", video_id=video_id)
+        self._upload_story_video(upload_url=upload_url, video_id=video_id,
+                                 video_url=video_url, page_token=page_token)
+        checkpoint("transferred", video_id=video_id)
+        self._wait_story_phase(video_id=video_id, page_token=page_token, published=False)
+        # Persist the video id before the only call that can create the public Story.
+        checkpoint("finishing", video_id=video_id, publication_may_have_occurred=True)
+        data = self._http(method="POST", path=f"/{self.page_id}/video_stories",
+                          params={"upload_phase": "finish", "video_id": video_id, "video_state": "PUBLISHED"},
+                          access_token=page_token)
+        story_id = str(data.get("post_id") or data.get("id") or "").strip()
+        if data.get("success") is False or (data.get("success") is not True and not story_id):
+            raise GenerationError("Facebook Story finish was not acknowledged; reconcile recorded video_id")
+        checkpoint("finish_acknowledged", video_id=video_id, story_id=story_id or None,
+                   publication_may_have_occurred=True)
+        status = self._wait_story_phase(video_id=video_id, page_token=page_token, published=True)
+        if not story_id:
+            stories = self._http(method="GET", path=f"/{self.page_id}/stories",
+                                 params={"limit": 50}, access_token=page_token)
+            matching = [row for row in stories.get("data", [])
+                        if str(row.get("media_id")) == video_id and row.get("status") == "published"]
+            if len(matching) != 1 or not matching[0].get("post_id"):
+                raise GenerationError("Published Facebook video has no unambiguous Story receipt; reconcile video_id")
+            story_id = str(matching[0]["post_id"])
+        checkpoint("confirmed", video_id=video_id, story_id=story_id)
+        return {"channel": "facebook_graph_story_video", "status": "published",
+                "story_id": story_id, "post_id": story_id, "video_id": video_id,
+                "published_at": _now_iso(), "raw": data, "processing_status": status}
 
 
 def resolve_public_image_url(*, settings: AppSettings, image_path: Path, explicit_public_url: str | None = None) -> str:

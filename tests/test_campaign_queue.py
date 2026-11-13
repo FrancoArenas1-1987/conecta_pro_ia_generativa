@@ -53,7 +53,7 @@ def test_concurrent_workers_can_claim_only_one_slot(tmp_path):
     assert sum(r is not None for r in results) == 1
 
 
-@pytest.mark.parametrize('state', ['claimed', 'publishing', 'uncertain', 'partial'])
+@pytest.mark.parametrize('state', ['claimed', 'publishing', 'recovering', 'uncertain', 'partial'])
 def test_unresolved_outcomes_never_republish_automatically(tmp_path, state):
     q = CampaignQueue(tmp_path); a = q.claim(manifest(), NOW)
     q.finish(a['id'], state); q.mark_image_slot()
@@ -289,3 +289,13 @@ def test_changed_public_image_is_blocked_before_any_post(tmp_path,monkeypatch):
     monkeypatch.setattr('conecta_video_ai.campaign_queue.verify_public_image',bad)
     with pytest.raises(RuntimeError,match='checksum'):run_campaign_slot(service,now=NOW)
     assert not calls
+
+def test_upload_phase_is_durable_before_any_publication_result(tmp_path):
+    queue=CampaignQueue(tmp_path)
+    attempt=queue.claim(manifest(),NOW)
+    queue.delivery_started(attempt['id'],'target','facebook_story')
+    queue.delivery_progress(attempt['id'],'target','facebook_story',{'phase':'finishing','video_id':'123','publication_may_have_occurred':True})
+    with CampaignQueue(tmp_path).connect() as db:
+        row=db.execute("select status,receipt from deliveries").fetchone()
+        assert row[0]=='sending'
+        assert json.loads(row[1])=={'phase':'finishing','video_id':'123','publication_may_have_occurred':True}

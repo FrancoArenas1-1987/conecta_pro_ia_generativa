@@ -48,23 +48,23 @@ reservas concurrentes, historial idempotente y publicación desde imagen princip
 No se publican mensajes durante las pruebas.
 
 
-## Validaci?n de layout sin llamadas pagadas
+## Validación de layout sin llamadas pagadas
 
 `python scripts/check_instagram_layouts.py --output logs/layout_check.json` consulta
-servicios con proveedores y compone im?genes sint?ticas en una carpeta temporal.
-No publica, no llama a OpenAI ni modifica el registro de im?genes o presupuesto.
-El comando termina con c?digo 1 si alg?n layout falla o no hay servicios.
-Para auditor?a offline se puede usar `--registry-snapshot ruta/service_images.json`.
+servicios con proveedores y compone imágenes sintéticas en una carpeta temporal.
+No publica, no llama a OpenAI ni modifica el registro de imágenes o presupuesto.
+El comando termina con código 1 si algún layout falla o no hay servicios.
+Para auditoría offline se puede usar `--registry-snapshot ruta/service_images.json`.
 Debe ejecutarse con las fuentes del contenedor Linux antes de cambiar la plantilla.
 
-La plantilla v7 asigna regiones fijas a t?tulo, descripci?n, tarjetas y contacto;
-mide las letras reales (incluidos bearings de fuentes Linux), ajusta la tipograf?a
-sin truncar el texto y rechaza textos imposibles antes de comprar im?genes.
-Si la fuente pagada ya se gener? y luego falla el procesamiento local, se conserva
-y el servicio queda en `needs_review`: no se compra otra fuente autom?ticamente.
-La correcci?n no recompone los PNG aprobados existentes. La revisi?n visual de
+La plantilla v7 asigna regiones fijas a título, descripción, tarjetas y contacto;
+mide las letras reales (incluidos bearings de fuentes Linux), ajusta la tipografía
+sin truncar el texto y rechaza textos imposibles antes de comprar imágenes.
+Si la fuente pagada ya se generó y luego falla el procesamiento local, se conserva
+y el servicio queda en `needs_review`: no se compra otra fuente automáticamente.
+La corrección no recompone los PNG aprobados existentes. La revisión visual de
 2026-10-18 se documenta en `docs/revision_imagenes_2026-10-18.md` y su JSON
-identifica cada archivo por SHA-256 para evitar aplicar una revisi?n a otra imagen.
+identifica cada archivo por SHA-256 para evitar aplicar una revisión a otra imagen.
 ## Campañas de video aprobadas (12 de noviembre de 2026)
 
 El mismo runner `run_instagram_autopublish_once.py` ahora selecciona campañas de video desde `OUTPUT_ROOT/instagram/campaigns/manifest.json`, después de comprobar ventana horaria, cooldown antispam e intervalo entre publicaciones. No se añadió un temporizador.
@@ -91,3 +91,7 @@ El despliegue conservó la imagen anterior con la etiqueta `before-campaigns-202
 ## Validación de contenido antes del envío
 
 El control técnico de imágenes está activado. `publication_checks.py` valida captions y contacto antes de enviar. Los captions de campañas tienen aprobación por hash y los MP4 públicos se verifican contra los bytes aprobados. Los carruseles no completan sus temas con servicios ajenos y conservan un registro pendiente ante resultados parciales, para evitar duplicados. Ver `publication_quality.md` y `captions_campanas.md`.
+
+## Captación y seguimiento orgánico
+
+Ver organic_acquisition.md para la corrección completa de Stories de video de Facebook, recuperación por destino, recolección privada de métricas, referencias WhatsApp y aprendizaje conservador de la rotación. El temporizador nuevo solo recoge datos; la programación de publicaciones se conserva.

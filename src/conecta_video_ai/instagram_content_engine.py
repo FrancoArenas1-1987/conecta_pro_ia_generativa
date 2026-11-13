@@ -2751,8 +2751,10 @@ class InstagramContentEngine:
             index = 0
         else:
             index = max(0, int(state.get("image_sequence_index", 0))) % len(pool)
-        chosen = pool[index]
         catalog = self._asset_catalog_map()
+        from .social_analytics import adaptive_sequence_index
+        index = adaptive_sequence_index(pool, index, state, catalog, self._asset_key, self.settings.output_root)
+        chosen = pool[index]
         key = self._asset_key(chosen.path)
         meta = catalog.get(key) or {}
         flags = meta.get("flags") if isinstance(meta.get("flags"), dict) else {}
@@ -2833,6 +2835,9 @@ class InstagramContentEngine:
 
             # Base exploration: underused categories get more probability mass.
             weight = 1.0 / max(1.0, float(count + 1))
+            if str(cat.get("objective") or "") != "captar_proveedores":
+                from .social_analytics import category_weight
+                weight *= category_weight(self.settings.output_root, cat_id)
 
             if dist_generated is not None:
                 if dist_generated <= 1:
@@ -3240,6 +3245,8 @@ class InstagramContentEngine:
 
         hook, value, proof, cta, short_text = (editorial_copy(x) for x in (hook, value, proof, cta, short_text))
         value, proof, cta = (reviewed_template_copy(text, role) for text, role in [(value, "value"), (proof, "proof"), (cta, "cta")])
+        if objective == "captar_clientes":
+            cta = "Cuéntanos qué necesitas y en qué comuna buscas atención."
 
         if format_type == "story":
             short_text = self._clip(short_text, self.settings.instagram_short_text_max_chars)
@@ -4197,6 +4204,14 @@ class InstagramContentEngine:
             catalog=catalog,
         )
 
+        if effective_objective == "captar_clientes":
+            from .acquisition_tracking import tracking_code_for, tracked_whatsapp_url
+            reference = tracking_code_for(run_id)
+            tracked_url = tracked_whatsapp_url(copy["whatsapp_url"], reference, category.get("label") or service)
+            copy["caption"] = copy["caption"].replace(copy["whatsapp_url"], tracked_url)
+            copy["whatsapp_url"] = tracked_url
+            copy["tracking_code"] = reference
+
         (run_dir / "caption.txt").write_text(copy["caption"], encoding="utf-8")
         (run_dir / "short_text.txt").write_text(copy["short_text"], encoding="utf-8")
         (run_dir / "hashtags.txt").write_text(" ".join(copy["hashtags"]), encoding="utf-8")
@@ -4299,6 +4314,7 @@ class InstagramContentEngine:
             "hashtags": copy["hashtags"],
             "whatsapp_url": copy["whatsapp_url"],
             "whatsapp_phone": copy["whatsapp_phone"],
+            "tracking_code": copy.get("tracking_code"),
             "image_path": str(image_path),
             "image_source": image_source,
             "image_prompt": image_prompt,

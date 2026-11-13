@@ -104,7 +104,7 @@ class CampaignQueue:
                 history = db.execute('SELECT started_at,status FROM attempts WHERE campaign=? ORDER BY started_at DESC LIMIT 1', (code,)).fetchone()
                 if history:
                     stamp, status = history
-                    if status in {'claimed', 'publishing', 'uncertain', 'partial'}:
+                    if status in {'claimed', 'publishing', 'recovering', 'uncertain', 'partial'}:
                         continue
                     days = max(1, float(item.get('repeat_after_days', manifest.get('repeat_after_days', 7))))
                     if now - datetime.fromisoformat(stamp) < timedelta(days=days):
@@ -123,6 +123,17 @@ class CampaignQueue:
         with self.connect() as db:
             db.execute("INSERT INTO deliveries VALUES (?,?,?,'sending',NULL)", (key, target, channel))
             db.execute("UPDATE attempts SET status='publishing' WHERE id=?", (key,))
+
+    def delivery_progress(self, key, target, channel, progress):
+        with self.connect() as db:
+            row = db.execute("SELECT receipt FROM deliveries WHERE attempt=? AND target=? AND channel=?",
+                             (key, target, channel)).fetchone()
+            if row is None:
+                raise ValueError("Delivery intent must exist before upload progress")
+            receipt = json.loads(row[0]) if row[0] else {}
+            receipt.update(progress)
+            db.execute("UPDATE deliveries SET receipt=? WHERE attempt=? AND target=? AND channel=?",
+                       (json.dumps(receipt), key, target, channel))
 
     def delivery_finished(self, key, target, channel, receipt):
         with self.connect() as db:
@@ -166,7 +177,7 @@ def run_campaign_slot(service, *, now=None):
              'category_id': 'campaign', 'category_label': item.get('title', item['campaign_id']),
              'objective': 'branding', 'format_type': 'both', 'status': 'draft',
              'image_source': 'approved_campaign', 'video_source': 'approved_campaign',
-             'caption': item.get('caption', ''), 'multi_account_publications': [],
+             'caption': item.get('caption', ''), 'tracking_code': item.get('tracking_code'), 'multi_account_publications': [],
              'campaign_deliveries': []}
     atomic_json(draft_path, draft)
     sent_any = False
@@ -246,7 +257,7 @@ def run_campaign_slot(service, *, now=None):
                 if target.get('crosspost_facebook', False):
                     jobs.append(('facebook_video', lambda p=publisher: p.publish_facebook_video(video_url=source_url, description=draft['caption'])))
                     if item.get('publish_stories', True) and target.get('publish_facebook_story', False):
-                        jobs.append(('facebook_story', lambda p=publisher: p.publish_facebook_story_video(video_url=source_url)))
+                        jobs.append(('facebook_story', lambda p=publisher: p.publish_facebook_story_video(video_url=source_url, progress=lambda state: queue.delivery_progress(attempt['id'], target_key, 'facebook_story', state))))
             else:
                 if target.get('publish_instagram', True):
                     jobs.append(('instagram_post', lambda p=publisher: p.publish_image_post(image_url=source_url, caption=draft['caption'])))
