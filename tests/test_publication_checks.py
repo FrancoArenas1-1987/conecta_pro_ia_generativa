@@ -135,3 +135,20 @@ def test_spanish_todo_is_not_a_template_placeholder():
 
 def test_todo_chile_in_uppercase_is_valid_copy():
     assert validate_caption(GOOD+' Contactos en TODO CHILE.',whatsapp_url='https://wa.me/56983434503')['passed']
+
+
+@pytest.mark.parametrize('content_type,data,valid',[
+    ('image/jpeg',b'approved',True),
+    ('image/jpeg',b'changed',False),
+    ('text/html',b'approved',False),
+])
+def test_public_campaign_image_bytes_and_mime_are_verified(monkeypatch,content_type,data,valid):
+    from conecta_video_ai.publication_checks import verify_public_image
+    class Response(BytesIO):
+        status=200
+        headers={'Content-Type':content_type}
+    monkeypatch.setattr('conecta_video_ai.publication_checks.urlopen',lambda *a,**kw:Response(data))
+    kwargs={'sha256':hashlib.sha256(b'approved').hexdigest(),'size_bytes':len(b'approved')}
+    if valid:assert verify_public_image('https://example.test/image.jpg',**kwargs)['passed']
+    else:
+        with pytest.raises(GenerationError):verify_public_image('https://example.test/image.jpg',**kwargs)

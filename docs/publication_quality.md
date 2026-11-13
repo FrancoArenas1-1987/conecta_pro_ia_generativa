@@ -27,3 +27,7 @@ python scripts/campaign_status.py
 El auditor comprueba variantes para clientes y proveedores, imágenes feed/story, temas de carrusel elegibles y captions de campañas. Usa archivos locales y no llama a proveedores ni publica. Su informe incluye los textos y resultados de cada comprobación.
 
 Estos controles verifican reglas concretas y estructura técnica. No demuestran por sí solos que una fotografía represente bien el servicio, que todo texto integrado sea perfecto o que la pieza tenga buena calidad publicitaria. El contenido visual nuevo sigue necesitando revisión editorial antes de aprobarse. No se corrigieron publicaciones históricas ya publicadas.
+
+## Biblioteca de campa?as de imagen y video
+
+Ver advertising_library.md para los formatos, fuentes, rotaci?n y auditor?a completa de las doce campa?as. Las im?genes de campa?a usan el mismo registro durable de entregas que los videos.

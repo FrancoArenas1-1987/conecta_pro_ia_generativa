@@ -16,7 +16,7 @@ import tempfile
 import uuid
 
 from PIL import Image
-from .publication_checks import validate_caption, caption_digest, verify_public_video
+from .publication_checks import validate_caption, caption_digest, verify_public_video, verify_public_image, validate_images
 
 
 def utc_now():
@@ -173,50 +173,89 @@ def run_campaign_slot(service, *, now=None):
     sending = False
     errors = []
     try:
-        video = inside(root, item['video'])
-        cover = inside(root, item['cover'])
-        for path, key in [(video, 'sha256'), (cover, 'cover_sha256')]:
-            if not item.get(key) or hashlib.sha256(path.read_bytes()).hexdigest() != item[key]:
-                raise ValueError('Approved campaign checksum mismatch: ' + path.name)
+        media_type = item.get('media_type', 'video')
+        if media_type not in {'image', 'video'}:
+            raise ValueError('Unsupported campaign media_type')
         if caption_digest(draft['caption']) != item.get('caption_sha256'):
             raise ValueError('Approved campaign caption checksum mismatch')
-        whatsapp = settings.instagram_whatsapp_client_url
-        draft['content_qc'] = validate_caption(draft['caption'], whatsapp_url=whatsapp)
-        with Image.open(cover) as image:
-            image.verify()
-        qc = service.instagram_engine._validate_ig_video(video_path=video, target_seconds=float(item['duration_seconds']), require_audio=True)
-        if not qc.get('passed'):
-            raise ValueError('Campaign video QC failed: ' + str(qc.get('issues')))
+        draft['content_qc'] = validate_caption(draft['caption'], whatsapp_url=settings.instagram_whatsapp_client_url)
+        draft['media_type'] = media_type
+        if media_type == 'video':
+            video = inside(root, item['video'])
+            cover = inside(root, item['cover'])
+            assets = [(video, 'sha256'), (cover, 'cover_sha256')]
+        else:
+            image = inside(root, item['image'])
+            story = inside(root, item['story_image']) if item.get('publish_stories', True) else None
+            assets = [(image, 'sha256')] + ([(story, 'story_sha256')] if story else [])
+        for path, key in assets:
+            if not item.get(key) or hashlib.sha256(path.read_bytes()).hexdigest() != item[key]:
+                raise ValueError('Approved campaign checksum mismatch: ' + path.name)
+        if media_type == 'video':
+            with Image.open(cover) as picture:
+                picture.verify()
+            qc = service.instagram_engine._validate_ig_video(video_path=video, target_seconds=float(item['duration_seconds']), require_audio=True)
+            if not qc.get('passed'):
+                raise ValueError('Campaign video QC failed: ' + str(qc.get('issues')))
+            draft.update(image_path=str(cover), video_path=str(video), video_qc=qc,
+                         publish_media_mode_effective='video_only')
+        else:
+            for path, kind in [(image, 'feed')] + ([(story, 'story')] if story else []):
+                validate_images([path])
+                with Image.open(path) as picture:
+                    ratio = picture.width / picture.height
+                    if picture.format != 'JPEG' or path.stat().st_size > 8_000_000:
+                        raise ValueError('Campaign images must be JPEG under 8 MB')
+                    if (kind == 'feed' and not 0.8 <= ratio <= 1.91) or (kind == 'story' and abs(ratio - 9/16) > .001):
+                        raise ValueError('Campaign image aspect ratio is invalid for ' + kind)
+            draft.update(image_path=str(image), post_image_path=str(image),
+                         story_image_path=str(story) if story else None,
+                         image_qc={'passed': True}, video_source=None,
+                         publish_media_mode_effective='image_only')
         targets, preflight = service._preflight_publish_targets(service._load_instagram_publish_targets())
         if not targets or not any(t.get('publish_instagram', True) or t.get('crosspost_facebook', False) for t in targets):
             raise ValueError('No valid publishing destinations for campaign')
-        draft.update(image_path=str(cover), video_path=str(video), video_qc=qc,
-                     publish_media_mode_effective='video_only', targets_preflight=preflight)
+        draft['targets_preflight'] = preflight
         atomic_json(draft_path, draft)
         primary = service._build_instagram_publisher(targets[0])
-        source_url = str(item.get('public_video_url') or '').strip()
-        if source_url:
-            if not source_url.startswith('https://'):
-                raise ValueError('Campaign public video URL must use HTTPS')
-            draft['public_video_qc'] = verify_public_video(source_url, sha256=item['sha256'], size_bytes=video.stat().st_size)
-            atomic_json(draft_path, draft)
+        if media_type == 'video':
+            source_url = str(item.get('public_video_url') or '').strip()
+            if source_url:
+                draft['public_video_qc'] = verify_public_video(source_url, sha256=item['sha256'], size_bytes=video.stat().st_size)
+            else:
+                # Compatibility for previously approved videos without stable hosting.
+                source_url = primary.stage_local_video_for_public_url(video_path=video, description=draft['caption'])
         else:
-            # Compatibility for campaigns without stable hosting.
-            source_url = primary.stage_local_video_for_public_url(video_path=video, description=draft['caption'])
+            source_url = str(item.get('public_image_url') or '').strip()
+            draft['public_image_qc'] = verify_public_image(source_url, sha256=item['sha256'], size_bytes=image.stat().st_size)
+            story_url = str(item.get('public_story_image_url') or '').strip()
+            if story:
+                draft['public_story_image_qc'] = verify_public_image(story_url, sha256=item['story_sha256'], size_bytes=story.stat().st_size)
+        atomic_json(draft_path, draft)
         destinations_sent = set()
         for index, target in enumerate(targets):
             publisher = service._build_instagram_publisher(target)
             identity = '|'.join(str(target.get(k, '')) for k in ['meta_page_id', 'meta_instagram_user_id'])
             target_key = hashlib.sha256(identity.encode()).hexdigest()[:20]
             jobs = []
-            if target.get('publish_instagram', True):
-                jobs.append(('instagram_reel', lambda p=publisher: p.publish_reel_video(video_url=source_url, caption=draft['caption'])))
-                if item.get('publish_stories', True):
-                    jobs.append(('instagram_story', lambda p=publisher: p.publish_story_video(video_url=source_url)))
-            if target.get('crosspost_facebook', False):
-                jobs.append(('facebook_video', lambda p=publisher: p.publish_facebook_video(video_url=source_url, description=draft['caption'])))
-                if item.get('publish_stories', True) and target.get('publish_facebook_story', False):
-                    jobs.append(('facebook_story', lambda p=publisher: p.publish_facebook_story_video(video_url=source_url)))
+            if media_type == 'video':
+                if target.get('publish_instagram', True):
+                    jobs.append(('instagram_reel', lambda p=publisher: p.publish_reel_video(video_url=source_url, caption=draft['caption'])))
+                    if item.get('publish_stories', True):
+                        jobs.append(('instagram_story', lambda p=publisher: p.publish_story_video(video_url=source_url)))
+                if target.get('crosspost_facebook', False):
+                    jobs.append(('facebook_video', lambda p=publisher: p.publish_facebook_video(video_url=source_url, description=draft['caption'])))
+                    if item.get('publish_stories', True) and target.get('publish_facebook_story', False):
+                        jobs.append(('facebook_story', lambda p=publisher: p.publish_facebook_story_video(video_url=source_url)))
+            else:
+                if target.get('publish_instagram', True):
+                    jobs.append(('instagram_post', lambda p=publisher: p.publish_image_post(image_url=source_url, caption=draft['caption'])))
+                    if story:
+                        jobs.append(('instagram_story', lambda p=publisher: p.publish_story_image(image_url=story_url)))
+                if target.get('crosspost_facebook', False):
+                    jobs.append(('facebook_photo', lambda p=publisher: p.publish_facebook_photo(image_url=source_url, caption=draft['caption'])))
+                    if story and target.get('publish_facebook_story', False):
+                        jobs.append(('facebook_story', lambda p=publisher: p.publish_facebook_story_photo(image_url=story_url)))
             for channel, send in jobs:
                 destination = (channel, str(target.get('meta_instagram_user_id' if channel.startswith('instagram') else 'meta_page_id', '')))
                 if destination in destinations_sent:
@@ -238,11 +277,11 @@ def run_campaign_slot(service, *, now=None):
                     draft['campaign_deliveries'].append({'target': target.get('name', str(index)), 'channel': channel, 'receipt': receipt})
                     draft['published_at'] = receipt.get('published_at') or iso(utc_now())
                     draft['status'] = 'published_with_errors'
-                    if channel == 'instagram_reel' and not draft.get('post_id'):
+                    if channel in {'instagram_reel', 'instagram_post'} and not draft.get('post_id'):
                         draft.update(post_id=receipt.get('post_id'), post_url=receipt.get('url'), published_channel=receipt.get('channel'))
                     elif channel == 'instagram_story' and not draft.get('story_id'):
                         draft.update(story_id=receipt.get('post_id'), story_url=receipt.get('url'), story_channel=receipt.get('channel'))
-                    elif channel == 'facebook_video':
+                    elif channel in {'facebook_video', 'facebook_photo'}:
                         draft['facebook_publication'] = receipt
                     elif channel == 'facebook_story':
                         draft['facebook_story'] = receipt

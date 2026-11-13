@@ -205,3 +205,87 @@ def test_image_success_is_preserved_if_campaign_bookkeeping_fails(runner,monkeyp
     module.main()
     row=json.loads((settings.output_root/'instagram/automation_hourly_log.jsonl').read_text().splitlines()[-1])
     assert row['ok'] and row['campaign_state_error']=='read-only queue'
+
+
+def make_image_service(tmp_path, monkeypatch, *, fail=None, stories=True, duplicate_target=False):
+    service, root, calls = make_service(tmp_path, duplicate_target=duplicate_target)
+    feed, story = root/'feed.jpg', root/'story.jpg'
+    Image.new('RGB', (1080,1350), '#203040').save(feed)
+    Image.new('RGB', (1080,1920), '#203040').save(story)
+    data=json.loads((root/'manifest.json').read_text())
+    item=data['entries'][0]
+    for key in ['video','cover','cover_sha256','duration_seconds']:
+        item.pop(key,None)
+    item.update(media_type='image',image=feed.name,sha256=hashlib.sha256(feed.read_bytes()).hexdigest(),
+                public_image_url='https://example.test/feed.jpg',publish_stories=stories)
+    if stories:
+        item.update(story_image=story.name,story_sha256=hashlib.sha256(story.read_bytes()).hexdigest(),
+                    public_story_image_url='https://example.test/story.jpg')
+    (root/'manifest.json').write_text(json.dumps(data))
+    monkeypatch.setattr('conecta_video_ai.campaign_queue.verify_public_image',lambda *a,**k:{'passed':True})
+    class Publisher:
+        def send(self, channel):
+            calls.append(channel)
+            if channel==fail:raise RuntimeError('network timeout')
+            return {'post_id':channel,'published_at':NOW.isoformat()}
+        def publish_image_post(self, **kw):return self.send('image')
+        def publish_story_image(self, **kw):return self.send('image_story')
+        def publish_facebook_photo(self, **kw):return self.send('fb_photo')
+        def publish_facebook_story_photo(self, **kw):return self.send('fb_photo_story')
+    service._build_instagram_publisher=lambda _:Publisher()
+    return service,root,calls
+
+
+def test_image_campaign_uses_journaled_feed_and_story_destinations(tmp_path,monkeypatch):
+    service,root,calls=make_image_service(tmp_path,monkeypatch,duplicate_target=True)
+    result=run_campaign_slot(service,now=NOW)
+    assert calls==['image','image_story','fb_photo','fb_photo_story']
+    assert result['draft']['publish_media_mode_effective']=='image_only'
+    assert result['draft']['post_id']=='image'
+    with CampaignQueue(root).connect() as db:
+        assert db.execute("select count(*) from deliveries where status='published'").fetchone()[0]==4
+
+
+def test_image_campaign_without_story_never_uses_feed_as_story(tmp_path,monkeypatch):
+    service,root,calls=make_image_service(tmp_path,monkeypatch,stories=False)
+    run_campaign_slot(service,now=NOW)
+    assert calls==['image','fb_photo']
+
+
+def test_image_campaign_partial_delivery_is_quarantined(tmp_path,monkeypatch):
+    service,root,calls=make_image_service(tmp_path,monkeypatch,fail='image_story')
+    with pytest.raises(RuntimeError,match='timeout'):run_campaign_slot(service,now=NOW)
+    with CampaignQueue(root).connect() as db:
+        assert db.execute('select status from attempts').fetchone()[0]=='partial'
+    mark_image_slot_completed(service.settings)
+    assert run_campaign_slot(service,now=NOW+timedelta(days=30)) is None
+    assert calls.count('image')==1
+
+
+@pytest.mark.parametrize('change,reason',[
+    ('local_image','checksum'),('story_image','checksum'),('caption','caption checksum'),
+    ('wrong_ratio','aspect ratio'),('not_jpeg','JPEG'),('unknown_type','media_type')
+])
+def test_image_campaign_rejects_bad_assets_before_preflight(tmp_path,monkeypatch,change,reason):
+    service,root,calls=make_image_service(tmp_path,monkeypatch)
+    m=json.loads((root/'manifest.json').read_text());item=m['entries'][0]
+    if change=='local_image':(root/item['image']).write_bytes(b'changed')
+    elif change=='story_image':(root/item['story_image']).write_bytes(b'changed')
+    elif change=='caption':item['caption']+=' Unapproved.'
+    elif change in {'wrong_ratio','not_jpeg'}:
+        p=root/item['image']
+        Image.new('RGB',(1080,1920) if change=='wrong_ratio' else (1080,1350)).save(p,format='PNG' if change=='not_jpeg' else 'JPEG')
+        item['sha256']=hashlib.sha256(p.read_bytes()).hexdigest()
+    else:item['media_type']='unknown'
+    (root/'manifest.json').write_text(json.dumps(m))
+    service._preflight_publish_targets=lambda _: (_ for _ in ()).throw(AssertionError('must not contact Meta'))
+    with pytest.raises(RuntimeError,match=reason):run_campaign_slot(service,now=NOW)
+    assert not calls
+
+
+def test_changed_public_image_is_blocked_before_any_post(tmp_path,monkeypatch):
+    service,root,calls=make_image_service(tmp_path,monkeypatch)
+    def bad(*a,**kw):raise ValueError('Public image checksum mismatch')
+    monkeypatch.setattr('conecta_video_ai.campaign_queue.verify_public_image',bad)
+    with pytest.raises(RuntimeError,match='checksum'):run_campaign_slot(service,now=NOW)
+    assert not calls

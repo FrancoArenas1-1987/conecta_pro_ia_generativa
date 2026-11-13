@@ -103,17 +103,25 @@ def validate_images(paths, *, size=None):
     return {'passed':True,'images':len(paths)}
 
 
-def verify_public_video(url, *, sha256, size_bytes):
-    if not url.startswith('https://'):raise GenerationError('Public video must use HTTPS')
+def verify_public_asset(url, *, sha256, size_bytes, content_type):
+    if not url.startswith('https://'):raise GenerationError('Public asset must use HTTPS')
     digest=hashlib.sha256();total=0
     with urlopen(Request(url,headers={'Accept-Encoding':'identity'}),timeout=45) as response:
-        if response.status!=200:raise GenerationError('Public video did not return HTTP 200')
-        if not response.headers.get('Content-Type','').lower().startswith('video/'):
-            raise GenerationError('Public URL did not return a video')
+        if response.status!=200:raise GenerationError('Public asset did not return HTTP 200')
+        if not response.headers.get('Content-Type','').lower().startswith(content_type):
+            raise GenerationError('Public URL returned an unexpected media type')
         while chunk:=response.read(1024*1024):
             total+=len(chunk)
-            if total>size_bytes:raise GenerationError('Public video size mismatch')
+            if total>size_bytes:raise GenerationError('Public asset size mismatch')
             digest.update(chunk)
     if total!=size_bytes or digest.hexdigest()!=sha256:
-        raise GenerationError('Public video checksum mismatch')
+        raise GenerationError('Public asset checksum mismatch')
     return {'passed':True,'bytes':total,'sha256':sha256}
+
+
+def verify_public_video(url, *, sha256, size_bytes):
+    return verify_public_asset(url, sha256=sha256, size_bytes=size_bytes, content_type='video/')
+
+
+def verify_public_image(url, *, sha256, size_bytes):
+    return verify_public_asset(url, sha256=sha256, size_bytes=size_bytes, content_type='image/jpeg')
