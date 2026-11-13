@@ -692,6 +692,9 @@ def generated_file(subpath: str):
     root = settings.output_root.resolve()
     if root not in target.parents and target != root:
         return jsonify({"error": "Acceso denegado"}), 403
+    private_reports = (root / "instagram" / "analytics").resolve()
+    if target == private_reports or private_reports in target.parents:
+        return jsonify({"error": "Archivo no encontrado"}), 404
     if not target.exists():
         return jsonify({"error": "Archivo no encontrado"}), 404
     return send_file(target)

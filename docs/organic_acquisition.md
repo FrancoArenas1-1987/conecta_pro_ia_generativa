@@ -28,7 +28,7 @@ collect_social_insights.py consulta posts, Reels y Stories activos de Instagram;
 
 El temporizador conectapro-social-insights corre a las 08:15, 14:15 y 20:45 America/Santiago, con hasta tres minutos de desfase. Permite capturar las Stories antes de que expiren. Una segunda ejecución dentro de cuatro horas se omite. Los archivos del temporizador están en config/systemd. No cambia los horarios de publicación ni activa la fábrica de imágenes.
 
-Los informes son privados: latest.json, analysis.json, policy.json, summary.json e informe.html. No se alojan en la galería pública de publicidad.
+Los informes son privados: latest.json, analysis.json, policy.json, summary.json e informe.html. No se alojan en la galería pública de publicidad. La ruta generated del panel local rechaza también los archivos del directorio de análisis, incluso si se usa un alias o traversal que resuelve a esa carpeta.
 
 Referencia de métricas de Facebook: https://developers.facebook.com/docs/graph-api/reference/insights
 
