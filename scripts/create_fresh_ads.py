@@ -179,7 +179,7 @@ def encode_video(spec, folder):
 def normalize_video_music(target, total):
     normalized = target.with_name(target.stem+"_normalized.mp4")
     subprocess.run([FF, "-y", "-v", "error", "-i", str(target), "-map", "0:v:0", "-map", "0:a:0",
-                    "-c:v", "copy", "-af", "loudnorm=I=-18:TP=-1.5:LRA=8",
+                    "-c:v", "copy", "-af", "loudnorm=I=-18:TP=-3:LRA=8,alimiter=limit=0.78:level=false",
                     "-c:a", "aac", "-ar", "48000", "-ac", "2", "-b:a", "192k", "-t", str(total),
                     "-movflags", "+faststart", "-use_editlist", "0", str(normalized)], check=True)
     normalized.replace(target)
