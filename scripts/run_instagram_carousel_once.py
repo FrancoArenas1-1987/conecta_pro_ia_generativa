@@ -17,6 +17,8 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
+from conecta_video_ai.publication_checks import validate_caption, validate_images, DISCLAIMER, FREE_SEARCH, editorial_copy
+from conecta_video_ai.campaign_queue import atomic_json
 from conecta_video_ai.instagram_graph_publisher import InstagramGraphPublisher
 from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.settings import load_settings
@@ -51,7 +53,7 @@ THEMES: list[dict[str, Any]] = [
         "id": "salud_mascotas",
         "title": "Cuidado para personas y mascotas",
         "subtitle": "Encuentra orientacion y opciones disponibles por WhatsApp.",
-        "categories": ["kinesiologia", "medico_veterinario", "veterinarios"],
+        "categories": ["kinesiologia", "medico_veterinario", "dentista"],
         "caption_intro": "Salud, recuperacion y cuidado de mascotas con una coordinacion simple.",
         "hashtags": ["#kinesiologia", "#veterinaria", "#cuidadodemascotas"],
     },
@@ -291,16 +293,7 @@ def load_assets(assets_root: Path) -> dict[str, list[Path]]:
     registry = read_registry(INSTAGRAM_STATE_PATH.parent / "catalog" / "service_images.json")
     if registry:
         return {code: [path] for code, path in approved_paths(registry, assets_root).items()}
-    grouped: dict[str, list[Path]] = {}
-    for path in sorted(assets_root.rglob("*")):
-        if not path.is_file():
-            continue
-        if path.suffix.lower() not in {".jpg", ".jpeg", ".png"}:
-            continue
-        grouped.setdefault(detect_category(path, assets_root=assets_root), []).append(path)
-    for paths in grouped.values():
-        paths.sort(key=lambda p: (p.stat().st_mtime_ns, p.name.lower()), reverse=True)
-    return grouped
+    raise RuntimeError("No approved service registry; carousel publication blocked")
 
 
 def choose_theme(grouped: dict[str, list[Path]], *, force_theme: str | None = None) -> dict[str, Any]:
@@ -322,7 +315,7 @@ def choose_theme(grouped: dict[str, list[Path]], *, force_theme: str | None = No
         scored.append((fresh_bonus, min(available, 3), -recent_penalty, -idx, theme | {"_index": idx}))
     scored.sort(key=lambda x: (x[0], x[1], x[2]), reverse=True)
     best = scored[0][4]
-    if scored[0][1] < 2:
+    if scored[0][1] < 3:
         raise RuntimeError("No hay suficientes imagenes para armar un carrusel coherente")
     return best
 
@@ -366,15 +359,6 @@ def choose_services(theme: dict[str, Any], grouped: dict[str, list[Path]], *, co
             continue
         label, title, body = SERVICE_COPY.get(category, default_service_copy(category))
         services.append(ServiceSlide(category, label, title, body, images[0]))
-    if len(services) < count:
-        used = {x.category_id for x in services}
-        for category, images in sorted(grouped.items()):
-            if category in used or not images:
-                continue
-            label, title, body = SERVICE_COPY.get(category, default_service_copy(category))
-            services.append(ServiceSlide(category, label, title, body, images[0]))
-            if len(services) >= count:
-                break
     return services[:count]
 
 
@@ -459,9 +443,9 @@ def render_cta(theme: dict[str, Any], services: list[ServiceSlide], output: Path
 
 
 def build_caption(theme: dict[str, Any], services: list[ServiceSlide], *, whatsapp_url: str) -> str:
-    service_names = ", ".join(x.label for x in services)
+    service_names = ", ".join(editorial_copy(x.label) for x in services)
     whatsapp_phone = extract_whatsapp_phone(whatsapp_url)
-    hashtags_list = ["#conectaproia", "#profesionalesconfiables", "#whatsapp", "#chile", *theme["hashtags"]]
+    hashtags_list = ["#conectaproia", "#profesionales", "#whatsapp", "#chile", *theme["hashtags"]]
     seen_tags: set[str] = set()
     clean_tags: list[str] = []
     for tag in hashtags_list:
@@ -472,10 +456,12 @@ def build_caption(theme: dict[str, Any], services: list[ServiceSlide], *, whatsa
     hashtags = " ".join(clean_tags)
     return "\n".join(
         [
-            str(theme["caption_intro"]),
+            editorial_copy(theme["caption_intro"]),
             "",
             f"En este carrusel: {service_names}.",
-            "ConectaProIA te ayuda a coordinar opciones disponibles en Chile.",
+            "ConectaProIA te ayuda a encontrar contactos en Chile.",
+            FREE_SEARCH,
+            DISCLAIMER,
             "",
             f"WhatsApp: {whatsapp_phone or whatsapp_url}",
             f"Link directo: {whatsapp_url}",
@@ -536,6 +522,8 @@ def build_carousel(*, force_theme: str | None = None) -> dict[str, Any]:
 
 
 def should_skip(interval_hours: int, *, force: bool = False) -> tuple[bool, dict[str, Any] | None]:
+    if STATE_PATH.with_name("carousel_pending.json").exists():
+        return True, {"ok": False, "skipped": True, "reason": "carousel_requires_manual_reconciliation"}
     if force or interval_hours <= 0:
         return False, None
     state = read_json(STATE_PATH, {})
@@ -558,47 +546,74 @@ def should_skip(interval_hours: int, *, force: bool = False) -> tuple[bool, dict
 
 def publish_carousel(manifest: dict[str, Any]) -> dict[str, Any]:
     settings = load_settings()
-    publisher = InstagramGraphPublisher(settings)
+    caption = str(manifest.get("caption") or "")
+    content_qc = validate_caption(caption, whatsapp_url=settings.instagram_whatsapp_client_url)
     slides = [Path(x) for x in manifest.get("slides") or []]
-    public_urls = [
-        publisher.stage_local_image_for_public_url(image_path=slide, caption=str(manifest.get("caption") or ""))
-        for slide in slides
-    ]
-    ig = publisher.publish_carousel_post(image_urls=public_urls, caption=str(manifest.get("caption") or ""))
-    fb: dict[str, Any] = {"status": "skipped", "reason": "instagram_crosspost_facebook_disabled"}
-    if bool(settings.instagram_crosspost_facebook):
-        fb = publisher.publish_facebook_multi_photo(image_urls=public_urls, caption=str(manifest.get("caption") or ""))
-    result = {
-        "ok": True,
-        "status": "published",
-        "published_at": now_iso(),
-        "public_urls": public_urls,
-        "instagram": ig,
-        "facebook": fb,
-    }
-    run_dir = Path(str(manifest["slides"][0])).parent
-    manifest.update(result)
-    write_json(run_dir / "manifest.json", manifest)
-    state = read_json(STATE_PATH, {})
-    state.update(
-        {
-            "last_published_at": result["published_at"],
-            "last_run_id": manifest.get("run_id"),
-            "last_theme": (manifest.get("theme") or {}).get("id"),
-            "last_result": result,
-            "recent_themes": [*((state.get("recent_themes") or []) if isinstance(state, dict) else [])],
-        }
-    )
-    theme_id = str((manifest.get("theme") or {}).get("id") or "")
-    recent = [theme_id, *[x for x in state.get("recent_themes", []) if x != theme_id]][:8]
-    state["recent_themes"] = recent
-    write_json(STATE_PATH, state)
-
-    ig_state = read_json(INSTAGRAM_STATE_PATH, {})
-    if isinstance(ig_state, dict):
-        ig_state["last_sequence_published_at"] = result["published_at"]
-        write_json(INSTAGRAM_STATE_PATH, ig_state)
-    return result
+    if len(slides) != 5:
+        raise RuntimeError("Carousel requires a cover, three services and a CTA")
+    media_qc = validate_images(slides, size=(W, H))
+    approved = load_assets(Path(manifest["assets_root"]))
+    allowed_categories = {canonical(c) for c in manifest.get("theme", {}).get("categories", [])}
+    for service in manifest.get("services", []):
+        code = canonical(service["category_id"])
+        source = Path(service["image_path"]).resolve()
+        if code not in allowed_categories or source not in {p.resolve() for p in approved.get(code, [])}:
+            raise RuntimeError("Carousel source is unapproved or outside its theme")
+    if len(manifest.get("services", [])) != 3:
+        raise RuntimeError("Carousel must contain exactly three approved services")
+    pending = STATE_PATH.with_name("carousel_pending.json")
+    if pending.exists():
+        raise RuntimeError("Carousel has an unresolved publication; manual reconciliation required")
+    publisher = InstagramGraphPublisher(settings)
+    identity = publisher.inspect_page_identity()
+    if identity.get("linked_instagram_user_id") != publisher.ig_user_id:
+        raise RuntimeError("Carousel Instagram destination does not match its Facebook page")
+    run_dir = slides[0].parent
+    journal = {"run_id": manifest.get("run_id"), "manifest": str(run_dir / "manifest.json"),
+               "status": "staging", "created_at": now_iso(), "deliveries": {}}
+    def save():
+        manifest["publication_journal"] = journal
+        atomic_json(pending, journal)
+        atomic_json(run_dir / "manifest.json", manifest)
+    save()
+    try:
+        public_urls = [publisher.stage_local_image_for_public_url(image_path=p, caption=caption) for p in slides]
+        results = {}
+        jobs = [("instagram", lambda: publisher.publish_carousel_post(image_urls=public_urls, caption=caption))]
+        if bool(settings.instagram_crosspost_facebook):
+            jobs.append(("facebook", lambda: publisher.publish_facebook_multi_photo(image_urls=public_urls, caption=caption)))
+        for channel, send in jobs:
+            journal["status"] = "publishing"
+            journal["deliveries"][channel] = {"status": "sending"}
+            save()
+            receipt = send()
+            if not receipt.get("post_id"):
+                raise RuntimeError("Carousel publisher returned no publication id")
+            results[channel] = receipt
+            journal["deliveries"][channel] = {"status": "published", "receipt": receipt}
+            save()
+        result = {"ok": True, "status": "published", "published_at": now_iso(),
+                  "public_urls": public_urls, "instagram": results["instagram"],
+                  "facebook": results.get("facebook", {"status": "skipped"}),
+                  "content_qc": content_qc, "media_qc": media_qc}
+        manifest.update(result)
+        journal["status"] = "published"
+        save()
+        state = read_json(STATE_PATH, {})
+        recent = list(state.get("recent_themes") or [])
+        recent.append((manifest.get("theme") or {}).get("id"))
+        state.update(last_published_at=result["published_at"], last_run_id=manifest.get("run_id"),
+                     last_theme=(manifest.get("theme") or {}).get("id"), last_result=result,
+                     recent_themes=recent[-12:])
+        atomic_json(STATE_PATH, state)
+        pending.unlink()
+        return result
+    except Exception:
+        journal["status"] = "requires_review" if journal["deliveries"] else "failed_before_publish"
+        save()
+        if not journal["deliveries"]:
+            pending.unlink()
+        raise
 
 
 def main() -> None:

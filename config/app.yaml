@@ -1,4 +1,4 @@
-﻿output_root: "output/runs"
+output_root: "output/runs"
 tracking_root: "output/tracking"
 context_path: "config/context_conecta_pro_ia.yaml"
 assets_root: "C:\\Franco\\conectapro_rrss\\biblioteca_ia\\raw"
@@ -80,7 +80,7 @@ instagram_crosspost_facebook: true
 instagram_publish_facebook_story: true
 instagram_publish_targets_path: "config/instagram_publish_targets.yaml"
 instagram_publish_media_mode: "image_only"
-instagram_publish_quality_gate_enabled: false
+instagram_publish_quality_gate_enabled: true
 instagram_publish_quality_min_score: 90
 instagram_publish_quality_max_regenerations: 2
 instagram_publish_quality_max_attempts: 12

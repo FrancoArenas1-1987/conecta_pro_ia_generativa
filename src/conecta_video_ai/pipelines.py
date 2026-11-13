@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 import json
 import os
@@ -8,6 +8,7 @@ from pathlib import Path
 from tenacity import retry, stop_after_attempt, wait_fixed
 import yaml
 
+from .publication_checks import validate_draft_content
 from .assets import AssetLibrary
 from .campaign_engine import CampaignDefinition, campaign_from_payload, run_campaign
 from .context_loader import load_brand_context
@@ -1601,6 +1602,10 @@ class StudioService:
             return self.instagram_engine.simulate_publish(draft_id)
 
         draft = self.instagram_engine.get_draft(draft_id)
+        whatsapp_url = (self.settings.instagram_whatsapp_provider_url
+                        if draft.get("objective") == "captar_proveedores"
+                        else self.settings.instagram_whatsapp_client_url)
+        draft["content_qc"] = validate_draft_content(draft, whatsapp_url=whatsapp_url)
         draft_format = str(draft.get("format_type") or "").strip().lower()
         publish_post_channel = draft_format != "story"
         publish_story_channel = draft_format != "feed"

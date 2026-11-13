@@ -189,7 +189,7 @@ def test_publish_instagram_draft_uses_distinct_post_and_story_image_variants(mon
         "draft_id": "draft_1",
         "draft_dir": str(draft_dir),
         "status": "draft",
-        "caption": "Caption test",
+        "caption": "ConectaProIA: encuentra contactos. El servicio lo cobra cada profesional. WhatsApp: https://wa.me/56983434503",
         "hook": "Hook",
         "value": "Value",
         "cta": "CTA",
@@ -203,6 +203,8 @@ def test_publish_instagram_draft_uses_distinct_post_and_story_image_variants(mon
     draft_json_path.write_text(json.dumps(draft_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -274,7 +276,7 @@ def test_publish_instagram_draft_respects_feed_or_story_channel(
                 "draft_dir": str(draft_dir),
                 "status": "draft",
                 "format_type": format_type,
-                "caption": "Caption test",
+                "caption": "ConectaProIA: encuentra contactos. El servicio lo cobra cada profesional. WhatsApp: https://wa.me/56983434503",
                 "image_path": str(source_image),
                 "video_path": "",
                 "image_qc": {"passed": True, "score": 100},
@@ -284,6 +286,8 @@ def test_publish_instagram_draft_respects_feed_or_story_channel(
         encoding="utf-8",
     )
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -317,6 +321,8 @@ def test_publish_instagram_draft_respects_feed_or_story_channel(
 
 def test_run_instagram_auto_cycle_retries_after_quality_reject_and_cleans_once(tmp_path: Path):
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -346,6 +352,8 @@ def test_run_instagram_auto_cycle_retries_after_quality_reject_and_cleans_once(t
 
 def test_run_instagram_auto_cycle_caps_quality_attempt_bursts(tmp_path: Path):
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -375,6 +383,8 @@ def test_run_instagram_auto_cycle_caps_quality_attempt_bursts(tmp_path: Path):
 
 def test_quality_gate_is_channel_specific_for_feed_and_story(tmp_path: Path):
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -453,6 +463,8 @@ targets:
     monkeypatch.setenv("TARGET_META_IG", "ig_extra")
 
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -493,7 +505,7 @@ def test_publish_instagram_draft_replicates_to_multiple_targets(monkeypatch, tmp
         "draft_id": "draft_multi",
         "draft_dir": str(draft_dir),
         "status": "draft",
-        "caption": "Caption multi",
+        "caption": "ConectaProIA: encuentra contactos. El servicio lo cobra cada profesional. WhatsApp: https://wa.me/56983434503",
         "hook": "Hook",
         "value": "Value",
         "cta": "CTA",
@@ -526,6 +538,8 @@ targets:
     monkeypatch.setenv("TARGET2_IG", "ig_2")
 
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -574,6 +588,8 @@ def test_quality_gate_auto_mode_warns_but_does_not_block_on_video_qc(tmp_path: P
     video_path = tmp_path / "draft_video.mp4"
     video_path.write_bytes(b"fake-video")
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -622,6 +638,8 @@ def test_run_instagram_auto_cycle_falls_back_to_image_only_after_publish_error(t
             raise AssertionError("No se esperaba limpieza por quality gate")
 
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",
@@ -667,6 +685,8 @@ def test_run_instagram_auto_cycle_falls_back_to_image_only_after_publish_error(t
 
 def test_preflight_targets_disables_instagram_when_page_linked_ig_differs(tmp_path: Path):
     settings = AppSettings(
+        instagram_whatsapp_client_url="https://wa.me/56983434503",
+        instagram_whatsapp_provider_url="https://wa.me/56961903199",
         output_root=tmp_path / "output",
         tracking_root=tmp_path / "tracking",
         context_path=tmp_path / "context.yaml",

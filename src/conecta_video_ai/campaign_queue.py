@@ -16,6 +16,7 @@ import tempfile
 import uuid
 
 from PIL import Image
+from .publication_checks import validate_caption, caption_digest, verify_public_video
 
 
 def utc_now():
@@ -177,8 +178,10 @@ def run_campaign_slot(service, *, now=None):
         for path, key in [(video, 'sha256'), (cover, 'cover_sha256')]:
             if not item.get(key) or hashlib.sha256(path.read_bytes()).hexdigest() != item[key]:
                 raise ValueError('Approved campaign checksum mismatch: ' + path.name)
-        if not draft['caption'].strip() or len(draft['caption']) > 2200:
-            raise ValueError('Campaign caption is empty or exceeds 2200 characters')
+        if caption_digest(draft['caption']) != item.get('caption_sha256'):
+            raise ValueError('Approved campaign caption checksum mismatch')
+        whatsapp = settings.instagram_whatsapp_client_url
+        draft['content_qc'] = validate_caption(draft['caption'], whatsapp_url=whatsapp)
         with Image.open(cover) as image:
             image.verify()
         qc = service.instagram_engine._validate_ig_video(video_path=video, target_seconds=float(item['duration_seconds']), require_audio=True)
@@ -195,9 +198,8 @@ def run_campaign_slot(service, *, now=None):
         if source_url:
             if not source_url.startswith('https://'):
                 raise ValueError('Campaign public video URL must use HTTPS')
-            reachable, reason = primary.remote_url_reachable(source_url)
-            if not reachable:
-                raise ValueError('Campaign public video URL unavailable: ' + str(reason))
+            draft['public_video_qc'] = verify_public_video(source_url, sha256=item['sha256'], size_bytes=video.stat().st_size)
+            atomic_json(draft_path, draft)
         else:
             # Compatibility for campaigns without stable hosting.
             source_url = primary.stage_local_video_for_public_url(video_path=video, description=draft['caption'])

@@ -87,3 +87,7 @@ docker compose -f docker-compose.prod.yml --env-file .env run --rm social_automa
 Para pausar videos conservando imágenes y carruseles, establecer `enabled: false` en el manifiesto. No deshabilitar el temporizador de autopublicación. Para añadir piezas: crear video y portada, comprobar QC y contenido, agregar caption y hashes al manifiesto y habilitar únicamente piezas aprobadas.
 
 El despliegue conservó la imagen anterior con la etiqueta `before-campaigns-20261112` y los archivos anteriores en un backup del VPS. El registro de despliegue contiene la ruta concreta. No se reinstalaron timers ni se sustituyeron otros cambios de producción.
+
+## Validación de contenido antes del envío
+
+El control técnico de imágenes está activado. `publication_checks.py` valida captions y contacto antes de enviar. Los captions de campañas tienen aprobación por hash y los MP4 públicos se verifican contra los bytes aprobados. Los carruseles no completan sus temas con servicios ajenos y conservan un registro pendiente ante resultados parciales, para evitar duplicados. Ver `publication_quality.md` y `captions_campanas.md`.

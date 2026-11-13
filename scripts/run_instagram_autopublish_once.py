@@ -216,7 +216,7 @@ def main() -> None:
     settings.instagram_ai_library_fallback_enabled = True
     settings.instagram_simulate_publish = False
     settings.instagram_crosspost_facebook = bool(settings.instagram_crosspost_facebook)
-    settings.instagram_publish_quality_gate_enabled = bool(settings.instagram_publish_quality_gate_enabled)
+    settings.instagram_publish_quality_gate_enabled = True
     settings.instagram_publish_auto_video_fallback_enabled = bool(settings.instagram_publish_auto_video_fallback_enabled)
     settings.instagram_publish_preflight_targets_enabled = bool(settings.instagram_publish_preflight_targets_enabled)
     # Preserve budget and estimated image cost from config/.env.

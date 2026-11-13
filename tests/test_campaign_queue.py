@@ -8,6 +8,7 @@ from types import SimpleNamespace
 from PIL import Image
 import pytest
 
+from conecta_video_ai.publication_checks import caption_digest
 from conecta_video_ai.campaign_queue import (
     CampaignQueue, CampaignSelectionError, campaign_root, run_campaign_slot,
     mark_image_slot_completed,
@@ -60,12 +61,13 @@ def test_unresolved_outcomes_never_republish_automatically(tmp_path, state):
 
 
 def make_service(tmp_path, *, fail=None, duplicate_target=False):
-    settings = SimpleNamespace(output_root=tmp_path/'runs', instagram_drafts_root=tmp_path/'drafts')
+    settings = SimpleNamespace(output_root=tmp_path/'runs', instagram_drafts_root=tmp_path/'drafts',instagram_whatsapp_client_url='https://wa.me/56983434503')
     r = campaign_root(settings); r.mkdir(parents=True)
     video = r/'test.mp4'; video.write_bytes(b'fake video - actual encoding is checked in production preflight')
     cover = r/'cover.png'; Image.new('RGB', (1080,1920), 'white').save(cover)
-    item = entry(); item.update(video='test.mp4', cover='cover.png', caption='Find contacts.', duration_seconds=20,
+    item = entry(); item.update(video='test.mp4', cover='cover.png', caption='ConectaProIA: busca contactos. El servicio lo cobra cada profesional. WhatsApp: https://wa.me/56983434503', duration_seconds=20,
         sha256=hashlib.sha256(video.read_bytes()).hexdigest(), cover_sha256=hashlib.sha256(cover.read_bytes()).hexdigest())
+    item['caption_sha256']=caption_digest(item['caption'])
     (r/'manifest.json').write_text(json.dumps(manifest(item)))
     calls = []
     class Publisher:
@@ -186,7 +188,8 @@ def test_runner_continues_images_on_invalid_campaign_configuration(runner,monkey
     module.main();assert calls==['image','mark']
 
 
-def test_stable_https_asset_avoids_temporary_facebook_staging(tmp_path):
+def test_stable_https_asset_avoids_temporary_facebook_staging(tmp_path,monkeypatch):
+    monkeypatch.setattr('conecta_video_ai.campaign_queue.verify_public_video',lambda *args,**kw:{'passed':True})
     service,root,calls=make_service(tmp_path)
     m=json.loads((root/'manifest.json').read_text());m['entries'][0]['public_video_url']='https://conectaproia.cl/campanas/test.mp4';(root/'manifest.json').write_text(json.dumps(m))
     run_campaign_slot(service,now=NOW)

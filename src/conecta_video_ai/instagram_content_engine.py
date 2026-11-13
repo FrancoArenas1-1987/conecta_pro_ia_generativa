@@ -1,4 +1,4 @@
-﻿
+
 from __future__ import annotations
 
 import colorsys
@@ -30,6 +30,7 @@ from .music_engine import generate_instrumental_bed
 from .providers import OllamaProvider, OpenAIImageProvider
 from .settings import AppSettings
 from .storage import create_run_dir, write_json
+from .publication_checks import DISCLAIMER, FREE_SEARCH, editorial_copy, reviewed_template_copy
 from .service_images import read_registry, approved_paths, canonical
 from .whatsapp_links import (
     DEFAULT_CLIENT_PHONE,
@@ -3237,6 +3238,9 @@ class InstagramContentEngine:
         cta = self._norm(variant.get("cta") or "Escribenos ahora.")
         short_text = self._norm(variant.get("short_text") or hook)
 
+        hook, value, proof, cta, short_text = (editorial_copy(x) for x in (hook, value, proof, cta, short_text))
+        value, proof, cta = (reviewed_template_copy(text, role) for text, role in [(value, "value"), (proof, "proof"), (cta, "cta")])
+
         if format_type == "story":
             short_text = self._clip(short_text, self.settings.instagram_short_text_max_chars)
         elif format_type == "reel":
@@ -3250,6 +3254,7 @@ class InstagramContentEngine:
         seen: set[str] = set()
         for tag in hashtags:
             key = self._slug(tag, fallback="").replace("-", "")
+            key = {"profesionalesconfiables": "profesionales", "solucionrapida": "servicios"}.get(key, key)
             if key and key not in seen:
                 seen.add(key)
                 clean_tags.append(f"#{key}")
@@ -3260,7 +3265,9 @@ class InstagramContentEngine:
                 value,
                 proof,
                 cta,
-                f"Servicio: {service} | Zona: {locale}",
+                FREE_SEARCH,
+                DISCLAIMER,
+                f"Servicio: {editorial_copy(category.get('label') or service)} | Zona: {locale}",
                 coverage_text,
                 f"WhatsApp: {whatsapp_phone or whatsapp_url}",
                 f"Link directo: {whatsapp_url}",
