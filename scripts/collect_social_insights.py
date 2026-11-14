@@ -10,6 +10,15 @@ from conecta_video_ai.social_analytics import (MetaInsightsCollector,analyze,sav
     latest_observations,parse_time,stamp,write_report_html)
 from conecta_video_ai.campaign_queue import atomic_json,safe_error
 from conecta_video_ai.acquisition_tracking import whatsapp_enquiries
+from conecta_video_ai.acquisition_trial import refresh_trial_report
+
+def update_trial(folder):
+    try:
+        return refresh_trial_report(folder,ROOT/"config/acquisition_trial_20261114.json")
+    except Exception as exc:
+        atomic_json(Path(folder)/"trial_last_error.json",{"at":stamp().isoformat(),"error_type":type(exc).__name__})
+        return None
+
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
@@ -23,12 +32,14 @@ def main():
         try:
             at=parse_time(json.loads(old.read_text())["collected_at"])
             if at and stamp()-at<timedelta(hours=4):
+                update_trial(folder)
                 print(json.dumps({"ok":True,"skipped":True,"reason":"insights_collected_recently"}));return 0
         except (ValueError,KeyError):pass
     try:
         report=MetaInsightsCollector(InstagramGraphPublisher(s),s.output_root,max_calls=args.max_calls,max_posts=args.max_posts).collect()
         if not report["records"] or not any("reach" in r.get("metrics",{}) for r in report["records"]):
             atomic_json(folder/"last_error.json",{"at":stamp().isoformat(),"warnings":report["warnings"],"error":"no_insights_available"})
+            update_trial(folder)
             print(json.dumps({"ok":False,"reason":"no_insights_available"}));return 1
         save_observations(folder,report)
         historical=latest_observations(folder)
@@ -43,9 +54,12 @@ def main():
                  "with_unavailable_metrics":sum(bool(r["issues"]) for r in report["records"]),
                  "api_reads":report["api_reads"],"automatic_category_weights":result["policy"]["category_weights"]}
         atomic_json(folder/"summary.json",summary)
+        trial=update_trial(folder)
+        if trial:summary["trial_phase"]=trial["phase"]
         print(json.dumps(summary,ensure_ascii=False));return 0
     except Exception as exc:
         atomic_json(folder/"last_error.json",{"at":stamp().isoformat(),"error":safe_error(exc)})
+        update_trial(folder)
         print(json.dumps({"ok":False,"reason":safe_error(exc)}));return 1
 
 if __name__=="__main__":raise SystemExit(main())

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "trial_id": "captacion_14d_20261114",
+  "starts_at": "2026-11-14T17:00:00Z",
+  "ends_at": "2026-11-28T17:00:00Z",
+  "timezone": "America/Santiago",
+  "strategy": "more_useful_creative_variety_same_publication_frequency",
+  "primary_metric": "distinct_whatsapp_contacts_with_published_creative_reference",
+  "metric_age_hours": [
+    48,
+    96
+  ],
+  "minimum_comparable_posts": 6,
+  "minimum_summed_post_reach": 200,
+  "minimum_tracking_coverage": 0.8,
+  "minimum_trial_contacts": 3,
+  "frequency_policy": "maintain_existing_schedule",
+  "automatic_frequency_changes": false,
+  "future_test": {
+    "additional_posts_per_week": 2,
+    "mode": "recommendation_only"
+  },
+  "notes": [
+    "Organic observation; changing creative mix is not a randomized frequency experiment.",
+    "Missing metrics or unavailable attribution remain unknown, never zero.",
+    "Creative references shared between networks do not identify sales or exact source channels."
+  ],
+  "story_metric_age_hours": [
+    12,
+    24
+  ]
+}

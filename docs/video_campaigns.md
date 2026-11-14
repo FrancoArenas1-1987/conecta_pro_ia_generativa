@@ -45,3 +45,7 @@ Dos campañas nuevas de mudanzas y mecánica automotriz tienen Feed, Story y enl
 ## Diseños y formatos variados
 
 La ampliación siguiente suma tres conceptos: guía amarilla del 2026, búsqueda por comuna y pendientes cotidianos. Hay dos Feed 4:5, un Feed cuadrado 1:1 y tres Stories con composición propia 9:16. La biblioteca actual tiene 24 entradas: 23 habilitadas (15 campañas de imagen y 8 videos), además de las 30 imágenes habituales por servicio. La pieza con año 2026 tiene fecha de caducidad. Ver `variedad_campaigns_20261114.md`.
+
+## Consejos útiles y observación de captación
+
+Se suman dos campañas con consejos para consultar por una mudanza o soporte de notebook: dos Feed (1:1 y 4:5) y dos Stories nativas 9:16. La biblioteca tiene ahora 26 entradas, 25 habilitadas (17 campañas de imagen y 8 videos), además de las 30 imágenes habituales por servicio. Los horarios se conservan. El seguimiento privado de 14 días evalúa consultas con referencia y métricas comparables; no aumenta la frecuencia automáticamente. Ver `acquisition_trial_20261114.md`.

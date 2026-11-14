@@ -61,7 +61,7 @@ def prepare(folder, spec_path=None):
         delivery(source,feed,story=False,background=spec.get("background") or BACKGROUNDS[code],feed_format=spec.get("feed_format","portrait"))
         delivery(story_source,story,story=True,background=spec.get("background") or BACKGROUNDS[code],native_story=bool(spec.get("story_source")))
         entries.append({"campaign_id":code,"title":spec["title"],"angle":spec["angle"],
-          "objective":"captar_clientes","caption":caption,"caption_sha256":caption_digest(caption),
+          "objective":"captar_clientes","content_group":spec.get("content_group","publicidad"),"caption":caption,"caption_sha256":caption_digest(caption),
           "tracking_code":reference,"media_type":"image","image":feed.name,"sha256":digest(feed),
           "story_image":story.name,"story_sha256":digest(story),"publish_stories":True,
           "approval_status":"pending_review","enabled":False,"repeat_after_days":21,

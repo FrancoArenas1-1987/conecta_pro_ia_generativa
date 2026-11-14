@@ -42,3 +42,39 @@ def test_enquiry_collection_is_read_only_parameterized_and_does_not_export_peopl
     assert "default_transaction_read_only=on" in seen["options"]
     assert result["per_reference"]=={code:2}
     assert "customer_wa_id" not in str(result)
+
+
+def test_period_attribution_is_bounded_read_only_and_deduplicates_contacts(monkeypatch):
+    from datetime import datetime,timedelta,timezone
+    import psycopg
+    from conecta_video_ai.acquisition_tracking import whatsapp_enquiries_window
+    since=datetime(2026,11,14,tzinfo=timezone.utc);until=since+timedelta(days=14)
+    codes=sorted([tracking_code_for("first"),tracking_code_for("second")]);seen={}
+    for key in ["CP_DB_HOST","CP_DB_NAME","CP_DB_USER","CP_DB_PASSWORD"]:monkeypatch.setenv(key,"test")
+    class DB:
+        def __enter__(self):return self
+        def __exit__(self,*args):pass
+        def execute(self,query,params):
+            assert "inbound.created_at >= %s" in query and "inbound.created_at < %s" in query
+            assert "GROUPING SETS" in query and "COUNT(DISTINCT customer_wa_id)" in query
+            assert params==(since,until,codes)
+            return self
+        def fetchall(self):return [(codes[0],2),(codes[1],2),(None,3)]
+    def connect(**kwargs):seen.update(kwargs);return DB()
+    monkeypatch.setattr(psycopg,"connect",connect)
+    result=whatsapp_enquiries_window([{"tracking_code":c} for c in codes],since=since,until=until)
+    assert result["distinct_contacts"]==3
+    assert sum(result["per_reference"].values())==4
+    assert "default_transaction_read_only=on" in seen["options"]
+    assert "customer_wa_id" not in str(result)
+
+def test_period_attribution_rejects_naive_dates_and_preserves_unknown_data(monkeypatch):
+    from datetime import datetime,timedelta,timezone
+    import pytest
+    from conecta_video_ai.acquisition_tracking import whatsapp_enquiries_window
+    start=datetime(2026,11,14,tzinfo=timezone.utc)
+    with pytest.raises(ValueError):
+        whatsapp_enquiries_window([],since=start.replace(tzinfo=None),until=start+timedelta(days=14))
+    for key in ["CP_DB_HOST","CP_DB_NAME","CP_DB_USER","CP_DB_PASSWORD"]:monkeypatch.delenv(key,raising=False)
+    result=whatsapp_enquiries_window([{"tracking_code":tracking_code_for("ad")}],since=start,until=start+timedelta(days=14))
+    assert result["status"]=="database_not_configured" and result["distinct_contacts"] is None

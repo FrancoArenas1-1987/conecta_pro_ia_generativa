@@ -2,6 +2,22 @@
 
 Cada pieza conserva texto, contacto y referencia. Una referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las Stories llevan el contacto en el medio. Las entradas deshabilitadas se conservan para trazabilidad y no se seleccionan para publicación.
 
+## Cotiza tu mudanza con estos datos
+
+Formato: image. Referencia: CP-B121B3F9BB3A. Estado: habilitada.
+
+¿Vas a cotizar una mudanza? Ten a mano la comuna de origen y destino, una fecha estimada y qué necesitas trasladar. Comenta también si hay escaleras o dificultades de acceso para que el prestador pueda entender el trabajo.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Busca contactos de fletes y mudanzas: cuéntanos qué necesitas y tu comuna.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+fletes+y+mudanzas.+Referencia+CP-B121B3F9BB3A
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Las amarillas del 2026
 
 Formato: image. Referencia: CP-3FABDCAFFEEE. Estado: habilitada.
@@ -94,6 +110,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos el servicio que necesitas y tu comuna por WhatsApp.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+proveedores+de+servicios+en+mi+comuna.+Referencia+CP-03A02119495A
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Pide soporte para tu notebook con una consulta clara
+
+Formato: image. Referencia: CP-0066AA8515BD. Estado: habilitada.
+
+¿Tu notebook necesita soporte? Para empezar una consulta, indica la marca y el modelo, describe qué necesitas resolver y comparte tu comuna. Estos datos ayudan a explicar la necesidad; el diagnóstico, la disponibilidad y los valores se acuerdan con cada profesional.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Escríbenos qué necesita tu equipo y en qué comuna buscas soporte.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+soporte+y+reparaci%C3%B3n+de+notebooks.+Referencia+CP-0066AA8515BD
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -261,7 +293,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Cuidado para tus mascotas
 
-Formato: video. Referencia: CP-445AB6D73647. Estado: fuera de rotación.
+Formato: video. Referencia: CP-445AB6D73647. Estado: deshabilitada.
 
 ¿Buscas un veterinario o peluquería canina?
 
@@ -380,3 +412,4 @@ WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionale
 La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
+

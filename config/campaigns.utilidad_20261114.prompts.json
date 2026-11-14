@@ -1,0 +1,62 @@
+{
+  "tool": "built_in_imagegen",
+  "mode": "generate_finished_ads",
+  "entries": [
+    {
+      "id": "mudanza_datos_utiles_20261114_v1",
+      "title": "Cotiza tu mudanza con estos datos",
+      "angle": "consejo_util_mudanza",
+      "content_group": "consejo_util",
+      "service": "fletes y mudanzas",
+      "intro": "¿Vas a cotizar una mudanza? Ten a mano la comuna de origen y destino, una fecha estimada y qué necesitas trasladar. Comenta también si hay escaleras o dificultades de acceso para que el prestador pueda entender el trabajo.",
+      "cta": "Busca contactos de fletes y mudanzas: cuéntanos qué necesitas y tu comuna.",
+      "background": "FFF5DA",
+      "feed_format": "square",
+      "story_source": "mudanza_datos_utiles_20261114_v1_story_original.png",
+      "copy": [
+        "ConectaProIA",
+        "¿Vas a cotizar una mudanza?",
+        "Ten estos datos a mano:",
+        "Origen y destino",
+        "Fecha y qué trasladar",
+        "Accesos y escaleras",
+        "Busca contactos por tu comuna.",
+        "WhatsApp +56 9 8343 4503",
+        "conectaproia.cl",
+        "Buscar contactos es gratis.",
+        "El traslado lo cobra cada prestador. Confirma disponibilidad y valores."
+      ],
+      "style": "Professional useful illustrated checklist, warm pale butter-cream, cobalt navy and a restrained sunny orange. Three original simple illustrations of a location route, a moving box/calendar, and a staircase. Large friendly editorial typography, clear numbered checklist hierarchy, generous breathing room, premium trustworthy service-directory brand. This is a helpful planning checklist, no promise of a quote amount or guaranteed availability.",
+      "feed_prompt": "Use case: ads-marketing. Create one COMPLETE FINISHED Spanish advertising image for ConectaProIA with useful guidance and all exact text. No textless backgrounds. Style: Professional useful illustrated checklist, warm pale butter-cream, cobalt navy and a restrained sunny orange. Three original simple illustrations of a location route, a moving box/calendar, and a staircase. Large friendly editorial typography, clear numbered checklist hierarchy, generous breathing room, premium trustworthy service-directory brand. This is a helpful planning checklist, no promise of a quote amount or guaranteed availability. Use only this EXACT text with correct accents: \"ConectaProIA\"; \"¿Vas a cotizar una mudanza?\"; \"Ten estos datos a mano:\"; \"Origen y destino\"; \"Fecha y qué trasladar\"; \"Accesos y escaleras\"; \"Busca contactos por tu comuna.\"; \"WhatsApp +56 9 8343 4503\"; \"conectaproia.cl\"; \"Buscar contactos es gratis.\"; \"El traslado lo cobra cada prestador. Confirma disponibilidad y valores.\". Clear mobile-readable hierarchy, strong contrast, correct phone digits and website, no tiny legal text, no extra words, no fake testimonials or verification/speed claims. Search for contacts is free; professional work is paid. No watermark, no third-party branding. Native SQUARE 1:1 feed composition. All meaningful text at least7% inside every edge. A finished useful checklist with contact CTA, not a portrait design cropped to square.",
+      "story_prompt": "Use case: ads-marketing. Create one COMPLETE FINISHED Spanish advertising image for ConectaProIA with useful guidance and all exact text. No textless backgrounds. Style: Professional useful illustrated checklist, warm pale butter-cream, cobalt navy and a restrained sunny orange. Three original simple illustrations of a location route, a moving box/calendar, and a staircase. Large friendly editorial typography, clear numbered checklist hierarchy, generous breathing room, premium trustworthy service-directory brand. This is a helpful planning checklist, no promise of a quote amount or guaranteed availability. Use only this EXACT text with correct accents: \"ConectaProIA\"; \"¿Vas a cotizar una mudanza?\"; \"Ten estos datos a mano:\"; \"Origen y destino\"; \"Fecha y qué trasladar\"; \"Accesos y escaleras\"; \"Busca contactos por tu comuna.\"; \"WhatsApp +56 9 8343 4503\"; \"conectaproia.cl\"; \"Buscar contactos es gratis.\"; \"El traslado lo cobra cada prestador. Confirma disponibilidad y valores.\". Clear mobile-readable hierarchy, strong contrast, correct phone digits and website, no tiny legal text, no extra words, no fake testimonials or verification/speed claims. Search for contacts is free; professional work is paid. No watermark, no third-party branding. Native vertical9:16 STORY design with its own layout. ALL ESSENTIAL COPY including brand and clarification must be inside x8%-92%, y15%-80% of total canvas. Top15% and bottom20% decorative background only, no text or logo. Put brand15-19%, headline20-31%, compact checklist32-50%, service/CTA51-56%, WhatsApp57-64%, website65-69%, free-search benefit70-74%, complete clarification75-80%. Use a compact illustration so all text remains legible within that safe region. Fill the full canvas with cohesive design, no letterbox borders, no pasted feed rectangle."
+    },
+    {
+      "id": "notebook_consulta_clara_20261114_v1",
+      "title": "Pide soporte para tu notebook con una consulta clara",
+      "angle": "consejo_util_soporte_pc",
+      "content_group": "consejo_util",
+      "service": "soporte y reparación de notebooks",
+      "intro": "¿Tu notebook necesita soporte? Para empezar una consulta, indica la marca y el modelo, describe qué necesitas resolver y comparte tu comuna. Estos datos ayudan a explicar la necesidad; el diagnóstico, la disponibilidad y los valores se acuerdan con cada profesional.",
+      "cta": "Escríbenos qué necesita tu equipo y en qué comuna buscas soporte.",
+      "background": "EEEAF9",
+      "feed_format": "portrait",
+      "story_source": "notebook_consulta_clara_20261114_v1_story_original.png",
+      "copy": [
+        "ConectaProIA",
+        "¿Tu notebook necesita soporte?",
+        "Una consulta clara empieza con:",
+        "Marca y modelo",
+        "Qué necesitas resolver",
+        "Tu comuna",
+        "Busca contactos de soporte técnico.",
+        "WhatsApp +56 9 8343 4503",
+        "conectaproia.cl",
+        "Buscar contactos es gratis.",
+        "El diagnóstico y la reparación los cobra cada profesional. Consulta disponibilidad y valores."
+      ],
+      "style": "Premium modern editorial tech illustration with soft lilac, deep indigo and mint accent. One clean generic unbranded laptop illustration with a neutral screen, three crisp elegant numbered information cards, soft dimensional paper texture, bold humanist typography. No fake chat conversation, no screenshot of a real platform, no logos of computer brands, no hacking imagery or repair diagnosis. Useful and professional rather than a busy flyer.",
+      "feed_prompt": "Use case: ads-marketing. Create one COMPLETE FINISHED Spanish advertising image for ConectaProIA with useful guidance and all exact text. No textless backgrounds. Style: Premium modern editorial tech illustration with soft lilac, deep indigo and mint accent. One clean generic unbranded laptop illustration with a neutral screen, three crisp elegant numbered information cards, soft dimensional paper texture, bold humanist typography. No fake chat conversation, no screenshot of a real platform, no logos of computer brands, no hacking imagery or repair diagnosis. Useful and professional rather than a busy flyer. Use only this EXACT text with correct accents: \"ConectaProIA\"; \"¿Tu notebook necesita soporte?\"; \"Una consulta clara empieza con:\"; \"Marca y modelo\"; \"Qué necesitas resolver\"; \"Tu comuna\"; \"Busca contactos de soporte técnico.\"; \"WhatsApp +56 9 8343 4503\"; \"conectaproia.cl\"; \"Buscar contactos es gratis.\"; \"El diagnóstico y la reparación los cobra cada profesional. Consulta disponibilidad y valores.\". Clear mobile-readable hierarchy, strong contrast, correct phone digits and website, no tiny legal text, no extra words, no fake testimonials or verification/speed claims. Search for contacts is free; professional work is paid. No watermark, no third-party branding. Native vertical4:5 feed composition. All meaningful text at least7% inside every edge. A finished educational poster with clear contact CTA.",
+      "story_prompt": "Use case: ads-marketing. Create one COMPLETE FINISHED Spanish advertising image for ConectaProIA with useful guidance and all exact text. No textless backgrounds. Style: Premium modern editorial tech illustration with soft lilac, deep indigo and mint accent. One clean generic unbranded laptop illustration with a neutral screen, three crisp elegant numbered information cards, soft dimensional paper texture, bold humanist typography. No fake chat conversation, no screenshot of a real platform, no logos of computer brands, no hacking imagery or repair diagnosis. Useful and professional rather than a busy flyer. Use only this EXACT text with correct accents: \"ConectaProIA\"; \"¿Tu notebook necesita soporte?\"; \"Una consulta clara empieza con:\"; \"Marca y modelo\"; \"Qué necesitas resolver\"; \"Tu comuna\"; \"Busca contactos de soporte técnico.\"; \"WhatsApp +56 9 8343 4503\"; \"conectaproia.cl\"; \"Buscar contactos es gratis.\"; \"El diagnóstico y la reparación los cobra cada profesional. Consulta disponibilidad y valores.\". Clear mobile-readable hierarchy, strong contrast, correct phone digits and website, no tiny legal text, no extra words, no fake testimonials or verification/speed claims. Search for contacts is free; professional work is paid. No watermark, no third-party branding. Native vertical9:16 STORY design with its own layout. ALL ESSENTIAL COPY including brand and clarification must be inside x8%-92%, y15%-80% of total canvas. Top15% and bottom20% decorative background only, no text or logo. Put brand15-19%, headline20-31%, compact checklist32-50%, service/CTA51-56%, WhatsApp57-64%, website65-69%, free-search benefit70-74%, complete clarification75-80%. Use a compact illustration so all text remains legible within that safe region. Fill the full canvas with cohesive design, no letterbox borders, no pasted feed rectangle."
+    }
+  ]
+}

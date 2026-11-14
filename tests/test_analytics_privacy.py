@@ -15,11 +15,14 @@ def panel(tmp_path,monkeypatch):
     private=tmp_path/"instagram/analytics";private.mkdir(parents=True)
     for name in ["latest.json","observations.sqlite3","informe.html"]:
         (private/name).write_bytes(b"private-data")
+    nested=private/"trials/captacion_14d_20261114/latest.json"
+    nested.parent.mkdir(parents=True);nested.write_bytes(b"private-data")
     yield module.app.test_client(),tmp_path
     sys.modules.pop("conecta_video_ai.webapp",None)
 
 @pytest.mark.parametrize("path",["instagram/analytics/latest.json","instagram/analytics/observations.sqlite3",
-    "instagram/analytics/informe.html","instagram/drafts/../analytics/latest.json"])
+    "instagram/analytics/informe.html","instagram/drafts/../analytics/latest.json",
+    "instagram/analytics/trials/captacion_14d_20261114/latest.json"])
 def test_private_reports_cannot_be_downloaded_through_generated_route(panel,path):
     client,root=panel
     response=client.get("/generated/"+path)
