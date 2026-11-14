@@ -18,7 +18,7 @@ NOW = datetime(2026, 11, 13, 15, tzinfo=timezone.utc)
 
 
 def entry(code='hogar'):
-    return {'campaign_id': code, 'enabled': True, 'approval_status': 'approved'}
+    return {'campaign_id': code, 'enabled': True, 'approval_status': 'approved', 'availability_scope':'general', 'required_service_codes':[]}
 
 
 def manifest(*entries):
@@ -148,6 +148,7 @@ def runner(monkeypatch, tmp_path):
     settings=AppSettings(output_root=tmp_path/'runs',instagram_drafts_root=tmp_path/'drafts',instagram_state_path=tmp_path/'state.json')
     engine=SimpleNamespace(sync_asset_catalog=lambda:{},sweep_library_quality=lambda **kw:{})
     service=SimpleNamespace(settings=settings,instagram_engine=engine,_instagram_publish_media_mode=lambda:'image_only')
+    monkeypatch.setattr(module,'synchronize_registry',lambda _: {'status':'available'})
     monkeypatch.setattr(module,'load_settings',lambda:settings)
     monkeypatch.setattr(module,'StudioService',lambda _:service)
     monkeypatch.setattr(module,'publish_window_status',lambda **kw:{'allowed':True})

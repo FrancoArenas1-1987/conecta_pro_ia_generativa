@@ -1,4 +1,5 @@
 from __future__ import annotations
+from .publication_supply import assert_draft, SupplyBlocked
 
 import json
 import os
@@ -1602,6 +1603,7 @@ class StudioService:
             return self.instagram_engine.simulate_publish(draft_id)
 
         draft = self.instagram_engine.get_draft(draft_id)
+        draft["supply_check"] = assert_draft(draft)
         whatsapp_url = (self.settings.instagram_whatsapp_provider_url
                         if draft.get("objective") == "captar_proveedores"
                         else self.settings.instagram_whatsapp_client_url)
@@ -2061,6 +2063,8 @@ class StudioService:
                     public_video_url=public_video_url,
                 )
             except Exception as exc:  # noqa: BLE001
+                if isinstance(exc, SupplyBlocked):
+                    raise
                 if bool(self.settings.instagram_publish_auto_video_fallback_enabled) and effective_mode in {"auto", "both"}:
                     previous_mode = self.settings.instagram_publish_media_mode
                     self.settings.instagram_publish_media_mode = "image_only"

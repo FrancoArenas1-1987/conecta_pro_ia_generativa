@@ -41,7 +41,11 @@
         "native_story_layout_reviewed": true,
         "free_search_and_paid_service_distinguished": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "fletes_mudanzas"
+      ]
     },
     {
       "campaign_id": "guia_amarilla_2026_20261114_v1",
@@ -79,7 +83,9 @@
         "spelling_checked": true,
         "free_search_and_paid_service_distinguished": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "mudanza_planificada_20261114_v1",
@@ -111,7 +117,11 @@
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true,
         "free_search_and_paid_service_distinguished": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "fletes_mudanzas"
+      ]
     },
     {
       "campaign_id": "gotera_hogar_20261113_v1",
@@ -142,7 +152,11 @@
         "original_spelling_checked": true,
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "gasfiteria"
+      ]
     },
     {
       "campaign_id": "mensaje_claro_reel_20261114_v1",
@@ -177,7 +191,9 @@
         "text_boxes_verified_during_render": true,
         "phone": "56983434503",
         "audio": "original_music_and_effects_no_narration"
-      }
+      },
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "guia_siglo_xxi_v1",
@@ -197,7 +213,9 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.861423+00:00",
       "media_type": "video",
       "angle": "marca",
-      "tracking_code": "CP-2EAFDEC0D833"
+      "tracking_code": "CP-2EAFDEC0D833",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "servicio_comuna_20261114_v1",
@@ -235,7 +253,9 @@
         "spelling_checked": true,
         "free_search_and_paid_service_distinguished": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "notebook_consulta_clara_20261114_v1",
@@ -274,7 +294,11 @@
         "native_story_layout_reviewed": true,
         "free_search_and_paid_service_distinguished": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "reparacion_pc_notebook"
+      ]
     },
     {
       "campaign_id": "tu_comuna_contacto_20261113_v1",
@@ -305,7 +329,9 @@
         "original_spelling_checked": true,
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "taller_auto_20261114_v1",
@@ -337,7 +363,11 @@
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true,
         "free_search_and_paid_service_distinguished": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "mecanica_automotriz"
+      ]
     },
     {
       "campaign_id": "empieza_por_tu_comuna_v1",
@@ -358,7 +388,9 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.861423+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/d045fa3c68b83bf7adbd.jpg",
       "public_story_image_url": "https://conectaproia.cl/campanas/71689d0c7f171dad1824.jpg",
-      "tracking_code": "CP-11B4B5CB551F"
+      "tracking_code": "CP-11B4B5CB551F",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "documento_traduccion_20261113_v1",
@@ -375,7 +407,7 @@
       "story_sha256": "25a54393be2e871fa4f3e8a9d420af6d19e4d245a94067f8d8829ef1b2a7b897",
       "publish_stories": true,
       "approval_status": "approved",
-      "enabled": true,
+      "enabled": false,
       "repeat_after_days": 21,
       "public_image_url": "https://conectaproia.cl/campanas/a77880c502add156d16f.jpg",
       "public_story_image_url": "https://conectaproia.cl/campanas/25a54393be2e871fa4f3.jpg",
@@ -389,7 +421,12 @@
         "original_spelling_checked": true,
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "traductor"
+      ],
+      "pause_reason": "no_active_providers_readonly_db_audit_20261114"
     },
     {
       "campaign_id": "a_quien_llamo_20261114_v1",
@@ -427,7 +464,13 @@
         "spelling_checked": true,
         "free_search_and_paid_service_distinguished": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "electricidad",
+        "gasfiteria",
+        "fletes_mudanzas"
+      ]
     },
     {
       "campaign_id": "pendientes_hogar_reel_20261114_v1",
@@ -462,7 +505,13 @@
         "text_boxes_verified_during_render": true,
         "phone": "56983434503",
         "audio": "original_music_and_effects_no_narration"
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "electricidad",
+        "gasfiteria",
+        "fletes_mudanzas"
+      ]
     },
     {
       "campaign_id": "hogar_sin_vueltas_v1",
@@ -497,7 +546,13 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "media_type": "video",
       "angle": "hogar",
-      "tracking_code": "CP-2A95478AC115"
+      "tracking_code": "CP-2A95478AC115",
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "electricidad",
+        "gasfiteria",
+        "fletes_mudanzas"
+      ]
     },
     {
       "campaign_id": "pizza_compartir_20261113_v1",
@@ -528,7 +583,11 @@
         "original_spelling_checked": true,
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
-      }
+      },
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "comida_pizzeria"
+      ]
     },
     {
       "campaign_id": "peluqueria_canina_reel_20261114_v1",
@@ -565,7 +624,11 @@
         "audio": "original_music_and_effects_no_narration"
       },
       "source_file": "peluqueria_canina_escena.png",
-      "source_sha256": "95af72bb5fd5654b58932bc745e7ca6294e30b760470831b4325bebaf07a16f8"
+      "source_sha256": "95af72bb5fd5654b58932bc745e7ca6294e30b760470831b4325bebaf07a16f8",
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "peluqueria_canina"
+      ]
     },
     {
       "campaign_id": "antes_de_contratar_v1",
@@ -586,7 +649,9 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/104ebe8b50463e65e54f.jpg",
       "public_story_image_url": "https://conectaproia.cl/campanas/0a052683db878acdc8b0.jpg",
-      "tracking_code": "CP-8244BE9D8102"
+      "tracking_code": "CP-8244BE9D8102",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "mascotas_bien_cuidadas_v1",
@@ -622,7 +687,12 @@
       "media_type": "video",
       "angle": "mascotas",
       "tracking_code": "CP-445AB6D73647",
-      "review_reason": "Legacy photographs do not clearly depict veterinary care and dog grooming; replaced in rotation by the reviewed canine Reel."
+      "review_reason": "Legacy photographs do not clearly depict veterinary care and dog grooming; replaced in rotation by the reviewed canine Reel.",
+      "availability_scope": "specific",
+      "required_service_codes": [
+        "medico_veterinario",
+        "peluqueria_canina"
+      ]
     },
     {
       "campaign_id": "muchos_pendientes_v1",
@@ -643,7 +713,9 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.871841+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/8cb9881007f2ff6995a6.jpg",
       "public_story_image_url": "https://conectaproia.cl/campanas/ba75fe9d68054b255a77.jpg",
-      "tracking_code": "CP-2F15C1D5A03D"
+      "tracking_code": "CP-2F15C1D5A03D",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "como_buscar_video_v1",
@@ -665,7 +737,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.871841+00:00",
       "public_video_url": "https://conectaproia.cl/campanas/168e62fb617d5cb833b7.mp4",
-      "tracking_code": "CP-03911C733CAA"
+      "tracking_code": "CP-03911C733CAA",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "profesional_casa_imagen_v1",
@@ -683,7 +757,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/5652597714d8bb564114.jpg",
-      "tracking_code": "CP-0CF6F83FD573"
+      "tracking_code": "CP-0CF6F83FD573",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "preguntas_antes_contratar_video_v1",
@@ -705,7 +781,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
       "public_video_url": "https://conectaproia.cl/campanas/f7e257dc49cc357354ed.mp4",
-      "tracking_code": "CP-AEFD32C17BEC"
+      "tracking_code": "CP-AEFD32C17BEC",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "muchos_servicios_imagen_v1",
@@ -723,7 +801,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/efa22fc15d0f88aeda42.jpg",
-      "tracking_code": "CP-B8A4D4BB76D2"
+      "tracking_code": "CP-B8A4D4BB76D2",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "buscar_sin_costo_video_v1",
@@ -745,7 +825,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.872844+00:00",
       "public_video_url": "https://conectaproia.cl/campanas/117068944e162843ee06.mp4",
-      "tracking_code": "CP-197869B34C28"
+      "tracking_code": "CP-197869B34C28",
+      "availability_scope": "general",
+      "required_service_codes": []
     },
     {
       "campaign_id": "guia_siglo_xxi_imagen_v1",
@@ -763,7 +845,9 @@
       "reviewed_at": "2026-11-13T00:51:32.921697+00:00",
       "caption_reviewed_at": "2026-11-13T22:03:31.874255+00:00",
       "public_image_url": "https://conectaproia.cl/campanas/e4939ce9e2657d0c07ea.jpg",
-      "tracking_code": "CP-4BE71D946EAE"
+      "tracking_code": "CP-4BE71D946EAE",
+      "availability_scope": "general",
+      "required_service_codes": []
     }
   ],
   "status": "restore_template_requires_reconciliation"

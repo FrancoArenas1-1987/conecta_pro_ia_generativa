@@ -16,6 +16,7 @@ SRC_ROOT = PROJECT_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
 
+from conecta_video_ai.publication_supply import synchronize_registry
 from conecta_video_ai.campaign_queue import (
     CampaignSelectionError, mark_image_slot_completed, run_campaign_slot, safe_error,
 )
@@ -313,6 +314,8 @@ def main() -> None:
             return
 
         try:
+            entry["live_supply"] = synchronize_registry(settings.output_root / "instagram/catalog/service_images.json")
+            service.instagram_engine.sync_asset_catalog()
             result = None
             # Campaigns share the same timer, lock, interval and antispam guards.
             # Explicit category/objective invocations keep their original intent.

@@ -16,6 +16,7 @@ import tempfile
 import uuid
 
 from PIL import Image
+from .publication_supply import eligible_manifest, assert_campaign
 from .publication_checks import validate_caption, caption_digest, verify_public_video, verify_public_image, validate_images
 
 
@@ -169,7 +170,7 @@ def run_campaign_slot(service, *, now=None):
     try:
         manifest = json.loads(manifest_path.read_text(encoding='utf-8-sig'))
         queue = CampaignQueue(root)
-        attempt = queue.claim(manifest, now=now)
+        attempt = queue.claim(eligible_manifest(manifest), now=now)
     except (ValueError, TypeError, KeyError, OSError, sqlite3.Error) as exc:
         raise CampaignSelectionError(safe_error(exc)) from None
     if not attempt:
@@ -181,7 +182,8 @@ def run_campaign_slot(service, *, now=None):
     draft = {'draft_id': attempt['draft_id'], 'draft_dir': str(draft_dir),
              'created_at': attempt['started_at'], 'campaign_id': item['campaign_id'],
              'category_id': 'campaign', 'category_label': item.get('title', item['campaign_id']),
-             'objective': 'branding', 'format_type': 'both', 'status': 'draft',
+             'objective': item.get('objective', 'branding'), 'availability_scope': item.get('availability_scope'),
+             'required_service_codes': item.get('required_service_codes'), 'format_type': 'both', 'status': 'draft',
              'image_source': 'approved_campaign', 'video_source': 'approved_campaign',
              'caption': item.get('caption', ''), 'tracking_code': item.get('tracking_code'), 'multi_account_publications': [],
              'campaign_deliveries': []}
@@ -229,6 +231,7 @@ def run_campaign_slot(service, *, now=None):
                          story_image_path=str(story) if story else None,
                          image_qc={'passed': True}, video_source=None,
                          publish_media_mode_effective='image_only')
+        draft['supply_check'] = assert_campaign(item)
         targets, preflight = service._preflight_publish_targets(service._load_instagram_publish_targets())
         if not targets or not any(t.get('publish_instagram', True) or t.get('crosspost_facebook', False) for t in targets):
             raise ValueError('No valid publishing destinations for campaign')

@@ -728,3 +728,9 @@ def test_preflight_targets_disables_instagram_when_page_linked_ig_differs(tmp_pa
     assert selected[0]["crosspost_facebook"] is True
     rows = report.get("reports") or []
     assert rows and rows[0]["status"] == "instagram_disabled_link_mismatch"
+
+
+@pytest.fixture(autouse=True)
+def isolate_existing_publisher_flow_from_live_supply(monkeypatch):
+    # These tests exercise destinations/QC. Dedicated supply tests cover the real guard.
+    monkeypatch.setattr(pipelines, "assert_draft", lambda _: {"status":"available"})

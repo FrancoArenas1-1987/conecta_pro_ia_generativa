@@ -22,6 +22,7 @@ from conecta_video_ai.campaign_queue import atomic_json
 from conecta_video_ai.instagram_graph_publisher import InstagramGraphPublisher
 from conecta_video_ai.publish_schedule import publish_window_status
 from conecta_video_ai.settings import load_settings
+from conecta_video_ai.publication_supply import synchronize_registry, assert_services
 from conecta_video_ai.service_images import read_registry, approved_paths, canonical
 from conecta_video_ai.whatsapp_links import extract_whatsapp_phone, normalize_whatsapp_click_url
 
@@ -561,6 +562,8 @@ def publish_carousel(manifest: dict[str, Any]) -> dict[str, Any]:
             raise RuntimeError("Carousel source is unapproved or outside its theme")
     if len(manifest.get("services", [])) != 3:
         raise RuntimeError("Carousel must contain exactly three approved services")
+    supply_check = assert_services([s["category_id"] for s in manifest["services"]])
+    manifest["supply_check"] = supply_check
     pending = STATE_PATH.with_name("carousel_pending.json")
     if pending.exists():
         raise RuntimeError("Carousel has an unresolved publication; manual reconciliation required")
@@ -656,6 +659,8 @@ def main() -> None:
         if skipped and payload is not None:
             print(json.dumps(payload, ensure_ascii=False, indent=2))
             return
+    if args.publish:
+        synchronize_registry(INSTAGRAM_STATE_PATH.parent / "catalog/service_images.json")
     manifest = build_carousel(force_theme=args.theme)
     if not args.publish:
         print(json.dumps({"ok": True, "published": False, "preview_dir": str(Path(manifest["slides"][0]).parent), "manifest": manifest}, ensure_ascii=False, indent=2))

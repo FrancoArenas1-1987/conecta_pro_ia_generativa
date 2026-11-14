@@ -11,6 +11,7 @@ from moviepy.editor import VideoFileClip
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"src"))
+from conecta_video_ai.publication_supply import required_codes
 from conecta_video_ai.campaign_queue import inside
 from conecta_video_ai.instagram_content_engine import InstagramContentEngine
 from conecta_video_ai.publication_checks import validate_caption, caption_digest, verify_public_image, verify_public_video
@@ -25,6 +26,7 @@ def check(path, *, remote=False):
     for e in manifest["entries"]:
         if not e.get("enabled"):continue
         if e.get("approval_status")!="approved":raise ValueError("Campaign is not approved")
+        required_codes(e)
         validate_caption(e["caption"],whatsapp_url="https://wa.me/56983434503")
         if caption_digest(e["caption"])!=e["caption_sha256"]:raise ValueError("Caption checksum changed")
         kind=e.get("media_type","video")
