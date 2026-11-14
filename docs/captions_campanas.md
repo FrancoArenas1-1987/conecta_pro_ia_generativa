@@ -1,6 +1,6 @@
 # Textos aprobados de las campañas
 
-Cada pieza conserva su texto, contacto y referencia. Las referencias de campaña se comparten entre redes y repeticiones: permiten contar consultas que las incluyan, sin demostrar ventas. Las Stories llevan el contacto dentro de la imagen.
+Cada pieza conserva texto, contacto y referencia. Una referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las Stories llevan el contacto en el medio.
 
 ## Esa gotera no se arregla sola
 
@@ -12,6 +12,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos qué necesitas y en qué comuna buscas atención.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+gasfiter%C3%ADa+para+mi+hogar.+Referencia+CP-15F840DBF69B
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Tu búsqueda empieza con un mensaje
+
+Formato: video. Referencia: CP-73D7A31DD0C3.
+
+¿No sabes por dónde empezar a buscar? ConectaProIA te ayuda a buscar contactos. Un mensaje claro puede incluir el servicio que necesitas y tu comuna.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-73D7A31DD0C3
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -82,6 +98,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## De los pendientes al primer mensaje
+
+Formato: video. Referencia: CP-C3EA34BF25F9.
+
+¿Tienes pendientes en casa? Busca contactos de gasfitería, electricidad o mudanzas con ConectaProIA. Empieza por una necesidad concreta.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Escríbenos qué servicio necesitas y tu comuna. Confirma disponibilidad y valores con cada profesional.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+para+el+hogar.+Referencia+CP-C3EA34BF25F9
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Servicios para tu hogar
 
 Formato: video. Referencia: CP-2A95478AC115.
@@ -109,6 +141,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos tu comuna y qué estás buscando para compartir.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+pizzer%C3%ADas+en+mi+comuna.+Referencia+CP-B5873C090016
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Busca peluquería canina por tu comuna
+
+Formato: video. Referencia: CP-C25E16FBE51B.
+
+¿Buscas peluquería para tu perro? ConectaProIA te ayuda a buscar contactos de peluquería canina según tu necesidad y comuna.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos tu comuna y qué servicio buscas para tu mascota. Consulta horarios, valores y condiciones directamente con cada profesional.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+peluquer%C3%ADa+canina.+Referencia+CP-C25E16FBE51B
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.

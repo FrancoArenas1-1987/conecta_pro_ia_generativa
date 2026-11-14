@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "format": "1080x1920, H.264/AAC, 30 fps",
+  "audio": "Original locally synthesized music and effects; no external TTS or paid API",
+  "layout": {
+    "safe_rectangle": [
+      90,
+      290,
+      990,
+      1240
+    ],
+    "rationale": "Core copy above lower 35%; modest additional margins for Reels interface."
+  },
+  "entries": [
+    {
+      "id": "mensaje_claro_reel_20261114_v1",
+      "title": "Tu búsqueda empieza con un mensaje",
+      "style": "animated_message",
+      "duration": 15,
+      "service": "profesionales y servicios",
+      "intro": "¿No sabes por dónde empezar a buscar? ConectaProIA te ayuda a buscar contactos. Un mensaje claro puede incluir el servicio que necesitas y tu comuna.",
+      "cta": "Cuéntanos qué necesitas y en qué comuna buscas atención.",
+      "eyebrow": "ASÍ EMPIEZA TU BÚSQUEDA",
+      "palette": [
+        "#F5F1E8",
+        "#103F35",
+        "#BAE84B"
+      ],
+      "headlines": [
+        "¿Por dónde\nempiezo?",
+        "Tu necesidad\n+ tu comuna",
+        "Busca contactos.\nTú decides.",
+        "Tu búsqueda\nempieza aquí."
+      ],
+      "phases": [
+        0,
+        2.3,
+        7.5,
+        10.5,
+        15
+      ],
+      "body": [
+        "Empieza con un mensaje.",
+        "Ejemplo de consulta",
+        "Consulta condiciones directamente.",
+        "Cuéntanos qué necesitas."
+      ]
+    },
+    {
+      "id": "pendientes_hogar_reel_20261114_v1",
+      "title": "De los pendientes al primer mensaje",
+      "style": "kinetic_checklist",
+      "duration": 12.6,
+      "service": "servicios para el hogar",
+      "intro": "¿Tienes pendientes en casa? Busca contactos de gasfitería, electricidad o mudanzas con ConectaProIA. Empieza por una necesidad concreta.",
+      "cta": "Escríbenos qué servicio necesitas y tu comuna. Confirma disponibilidad y valores con cada profesional.",
+      "eyebrow": "PARA LOS PENDIENTES DE TU CASA",
+      "palette": [
+        "#13243A",
+        "#FFF5E7",
+        "#FFBD57"
+      ],
+      "headlines": [
+        "¿Otro pendiente\nen casa?",
+        "Una necesidad.\nTu comuna.",
+        "De la lista\nal primer mensaje."
+      ],
+      "phases": [
+        0,
+        2,
+        7.5,
+        12.6
+      ],
+      "body": [
+        "Empieza por lo que necesitas.",
+        "Busca contactos para tu hogar.",
+        "Cuéntanos qué necesitas resolver."
+      ]
+    },
+    {
+      "id": "peluqueria_canina_reel_20261114_v1",
+      "title": "Busca peluquería canina por tu comuna",
+      "style": "pet_editorial",
+      "duration": 13.8,
+      "service": "peluquería canina",
+      "intro": "¿Buscas peluquería para tu perro? ConectaProIA te ayuda a buscar contactos de peluquería canina según tu necesidad y comuna.",
+      "cta": "Cuéntanos tu comuna y qué servicio buscas para tu mascota. Consulta horarios, valores y condiciones directamente con cada profesional.",
+      "eyebrow": "PARA EL CUIDADO DE TU MASCOTA",
+      "palette": [
+        "#103E35",
+        "#FFF6E8",
+        "#C8EE69"
+      ],
+      "headlines": [
+        "¿Peluquería\npara tu perro?",
+        "Tu mascota.\nTu comuna.",
+        "Busca contactos\npara tu mascota."
+      ],
+      "phases": [
+        0,
+        3,
+        8,
+        13.8
+      ],
+      "body": [
+        "Empieza por tu comuna.",
+        "Cuéntanos qué servicio buscas.",
+        "Consulta opciones y horarios."
+      ]
+    }
+  ]
+}

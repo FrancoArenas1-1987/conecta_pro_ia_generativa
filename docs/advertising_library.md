@@ -1,6 +1,6 @@
 # Biblioteca de campañas publicitarias
 
-La biblioteca incorpora diez imágenes de campaña y seis videos. Es adicional a las imágenes habituales por servicio y a los carruseles existentes.
+La biblioteca incorpora diez imágenes de campaña y nueve videos. Es adicional a las imágenes habituales por servicio y a los carruseles existentes.
 
 Los ángulos editoriales incluyen hogar, mascotas, variedad de servicios, marca, cómo buscar por necesidad y comuna, preguntas antes de contratar y la diferencia entre buscar contactos gratis y pagar por el trabajo profesional. No se presentan las personas ilustradas como testimonios o proveedores identificados.
 
@@ -38,3 +38,8 @@ La generación automática pagada de imágenes sigue desactivada. Esta bibliotec
 ## Tanda para consultas por necesidad y comuna
 
 Cuatro piezas nuevas de hogar, búsqueda por comuna, traducción y pizzerías se documentan en contacto_campaigns.md. Cada una tiene feed y Story, texto revisado y referencia de consulta. Sus originales y ocho JPEG de entrega se conservan en output/advertising/contacto_2026_11_13. Los nuevos elementos se intercalan al comienzo del manifiesto con los existentes; no se aumenta la frecuencia y la cola conserva todos sus comprobantes. El mínimo de repetición de estas cuatro piezas es de 21 días.
+
+
+## Tanda de Reels con movimiento original
+
+Tres videos nuevos incluyen ejemplo de mensaje animado, lista de pendientes del hogar y peluquería canina con escena ilustrativa. Son piezas verticales de 12,6 a 15 segundos con música y efectos originales, textos dentro de la zona segura y referencia WhatsApp por pieza. La investigación, hipótesis y criterios se documentan en reels_strategy_20261114.md. Los originales y galerías quedan en output/advertising/reels_2026_11_14; la plantilla contiene diecinueve entradas y permanece desactivada para restauración.

@@ -36,6 +36,41 @@
       }
     },
     {
+      "campaign_id": "mensaje_claro_reel_20261114_v1",
+      "title": "Tu búsqueda empieza con un mensaje",
+      "angle": "animated_message",
+      "objective": "captar_clientes",
+      "media_type": "video",
+      "video": "mensaje_claro_reel_20261114_v1.mp4",
+      "cover": "mensaje_claro_reel_20261114_v1_cover.jpg",
+      "duration_seconds": 15,
+      "sha256": "20ca4ad8e40159d3ddf55a0b44c604517c364aa82be588ec50b46c0f8d775d03",
+      "cover_sha256": "37c4005a6f7678c3bc16c59a3aa1812a8475056f13f85659c9e88ef63a0133ce",
+      "caption": "¿No sabes por dónde empezar a buscar? ConectaProIA te ayuda a buscar contactos. Un mensaje claro puede incluir el servicio que necesitas y tu comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas y en qué comuna buscas atención.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-73D7A31DD0C3\nWeb: https://conectaproia.cl\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "9653da505af9138c95dda9814b0441ea58080b82185be87c5cf3e6686cf2c1ca",
+      "tracking_code": "CP-73D7A31DD0C3",
+      "approval_status": "approved",
+      "enabled": true,
+      "repeat_after_days": 21,
+      "publish_stories": true,
+      "audio": "original_locally_synthesized",
+      "public_video_url": "https://conectaproia.cl/campanas/20ca4ad8e40159d3ddf5.mp4",
+      "reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "caption_reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "review": {
+        "method": "source_and_rendered_scene_review",
+        "safe_rectangle": [
+          90,
+          290,
+          990,
+          1240
+        ],
+        "text_boxes_verified_during_render": true,
+        "phone": "56983434503",
+        "audio": "original_music_and_effects_no_narration"
+      }
+    },
+    {
       "campaign_id": "guia_siglo_xxi_v1",
       "title": "La guía de servicios del siglo XXI",
       "video": "conectaproia_publicitario_v1_meta.mp4",
@@ -139,6 +174,41 @@
       }
     },
     {
+      "campaign_id": "pendientes_hogar_reel_20261114_v1",
+      "title": "De los pendientes al primer mensaje",
+      "angle": "kinetic_checklist",
+      "objective": "captar_clientes",
+      "media_type": "video",
+      "video": "pendientes_hogar_reel_20261114_v1.mp4",
+      "cover": "pendientes_hogar_reel_20261114_v1_cover.jpg",
+      "duration_seconds": 12.6,
+      "sha256": "e4ba869d627af8092fd74c7c516c5d8e317e14e57d9ce1b67453b45ba2ba28fa",
+      "cover_sha256": "633d3541604fd00018fe74c9e89bf50aaf01f26ffce45431cbff9ec9445191d2",
+      "caption": "¿Tienes pendientes en casa? Busca contactos de gasfitería, electricidad o mudanzas con ConectaProIA. Empieza por una necesidad concreta.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nEscríbenos qué servicio necesitas y tu comuna. Confirma disponibilidad y valores con cada profesional.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+para+el+hogar.+Referencia+CP-C3EA34BF25F9\nWeb: https://conectaproia.cl\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "4f676e963e82a9d68e9fa4206d9b7297d9cc99a15e2566a7649ba52eb459c0cd",
+      "tracking_code": "CP-C3EA34BF25F9",
+      "approval_status": "approved",
+      "enabled": true,
+      "repeat_after_days": 21,
+      "publish_stories": true,
+      "audio": "original_locally_synthesized",
+      "public_video_url": "https://conectaproia.cl/campanas/e4ba869d627af8092fd7.mp4",
+      "reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "caption_reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "review": {
+        "method": "source_and_rendered_scene_review",
+        "safe_rectangle": [
+          90,
+          290,
+          990,
+          1240
+        ],
+        "text_boxes_verified_during_render": true,
+        "phone": "56983434503",
+        "audio": "original_music_and_effects_no_narration"
+      }
+    },
+    {
       "campaign_id": "hogar_sin_vueltas_v1",
       "title": "Servicios para tu hogar",
       "video": "hogar_sin_vueltas_v1.mp4",
@@ -203,6 +273,43 @@
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
       }
+    },
+    {
+      "campaign_id": "peluqueria_canina_reel_20261114_v1",
+      "title": "Busca peluquería canina por tu comuna",
+      "angle": "pet_editorial",
+      "objective": "captar_clientes",
+      "media_type": "video",
+      "video": "peluqueria_canina_reel_20261114_v1.mp4",
+      "cover": "peluqueria_canina_reel_20261114_v1_cover.jpg",
+      "duration_seconds": 13.8,
+      "sha256": "6319efababd460f0a60863dfef5d8b720d4f4f0f6ef6000c305a9a6a5712a4cf",
+      "cover_sha256": "f82ebf043fab991341f127b462b66996cc2e55f1749358e76ac77025979c03b7",
+      "caption": "¿Buscas peluquería para tu perro? ConectaProIA te ayuda a buscar contactos de peluquería canina según tu necesidad y comuna.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos tu comuna y qué servicio buscas para tu mascota. Consulta horarios, valores y condiciones directamente con cada profesional.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+peluquer%C3%ADa+canina.+Referencia+CP-C25E16FBE51B\nWeb: https://conectaproia.cl\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "369570e3baa8201e9b70779c2ed55a74e7e154f8a08c013e3c865ea357f3981b",
+      "tracking_code": "CP-C25E16FBE51B",
+      "approval_status": "approved",
+      "enabled": true,
+      "repeat_after_days": 21,
+      "publish_stories": true,
+      "audio": "original_locally_synthesized",
+      "public_video_url": "https://conectaproia.cl/campanas/6319efababd460f0a608.mp4",
+      "reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "caption_reviewed_at": "2026-11-14T12:25:49.822010+00:00",
+      "review": {
+        "method": "source_and_rendered_scene_review",
+        "safe_rectangle": [
+          90,
+          290,
+          990,
+          1240
+        ],
+        "text_boxes_verified_during_render": true,
+        "phone": "56983434503",
+        "audio": "original_music_and_effects_no_narration"
+      },
+      "source_file": "peluqueria_canina_escena.png",
+      "source_sha256": "95af72bb5fd5654b58932bc745e7ca6294e30b760470831b4325bebaf07a16f8"
     },
     {
       "campaign_id": "antes_de_contratar_v1",
