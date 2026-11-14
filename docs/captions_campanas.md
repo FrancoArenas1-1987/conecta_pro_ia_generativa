@@ -2,6 +2,23 @@
 
 Cada pieza conserva texto, contacto y referencia. Una referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las Stories llevan el contacto en el medio. Las entradas deshabilitadas se conservan para trazabilidad y no se seleccionan para publicación.
 
+## Las amarillas del 2026
+
+Formato: image. Referencia: CP-3FABDCAFFEEE. Estado: habilitada.
+Vigencia: hasta 2027-01-01T00:00:00Z.
+
+Las amarillas del 2026 para tus necesidades del día a día. Busca contactos de profesionales y servicios con ConectaProIA: cuéntanos qué necesitas y en qué comuna buscas atención.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Escríbenos qué servicio buscas y en qué comuna necesitas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios+en+mi+comuna.+Referencia+CP-3FABDCAFFEEE
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Una mudanza empieza antes del camión
 
 Formato: image. Referencia: CP-F3C2A9F6621F. Estado: habilitada.
@@ -67,6 +84,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## El servicio que buscas, por tu comuna
+
+Formato: image. Referencia: CP-03A02119495A. Estado: habilitada.
+
+¿Qué servicio buscas y en qué comuna? ConectaProIA te ayuda a buscar contactos de proveedores y profesionales. Empieza por contarnos tu necesidad; la disponibilidad y las condiciones se consultan directamente con cada prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos el servicio que necesitas y tu comuna por WhatsApp.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+proveedores+de+servicios+en+mi+comuna.+Referencia+CP-03A02119495A
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Una necesidad, una comuna, un contacto
 
 Formato: image. Referencia: CP-2DFA8077F47F. Estado: habilitada.
@@ -124,6 +157,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos el idioma, qué documento necesitas traducir y en qué comuna buscas atención.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+traducci%C3%B3n+de+documentos.+Referencia+CP-83D19BD2E1E0
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## ¿A quién llamo para esto?
+
+Formato: image. Referencia: CP-92A5FD93C9EB. Estado: habilitada.
+
+¿Un pendiente en casa y no sabes a quién consultar? Busca contactos de electricidad, gasfitería o mudanzas con ConectaProIA. Dinos qué necesitas y en qué comuna buscas; confirma valores y disponibilidad con cada profesional.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos tu pendiente y tu comuna para empezar a buscar contactos.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+electricidad%2C+gasfiter%C3%ADa+o+mudanzas.+Referencia+CP-92A5FD93C9EB
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.

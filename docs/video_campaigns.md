@@ -37,6 +37,11 @@ La rama `mejoras` conserva el trabajo local de desarrollo. Una rama de respaldo 
 
 ## Revisión editorial y ampliación de noviembre
 
-Las 30 imágenes habituales se recompusieron con textos prudentes, palabras completas y escenas corregidas por servicio. Se conserva cada original y su aprobación anterior. El video antiguo `mascotas_bien_cuidadas_v1` queda desactivado por fotografías poco representativas; el Reel canino nuevo sigue activo. Hay 21 campañas registradas, 20 habilitadas (12 imágenes y 8 videos).
+Las 30 imágenes habituales se recompusieron con textos prudentes, palabras completas y escenas corregidas por servicio. Se conserva cada original y su aprobación anterior. El video antiguo `mascotas_bien_cuidadas_v1` queda desactivado por fotografías poco representativas; el Reel canino nuevo sigue activo. La revisión inicial dejó 21 campañas registradas y 20 habilitadas (12 imágenes y 8 videos).
 
 Dos campañas nuevas de mudanzas y mecánica automotriz tienen Feed, Story y enlace medible. Se mantienen las ventanas y la frecuencia. Ver `editorial_review_20261114.md`.
+
+
+## Diseños y formatos variados
+
+La ampliación siguiente suma tres conceptos: guía amarilla del 2026, búsqueda por comuna y pendientes cotidianos. Hay dos Feed 4:5, un Feed cuadrado 1:1 y tres Stories con composición propia 9:16. La biblioteca actual tiene 24 entradas: 23 habilitadas (15 campañas de imagen y 8 videos), además de las 30 imágenes habituales por servicio. La pieza con año 2026 tiene fecha de caducidad. Ver `variedad_campaigns_20261114.md`.

@@ -101,6 +101,12 @@ class CampaignQueue:
                         raise ValueError('Campaign not_before must include a timezone')
                     if now < after:
                         continue
+                if item.get('not_after'):
+                    deadline = datetime.fromisoformat(item['not_after'].replace('Z', '+00:00'))
+                    if deadline.tzinfo is None:
+                        raise ValueError('Campaign not_after must include a timezone')
+                    if now >= deadline:
+                        continue
                 history = db.execute('SELECT started_at,status FROM attempts WHERE campaign=? ORDER BY started_at DESC LIMIT 1', (code,)).fetchone()
                 if history:
                     stamp, status = history

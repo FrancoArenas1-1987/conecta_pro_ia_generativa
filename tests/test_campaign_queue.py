@@ -299,3 +299,27 @@ def test_upload_phase_is_durable_before_any_publication_result(tmp_path):
         row=db.execute("select status,receipt from deliveries").fetchone()
         assert row[0]=='sending'
         assert json.loads(row[1])=={'phase':'finishing','video_id':'123','publication_may_have_occurred':True}
+
+
+def test_dated_campaign_is_eligible_before_expiry(tmp_path):
+    dated=entry("year_2026")
+    dated["not_after"]="2027-01-01T00:00:00Z"
+    q=CampaignQueue(tmp_path)
+    assert q.claim(manifest(dated), datetime(2026,12,31,23,59,tzinfo=timezone.utc))["campaign"]["campaign_id"]=="year_2026"
+
+@pytest.mark.parametrize("when",[
+    datetime(2027,1,1,tzinfo=timezone.utc),
+    datetime(2027,1,15,tzinfo=timezone.utc),
+])
+def test_expired_campaign_is_skipped_while_evergreen_rotation_continues(tmp_path,when):
+    dated=entry("year_2026");dated["not_after"]="2027-01-01T00:00:00Z"
+    q=CampaignQueue(tmp_path)
+    selected=q.claim(manifest(dated,entry("evergreen")),when)
+    assert selected["campaign"]["campaign_id"]=="evergreen"
+    with q.connect() as db:
+        assert db.execute("SELECT COUNT(*) FROM attempts WHERE campaign='year_2026'").fetchone()[0]==0
+
+def test_expiry_requires_an_explicit_timezone(tmp_path):
+    dated=entry("year_2026");dated["not_after"]="2027-01-01T00:00:00"
+    with pytest.raises(ValueError,match="not_after must include a timezone"):
+        CampaignQueue(tmp_path).claim(manifest(dated),NOW)
