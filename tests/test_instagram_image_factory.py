@@ -123,7 +123,7 @@ def test_fitted_text_preserves_full_copy_and_measures_drawn_bounds():
         calls.append((xy, text, kwargs))
         return original(xy, text, **kwargs)
     draw.text = record
-    text = 'Árbol ' + 'especialización'*5 + ' WhatsApp'
+    text = 'Árbol ' + 'especialización '*5 + ' WhatsApp'
     box = factory.draw_fitted_text(draw, (20, 20, 550, 270), text, factory.FONTS['body'], 'black', min_size=24)
     assert ''.join(t.replace(' ', '') for _, t, _ in calls) == text.replace(' ', '')
     for xy, text, kwargs in calls:
@@ -195,3 +195,54 @@ def test_linux_font_bearings_and_variable_copy(tmp_path, monkeypatch):
         monkeypatch.setitem(factory.FONTS, key, ImageFont.truetype(str(directory / filename), value.size))
     for name in ['Electricidad', 'Lavandería / Tintorería', 'Restaurante / Comida preparada', 'Traductor Inglés - Español']:
         assert preflight_layout(DbService('regression', name, 123456), tmp_path)['layout']['issues'] == []
+
+
+@pytest.mark.parametrize(("code", "required"), [
+    ("aire_acondicionado_calefaccion", "wall-mounted split air conditioner"),
+    ("calefont_termos", "domestic water heater"),
+    ("peluqueria_canina", "dog grooming"),
+    ("medico_veterinario", "healthy dog"),
+    ("fletes_mudanzas", "moving van"),
+])
+def test_specific_scene_precedes_broad_keyword(code, required):
+    assert required in factory.visual_scene_hint(DbService(code, code, 3))
+
+
+def test_composition_does_not_claim_verification_speed_or_live_inventory(tmp_path, monkeypatch):
+    base = tmp_path / "base.png"
+    Image.new("RGB", (1080, 1350), "white").save(base)
+    captured = []
+    original = factory.draw_fitted_text
+    def capture(draw, box, text, *args, **kwargs):
+        captured.append(text)
+        return original(draw, box, text, *args, **kwargs)
+    monkeypatch.setattr(factory, "draw_fitted_text", capture)
+    factory.compose_asset(base_path=base, output_path=tmp_path / "final.png",
+        service=DbService("gasfiteria", "Gasfiteria", 9876))
+    rendered = " ".join(captured).lower()
+    assert "buscar contactos es gratis" in rendered
+    assert "el servicio lo cobra cada profesional" in rendered
+    assert "gasfíter" in rendered
+    for forbidden in ["verificad", "rápida", "9876", "profesionales activos", "servicio disponible"]:
+        assert forbidden not in rendered
+
+
+@pytest.mark.parametrize("label", ["climatización", "kinesiología", "hamburguesas", "electrodomésticos", "sanitización"])
+def test_headline_shrinks_before_splitting_words_or_punctuation(label, monkeypatch):
+    draw = factory.ImageDraw.Draw(Image.new("RGB", (1080, 1350), "white"))
+    lines = []
+    original = draw.text
+    def capture(position, text, *args, **kwargs):
+        lines.append(text)
+        return original(position, text, *args, **kwargs)
+    monkeypatch.setattr(draw, "text", capture)
+    factory.draw_fitted_text(draw, (64, 182, 604, 410), "¿Buscas\n"+label+"?",
+        factory.FONTS["title"], "black", min_size=38, gap=10)
+    assert lines == ["¿Buscas", label+"?"]
+
+
+def test_unbreakable_unreadable_word_fails_instead_of_slicing_letters():
+    draw = factory.ImageDraw.Draw(Image.new("RGB", (600, 300)))
+    with pytest.raises(RuntimeError, match="cannot fit"):
+        factory.draw_fitted_text(draw, (20, 20, 550, 270), "especialización"*5,
+            factory.FONTS["body"], "black", min_size=24)

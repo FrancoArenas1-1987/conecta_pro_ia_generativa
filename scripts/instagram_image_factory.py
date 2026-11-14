@@ -38,7 +38,7 @@ SOURCE_SAFE_MARGIN = 56
 PHONE = "+56 9 8343 4503"
 SITE = "conectaproia.cl"
 BRAND = "ConectaProIA"
-QUALITY_STANDARD_VERSION = 7
+QUALITY_STANDARD_VERSION = 8
 REFERENCE_SEEDS = {
     "electricidad": "electricidad_reparacion_01.png",
 }
@@ -294,6 +294,16 @@ def service_tokens(service: DbService) -> list[str]:
 
 def visual_scene_hint(service: DbService) -> str:
     text = f"{service.code} {service.name}".lower()
+    if "peluqueria_canina" in text or "peluquería canina" in text:
+        return "dog grooming setting with a dog, grooming brush and towel, no human beauty treatment"
+    if "veterinar" in text:
+        return "veterinarian gently examining a healthy dog in a veterinary consultation room, no human patient"
+    if "aire_acondicionado" in text or "climat" in text:
+        return "HVAC technician inspecting a wall-mounted split air conditioner, no sink or plumbing scene"
+    if "calefont" in text or "termos" in text:
+        return "technician beside a closed wall-mounted domestic water heater, inspection only, no sink repair"
+    if "flete" in text or "mudanza" in text:
+        return "moving worker with cardboard household boxes and an unbranded moving van"
     if any(x in text for x in ("electric", "enchufe", "tablero", "luz")):
         return (
             "certified electrician actively repairing or inspecting an open electrical outlet or breaker panel, "
@@ -464,29 +474,32 @@ def draw_fitted_text(draw, bounds, text, fnt, fill, *, min_size: int = 16, gap: 
     """Measure full copy with the actual font and fit it within a fixed region.
 
     Never truncate copy. Impossible layouts fail during preflight before spending.
-    Long words are split by glyph width; Linux fallback fonts are measured too.
+    Keep words and their punctuation intact; shrink the font before wrapping. Linux fallback fonts are measured too.
     """
     x1, y1, x2, y2 = bounds
     for size in range(fnt.size, min_size - 1, -1):
         fitted = fnt.font_variant(size=size)
         lines = []
+        word_too_wide = False
         for paragraph in text.splitlines():
             line = ""
             for word in paragraph.split():
+                if text_size(draw, word, fitted)[0] > x2 - x1:
+                    word_too_wide = True
+                    break
                 trial = (line + " " + word).strip()
                 if text_size(draw, trial, fitted)[0] <= x2 - x1:
                     line = trial
-                    continue
-                if line:
-                    lines.append(line)
-                    line = ""
-                for char in word:
-                    if line and text_size(draw, line + char, fitted)[0] > x2 - x1:
+                else:
+                    if line:
                         lines.append(line)
-                        line = ""
-                    line += char
+                    line = word
+            if word_too_wide:
+                break
             if line:
                 lines.append(line)
+        if word_too_wide:
+            continue
         measured = [draw.textbbox((0, 0), line, font=fitted, anchor="lt") for line in lines]
         heights = [b[3] - b[1] for b in measured]
         height = sum(heights) + gap * max(0, len(lines) - 1)
@@ -518,8 +531,8 @@ def stable_accent(code: str) -> tuple[int, int, int]:
 
 def draw_footer(draw, service: DbService, x: int, y: int, max_width: int, fill) -> tuple[int, int, int, int]:
     text = (
-        f"ConectaProIA actúa como intermediario y no presta directamente servicios de {service.name}. "
-        "La prestación es responsabilidad del proveedor/profesional."
+        "Buscar contactos es gratis. El servicio lo cobra cada profesional. "
+        "Disponibilidad y valores se confirman directamente."
     )
     return draw_fitted_text(draw, (x, y, x + max_width, 1306), text, FONTS["tiny"], fill, min_size=16, gap=4)
 
@@ -529,14 +542,24 @@ def headline_for_service(service: DbService) -> str:
     mapping = {
         "aire_acondicionado_calefaccion": "climatización",
         "electricidad": "un electricista",
-        "gasfiteria": "un gasfiter",
+        "gasfiteria": "un gasfíter",
         "kinesiologia": "kinesiología",
         "comida_preparada_restaurante": "comida preparada",
+        "dentista": "un dentista", "comida_sushi": "sushi", "arquitectura": "arquitectura",
+        "comida_sandwiches_completos": "sándwiches y completos", "comida_pizzeria": "una pizzería",
+        "terapeuta_ocupacional": "terapia ocupacional", "medico_veterinario": "atención veterinaria",
+        "comida_hamburguesas": "hamburguesas", "psicologia": "psicología", "fletes_mudanzas": "fletes y mudanzas",
+        "mecanica_automotriz": "mecánica automotriz", "peluqueria_canina": "peluquería canina",
+        "calefont_termos": "calefont y termos", "camaras_seguridad": "cámaras de seguridad",
+        "reparacion_pc_notebook": "soporte para tu PC", "medicina_general": "medicina general",
+        "corretaje_de_propiedades": "corretaje de propiedades", "imagenologia_ecografia": "imagenología y ecografía",
+        "reparacion_electrodomesticos": "reparar electrodomésticos", "cerrajeria": "cerrajería",
+        "sanitizacion": "sanitización", "cosmetologia_limpieza_facial": "limpieza facial",
+        "desarrollo_web": "desarrollo de software", "agencia_de_viajes": "una agencia de viajes",
+        "guia_turistico": "un guía turístico", "lavanderia_tintoreria": "lavandería y tintorería",
     }
     label = mapping.get(service.code, service.name)
-    if len(label) > 28:
-        label = "este servicio"
-    return "¿Necesitas\n" + label + "?"
+    return "¿Buscas\n" + label + "?"
 
 
 def draw_card_icon(draw, *, kind: str, cx: int, cy: int, accent: tuple[int, int, int]) -> None:
@@ -607,7 +630,7 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
     guard = LayoutGuard(asset_name=output_path.name, width=W, height=H)
 
     left_w = 610
-    draw.rectangle((0, 0, left_w, 930), fill=(255, 255, 255, 246))
+    draw.rectangle((0, 0, left_w, 930), fill=(255, 255, 255, 255))
     fade = Image.new("RGBA", (140, 930), (255, 255, 255, 0))
     fpx = fade.load()
     for fx in range(140):
@@ -616,7 +639,7 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
             fpx[fx, fy] = (255, 255, 255, alpha)
     canvas.alpha_composite(fade, (left_w, 0))
     draw.rectangle((0, 0, W, 46), fill=(255, 255, 255, 222))
-    draw.rectangle((0, 930, W, H), fill=(244, 248, 252, 245))
+    draw.rectangle((0, 930, W, H), fill=(244, 248, 252, 255))
 
     x, y = 64, 70
     draw.ellipse((x, y, x + 58, y + 58), fill=navy)
@@ -626,14 +649,14 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
     guard.add("brand", (x, y, x + 440, y + 86))
 
     guard.add("title", draw_fitted_text(draw, (x, 182, x+540, 410), headline_for_service(service), FONTS["title"], navy, min_size=38, gap=10))
-    desc = f"Te conectamos por WhatsApp con opciones locales de {service.name}."
+    desc = "Cuéntanos qué necesitas y en qué comuna buscas atención."
     guard.add("description", draw_fitted_text(draw, (x, 432, x+520, 556), desc, FONTS["body"], (51, 65, 85, 255), min_size=24, gap=8))
     y = 580
-    guard.add("card_fast", draw_info_card(draw, x, y, "Atención rápida", "por WhatsApp", "fast", green[:3]))
+    guard.add("card_fast", draw_info_card(draw, x, y, "Contacto directo", "por WhatsApp", "fast", green[:3]))
     y += 116
-    guard.add("card_options", draw_info_card(draw, x, y, "Opciones locales", "profesionales activos", "local", navy[:3]))
+    guard.add("card_options", draw_info_card(draw, x, y, "Tu comuna", "Indica dónde buscas", "local", navy[:3]))
     y += 116
-    guard.add("card_service", draw_info_card(draw, x, y, "Servicio disponible", f"{service.provider_count} profesionales activos", "service", accent))
+    guard.add("card_service", draw_info_card(draw, x, y, "Consulta condiciones", "Valores y disponibilidad", "service", accent))
 
     draw.rounded_rectangle((52, 960, 1028, 1168), radius=20, fill=navy)
     guard.add("cta_panel", (52, 960, 1028, 1168), kind="background")
@@ -645,7 +668,7 @@ def compose_premium_reference_asset(*, base_path: Path, output_path: Path, servi
     guard.add("site", site_box)
 
     fy = 1188
-    labels = ["Contacto directo", "Profesionales locales", "Respuesta WhatsApp", "Intermediario"]
+    labels = ["Búsqueda gratis", "Contacto directo", "Tú decides", "Intermediario"]
     trust_x = [58, 310, 560, 800]
     for idx, (bx, label) in enumerate(zip(trust_x, labels)):
         draw.ellipse((bx, fy + 8, bx + 24, fy + 32), outline=navy, width=3)

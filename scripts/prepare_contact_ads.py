@@ -1,4 +1,4 @@
-"""Prepare delivery formats and tracked captions from four built-in-generated originals.
+"""Prepare delivery formats and tracked captions from built-in-generated originals.
 No AI API calls and no publishing. Approval remains a separate editorial step.
 """
 from __future__ import annotations
@@ -36,8 +36,8 @@ def delivery(source,target,*,story,background):
             raise ValueError("Invalid delivery format")
         image.verify()
 
-def prepare(folder):
-    specs=json.loads((ROOT/"config/campaigns.contacto.prompts.json").read_text(encoding="utf-8"))["entries"]
+def prepare(folder, spec_path=None):
+    specs=json.loads(Path(spec_path or ROOT/"config/campaigns.contacto.prompts.json").read_text(encoding="utf-8"))["entries"]
     folder=Path(folder);folder.mkdir(parents=True,exist_ok=True)
     entries=[]
     for spec in specs:
@@ -51,8 +51,8 @@ def prepare(folder):
             "\nWeb: https://conectaproia.cl\n\n"+DISCLAIMER+"\n\n#ConectaProIA #Servicios #Chile")
         validate_caption(caption,whatsapp_url=CONTACT)
         feed=folder/(code+"_feed.jpg");story=folder/(code+"_story.jpg")
-        delivery(source,feed,story=False,background=BACKGROUNDS[code])
-        delivery(source,story,story=True,background=BACKGROUNDS[code])
+        delivery(source,feed,story=False,background=spec.get("background") or BACKGROUNDS[code])
+        delivery(source,story,story=True,background=spec.get("background") or BACKGROUNDS[code])
         entries.append({"campaign_id":code,"title":spec["title"],"angle":spec["angle"],
           "objective":"captar_clientes","caption":caption,"caption_sha256":caption_digest(caption),
           "tracking_code":reference,"media_type":"image","image":feed.name,"sha256":digest(feed),
@@ -71,4 +71,5 @@ def prepare(folder):
 if __name__=="__main__":
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output",type=Path,default=DEFAULT_OUT)
-    args=parser.parse_args();prepare(args.output)
+    parser.add_argument("--specs",type=Path,help="Campaign descriptions and source prompts")
+    args=parser.parse_args();prepare(args.output,args.specs)

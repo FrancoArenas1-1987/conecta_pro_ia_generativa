@@ -33,3 +33,10 @@ python scripts/campaign_status.py
 Los generadores usan Pillow, MoviePy y FFmpeg; actualmente seleccionan fuentes de Windows. Las imágenes de entrada, la música y las salidas se conservan en las carpetas indicadas en cada script. Los MP4 y el estado mutable de producción requieren un respaldo aparte de Git.
 
 La rama `mejoras` conserva el trabajo local de desarrollo. Una rama de respaldo del VPS registra por separado las diferencias del código del contenedor desplegado. Un push a `main` puede activar el workflow de despliegue existente: el respaldo de código no exige ejecutar ese despliegue.
+
+
+## Revisión editorial y ampliación de noviembre
+
+Las 30 imágenes habituales se recompusieron con textos prudentes, palabras completas y escenas corregidas por servicio. Se conserva cada original y su aprobación anterior. El video antiguo `mascotas_bien_cuidadas_v1` queda desactivado por fotografías poco representativas; el Reel canino nuevo sigue activo. Hay 21 campañas registradas, 20 habilitadas (12 imágenes y 8 videos).
+
+Dos campañas nuevas de mudanzas y mecánica automotriz tienen Feed, Story y enlace medible. Se mantienen las ventanas y la frecuencia. Ver `editorial_review_20261114.md`.

@@ -1,10 +1,26 @@
 # Textos aprobados de las campañas
 
-Cada pieza conserva texto, contacto y referencia. Una referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las Stories llevan el contacto en el medio.
+Cada pieza conserva texto, contacto y referencia. Una referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las Stories llevan el contacto en el medio. Las entradas deshabilitadas se conservan para trazabilidad y no se seleccionan para publicación.
+
+## Una mudanza empieza antes del camión
+
+Formato: image. Referencia: CP-F3C2A9F6621F. Estado: habilitada.
+
+¿Te cambias de casa? Busca contactos de fletes y mudanzas con ConectaProIA. Para consultar, indica tu comuna de origen, destino y fecha estimada; los detalles se acuerdan con cada prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas trasladar y en qué comuna buscas.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+fletes+y+mudanzas.+Referencia+CP-F3C2A9F6621F
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
 
 ## Esa gotera no se arregla sola
 
-Formato: image. Referencia: CP-15F840DBF69B.
+Formato: image. Referencia: CP-15F840DBF69B. Estado: habilitada.
 
 ¿Esa gotera sigue pendiente? ConectaProIA te ayuda a buscar contactos de gasfitería para tu hogar.
 
@@ -20,7 +36,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Tu búsqueda empieza con un mensaje
 
-Formato: video. Referencia: CP-73D7A31DD0C3.
+Formato: video. Referencia: CP-73D7A31DD0C3. Estado: habilitada.
 
 ¿No sabes por dónde empezar a buscar? ConectaProIA te ayuda a buscar contactos. Un mensaje claro puede incluir el servicio que necesitas y tu comuna.
 
@@ -36,7 +52,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## La guía de servicios del siglo XXI
 
-Formato: video. Referencia: CP-2EAFDEC0D833.
+Formato: video. Referencia: CP-2EAFDEC0D833. Estado: habilitada.
 
 ¿Necesitas un profesional o un servicio para tu hogar?
 
@@ -53,7 +69,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Una necesidad, una comuna, un contacto
 
-Formato: image. Referencia: CP-2DFA8077F47F.
+Formato: image. Referencia: CP-2DFA8077F47F. Estado: habilitada.
 
 No necesitas saber a quién llamar para empezar. ConectaProIA te ayuda a buscar contactos de profesionales y servicios en Chile.
 
@@ -67,9 +83,25 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Tu próximo contacto para el auto
+
+Formato: image. Referencia: CP-BF25F5B70E1D. Estado: habilitada.
+
+¿Tu auto necesita una revisión? ConectaProIA te ayuda a buscar contactos de mecánica automotriz. Describe lo que necesitas e indica tu comuna para empezar la búsqueda. El diagnóstico y el trabajo se acuerdan directamente con el taller o profesional.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Escríbenos qué necesita tu auto y en qué comuna buscas un taller.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+mec%C3%A1nica+automotriz.+Referencia+CP-BF25F5B70E1D
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Empieza por tu comuna
 
-Formato: image. Referencia: CP-11B4B5CB551F.
+Formato: image. Referencia: CP-11B4B5CB551F. Estado: habilitada.
 
 ¿Cómo empezar? Cuéntanos qué servicio necesitas, indica tu comuna y revisa los contactos disponibles con ConectaProIA.
 
@@ -84,7 +116,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Ese documento necesita traducción
 
-Formato: image. Referencia: CP-83D19BD2E1E0.
+Formato: image. Referencia: CP-83D19BD2E1E0. Estado: habilitada.
 
 ¿Un documento por traducir? Busca contactos de traducción con ConectaProIA. Antes de contratar, confirma idiomas, tipo de traducción, plazos y valores.
 
@@ -100,7 +132,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## De los pendientes al primer mensaje
 
-Formato: video. Referencia: CP-C3EA34BF25F9.
+Formato: video. Referencia: CP-C3EA34BF25F9. Estado: habilitada.
 
 ¿Tienes pendientes en casa? Busca contactos de gasfitería, electricidad o mudanzas con ConectaProIA. Empieza por una necesidad concreta.
 
@@ -116,7 +148,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Servicios para tu hogar
 
-Formato: video. Referencia: CP-2A95478AC115.
+Formato: video. Referencia: CP-2A95478AC115. Estado: habilitada.
 
 ¿Necesitas un electricista, un gasfíter o ayuda con una mudanza?
 
@@ -133,7 +165,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Una pizza empieza por un contacto
 
-Formato: image. Referencia: CP-B5873C090016.
+Formato: image. Referencia: CP-B5873C090016. Estado: habilitada.
 
 ¿Pizza para compartir? Busca contactos de pizzerías con ConectaProIA y consulta opciones, horarios y valores directamente con cada local.
 
@@ -149,7 +181,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Busca peluquería canina por tu comuna
 
-Formato: video. Referencia: CP-C25E16FBE51B.
+Formato: video. Referencia: CP-C25E16FBE51B. Estado: habilitada.
 
 ¿Buscas peluquería para tu perro? ConectaProIA te ayuda a buscar contactos de peluquería canina según tu necesidad y comuna.
 
@@ -165,7 +197,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Antes de contratar, pregunta esto
 
-Formato: image. Referencia: CP-8244BE9D8102.
+Formato: image. Referencia: CP-8244BE9D8102. Estado: habilitada.
 
 Tres preguntas para decidir con información: ¿cuál es el valor?, ¿qué incluye? y ¿hay disponibilidad? Guarda esta lista y encuentra contactos con ConectaProIA.
 
@@ -180,7 +212,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Cuidado para tus mascotas
 
-Formato: video. Referencia: CP-445AB6D73647.
+Formato: video. Referencia: CP-445AB6D73647. Estado: fuera de rotación.
 
 ¿Buscas un veterinario o peluquería canina?
 
@@ -197,7 +229,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Un lugar para tus pendientes
 
-Formato: image. Referencia: CP-2F15C1D5A03D.
+Formato: image. Referencia: CP-2F15C1D5A03D. Estado: habilitada.
 
 Tu hogar, tus mascotas, tu trabajo o una mudanza: las necesidades cambian. ConectaProIA te ayuda a buscar contactos según tu necesidad y comuna.
 
@@ -212,7 +244,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Cómo buscar un servicio
 
-Formato: video. Referencia: CP-03911C733CAA.
+Formato: video. Referencia: CP-03911C733CAA. Estado: habilitada.
 
 Empieza por tu necesidad y tu comuna. ConectaProIA te ayuda a encontrar contactos de profesionales y servicios.
 
@@ -227,7 +259,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Un profesional para tu casa
 
-Formato: image. Referencia: CP-0CF6F83FD573.
+Formato: image. Referencia: CP-0CF6F83FD573. Estado: habilitada.
 
 ¿Buscas un profesional o un servicio para tu hogar? Cuéntanos qué necesitas y en qué comuna buscas atención. ConectaProIA te ayuda a encontrar contactos.
 
@@ -242,7 +274,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Tres preguntas antes de contratar
 
-Formato: video. Referencia: CP-AEFD32C17BEC.
+Formato: video. Referencia: CP-AEFD32C17BEC. Estado: habilitada.
 
 Antes de contratar, pregunta por el valor, qué incluye el servicio y la disponibilidad. Guarda esta lista y decide con información. Encuentra contactos con ConectaProIA.
 
@@ -257,7 +289,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Muchos servicios, un lugar
 
-Formato: image. Referencia: CP-B8A4D4BB76D2.
+Formato: image. Referencia: CP-B8A4D4BB76D2. Estado: habilitada.
 
 Hay distintas necesidades en tu día a día. Busca contactos de profesionales y servicios con ConectaProIA y consulta las opciones disponibles para tu comuna.
 
@@ -272,7 +304,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## Qué es gratis y qué se contrata
 
-Formato: video. Referencia: CP-197869B34C28.
+Formato: video. Referencia: CP-197869B34C28. Estado: habilitada.
 
 Buscar contactos y contratar un servicio son pasos distintos. ConectaProIA te ayuda a encontrar a quién consultar; acuerda el trabajo directamente con cada profesional.
 
@@ -287,7 +319,7 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 ## La guía de servicios del siglo XXI
 
-Formato: image. Referencia: CP-4BE71D946EAE.
+Formato: image. Referencia: CP-4BE71D946EAE. Estado: habilitada.
 
 Una guía de contactos para el día a día. ConectaProIA te ayuda a encontrar profesionales y servicios según lo que necesitas y dónde buscas atención.
 

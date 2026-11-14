@@ -5,6 +5,38 @@
   "repeat_after_days": 7,
   "entries": [
     {
+      "campaign_id": "mudanza_planificada_20261114_v1",
+      "title": "Una mudanza empieza antes del camión",
+      "angle": "mudanza_planificacion",
+      "objective": "captar_clientes",
+      "caption": "¿Te cambias de casa? Busca contactos de fletes y mudanzas con ConectaProIA. Para consultar, indica tu comuna de origen, destino y fecha estimada; los detalles se acuerdan con cada prestador.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nCuéntanos qué necesitas trasladar y en qué comuna buscas.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+fletes+y+mudanzas.+Referencia+CP-F3C2A9F6621F\nWeb: https://conectaproia.cl\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "4d6428911d3a8442d844e057a0b26985d38609370c781fbea78dd66c75c809c3",
+      "tracking_code": "CP-F3C2A9F6621F",
+      "media_type": "image",
+      "image": "mudanza_planificada_20261114_v1_feed.jpg",
+      "sha256": "b3d0426dcd9a81e40c36132aeb718ee6b59724d08797c1145000e5c8b969c31c",
+      "story_image": "mudanza_planificada_20261114_v1_story.jpg",
+      "story_sha256": "e6ce95fa9cc52393a2d932bfb39ed45781a05a3e9c2d104537a9b9f3413b2ac6",
+      "publish_stories": true,
+      "approval_status": "approved",
+      "enabled": true,
+      "repeat_after_days": 21,
+      "public_image_url": "https://conectaproia.cl/campanas/b3d0426dcd9a81e40c36.jpg",
+      "public_story_image_url": "https://conectaproia.cl/campanas/e6ce95fa9cc52393a2d9.jpg",
+      "source_file": "mudanza_planificada_20261114_v1.png",
+      "source_sha256": "a2259d435b72d6d5ab6b837861da298380be9fed236f53e465ce5fb57f640182",
+      "reviewed_at": "2026-11-14T13:09:48.673219+00:00",
+      "caption_reviewed_at": "2026-11-14T13:09:48.673219+00:00",
+      "review": {
+        "method": "original_and_delivery_visual_review_plus_caption_checks",
+        "phone": "56983434503",
+        "original_spelling_checked": true,
+        "whole_artwork_preserved": true,
+        "illustrative_not_testimonial": true,
+        "free_search_and_paid_service_distinguished": true
+      }
+    },
+    {
       "campaign_id": "gotera_hogar_20261113_v1",
       "title": "Esa gotera no se arregla sola",
       "angle": "hogar_necesidad_concreta",
@@ -119,6 +151,38 @@
         "original_spelling_checked": true,
         "whole_artwork_preserved": true,
         "illustrative_not_testimonial": true
+      }
+    },
+    {
+      "campaign_id": "taller_auto_20261114_v1",
+      "title": "Tu próximo contacto para el auto",
+      "angle": "auto_necesidad_concreta",
+      "objective": "captar_clientes",
+      "caption": "¿Tu auto necesita una revisión? ConectaProIA te ayuda a buscar contactos de mecánica automotriz. Describe lo que necesitas e indica tu comuna para empezar la búsqueda. El diagnóstico y el trabajo se acuerdan directamente con el taller o profesional.\n\nBuscar contactos es gratis. El servicio contratado lo cobra cada profesional.\n\nEscríbenos qué necesita tu auto y en qué comuna buscas un taller.\nWhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+mec%C3%A1nica+automotriz.+Referencia+CP-BF25F5B70E1D\nWeb: https://conectaproia.cl\n\nLa disponibilidad y el valor del servicio se confirman con cada profesional.\n\n#ConectaProIA #Servicios #Chile",
+      "caption_sha256": "d3c727ec9cd097bae94fd45541a00d821b83a581a10d1dd607191d12f564b933",
+      "tracking_code": "CP-BF25F5B70E1D",
+      "media_type": "image",
+      "image": "taller_auto_20261114_v1_feed.jpg",
+      "sha256": "e3755c1dd2cb5adf3357233537e81c87c50ea03893d049a0b0130524a0f80584",
+      "story_image": "taller_auto_20261114_v1_story.jpg",
+      "story_sha256": "6cfa1161a39a6d0816d55b7818b2bd2ac2852f7b1635f19017af31d5cefbde8d",
+      "publish_stories": true,
+      "approval_status": "approved",
+      "enabled": true,
+      "repeat_after_days": 21,
+      "public_image_url": "https://conectaproia.cl/campanas/e3755c1dd2cb5adf3357.jpg",
+      "public_story_image_url": "https://conectaproia.cl/campanas/6cfa1161a39a6d0816d5.jpg",
+      "source_file": "taller_auto_20261114_v1.png",
+      "source_sha256": "de23b314a6a7e225d57d5ee72eac8b0be9a99761d79a387d77460946b33582a0",
+      "reviewed_at": "2026-11-14T13:09:48.673219+00:00",
+      "caption_reviewed_at": "2026-11-14T13:09:48.673219+00:00",
+      "review": {
+        "method": "original_and_delivery_visual_review_plus_caption_checks",
+        "phone": "56983434503",
+        "original_spelling_checked": true,
+        "whole_artwork_preserved": true,
+        "illustrative_not_testimonial": true,
+        "free_search_and_paid_service_distinguished": true
       }
     },
     {
@@ -354,8 +418,8 @@
         },
         "recommendations": []
       },
-      "approval_status": "approved",
-      "enabled": true,
+      "approval_status": "needs_review",
+      "enabled": false,
       "not_before": null,
       "publish_stories": true,
       "repeat_after_days": 7,
@@ -365,7 +429,8 @@
       "caption_reviewed_at": "2026-11-13T22:03:31.870667+00:00",
       "media_type": "video",
       "angle": "mascotas",
-      "tracking_code": "CP-445AB6D73647"
+      "tracking_code": "CP-445AB6D73647",
+      "review_reason": "Legacy photographs do not clearly depict veterinary care and dog grooming; replaced in rotation by the reviewed canine Reel."
     },
     {
       "campaign_id": "muchos_pendientes_v1",
