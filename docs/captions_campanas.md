@@ -2,6 +2,22 @@
 
 Las piezas habilitadas conservan texto, contacto visible y referencia de WhatsApp. La referencia se comparte entre redes y repeticiones: permite contar consultas que la incluyan, sin demostrar ventas. Las entradas pausadas se conservan para trazabilidad. Los servicios específicos se contrastan con la oferta antes de publicar.
 
+## Tu proyecto empieza por preparar el terreno.
+
+Formato: image. Referencia: CP-45BF32926561. Estado: habilitada.
+
+¿Preparas un terreno, una demolición o un traslado de material? Indícanos el trabajo y la comuna. Consulta permisos, alcance, condiciones de seguridad y cotización directamente con el prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Movimiento+de+tierra%2C+demolici%C3%B3n+y+transporte.+Referencia+CP-45BF32926561
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Tu próximo almuerzo empieza por un contacto
 
 Formato: image. Referencia: CP-54082AC2A2CD. Estado: habilitada.
@@ -50,10 +66,25 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Hay trabajos que conviene planificar.
+
+Formato: image. Referencia: CP-4C9F8312745C. Estado: habilitada.
+
+¿Necesitas mantención de una fosa séptica o trabajos de alcantarillado? Cuéntanos qué buscas y en qué comuna. Consulta el alcance del trabajo, permisos y valores con cada prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Fosas+s%C3%A9pticas+y+alcantarillado.+Referencia+CP-4C9F8312745C
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Las amarillas del 2026
 
 Formato: image. Referencia: CP-3FABDCAFFEEE. Estado: habilitada.
-Vigencia: hasta 2027-01-01T00:00:00Z.
 
 Las amarillas del 2026 para tus necesidades del día a día. Busca contactos de profesionales y servicios con ConectaProIA: cuéntanos qué necesitas y en qué comuna buscas atención.
 
@@ -93,6 +124,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Escríbenos qué necesita tu equipo y en qué comuna buscas soporte.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+soporte+y+reparaci%C3%B3n+de+notebooks.+Referencia+CP-0066AA8515BD
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Un cambio de look empieza aquí.
+
+Formato: image. Referencia: CP-012514565329. Estado: habilitada.
+
+¿Buscas peluquería o barbería? Dinos tu comuna y el servicio que necesitas. Revisa estilos, horarios, valores y condiciones de reserva directamente con el local.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Peluquer%C3%ADa+y+barber%C3%ADa.+Referencia+CP-012514565329
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -147,6 +194,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Encuentra tu próximo contacto de laboratorio.
+
+Formato: image. Referencia: CP-352780070633. Estado: habilitada.
+
+Encuentra contactos de laboratorios clínicos. Indícanos tu comuna y consulta con cada laboratorio los exámenes disponibles, requisitos, horarios y valores. ConectaProIA facilita el contacto; no entrega diagnósticos.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Laboratorio+cl%C3%ADnico.+Referencia+CP-352780070633
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Tu búsqueda empieza con un mensaje
 
 Formato: video. Referencia: CP-73D7A31DD0C3. Estado: habilitada.
@@ -189,6 +252,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos el servicio que necesitas y tu comuna por WhatsApp.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+proveedores+de+servicios+en+mi+comuna.+Referencia+CP-03A02119495A
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Que conectarte sea más simple.
+
+Formato: image. Referencia: CP-74A7E8E108EA. Estado: habilitada.
+
+¿Necesitas ayuda con una red, WiFi o Internet en casa? Cuéntanos tu comuna y qué quieres revisar. El prestador debe evaluar factibilidad, equipos, cobertura y costos antes de contratar.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Red%2C+WiFi+e+Internet+hogar.+Referencia+CP-74A7E8E108EA
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -243,6 +322,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Tu espacio merece un buen cuidado.
+
+Formato: image. Referencia: CP-E3D9045A907A. Estado: habilitada.
+
+¿Buscas un servicio de control de plagas? Indica el tipo de espacio, lo que necesitas revisar y tu comuna. Confirma métodos, autorizaciones, recomendaciones de seguridad y cotización con el prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Control+de+plagas.+Referencia+CP-E3D9045A907A
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## ¿A quién llamo para esto?
 
 Formato: image. Referencia: CP-92A5FD93C9EB. Estado: habilitada.
@@ -291,6 +386,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## El cuidado también necesita un buen contacto.
+
+Formato: image. Referencia: CP-B6487A761AFE. Estado: habilitada.
+
+Encuentra contactos de enfermería a domicilio. Comparte tu comuna y consulta con el profesional la atención que ofrece, sus credenciales, disponibilidad y valores. Este directorio no es un servicio de urgencia.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Enfermer%C3%ADa+a+domicilio.+Referencia+CP-B6487A761AFE
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Busca tu próximo contacto para hamburguesas
 
 Formato: image. Referencia: CP-756C73BC51D7. Estado: habilitada.
@@ -333,6 +444,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos qué necesitas trasladar y en qué comuna buscas.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+fletes+y+mudanzas.+Referencia+CP-F3C2A9F6621F
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Dale una pausa al polvo.
+
+Formato: image. Referencia: CP-610860A77E1E. Estado: habilitada.
+
+¿Buscas dónde lavar tu auto? Dinos tu comuna y consulta alternativas de lavado, horarios, tipo de atención y valores directamente con cada servicio.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Lavado+de+autos.+Referencia+CP-610860A77E1E
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -388,6 +515,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Tu negocio tiene algo que contar.
+
+Formato: image. Referencia: CP-69AED528A7F7. Estado: habilitada.
+
+¿Buscas apoyo para comunicar tu negocio? Cuéntanos tu comuna y si necesitas contenidos, estrategia o campañas. Pide alcance, presupuesto y condiciones al prestador. La búsqueda de contactos es gratuita; la gestión y la pauta pueden tener costos.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Marketing+digital.+Referencia+CP-69AED528A7F7
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Empieza por tu comuna
 
 Formato: image. Referencia: CP-11B4B5CB551F. Estado: habilitada.
@@ -430,6 +573,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Escríbenos qué servicio necesitas y tu comuna. Confirma disponibilidad y valores con cada profesional.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+servicios+para+el+hogar.+Referencia+CP-C3EA34BF25F9
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Planifica la seguridad de tu espacio.
+
+Formato: image. Referencia: CP-A7D2F675121C. Estado: habilitada.
+
+Encuentra contactos de seguridad privada para evaluar las necesidades de tu espacio. Indica tu comuna y consulta alcance, personal, autorizaciones, disponibilidad y cotización con cada prestador.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Seguridad+privada.+Referencia+CP-A7D2F675121C
 Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
@@ -485,6 +644,22 @@ La disponibilidad y el valor del servicio se confirman con cada profesional.
 
 #ConectaProIA #Servicios #Chile
 
+## Contactos de traumatología, a tu alcance.
+
+Formato: image. Referencia: CP-45BD18CBBB86. Estado: habilitada.
+
+Busca contactos de traumatología indicando tu comuna. Consulta credenciales, modalidad de atención, agenda y valores directamente con el profesional. ConectaProIA facilita la búsqueda y no reemplaza una evaluación médica ni atiende urgencias.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Traumatolog%C3%ADa.+Referencia+CP-45BD18CBBB86
+Web: https://conectaproia.cl
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
 ## Antes de contratar, pregunta esto
 
 Formato: image. Referencia: CP-8244BE9D8102. Estado: habilitada.
@@ -527,6 +702,22 @@ Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
 
 Cuéntanos qué necesitas y en qué comuna buscas atención.
 WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+profesionales+y+servicios.+Referencia+CP-2F15C1D5A03D
+
+La disponibilidad y el valor del servicio se confirman con cada profesional.
+
+#ConectaProIA #Servicios #Chile
+
+## Hazle espacio al movimiento.
+
+Formato: image. Referencia: CP-B9BDDBB4FE45. Estado: habilitada.
+
+¿Quieres conocer clases de yoga o Pilates? Cuéntanos tu comuna y qué modalidad buscas. Consulta niveles, horarios, requisitos, disponibilidad y valores con cada instructor o centro.
+
+Buscar contactos es gratis. El servicio contratado lo cobra cada profesional.
+
+Cuéntanos qué necesitas y en qué comuna buscas atención.
+WhatsApp: https://wa.me/56983434503?text=Hola%2C+busco+contactos+de+Yoga+y+Pilates.+Referencia+CP-B9BDDBB4FE45
+Web: https://conectaproia.cl
 
 La disponibilidad y el valor del servicio se confirman con cada profesional.
 
