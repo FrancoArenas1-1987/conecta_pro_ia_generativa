@@ -49,3 +49,7 @@ La ampliación siguiente suma tres conceptos: guía amarilla del 2026, búsqueda
 ## Consejos útiles y observación de captación
 
 Se suman dos campañas con consejos para consultar por una mudanza o soporte de notebook: dos Feed (1:1 y 4:5) y dos Stories nativas 9:16. La biblioteca tiene ahora 26 entradas, 25 habilitadas (17 campañas de imagen y 8 videos), además de las 30 imágenes habituales por servicio. Los horarios se conservan. El seguimiento privado de 14 días evalúa consultas con referencia y métricas comparables; no aumenta la frecuencia automáticamente. Ver `acquisition_trial_20261114.md`.
+
+## Cobertura, contacto visible y Stories nativas
+
+La corrección siguiente deja 39 entradas y 37 campañas habilitadas: 29 de imagen y ocho videos. Las 29 campañas de imagen habilitadas tienen Feed y Story con composición propia. Se conservan las 30 imágenes habituales aprobadas, los horarios y la cola. Se revisan tres Feed con contacto faltante y once Stories; se suman 13 campañas con 26 entregables. Traducción queda pausada por falta de oferta vigente; la pieza antigua de mascotas sigue deshabilitada. Ver `coverage_campaigns_20261114.md` y `publication_supply_guard.md`.

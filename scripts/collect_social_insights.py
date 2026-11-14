@@ -11,8 +11,10 @@ from conecta_video_ai.social_analytics import (MetaInsightsCollector,analyze,sav
 from conecta_video_ai.campaign_queue import atomic_json,safe_error
 from conecta_video_ai.acquisition_tracking import whatsapp_enquiries
 from conecta_video_ai.acquisition_trial import refresh_trial_report
+from conecta_video_ai.ad_coverage import refresh_coverage_report
 
 def update_trial(folder):
+    refresh_coverage_report(load_settings())
     try:
         return refresh_trial_report(folder,ROOT/"config/acquisition_trial_20261114.json")
     except Exception as exc:

@@ -13,7 +13,7 @@ def panel(tmp_path,monkeypatch):
         monkeypatch.delitem(sys.modules,"conecta_video_ai.webapp",raising=False)
         module=importlib.import_module("conecta_video_ai.webapp")
     private=tmp_path/"instagram/analytics";private.mkdir(parents=True)
-    for name in ["latest.json","observations.sqlite3","informe.html"]:
+    for name in ["latest.json","coverage.json","observations.sqlite3","informe.html"]:
         (private/name).write_bytes(b"private-data")
     nested=private/"trials/captacion_14d_20261114/latest.json"
     nested.parent.mkdir(parents=True);nested.write_bytes(b"private-data")
@@ -21,7 +21,7 @@ def panel(tmp_path,monkeypatch):
     sys.modules.pop("conecta_video_ai.webapp",None)
 
 @pytest.mark.parametrize("path",["instagram/analytics/latest.json","instagram/analytics/observations.sqlite3",
-    "instagram/analytics/informe.html","instagram/drafts/../analytics/latest.json",
+    "instagram/analytics/informe.html","instagram/analytics/coverage.json","instagram/drafts/../analytics/latest.json",
     "instagram/analytics/trials/captacion_14d_20261114/latest.json"])
 def test_private_reports_cannot_be_downloaded_through_generated_route(panel,path):
     client,root=panel

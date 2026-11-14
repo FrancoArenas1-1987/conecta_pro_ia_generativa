@@ -1,0 +1,94 @@
+{
+  "tool": "built_in_imagegen",
+  "mode": "edit_finished_ads",
+  "entries": [
+    {
+      "id": "profesional_casa_imagen_v1",
+      "feed_source": "profesional_casa_imagen_v1_contacto_v2.png",
+      "story_source": "profesional_casa_imagen_v1_story_native_v2.png",
+      "reason": "visible_platform_contact_and_native_story",
+      "feed_prompt": "Use case: ads-marketing. Edit target: attached existing ConectaProIA Feed ad. Produce one finished vertical Feed ad, 4:5 ratio, no mockup. Preserve the two illustrative home tradespeople, cream and green palette and the headline. Recompose to add a large legible contact block at the bottom. Replace broad 'en todo Chile' subtitle with 'Busca contactos según tu necesidad y comuna.' Exact contact block text: 'Escríbenos por WhatsApp', '+56 9 8343 4503', 'conectaproia.cl'. Exact free-search line: 'Buscar contactos es gratis.' Footer: 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve correct Spanish accents and brand spelling ConectaProIA. These are illustrative scenes, not testimonials. Keep all important text at least 6% from edges, clear readable hierarchy. No provider counts, no promises of verification or immediate availability.",
+      "story_prompt": "Use case: ads-marketing. Edit/reference image: the supplied corrected ConectaProIA Feed ad. Create a finished native Instagram Story 9:16, designed from scratch for a tall mobile canvas, preserving its main subject, colors, headline and professional visual identity. Reorganize into clear top headline, center illustration/photo and lower large contact block. Do not place a miniature unchanged Feed in blank vertical margins. Exact text must include 'ConectaProIA', 'Busca contactos según tu necesidad y comuna.', 'Buscar contactos es gratis.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve the original headline in correct Spanish. No 'en todo Chile' guarantee. All text in safe central 78% height and at least 6% side margins. Legible spelling, complete words, no extra slogans or provider counts."
+    },
+    {
+      "id": "muchos_servicios_imagen_v1",
+      "feed_source": "muchos_servicios_imagen_v1_contacto_v2.png",
+      "story_source": "muchos_servicios_imagen_v1_story_native_v2.png",
+      "reason": "visible_platform_contact_and_native_story",
+      "feed_prompt": "Use case: ads-marketing. Edit target: attached existing ConectaProIA Feed ad. Produce one finished vertical Feed ad, 4:5 ratio, no mockup. Preserve the collage and green cream yellow visual style and main headline. Recompose to add a large legible contact block at the bottom. Replace broad geographic guarantee with 'Contactos de servicios para tu día a día. Indica tu comuna.' Exact contact block text: 'Escríbenos por WhatsApp', '+56 9 8343 4503', 'conectaproia.cl'. Exact free-search line: 'Buscar contactos es gratis.' Footer: 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve correct Spanish accents and brand spelling ConectaProIA. These are illustrative scenes, not testimonials. Keep all important text at least 6% from edges, clear readable hierarchy. No provider counts, no promises of verification or immediate availability.",
+      "story_prompt": "Use case: ads-marketing. Edit/reference image: the supplied corrected ConectaProIA Feed ad. Create a finished native Instagram Story 9:16, designed from scratch for a tall mobile canvas, preserving its main subject, colors, headline and professional visual identity. Reorganize into clear top headline, center illustration/photo and lower large contact block. Do not place a miniature unchanged Feed in blank vertical margins. Exact text must include 'ConectaProIA', 'Busca contactos según tu necesidad y comuna.', 'Buscar contactos es gratis.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve the original headline in correct Spanish. No 'en todo Chile' guarantee. All text in safe central 78% height and at least 6% side margins. Legible spelling, complete words, no extra slogans or provider counts."
+    },
+    {
+      "id": "guia_siglo_xxi_imagen_v1",
+      "feed_source": "guia_siglo_xxi_imagen_v1_contacto_v2.png",
+      "story_source": "guia_siglo_xxi_imagen_v1_story_native_v2.png",
+      "reason": "visible_platform_contact_and_native_story",
+      "feed_prompt": "Use case: ads-marketing. Edit target: attached existing ConectaProIA Feed ad. Produce one finished vertical Feed ad, 4:5 ratio, no mockup. Preserve the open yellow directory transforming into a green smartphone and the main headline and elegant cream/green typography. Recompose lower part for large contact block. Replace broad geographic guarantee with 'Busca contactos de servicios según tu comuna.' Exact contact block text: 'Escríbenos por WhatsApp', '+56 9 8343 4503', 'conectaproia.cl'. Exact free-search line: 'Buscar contactos es gratis.' Footer: 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve correct Spanish accents and brand spelling ConectaProIA. These are illustrative scenes, not testimonials. Keep all important text at least 6% from edges, clear readable hierarchy. No provider counts, no promises of verification or immediate availability.",
+      "story_prompt": "Use case: ads-marketing. Edit/reference image: the supplied corrected ConectaProIA Feed ad. Create a finished native Instagram Story 9:16, designed from scratch for a tall mobile canvas, preserving its main subject, colors, headline and professional visual identity. Reorganize into clear top headline, center illustration/photo and lower large contact block. Do not place a miniature unchanged Feed in blank vertical margins. Exact text must include 'ConectaProIA', 'Busca contactos según tu necesidad y comuna.', 'Buscar contactos es gratis.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'El servicio lo cobra cada profesional. Confirma disponibilidad y valores.' Preserve the original headline in correct Spanish. No 'en todo Chile' guarantee. All text in safe central 78% height and at least 6% side margins. Legible spelling, complete words, no extra slogans or provider counts."
+    },
+    {
+      "id": "mudanza_planificada_20261114_v1",
+      "feed_source": null,
+      "story_source": "mudanza_planificada_20261114_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Edit target: supplied ConectaProIA Feed ad. Create a native 9:16 Instagram Story that reorganizes this campaign into a full tall professional composition. Preserve the headline, theme, scene and color identity. Do not center an unchanged miniature Feed with blank bars. Use large readable headline near top, scene center, a strong contact panel lower in the safe area. Exact brand 'ConectaProIA'. Exact CTA 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' Keep all text within central 78% height and 6% side margins. Complete words, correct Spanish accents. Remove any broad geographic guarantee. Illustrative scene, no testimonial or promise of immediate availability."
+    },
+    {
+      "id": "gotera_hogar_20261113_v1",
+      "feed_source": null,
+      "story_source": "gotera_hogar_20261113_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Edit target: supplied ConectaProIA Feed ad. Create a native 9:16 Instagram Story that reorganizes this campaign into a full tall professional composition. Preserve the headline, theme, scene and color identity. Do not center an unchanged miniature Feed with blank bars. Use large readable headline near top, scene center, a strong contact panel lower in the safe area. Exact brand 'ConectaProIA'. Exact CTA 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' Keep all text within central 78% height and 6% side margins. Complete words, correct Spanish accents. Remove any broad geographic guarantee. Illustrative scene, no testimonial or promise of immediate availability."
+    },
+    {
+      "id": "tu_comuna_contacto_20261113_v1",
+      "feed_source": null,
+      "story_source": "tu_comuna_contacto_20261113_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Edit target: supplied ConectaProIA Feed ad. Create a native 9:16 Instagram Story that reorganizes this campaign into a full tall professional composition. Preserve the headline, theme, scene and color identity. Do not center an unchanged miniature Feed with blank bars. Use large readable headline near top, scene center, a strong contact panel lower in the safe area. Exact brand 'ConectaProIA'. Exact CTA 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' Keep all text within central 78% height and 6% side margins. Complete words, correct Spanish accents. Remove any broad geographic guarantee. Illustrative scene, no testimonial or promise of immediate availability."
+    },
+    {
+      "id": "taller_auto_20261114_v1",
+      "feed_source": null,
+      "story_source": "taller_auto_20261114_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Edit target: supplied ConectaProIA Feed ad. Create a native 9:16 Instagram Story that reorganizes this campaign into a full tall professional composition. Preserve the headline, theme, scene and color identity. Do not center an unchanged miniature Feed with blank bars. Use large readable headline near top, scene center, a strong contact panel lower in the safe area. Exact brand 'ConectaProIA'. Exact CTA 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' Keep all text within central 78% height and 6% side margins. Complete words, correct Spanish accents. Remove any broad geographic guarantee. Illustrative scene, no testimonial or promise of immediate availability."
+    },
+    {
+      "id": "empieza_por_tu_comuna_v1",
+      "feed_source": null,
+      "story_source": "empieza_por_tu_comuna_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Reference/edit target: supplied ConectaProIA Feed ad. Produce a finished native vertical Instagram Story 9:16. Recompose the design for a tall canvas with large full-sized headline, scene or illustrated steps in the middle, and a prominent contact block; no miniature Feed inside blank bars. Keep campaign's original theme, subject, headline, palette and visual quality. Required exact text: 'ConectaProIA', 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' For checklist keep all three questions readable. Large phone and CTA in central safe area, spacious side margins, all words complete and accents correct. No exaggerated promises, verification, testimonial or guaranteed availability."
+    },
+    {
+      "id": "pizza_compartir_20261113_v1",
+      "feed_source": null,
+      "story_source": "pizza_compartir_20261113_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Reference/edit target: supplied ConectaProIA Feed ad. Produce a finished native vertical Instagram Story 9:16. Recompose the design for a tall canvas with large full-sized headline, scene or illustrated steps in the middle, and a prominent contact block; no miniature Feed inside blank bars. Keep campaign's original theme, subject, headline, palette and visual quality. Required exact text: 'ConectaProIA', 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' For checklist keep all three questions readable. Large phone and CTA in central safe area, spacious side margins, all words complete and accents correct. No exaggerated promises, verification, testimonial or guaranteed availability."
+    },
+    {
+      "id": "antes_de_contratar_v1",
+      "feed_source": null,
+      "story_source": "antes_de_contratar_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Reference/edit target: supplied ConectaProIA Feed ad. Produce a finished native vertical Instagram Story 9:16. Recompose the design for a tall canvas with large full-sized headline, scene or illustrated steps in the middle, and a prominent contact block; no miniature Feed inside blank bars. Keep campaign's original theme, subject, headline, palette and visual quality. Required exact text: 'ConectaProIA', 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' For checklist keep all three questions readable. Large phone and CTA in central safe area, spacious side margins, all words complete and accents correct. No exaggerated promises, verification, testimonial or guaranteed availability."
+    },
+    {
+      "id": "muchos_pendientes_v1",
+      "feed_source": null,
+      "story_source": "muchos_pendientes_v1_story_native_v2.png",
+      "reason": "native_story_composition",
+      "feed_prompt": null,
+      "story_prompt": "Use case: ads-marketing. Reference/edit target: supplied ConectaProIA Feed ad. Produce a finished native vertical Instagram Story 9:16. Recompose the design for a tall canvas with large full-sized headline, scene or illustrated steps in the middle, and a prominent contact block; no miniature Feed inside blank bars. Keep campaign's original theme, subject, headline, palette and visual quality. Required exact text: 'ConectaProIA', 'Cuéntanos qué necesitas y tu comuna.', 'WhatsApp +56 9 8343 4503', 'conectaproia.cl', 'Buscar contactos es gratis.', 'El servicio lo cobra cada prestador. Confirma disponibilidad y valores.' For checklist keep all three questions readable. Large phone and CTA in central safe area, spacious side margins, all words complete and accents correct. No exaggerated promises, verification, testimonial or guaranteed availability."
+    }
+  ]
+}

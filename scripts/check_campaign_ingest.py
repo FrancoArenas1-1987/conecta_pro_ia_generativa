@@ -21,6 +21,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("manifest",type=Path)
     parser.add_argument("--report",type=Path,required=True)
+    parser.add_argument("--formats",nargs="+",choices=["FEED","STORIES","REELS"],help="Validate only selected unpublished delivery formats")
     args=parser.parse_args()
     check(args.manifest,remote=True)
     publisher=IngestOnlyPublisher(load_settings())
@@ -29,6 +30,7 @@ def main():
         if not item.get("enabled") or item.get("approval_status")!="approved":continue
         kind=item.get("media_type","video")
         formats=["REELS","STORIES"] if kind=="video" else ["FEED","STORIES"]
+        if args.formats:formats=[fmt for fmt in formats if fmt in args.formats]
         for fmt in formats:
             if fmt=="STORIES" and not item.get("publish_stories",True):continue
             if kind=="video":
@@ -44,5 +46,7 @@ def main():
             args.report.parent.mkdir(parents=True,exist_ok=True)
             args.report.write_text(json.dumps({"published":False,"containers":rows},indent=2),encoding="utf-8")
             print(json.dumps({"campaign":item["campaign_id"],"format":fmt,"status":status,"published":False}),flush=True)
+
+    if not rows:raise RuntimeError("No eligible delivery formats were checked")
 
 if __name__=="__main__":main()
